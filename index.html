@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakHanzi — Learn Chinese with Anqi</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ══════════════════════════════
+   DARK THEME (default)
+══════════════════════════════ */
+:root {
+  --canvas:   #090909;
+  --s1:       #141414;
+  --s2:       #1e1e1e;
+  --s3:       #2c2c2c;
+  --s4:       #3a3a3a;
+  --ink:      #ffffff;
+  --muted:    #888888;
+  --hair:     #232323;
+  --hair2:    #2e2e2e;
+  --nav-bg:   rgba(9,9,9,0.88);
+  --red:      #C13A2D;
+  --gold:     #C9993A;
+  --hero-grad:         linear-gradient(140deg,#ffffff 55%,#888);
+  --success-bg:        #0c2417;
+  --success-border:    #1e5230;
+  --success-color:     #5fcf85;
+  --toggle-track:      #2a2a2a;
+  --toggle-border:     #444;
+  --radius-pill: 100px;
+  --radius-card: 16px;
+  --radius-lg:   24px;
+}
+
+/* ══════════════════════════════
+   LIGHT THEME
+══════════════════════════════ */
+[data-theme="light"] {
+  --canvas:   #faf8f4;
+  --s1:       #ffffff;
+  --s2:       #f2ebe0;
+  --s3:       #e6dcd0;
+  --s4:       #d5c8b8;
+  --ink:      #1a1a1a;
+  --muted:    #777777;
+  --hair:     #e0d6c8;
+  --hair2:    #cfc3b0;
+  --nav-bg:   rgba(250,248,244,0.92);
+  --hero-grad:         linear-gradient(140deg,#1a1a1a 55%,#777);
+  --success-bg:        #edf8f1;
+  --success-border:    #6dbf88;
+  --success-color:     #1e6e35;
+  --toggle-track:      #ede6da;
+  --toggle-border:     #d0c4b0;
+}
+
+/* ══════════════════════════════
+   SMOOTH TRANSITIONS
+══════════════════════════════ */
+body,nav,footer,
+.card,.course-card,.sidebar-card,
+.teacher-avatar,.teacher-avatar-label,
+.marquee-wrap,.marquee-item,
+.tl-item,.tl-year,.info-row,
+.tag,.pill,.coming,.faq li,.faq-q,.faq-a,
+.btn-secondary,.btn-cta,
+input,select,textarea,
+.success-bar {
+  transition: background 0.28s ease, color 0.28s ease,
+              border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── PAGE SWITCHING ── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ══════════════════════════════
+   NAV
+══════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hair);
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
+  letter-spacing: 0.06em; color: var(--ink);
+  text-decoration: none; display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+}
+.logo-hanzi { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; color: var(--red); line-height: 1; }
+.nav-center { display: flex; gap: 2px; align-items: center; }
+.nav-right   { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+
+.nav-center button {
+  background: none; border: none; cursor: pointer; color: var(--muted);
+  font-size: 0.82rem; font-family: 'Inter', sans-serif; font-weight: 500;
+  padding: 6px 14px; border-radius: var(--radius-pill);
+  transition: color 0.15s, background 0.15s; letter-spacing: -0.01em;
+}
+.nav-center button:hover  { color: var(--ink); background: var(--s2); }
+.nav-center button.active { color: var(--ink); background: var(--s2); }
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  display: flex; align-items: center; gap: 3px;
+  background: var(--toggle-track); border: 1px solid var(--toggle-border);
+  border-radius: var(--radius-pill); padding: 4px;
+  cursor: pointer;
+}
+.t-opt {
+  width: 28px; height: 26px; border-radius: 100px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.82rem; border: none; background: none; cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+[data-theme="dark"]  .t-moon { background: var(--s1); box-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+[data-theme="light"] .t-sun  { background: var(--s1); box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+
+.btn-cta {
+  background: var(--ink); color: var(--canvas);
+  border: none; border-radius: var(--radius-pill);
+  padding: 8px 18px; font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; font-family: 'Inter', sans-serif; letter-spacing: -0.01em;
+}
+.btn-cta:hover { opacity: 0.8; }
+
+/* ══════════════════════════════
+   SHARED
+══════════════════════════════ */
+.eyebrow {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;
+}
+.eyebrow::before { content:''; width:20px; height:1px; background:var(--gold); flex-shrink:0; }
+
+h1,h2 { font-family:'Bebas Neue',sans-serif; line-height:0.92; letter-spacing:-0.02em; }
+h1 { font-size: clamp(4rem,10vw,9rem); }
+h2 { font-size: clamp(2.5rem,5vw,5rem); }
+
+.g-text {
+  background: var(--hero-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.btn-primary {
+  background: var(--ink); color: var(--canvas);
+  border: none; border-radius: var(--radius-pill);
+  padding: 12px 24px; font-size: 0.88rem; font-weight: 500;
+  cursor: pointer; font-family: 'Inter', sans-serif; letter-spacing: -0.01em;
+}
+.btn-primary:hover { opacity: 0.8; }
+.btn-secondary {
+  background: var(--s2); color: var(--ink);
+  border: none; border-radius: var(--radius-pill);
+  padding: 12px 24px; font-size: 0.88rem; font-weight: 500;
+  cursor: pointer; font-family: 'Inter', sans-serif; letter-spacing: -0.01em;
+}
+.btn-secondary:hover { background: var(--s3); }
+
+/* ── CARDS ── */
+.card {
+  background: var(--s1); border-radius: var(--radius-card);
+  border: 1px solid var(--hair); padding: 1.75rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+[data-theme="light"] .card { box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.card-icon { font-family:'Noto Serif SC',serif; font-size:2rem; color:var(--muted); margin-bottom:0.2rem; }
+.card h3 { font-size:0.95rem; font-weight:500; color:var(--ink); }
+.card p  { font-size:0.82rem; color:var(--muted); line-height:1.65; }
+
+/* spotlight — always coloured */
+.card-red  { background:var(--red);  border-color:transparent; }
+.card-gold { background:linear-gradient(135deg,#8B6914,#C9993A); border-color:transparent; }
+.card-red .card-icon, .card-red h3, .card-gold .card-icon, .card-gold h3 { color:rgba(255,255,255,0.92); }
+.card-red p, .card-gold p { color:rgba(255,255,255,0.65); }
+[data-theme="light"] .card-red,
+[data-theme="light"] .card-gold { box-shadow: none; }
+
+/* ══════════════════════════════
+   HOME
+══════════════════════════════ */
+.hero {
+  position:relative; overflow:hidden;
+  min-height:88vh; display:flex; flex-direction:column; justify-content:flex-end;
+  padding:0 2.5rem 5rem; border-bottom:1px solid var(--hair);
+}
+.hero-bg {
+  position:absolute; font-family:'Noto Serif SC',serif;
+  font-size:38vw; line-height:1; opacity:0.04;
+  top:-5%; right:-4%; color:var(--ink);
+  pointer-events:none; user-select:none; letter-spacing:-0.05em;
+}
+.hero-tag {
+  font-size:0.7rem; font-weight:500; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--gold);
+  display:flex; align-items:center; gap:8px; margin-bottom:1.5rem;
+}
+.hero-tag::before { content:''; width:20px; height:1px; background:var(--gold); }
+.hero h1 { max-width:900px; margin-bottom:1.5rem; }
+.hero-sub {
+  font-size:1.05rem; font-weight:300; color:var(--muted);
+  max-width:500px; line-height:1.7; margin-bottom:2.5rem; letter-spacing:-0.01em;
+}
+.hero-actions { display:flex; gap:10px; align-items:center; }
+.hero-stats {
+  position:absolute; bottom:5rem; right:2.5rem;
+  display:flex; flex-direction:column; gap:1.5rem; text-align:right;
+}
+.stat-num { font-family:'Bebas Neue',sans-serif; font-size:2.8rem; line-height:1; letter-spacing:-0.02em; color:var(--ink); }
+.stat-label { font-size:0.7rem; font-weight:500; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; margin-top:2px; }
+
+.section { padding:5rem 2.5rem; max-width:1120px; margin:0 auto; }
+.card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:2rem; }
+.card-wide { grid-column:span 2; }
+
+/* MARQUEE */
+.marquee-wrap {
+  border-top:1px solid var(--hair); border-bottom:1px solid var(--hair);
+  overflow:hidden; padding:1rem 0; background:var(--s1);
+}
+.marquee { display:flex; gap:3rem; animation:marquee 24s linear infinite; width:max-content; }
+.marquee-item {
+  font-family:'Noto Serif SC',serif; font-size:1.4rem;
+  color:var(--s4); white-space:nowrap; letter-spacing:0.1em;
+}
+[data-theme="light"] .marquee-item { color:var(--s3); }
+.marquee-item span { color:var(--hair2); margin-left:2rem; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* TEACHER */
+.teacher-strip {
+  display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+  padding:5rem 2.5rem; max-width:1120px; margin:0 auto;
+  border-top:1px solid var(--hair);
+}
+.teacher-avatar {
+  background:var(--s1); border-radius:var(--radius-lg);
+  border:1px solid var(--hair); aspect-ratio:4/5;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+}
+[data-theme="light"] .teacher-avatar { box-shadow:0 2px 24px rgba(0,0,0,0.07); }
+.t-av-char { font-family:'Noto Serif SC',serif; font-size:7rem; color:var(--s3); position:absolute; }
+.t-av-label {
+  position:absolute; bottom:1.5rem; left:1.5rem;
+  background:var(--canvas); border-radius:var(--radius-pill);
+  border:1px solid var(--hair); padding:6px 14px;
+  font-size:0.75rem; font-weight:500; color:var(--muted);
+}
+.teacher-content { display:flex; flex-direction:column; gap:1.5rem; }
+.teacher-name { font-family:'Bebas Neue',sans-serif; font-size:4.5rem; line-height:0.9; letter-spacing:-0.02em; color:var(--ink); }
+.teacher-name span { color:var(--red); }
+.teacher-bio { font-size:0.92rem; color:var(--muted); line-height:1.75; font-weight:300; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; }
+.tag { border:1px solid var(--hair); border-radius:var(--radius-pill); padding:5px 14px; font-size:0.75rem; color:var(--muted); }
+
+/* ══════════════════════════════
+   COURSES
+══════════════════════════════ */
+.ph-hero {
+  min-height:46vh; display:flex; align-items:flex-end;
+  padding:0 2.5rem 4rem; border-bottom:1px solid var(--hair);
+  position:relative; overflow:hidden;
+}
+.ph-hero .bg-c {
+  position:absolute; right:-2%; top:-10%;
+  font-family:'Noto Serif SC',serif; font-size:40vw;
+  color:var(--ink); opacity:0.035;
+  pointer-events:none; line-height:1;
+}
+.course-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  padding:4rem 2.5rem; max-width:1120px; margin:0 auto;
+}
+.course-card {
+  background:var(--s1); border:1px solid var(--hair);
+  border-radius:var(--radius-card); padding:2rem;
+  display:flex; flex-direction:column; gap:1rem;
+}
+[data-theme="light"] .course-card { box-shadow:0 1px 8px rgba(0,0,0,0.05); }
+.c-level { font-size:0.68rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+.course-card h3 { font-size:1.05rem; font-weight:500; color:var(--ink); }
+.course-card p  { font-size:0.82rem; color:var(--muted); line-height:1.65; }
+.coming {
+  font-size:0.75rem; color:var(--muted);
+  border:1px solid var(--hair); border-radius:var(--radius-pill);
+  padding:4px 12px; width:fit-content; margin-top:auto;
+}
+.c-red { background:var(--red) !important; border-color:transparent !important; box-shadow:none !important; }
+.c-red .c-level, .c-red h3 { color:rgba(255,255,255,0.92) !important; }
+.c-red p   { color:rgba(255,255,255,0.65) !important; }
+.c-red .coming { border-color:rgba(255,255,255,0.25) !important; color:rgba(255,255,255,0.7) !important; }
+.c-dash {
+  border-style:dashed !important; background:var(--s2) !important;
+  box-shadow:none !important; min-height:200px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* ══════════════════════════════
+   ABOUT
+══════════════════════════════ */
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:4rem;
+  padding:5rem 2.5rem; max-width:1120px; margin:0 auto;
+}
+.tl-item { display:flex; gap:1.5rem; padding:1.5rem 0; border-bottom:1px solid var(--hair); }
+.tl-year { font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--s4); min-width:80px; line-height:1; }
+[data-theme="light"] .tl-year { color:var(--hair2); }
+.tl-body h4 { font-size:0.9rem; font-weight:500; color:var(--ink); margin-bottom:4px; }
+.tl-body p  { font-size:0.8rem; color:var(--muted); line-height:1.6; }
+
+/* ══════════════════════════════
+   CONTACT
+══════════════════════════════ */
+.contact-layout {
+  display:grid; grid-template-columns:1fr 360px; gap:3rem;
+  padding:4rem 2.5rem; max-width:1120px; margin:0 auto;
+}
+.f-label { font-size:0.7rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; display:block; }
+.f-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:1.25rem; }
+.f-group { margin-bottom:1.25rem; }
+
+input[type=text],input[type=email],select,textarea {
+  width:100%; background:var(--s1); border:1px solid var(--hair);
+  border-radius:10px; padding:0.72rem 1rem;
+  color:var(--ink); font-family:'Inter',sans-serif; font-size:0.88rem; outline:none;
+}
+input::placeholder,textarea::placeholder { color:var(--muted); opacity:0.55; }
+select option { background:var(--canvas); color:var(--ink); }
+input:focus,select:focus,textarea:focus {
+  border-color:var(--red); box-shadow:0 0 0 3px rgba(193,58,45,0.12);
+}
+textarea { resize:vertical; min-height:120px; }
+select { cursor:pointer; appearance:none; }
+
+.pills-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1.5rem; }
+.pill {
+  border:1px solid var(--hair); border-radius:var(--radius-pill);
+  padding:6px 16px; font-size:0.78rem; color:var(--muted);
+  cursor:pointer; font-family:'Inter',sans-serif; background:none;
+  transition:all 0.15s;
+}
+.pill:hover  { border-color:var(--muted); color:var(--ink); }
+.pill.active { background:var(--ink); color:var(--canvas); border-color:var(--ink); }
+
+.btn-send {
+  background:var(--ink); color:var(--canvas);
+  border:none; border-radius:var(--radius-pill);
+  padding:13px 28px; font-size:0.88rem; font-weight:500;
+  cursor:pointer; font-family:'Inter',sans-serif; width:100%;
+}
+.btn-send:hover { opacity:0.8; }
+
+.contact-sidebar { display:flex; flex-direction:column; gap:12px; }
+.sidebar-card {
+  background:var(--s1); border:1px solid var(--hair);
+  border-radius:var(--radius-card); padding:1.5rem;
+}
+[data-theme="light"] .sidebar-card { box-shadow:0 1px 8px rgba(0,0,0,0.05); }
+.sidebar-card h4 { font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
+.info-row { display:flex; gap:10px; align-items:flex-start; padding:0.6rem 0; border-bottom:1px solid var(--hair); }
+.info-row:last-child { border-bottom:none; padding-bottom:0; }
+.info-row .lbl { font-size:0.72rem; color:var(--muted); min-width:72px; padding-top:2px; }
+.info-row .val { font-size:0.82rem; color:var(--ink); line-height:1.5; }
+
+.spotlight-card { background:var(--red); border-radius:var(--radius-card); padding:1.5rem; }
+.spotlight-card .big { font-family:'Bebas Neue',sans-serif; font-size:3.5rem; line-height:1; margin-bottom:4px; color:#fff; }
+.spotlight-card .sub { font-size:0.78rem; color:rgba(255,255,255,0.65); }
+
+.faq { list-style:none; }
+.faq li { padding:0.9rem 0; border-bottom:1px solid var(--hair); cursor:pointer; }
+.faq li:last-child { border-bottom:none; }
+.faq-q { font-size:0.85rem; font-weight:500; color:var(--ink); display:flex; justify-content:space-between; gap:8px; }
+.faq-icon { color:var(--muted); font-size:0.7rem; transition:transform 0.2s; flex-shrink:0; padding-top:2px; }
+.faq li.open .faq-icon { transform:rotate(90deg); }
+.faq-a { font-size:0.8rem; color:var(--muted); line-height:1.65; margin-top:8px; display:none; }
+.faq li.open .faq-a { display:block; }
+
+.success-bar {
+  display:none; background:var(--success-bg); border:1px solid var(--success-border);
+  border-radius:10px; padding:0.9rem 1.1rem;
+  font-size:0.84rem; color:var(--success-color); text-align:center; margin-top:0.75rem;
+}
+.success-bar.show { display:block; }
+
+/* ── FOOTER ── */
+footer {
+  border-top:1px solid var(--hair); padding:2rem 2.5rem;
+  display:flex; justify-content:space-between; align-items:center;
+  background:var(--canvas);
+}
+.footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; color:var(--muted); }
+.footer-right { font-size:0.75rem; color:var(--muted); opacity:0.5; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:860px) {
+  .card-grid,.course-grid,.contact-layout,.teacher-strip,.about-grid { grid-template-columns:1fr; }
+  .card-wide { grid-column:span 1; }
+  .hero { min-height:75vh; padding-bottom:3rem; }
+  .hero-stats { display:none; }
+  h1 { font-size:3.5rem; }
+  nav { padding:0 1rem; }
+  .nav-center { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#" onclick="goto('home');return false;">
+    <span class="logo-hanzi">说</span>SpeakHanzi
+  </a>
+  <div class="nav-center">
+    <button onclick="goto('home')"    id="nav-home"    class="active">Home</button>
+    <button onclick="goto('courses')" id="nav-courses">Courses</button>
+    <button onclick="goto('about')"   id="nav-about">About Anqi</button>
+    <button onclick="goto('contact')" id="nav-contact">Contact</button>
+  </div>
+  <div class="nav-right">
+    <div class="theme-toggle" title="Toggle theme">
+      <button class="t-opt t-sun"  onclick="setTheme('light',event)">☀️</button>
+      <button class="t-opt t-moon" onclick="setTheme('dark',event)">🌙</button>
+    </div>
+    <button class="btn-cta" onclick="goto('contact')">Book Free Trial</button>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════
+     HOME
+══════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-bg">说</div>
+    <div>
+      <div class="hero-tag">Teacher Anqi · Mandarin Chinese</div>
+      <h1 class="g-text">Speak<br>Hanzi.</h1>
+      <p class="hero-sub">Live online Mandarin lessons built around real conversation — from zero to fluent, one character at a time.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="goto('contact')">Start for Free →</button>
+        <button class="btn-secondary" onclick="goto('courses')">See Courses</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">500+</div><div class="stat-label">Students</div></div>
+      <div><div class="stat-num">4.9★</div><div class="stat-label">Avg Rating</div></div>
+      <div><div class="stat-num">8yr</div><div class="stat-label">Teaching</div></div>
+    </div>
+  </section>
+
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span class="marquee-item">你好 <span>·</span></span>
+      <span class="marquee-item">普通话 <span>·</span></span>
+      <span class="marquee-item">汉字 <span>·</span></span>
+      <span class="marquee-item">四声 <span>·</span></span>
+      <span class="marquee-item">学习 <span>·</span></span>
+      <span class="marquee-item">流利 <span>·</span></span>
+      <span class="marquee-item">拼音 <span>·</span></span>
+      <span class="marquee-item">文化 <span>·</span></span>
+      <span class="marquee-item">你好 <span>·</span></span>
+      <span class="marquee-item">普通话 <span>·</span></span>
+      <span class="marquee-item">汉字 <span>·</span></span>
+      <span class="marquee-item">四声 <span>·</span></span>
+      <span class="marquee-item">学习 <span>·</span></span>
+      <span class="marquee-item">流利 <span>·</span></span>
+      <span class="marquee-item">拼音 <span>·</span></span>
+      <span class="marquee-item">文化 <span>·</span></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow">Why SpeakHanzi</div>
+    <div class="card-grid">
+      <div class="card card-red">
+        <div class="card-icon">语</div>
+        <h3>Conversation-First</h3>
+        <p>Every lesson starts by talking. Anqi adapts vocabulary to what you actually want to say — no rote memorisation.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">声</div>
+        <h3>Tones & Pronunciation</h3>
+        <p>Mandarin's four tones tackled head-on from day one, with targeted drills designed to lock them in fast.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">字</div>
+        <h3>Characters Made Simple</h3>
+        <p>Radicals, stroke order, and memory hooks. Reading and writing woven naturally into every lesson.</p>
+      </div>
+      <div class="card card-wide card-gold">
+        <div class="card-icon">文</div>
+        <h3>Culture, Not Just Language</h3>
+        <p>Language is culture. Lessons weave in idioms, history, and contemporary Chinese life — so you understand people, not just words.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">试</div>
+        <h3>Free First Lesson</h3>
+        <p>Try a full 30-minute lesson with Anqi — no commitment, no credit card. Find your level and a path forward.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="teacher-strip">
+    <div class="teacher-avatar">
+      <div class="t-av-char">安</div>
+      <div class="t-av-label">Teacher Anqi · 安琪老师</div>
+    </div>
+    <div class="teacher-content">
+      <div class="eyebrow">Meet Your Teacher</div>
+      <div class="teacher-name">Anqi<br><span>安琪</span></div>
+      <p class="teacher-bio">Native Mandarin speaker from Beijing with a Master's in Chinese Linguistics. Anqi has been teaching online since 2017 and has helped students from over 30 countries reach conversational fluency — from complete beginners to professionals preparing for HSK 5 & 6.</p>
+      <div class="tags">
+        <span class="tag">HSK 1–6</span>
+        <span class="tag">Business Chinese</span>
+        <span class="tag">Beginner-Friendly</span>
+        <span class="tag">Native Speaker</span>
+        <span class="tag">Beijing Accent</span>
+        <span class="tag">Online · Zoom</span>
+      </div>
+      <button class="btn-secondary" style="width:fit-content" onclick="goto('about')">Full Bio →</button>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">SpeakHanzi</span>
+    <span class="footer-right">© 2026 · Teacher Anqi · All rights reserved</span>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════
+     COURSES
+══════════════════════════════ -->
+<div class="page" id="page-courses">
+  <section class="ph-hero">
+    <div class="bg-c">课</div>
+    <div>
+      <div class="eyebrow">SpeakHanzi Curriculum</div>
+      <h1 class="g-text">Courses</h1>
+    </div>
+  </section>
+  <div class="course-grid">
+    <div class="course-card c-red">
+      <div class="c-level">Level 1 · Beginner</div>
+      <h3>Zero to Hello</h3>
+      <p>Tones, pinyin, greetings, numbers. Everything you need for your first real conversation in Mandarin.</p>
+      <span class="coming">Coming Soon</span>
+    </div>
+    <div class="course-card">
+      <div class="c-level">Level 2 · Elementary</div>
+      <h3>Everyday Mandarin</h3>
+      <p>Shopping, directions, food, transport. Build a practical toolkit for daily life in a Chinese-speaking environment.</p>
+      <span class="coming">Coming Soon</span>
+    </div>
+    <div class="course-card">
+      <div class="c-level">Level 3 · Intermediate</div>
+      <h3>Flowing Conversations</h3>
+      <p>Complex sentences, opinion giving, storytelling. Move from functional to genuinely fluid.</p>
+      <span class="coming">Coming Soon</span>
+    </div>
+    <div class="course-card">
+      <div class="c-level">Level 4 · HSK Prep</div>
+      <h3>HSK 3–6 Preparation</h3>
+      <p>Targeted vocabulary, past papers, listening practice, and writing tasks for every HSK level.</p>
+      <span class="coming">Coming Soon</span>
+    </div>
+    <div class="course-card">
+      <div class="c-level">Special · Professional</div>
+      <h3>Business Chinese</h3>
+      <p>Meetings, negotiations, emails, presentations. For professionals working with Chinese-speaking partners.</p>
+      <span class="coming">Coming Soon</span>
+    </div>
+    <div class="course-card c-dash">
+      <div style="text-align:center">
+        <div style="font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--muted);margin-bottom:0.5rem">？</div>
+        <p style="font-size:0.8rem;color:var(--muted)">Not sure which level?<br>
+          <button onclick="goto('contact')" style="background:none;border:none;cursor:pointer;color:var(--gold);font-size:0.8rem;font-family:inherit;padding:0;text-decoration:underline;margin-top:4px">Ask Anqi →</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span class="footer-logo">SpeakHanzi</span>
+    <span class="footer-right">© 2026 · Teacher Anqi · All rights reserved</span>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════
+     ABOUT
+══════════════════════════════ -->
+<div class="page" id="page-about">
+  <section class="ph-hero">
+    <div class="bg-c">安</div>
+    <div>
+      <div class="eyebrow">The Teacher</div>
+      <h1 class="g-text">About<br>Anqi</h1>
+    </div>
+  </section>
+  <div class="about-grid">
+    <div>
+      <div class="eyebrow" style="margin-bottom:1.5rem">Story</div>
+      <div class="tl-item"><div class="tl-year">2010</div><div class="tl-body"><h4>Beijing University · Linguistics</h4><p>Studied Chinese Linguistics and Language Education, specialising in second-language acquisition and tonal phonology.</p></div></div>
+      <div class="tl-item"><div class="tl-year">2014</div><div class="tl-body"><h4>Master's Completed</h4><p>Completed a Master's dissertation on common phonological errors made by European learners of Mandarin.</p></div></div>
+      <div class="tl-item"><div class="tl-year">2017</div><div class="tl-body"><h4>Started Teaching Online</h4><p>Began teaching private Mandarin lessons online, adapting curriculum around conversation rather than textbooks.</p></div></div>
+      <div class="tl-item"><div class="tl-year">2026</div><div class="tl-body"><h4>SpeakHanzi Launches</h4><p>Over 500 students from 30+ countries. Launching SpeakHanzi as a dedicated home for her courses and community.</p></div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+      <div class="eyebrow">At a Glance</div>
+      <div class="card" style="gap:0">
+        <div class="info-row"><span class="lbl">From</span><span class="val">Beijing, China 🇨🇳</span></div>
+        <div class="info-row"><span class="lbl">Teaches</span><span class="val">Mandarin · All Levels</span></div>
+        <div class="info-row"><span class="lbl">Accent</span><span class="val">Standard Putonghua (Beijing)</span></div>
+        <div class="info-row"><span class="lbl">Languages</span><span class="val">中文 · English · Français</span></div>
+        <div class="info-row"><span class="lbl">Format</span><span class="val">Live Online via Zoom</span></div>
+      </div>
+      <div class="card card-red" style="gap:0.5rem">
+        <div style="font-family:'Noto Serif SC',serif;font-size:1.5rem;color:rgba(255,255,255,0.35)">语</div>
+        <p style="font-size:0.88rem;line-height:1.75;color:rgba(255,255,255,0.82)">"I don't teach Chinese. I help people find their voice in it."</p>
+        <span style="font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase">— Anqi, 安琪</span>
+      </div>
+      <button class="btn-primary" onclick="goto('contact')" style="border-radius:100px">Book a Free Trial →</button>
+    </div>
+  </div>
+  <footer>
+    <span class="footer-logo">SpeakHanzi</span>
+    <span class="footer-right">© 2026 · Teacher Anqi · All rights reserved</span>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════
+     CONTACT
+══════════════════════════════ -->
+<div class="page" id="page-contact">
+  <section class="ph-hero">
+    <div class="bg-c">联</div>
+    <div>
+      <div class="eyebrow">Get in Touch</div>
+      <h1 class="g-text">Contact<br>Anqi</h1>
+    </div>
+  </section>
+
+  <div class="contact-layout">
+    <div>
+      <div class="eyebrow" style="margin-bottom:1.5rem">Send a Message</div>
+      <label class="f-label">I'm interested in</label>
+      <div class="pills-row">
+        <button class="pill active" onclick="togglePill(this)">Beginner Chinese</button>
+        <button class="pill" onclick="togglePill(this)">Business Chinese</button>
+        <button class="pill" onclick="togglePill(this)">HSK Prep</button>
+        <button class="pill" onclick="togglePill(this)">Private Tutoring</button>
+        <button class="pill" onclick="togglePill(this)">Group Classes</button>
+        <button class="pill" onclick="togglePill(this)">Free Trial</button>
+      </div>
+      <div class="f-row">
+        <div><label class="f-label">First Name</label><input type="text" id="fname" placeholder="Alan"></div>
+        <div><label class="f-label">Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="f-group"><label class="f-label">Email</label><input type="email" id="femail" placeholder="alan@example.com"></div>
+      <div class="f-group">
+        <label class="f-label">Current Level</label>
+        <select>
+          <option value="">Select your level…</option>
+          <option>Complete Beginner</option>
+          <option>Elementary (HSK 1–2)</option>
+          <option>Intermediate (HSK 3–4)</option>
+          <option>Advanced (HSK 5–6)</option>
+        </select>
+      </div>
+      <div class="f-group"><label class="f-label">Message</label><textarea placeholder="Tell Anqi about your goals, schedule, or any questions…"></textarea></div>
+      <button class="btn-send" onclick="submitForm()">Send Message →</button>
+      <div class="success-bar" id="success">✓ &nbsp;Sent! Anqi will reply within 24 hours.</div>
+    </div>
+
+    <div class="contact-sidebar">
+      <div class="spotlight-card">
+        <div class="big">24h</div>
+        <div class="sub">Average reply — personal, never automated.</div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Contact Details</h4>
+        <div class="info-row"><span class="lbl">Email</span><span class="val">hello@speakhanzi.com</span></div>
+        <div class="info-row"><span class="lbl">WeChat</span><span class="val">SpeakHanzi_Anqi</span></div>
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Mon–Fri, 9am–6pm CST</span></div>
+        <div class="info-row"><span class="lbl">Languages</span><span class="val">🇨🇳 🇬🇧 🇫🇷 🇪🇸</span></div>
+      </div>
+      <div class="sidebar-card">
+        <h4>FAQ</h4>
+        <ul class="faq">
+          <li onclick="toggleFaq(this)"><div class="faq-q">Is there a free trial? <span class="faq-icon">▶</span></div><div class="faq-a">Yes — every new student gets a free 30-minute lesson. No credit card required.</div></li>
+          <li onclick="toggleFaq(this)"><div class="faq-q">Are classes online? <span class="faq-icon">▶</span></div><div class="faq-a">All lessons are live online via Zoom — study from anywhere in the world.</div></li>
+          <li onclick="toggleFaq(this)"><div class="faq-q">How flexible is scheduling? <span class="faq-icon">▶</span></div><div class="faq-a">Very flexible — book at times that work for you, with at least 24h notice.</div></li>
+          <li onclick="toggleFaq(this)"><div class="faq-q">What payment methods? <span class="faq-icon">▶</span></div><div class="faq-a">Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">SpeakHanzi</span>
+    <span class="footer-right">© 2026 · Teacher Anqi · All rights reserved</span>
+  </footer>
+</div>
+
+
+<script>
+// NAVIGATION
+function goto(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-center button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  var btn = document.getElementById('nav-' + id);
+  if (btn) btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// THEME
+function setTheme(t, e) {
+  if (e) { e.stopPropagation(); e.preventDefault(); }
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('sh-theme', t); } catch(e) {}
+}
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  setTheme(cur === 'dark' ? 'light' : 'dark');
+}
+// Restore saved preference
+(function() {
+  try {
+    var saved = localStorage.getItem('sh-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch(e) {}
+})();
+
+// FORM
+function togglePill(el) {
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+}
+function toggleFaq(li) { li.classList.toggle('open'); }
+function submitForm() {
+  var n = document.getElementById('fname').value.trim();
+  var e = document.getElementById('femail').value.trim();
+  if (!n || !e) { alert('Please fill in your name and email.'); return; }
+  var s = document.getElementById('success');
+  s.classList.add('show');
+  var b = document.querySelector('.btn-send');
+  b.textContent = '✓  Sent';
+  b.disabled = true;
+  b.style.opacity = '0.55';
+}
+</script>
+</body>
+</html>
