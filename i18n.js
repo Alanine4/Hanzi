@@ -137,7 +137,7 @@ window.__i18n = {
   c5_lv: { zh: '商务 · 专业', en: 'Business · Professional', th: 'ธุรกิจ · มืออาชีพ', es: 'Negocios · Profesional', nl: 'Zaken · Professioneel', fr: 'Affaires · Professionnel' },
   c5_h:  { zh: '商务汉语', en: 'Business Chinese', th: 'ภาษาจีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
   c5_p:  { zh: '会议、谈判、邮件、演示。为与中方合作的职场人士量身打造。', en: 'Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.', th: 'การประชุม การเจรจา อีเมล การนำเสนอ สำหรับมืออาชีพที่ทำงานกับพันธมิตรชาวจีน', es: 'Reuniones, negociaciones, correos, presentaciones. Para profesionales que trabajan con socios chinos.', nl: 'Vergaderingen, onderhandelingen, e-mails, presentaties. Voor professionals die werken met Chinese partners.', fr: 'Réunions, négociations, e-mails, présentations. Pour les professionnels travaillant avec des partenaires chinois.' },
-  c_badge: { zh: '即将上线', en: 'Coming Soon', th: 'เร็ว ๆ นี้', es: 'Próximamente', nl: 'Binnenkort', fr: 'Bientôt disponible' },
+  c_badge: { zh: '可作 1-on-1 →', en: 'Available as 1-on-1 →', th: 'เรียน 1-ต่อ-1 →', es: 'Disponible 1-a-1 →', nl: 'Beschikbaar 1-op-1 →', fr: 'Disponible en 1-on-1 →' },
   co_unsure_q:   { zh: '不确定适合哪个等级？', en: 'Not sure which level?', th: 'ไม่แน่ใจว่าระดับไหน?', es: '¿No estás seguro del nivel?', nl: 'Niet zeker welk niveau?', fr: 'Pas sûr de votre niveau ?' },
   co_unsure_btn: { zh: '问问林老师 →', en: 'Ask Teacher Lin →', th: 'ถามครูหลิน →', es: 'Pregunta a la profesora Lin →', nl: 'Vraag het juf Lin →', fr: 'Demandez à la professeure Lin →' },
 
@@ -197,7 +197,93 @@ window.__i18n = {
   faq_q3: { zh: '在哪里上课？', en: 'Where are classes held?', th: 'เรียนที่ไหน?', es: '¿Dónde se imparten las clases?', nl: 'Waar vinden de lessen plaats?', fr: 'Où ont lieu les cours ?' },
   faq_a3: { zh: '所有课程均通过 Zoom 在线直播 —— 在世界任何地方都可以学习。', en: 'All lessons are live online via Zoom — study from anywhere in the world.', th: 'บทเรียนทั้งหมดเป็นแบบสดผ่าน Zoom — เรียนได้จากทุกที่ในโลก', es: 'Todas las clases son en directo por Zoom — estudia desde cualquier parte del mundo.', nl: 'Alle lessen zijn live online via Zoom — studeer waar je ook bent.', fr: 'Tous les cours sont en direct via Zoom — étudiez où que vous soyez.' },
   faq_q4: { zh: '支持什么支付方式？', en: 'Payment methods?', th: 'วิธีการชำระเงิน?', es: '¿Métodos de pago?', nl: 'Betaalmethoden?', fr: 'Modes de paiement ?' },
-  faq_a4: { zh: '接受信用卡、PayPal、支付宝和微信支付。', en: 'Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.', th: 'รับบัตรเครดิต PayPal Alipay และ WeChat Pay', es: 'Aceptamos tarjetas de crédito, PayPal, Alipay y WeChat Pay.', nl: 'Creditcards, PayPal, Alipay en WeChat Pay worden allemaal geaccepteerd.', fr: 'Cartes de crédit, PayPal, Alipay et WeChat Pay sont acceptés.' }
+  faq_a4: { zh: '接受信用卡、PayPal、支付宝和微信支付。', en: 'Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.', th: 'รับบัตรเครดิต PayPal Alipay และ WeChat Pay', es: 'Aceptamos tarjetas de crédito, PayPal, Alipay y WeChat Pay.', nl: 'Creditcards, PayPal, Alipay en WeChat Pay worden allemaal geaccepteerd.', fr: 'Cartes de crédit, PayPal, Alipay et WeChat Pay sont acceptés.' },
+
+  /* ═══ PRICING (CONTACT page section A) ═══ */
+  pricing_label:      { zh: '价格', en: 'Pricing', th: 'ราคา', es: 'Precios', nl: 'Prijzen', fr: 'Tarifs' },
+  pricing_h2:         { zh: '简单定价，真实对话', en: 'Simple pricing. Real conversations.', th: 'ราคาเรียบง่าย บทสนทนาจริง', es: 'Precios simples. Conversaciones reales.', nl: 'Eenvoudige prijzen. Echte gesprekken.', fr: 'Tarifs simples. Vraies conversations.' },
+  pricing_disclaimer: { zh: '此处仅为价格说明。通过 WeChat 或邮箱联系确定具体方案。', en: 'Pricing is informational. Contact via WeChat or email to finalise your package.', th: 'ราคานี้เพื่อข้อมูล ติดต่อทาง WeChat หรืออีเมลเพื่อยืนยันแพ็กเกจของคุณ', es: 'Los precios son informativos. Contacta por WeChat o email para definir tu paquete.', nl: 'Prijzen zijn informatief. Neem contact op via WeChat of e-mail om je pakket vast te leggen.', fr: 'Les tarifs sont indicatifs. Contactez-nous via WeChat ou e-mail pour finaliser votre formule.' },
+
+  price1_tag:  { zh: '试课', en: 'TRY', th: 'ทดลองเรียน', es: 'PRUEBA', nl: 'PROBEER', fr: 'ESSAI' },
+  price1_amt:  { zh: '€29', en: '€29', th: '€29', es: '€29', nl: '€29', fr: '€29' },
+  price1_unit: { zh: '/ 30 分钟', en: '/ 30 min', th: '/ 30 น.', es: '/ 30 min', nl: '/ 30 min', fr: '/ 30 min' },
+  price1_desc: { zh: '一次性试课', en: 'One trial lesson', th: 'บทเรียนทดลอง 1 ครั้ง', es: 'Una clase de prueba', nl: 'Eén proefles', fr: 'Un cours d\'essai' },
+  price1_b1:   { zh: '直接预约时段', en: 'Book any time slot', th: 'จองช่วงเวลาได้ทันที', es: 'Reserva cualquier hora', nl: 'Boek een tijdslot', fr: 'Réservez un créneau' },
+  price1_b2:   { zh: '无任何承诺', en: 'No commitment', th: 'ไม่มีข้อผูกมัด', es: 'Sin compromiso', nl: 'Geen verplichting', fr: 'Sans engagement' },
+  price1_cta:  { zh: '预约试课 →', en: 'Book Trial →', th: 'จองทดลองเรียน →', es: 'Reservar prueba →', nl: 'Boek proefles →', fr: 'Réserver l\'essai →' },
+
+  price2_tag:  { zh: '1-on-1 月套餐', en: '1-ON-1 MONTHLY', th: 'แพ็กเกจรายเดือน 1-ต่อ-1', es: '1-A-1 MENSUAL', nl: '1-OP-1 MAANDPAKKET', fr: 'COURS INDIVIDUEL MENSUEL' },
+  price2_amt:  { zh: '€40 起', en: 'from €40', th: 'เริ่มต้น €40', es: 'desde €40', nl: 'vanaf €40', fr: 'à partir de €40' },
+  price2_unit: { zh: '/ 节', en: '/ lesson', th: '/ บทเรียน', es: '/ clase', nl: '/ les', fr: '/ cours' },
+  price2_desc: { zh: '每月 4 节课 · 时间灵活', en: '4 lessons / month · Flexible schedule', th: '4 บทเรียน / เดือน · เวลายืดหยุ่น', es: '4 clases / mes · Horario flexible', nl: '4 lessen / maand · Flexibel rooster', fr: '4 cours / mois · Horaire flexible' },
+  price2_b1:   { zh: '主题：HSK、商务、口语', en: 'Topics: HSK, Business, Conversational', th: 'หัวข้อ: HSK ธุรกิจ บทสนทนา', es: 'Temas: HSK, Negocios, Conversación', nl: 'Thema\'s: HSK, zaken, conversatie', fr: 'Thèmes : HSK, affaires, conversation' },
+  price2_b2:   { zh: '个性化学习计划', en: 'Personalised plan', th: 'แผนเรียนเฉพาะตัว', es: 'Plan personalizado', nl: 'Persoonlijk plan', fr: 'Plan personnalisé' },
+  price2_b3:   { zh: '随时可暂停', en: 'Pause anytime', th: 'หยุดพักได้ตลอดเวลา', es: 'Pausa cuando quieras', nl: 'Pauzeer wanneer je wilt', fr: 'Pause à tout moment' },
+  price2_cta:  { zh: '微信沟通 →', en: 'Chat on WeChat →', th: 'แชทผ่าน WeChat →', es: 'Chatear por WeChat →', nl: 'Chat op WeChat →', fr: 'Discuter sur WeChat →' },
+
+  price3_tag:  { zh: '团课 / Cohort 班', en: 'GROUP COHORT', th: 'คลาสกลุ่ม', es: 'GRUPO COHORTE', nl: 'GROEPSKLAS', fr: 'CLASSE GROUPE' },
+  price3_amt:  { zh: '€299', en: '€299', th: '€299', es: '€299', nl: '€299', fr: '€299' },
+  price3_unit: { zh: '/ 8 周', en: '/ 8 weeks', th: '/ 8 สัปดาห์', es: '/ 8 semanas', nl: '/ 8 weken', fr: '/ 8 semaines' },
+  price3_desc: { zh: '最多 6 名学员', en: 'Max 6 students', th: 'นักเรียนสูงสุด 6 คน', es: 'Máximo 6 estudiantes', nl: 'Maximaal 6 studenten', fr: 'Max 6 étudiants' },
+  price3_next: { zh: '下期开班：待定', en: 'Next start: TBD', th: 'รอบถัดไป: รอประกาศ', es: 'Próximo inicio: por confirmar', nl: 'Volgende start: nog te bepalen', fr: 'Prochain départ : à confirmer' },
+  price3_b1:   { zh: '初级水平', en: 'Beginner level', th: 'ระดับเริ่มต้น', es: 'Nivel principiante', nl: 'Beginnersniveau', fr: 'Niveau débutant' },
+  price3_b2:   { zh: 'Zoom 在线直播', en: 'Live on Zoom', th: 'ถ่ายทอดสดบน Zoom', es: 'En vivo por Zoom', nl: 'Live op Zoom', fr: 'En direct sur Zoom' },
+  price3_b3:   { zh: '完整大纲 + 同学社群', en: 'Curriculum + community', th: 'หลักสูตร + ชุมชน', es: 'Plan de estudios + comunidad', nl: 'Curriculum + community', fr: 'Programme + communauté' },
+  price3_cta:  { zh: '加入通知名单 →', en: 'Get Notified →', th: 'รับการแจ้งเตือน →', es: 'Avísame →', nl: 'Houd me op de hoogte →', fr: 'Me prévenir →' },
+
+  /* ═══ TESTIMONIALS (HOME section B) ═══ */
+  testimonials_label: { zh: '真实学员 · 真实进步', en: 'Real Students · Real Progress', th: 'นักเรียนจริง · ความก้าวหน้าจริง', es: 'Estudiantes reales · Progreso real', nl: 'Echte studenten · echte vooruitgang', fr: 'Vrais étudiants · vraie progression' },
+  testimonials_h2:    { zh: '别只听我们怎么说', en: 'Don\'t just take our word', th: 'อย่าเพิ่งเชื่อแค่เราพูด', es: 'No te fíes solo de nosotros', nl: 'Geloof het niet alleen van ons', fr: 'Ne nous croyez pas sur parole' },
+  t_sample_note:      { zh: '示例占位 · 待替换为真实学员', en: 'Sample · replace with real students', th: 'ตัวอย่าง · จะแทนที่ด้วยนักเรียนจริง', es: 'Muestra · reemplazar con estudiantes reales', nl: 'Voorbeeld · te vervangen door echte studenten', fr: 'Exemple · à remplacer par de vrais étudiants' },
+
+  t1_name:  { zh: 'Sarah · 🇫🇷', en: 'Sarah · 🇫🇷', th: 'Sarah · 🇫🇷', es: 'Sarah · 🇫🇷', nl: 'Sarah · 🇫🇷', fr: 'Sarah · 🇫🇷' },
+  t1_meta:  { zh: '学习 3 个月 · A2 水平', en: '3 months · A2 level', th: '3 เดือน · ระดับ A2', es: '3 meses · Nivel A2', nl: '3 maanden · A2-niveau', fr: '3 mois · niveau A2' },
+  t1_quote: { zh: '"林老师的课像真实对话。我从零基础到能用中文聊周末。"', en: '"Lin\'s lessons feel like real conversations. I went from total beginner to chatting about my weekend in Mandarin."', th: '"บทเรียนของครูหลินเหมือนบทสนทนาจริง ฉันจากผู้เริ่มต้นแบบสมบูรณ์มาเป็นคุยเรื่องสุดสัปดาห์เป็นภาษาจีนได้"', es: '"Las clases de Lin se sienten como conversaciones reales. Pasé de cero a hablar de mi fin de semana en mandarín."', nl: '"De lessen van juf Lin voelen als echte gesprekken. Ik ging van complete beginner naar babbelen over mijn weekend in het Mandarijn."', fr: '"Les cours de Lin ressemblent à de vraies conversations. Je suis passée de débutante à discuter de mon week-end en mandarin."' },
+
+  t2_name:  { zh: 'Marco · 🇮🇹', en: 'Marco · 🇮🇹', th: 'Marco · 🇮🇹', es: 'Marco · 🇮🇹', nl: 'Marco · 🇮🇹', fr: 'Marco · 🇮🇹' },
+  t2_meta:  { zh: '学习 6 个月 · B1 水平', en: '6 months · B1 level', th: '6 เดือน · ระดับ B1', es: '6 meses · Nivel B1', nl: '6 maanden · B1-niveau', fr: '6 mois · niveau B1' },
+  t2_quote: { zh: '"从零基础到能在中餐厅自如点菜。拼音基础打得很扎实。"', en: '"From zero to ordering food in Chinese restaurants. The pinyin foundation is solid."', th: '"จากศูนย์มาสั่งอาหารในร้านอาหารจีนได้ พื้นฐานพินอินแน่นมาก"', es: '"De cero a pedir comida en restaurantes chinos. La base de pinyin es sólida."', nl: '"Van nul naar eten bestellen in Chinese restaurants. De pinyin-basis is sterk."', fr: '"De zéro à commander dans les restaurants chinois. La base de pinyin est solide."' },
+
+  t3_name:  { zh: 'Anna · 🇩🇪', en: 'Anna · 🇩🇪', th: 'Anna · 🇩🇪', es: 'Anna · 🇩🇪', nl: 'Anna · 🇩🇪', fr: 'Anna · 🇩🇪' },
+  t3_meta:  { zh: '学习 1 年 · 准备 HSK 3', en: '1 year · HSK 3 ready', th: '1 ปี · พร้อมสอบ HSK 3', es: '1 año · listo para HSK 3', nl: '1 jaar · klaar voor HSK 3', fr: '1 an · prête pour HSK 3' },
+  t3_quote: { zh: '"在欧洲遇到过的最好的中文老师。文化背景讲解让一切豁然开朗。"', en: '"Best Chinese teacher I\'ve had in Europe. The cultural context is what makes it click."', th: '"ครูภาษาจีนที่ดีที่สุดที่ฉันเคยมีในยุโรป บริบททางวัฒนธรรมคือสิ่งที่ทำให้เข้าใจ"', es: '"La mejor profesora de chino que he tenido en Europa. El contexto cultural es lo que lo hace clic."', nl: '"De beste Chinese leerkracht die ik in Europa heb gehad. De culturele context maakt het pas duidelijk."', fr: '"La meilleure professeure de chinois que j\'ai eue en Europe. Le contexte culturel rend tout clair."' },
+
+  /* ═══ AI TOOLS PREVIEW (HOME section C) ═══ */
+  ai_label:    { zh: 'AI 工具', en: 'AI Tools', th: 'เครื่องมือ AI', es: 'Herramientas IA', nl: 'AI-tools', fr: 'Outils IA' },
+  ai_h2:       { zh: '专为中文学习者打造的 AI 工具', en: 'AI Tools for Mandarin Learners', th: 'เครื่องมือ AI สำหรับผู้เรียนภาษาจีน', es: 'Herramientas IA para aprender mandarín', nl: 'AI-tools voor Mandarijnleerlingen', fr: 'Outils IA pour apprenants du mandarin' },
+  ai_sub:      { zh: '由林老师团队打造 · AI 驱动', en: 'Made by Teacher Lin · Powered by AI', th: 'สร้างโดยทีมครูหลิน · ขับเคลื่อนด้วย AI', es: 'Creado por la profesora Lin · Con IA', nl: 'Gemaakt door juf Lin · Aangedreven door AI', fr: 'Créé par la professeure Lin · Propulsé par l\'IA' },
+  ai_coming:   { zh: '即将上线', en: 'Coming soon', th: 'เร็ว ๆ นี้', es: 'Próximamente', nl: 'Binnenkort', fr: 'Bientôt disponible' },
+
+  ai1_h: { zh: 'HSK 词汇生成器', en: 'HSK Vocab Generator', th: 'เครื่องสร้างคำศัพท์ HSK', es: 'Generador de vocabulario HSK', nl: 'HSK-vocabulairegenerator', fr: 'Générateur de vocabulaire HSK' },
+  ai1_p: { zh: '用 AI 生成情境例句，针对 HSK 1-6 词汇练习。', en: 'Drill HSK 1-6 vocab with AI-generated context sentences.', th: 'ฝึกคำศัพท์ HSK 1-6 ด้วยประโยคที่ AI สร้างขึ้น', es: 'Practica el vocabulario HSK 1-6 con frases contextuales generadas por IA.', nl: 'Oefen HSK 1-6 woordenschat met door AI gegenereerde contextzinnen.', fr: 'Entraînez le vocabulaire HSK 1-6 avec des phrases contextuelles générées par IA.' },
+
+  ai2_h: { zh: '拼音声调辅导', en: 'Pinyin Tutor Pro', th: 'ติวพินอินแบบมืออาชีพ', es: 'Tutor de pinyin pro', nl: 'Pinyin-tutor Pro', fr: 'Tuteur de pinyin pro' },
+  ai2_p: { zh: '实时声调纠正 + 自适应反馈，让你的发音不再像机器人。', en: 'Real-time tone correction with adaptive feedback.', th: 'แก้ไขวรรณยุกต์แบบเรียลไทม์พร้อมข้อเสนอแนะที่ปรับตัวได้', es: 'Corrección de tonos en tiempo real con retroalimentación adaptativa.', nl: 'Real-time toonscorrectie met adaptieve feedback.', fr: 'Correction des tons en temps réel avec retour adaptatif.' },
+
+  ai3_h: { zh: 'AI 中文聊天搭子', en: 'AI Chat Buddy', th: 'เพื่อนแชท AI', es: 'Compañero de chat IA', nl: 'AI-chatbuddy', fr: 'Partenaire de chat IA' },
+  ai3_p: { zh: '24/7 用 AI 练中文口语，不用担心说错被尴尬。', en: 'Practice Mandarin conversation 24/7 with an AI tutor.', th: 'ฝึกสนทนาภาษาจีน 24/7 กับครู AI', es: 'Practica conversación en mandarín 24/7 con un tutor IA.', nl: 'Oefen Mandarijnse conversatie 24/7 met een AI-tutor.', fr: 'Pratiquez la conversation en mandarin 24/7 avec un tuteur IA.' },
+
+  ai4_h: { zh: '建议箱', en: 'Suggest one →', th: 'แนะนำสิ่งใหม่ →', es: 'Sugiere otra →', nl: 'Stel iets voor →', fr: 'Suggérer un outil →' },
+  ai4_p: { zh: '什么 AI 工具能帮到你的中文学习？告诉我们。', en: 'What AI tool would help you learn? Tell us.', th: 'เครื่องมือ AI แบบไหนที่จะช่วยคุณเรียนได้? บอกเรา', es: '¿Qué herramienta IA te ayudaría a aprender? Cuéntanos.', nl: 'Welke AI-tool zou je helpen leren? Vertel het ons.', fr: 'Quel outil IA vous aiderait à apprendre ? Dites-nous.' },
+
+  ai_email_h:   { zh: '产品上线时通知我', en: 'Get notified when these launch', th: 'แจ้งเตือนเมื่อเปิดตัว', es: 'Avísame cuando se lancen', nl: 'Houd me op de hoogte bij lancering', fr: 'Prévenez-moi au lancement' },
+  ai_email_ph:  { zh: 'your@email.com', en: 'your@email.com', th: 'your@email.com', es: 'your@email.com', nl: 'your@email.com', fr: 'your@email.com' },
+  ai_email_btn: { zh: '订阅', en: 'Subscribe', th: 'สมัครรับ', es: 'Suscribirme', nl: 'Abonneren', fr: 'S\'abonner' },
+
+  /* ═══ LEAD MAGNET (above each footer · section D) ═══ */
+  lm_h:        { zh: '免费 PDF · 30 句中文高频对话', en: 'Free PDF · 30 High-Frequency Mandarin Phrases', th: 'PDF ฟรี · 30 วลีภาษาจีนใช้บ่อย', es: 'PDF gratis · 30 frases de mandarín de alta frecuencia', nl: 'Gratis PDF · 30 veelgebruikte Mandarijnse zinnen', fr: 'PDF gratuit · 30 phrases mandarin les plus utilisées' },
+  lm_sub:      { zh: '适用于旅游、商务、日常 · 双语对照 + 拼音', en: 'For travel, business, daily life · Bilingual + Pinyin', th: 'สำหรับการเดินทาง ธุรกิจ ชีวิตประจำวัน · สองภาษา + พินอิน', es: 'Para viajes, negocios, vida diaria · Bilingüe + Pinyin', nl: 'Voor reizen, zaken, dagelijks leven · Tweetalig + Pinyin', fr: 'Pour voyage, affaires, vie quotidienne · Bilingue + Pinyin' },
+  lm_email_ph: { zh: 'your@email.com', en: 'your@email.com', th: 'your@email.com', es: 'your@email.com', nl: 'your@email.com', fr: 'your@email.com' },
+  lm_btn:      { zh: '获取 PDF →', en: 'Get Free PDF →', th: 'รับ PDF ฟรี →', es: 'Obtener PDF gratis →', nl: 'Krijg gratis PDF →', fr: 'Obtenir le PDF gratuit →' },
+  lm_sent:     { zh: '✓ 已发送！请查收邮箱（含垃圾邮件）', en: '✓ Sent! Check your inbox (and spam folder)', th: '✓ ส่งแล้ว! ตรวจสอบกล่องจดหมาย (รวมถึงสแปม)', es: '✓ ¡Enviado! Revisa tu bandeja (y spam)', nl: '✓ Verzonden! Check je inbox (en spam)', fr: '✓ Envoyé ! Vérifiez votre boîte (et spam)' },
+
+  /* ═══ WECHAT BIG CARD (CONTACT section F) ═══ */
+  wechat_h:      { zh: '微信沟通', en: 'Chat on WeChat', th: 'แชทผ่าน WeChat', es: 'Chatear por WeChat', nl: 'Chat op WeChat', fr: 'Discuter sur WeChat' },
+  wechat_p:      { zh: '咨询问题或定制课程包，微信最快。', en: 'Quickest way to ask questions or book a custom package.', th: 'วิธีที่เร็วที่สุดในการสอบถามหรือจองแพ็กเกจเฉพาะ', es: 'La forma más rápida de preguntar o reservar un paquete personalizado.', nl: 'De snelste manier om vragen te stellen of een pakket op maat te boeken.', fr: 'Le moyen le plus rapide de poser des questions ou de réserver une formule personnalisée.' },
+  wechat_id_lbl: { zh: '微信号', en: 'WeChat ID', th: 'ID WeChat', es: 'ID de WeChat', nl: 'WeChat-ID', fr: 'Identifiant WeChat' },
+
+  /* ═══ COURSES PAGE UPDATE (section E) ═══ */
+  co_subtitle: { zh: '下方所有主题均可作为 1-on-1 月套餐学习，按需选择。', en: 'Every theme below is available as a 1-on-1 monthly package. Pick what you need.', th: 'หัวข้อด้านล่างทั้งหมดเรียนได้แบบ 1-ต่อ-1 รายเดือน เลือกตามที่คุณต้องการ', es: 'Cada tema a continuación está disponible como paquete mensual 1-a-1. Elige lo que necesites.', nl: 'Elk onderstaand thema is beschikbaar als 1-op-1 maandpakket. Kies wat je nodig hebt.', fr: 'Chaque thème ci-dessous est disponible en formule individuelle mensuelle. Choisissez selon vos besoins.' }
 
 };
 

@@ -519,6 +519,184 @@ body.review-mode *{cursor:crosshair;}
   .review-panel{width:100vw;max-width:100vw;}
   .review-fab{right:12px;bottom:12px;}
 }
+
+/* ═══ PHASE 2 ADDITIONS · pricing / testimonials / ai / lead magnet / wechat / socials ═══ */
+
+/* Section wrappers */
+.section-mt{margin-top:4rem;max-width:1100px;margin-left:auto;margin-right:auto;padding:0 2.5rem;}
+
+/* Pricing */
+.pricing-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  margin:2rem 0 1rem;
+}
+.pcard{
+  background:var(--canvas);border:1.5px solid var(--hair);
+  border-radius:var(--r-card);padding:1.5rem 1.25rem;
+  display:flex;flex-direction:column;
+  transition:border-color .15s, box-shadow .15s, transform .15s;
+}
+.pcard:hover{border-color:var(--amber);box-shadow:var(--sh-md);transform:translateY(-2px);}
+.pcard.featured{border-color:var(--amber);background:var(--s1);}
+.pcard-tag{
+  font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--brown);margin-bottom:0.75rem;
+}
+.pcard-amt{
+  font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:700;
+  color:var(--ink);line-height:1;
+}
+.pcard-unit{font-size:0.82rem;color:var(--muted);margin-left:4px;font-weight:500;}
+.pcard-desc{font-size:0.82rem;color:var(--muted);margin:0.5rem 0 0.25rem;line-height:1.5;}
+.pcard-next{font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.5rem;}
+.pcard ul{list-style:none;padding:1rem 0;margin:0;flex:1;border-top:1px solid var(--hair-s);margin-top:1rem;}
+.pcard li{font-size:0.8rem;color:var(--body);padding:5px 0;display:flex;align-items:start;gap:8px;}
+.pcard li::before{content:'·';color:var(--amber);font-weight:900;flex-shrink:0;}
+.pcard-cta{
+  background:var(--amber);color:var(--bg);border:none;border-radius:var(--r-pill);
+  padding:0.7rem 1rem;font-size:0.82rem;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;width:100%;
+  transition:background .15s;
+}
+.pcard-cta:hover{background:var(--brown);}
+.pcard-cta.outline{background:none;color:var(--brown);border:1.5px solid var(--amber);}
+.pcard-cta.outline:hover{background:var(--s1);}
+.pricing-disclaimer{font-size:0.72rem;color:var(--muted);text-align:center;margin-top:1rem;font-style:italic;}
+
+/* Testimonials */
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:2rem 0;}
+.tcard{
+  background:var(--canvas);border:1.5px solid var(--hair);border-radius:var(--r-card);
+  overflow:hidden;display:flex;flex-direction:column;
+  position:relative;
+}
+.t-video-placeholder{
+  width:100%;aspect-ratio:16/10;background:var(--s2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:2.5rem;
+  border-bottom:1px solid var(--hair-s);
+  position:relative;
+}
+.t-video-placeholder::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 30%,rgba(0,0,0,0.04) 70%);
+  pointer-events:none;
+}
+.t-sample-badge{
+  position:absolute;top:8px;right:8px;
+  background:var(--canvas);color:var(--muted);
+  font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  padding:3px 8px;border:1px solid var(--hair);border-radius:var(--r-pill);
+}
+.tcard-body{padding:1rem 1.25rem;flex:1;}
+.tcard-name{font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.tcard-meta{font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;}
+.tcard-quote{font-size:0.82rem;color:var(--body);line-height:1.6;font-style:italic;}
+
+/* AI tools preview */
+.ai-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:2rem 0 1.5rem;}
+.aicard{
+  background:var(--s1);border:1.5px dashed var(--hair);
+  border-radius:var(--r-card);padding:1.25rem 1rem;
+  text-align:center;opacity:0.85;
+  transition:opacity .15s, border-color .15s;
+}
+.aicard:hover{opacity:1;border-color:var(--amber);}
+.aicard.suggest{background:var(--canvas);border-style:dashed;}
+.aicard h4{font-size:0.92rem;color:var(--ink);margin-bottom:0.5rem;font-weight:700;}
+.aicard p{font-size:0.75rem;color:var(--muted);line-height:1.5;margin-bottom:0.75rem;}
+.aicard .ai-coming{
+  display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  background:var(--s2);color:var(--brown);padding:3px 10px;border-radius:var(--r-pill);
+}
+.ai-email-bar{
+  display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;
+  background:var(--s1);border:1px solid var(--hair);border-radius:var(--r-pill);
+  padding:0.6rem 1rem;margin:1rem auto;max-width:560px;
+}
+.ai-email-bar .ai-email-h{font-size:0.82rem;color:var(--body);font-weight:600;flex:0 0 auto;}
+.ai-email-bar input{
+  flex:1;min-width:160px;background:var(--canvas);border:1px solid var(--hair);
+  border-radius:var(--r-pill);padding:0.45rem 0.9rem;font-size:0.8rem;
+  color:var(--ink);font-family:'Inter',sans-serif;outline:none;
+}
+.ai-email-bar button{
+  background:var(--amber);color:var(--bg);border:none;border-radius:var(--r-pill);
+  padding:0.45rem 1.1rem;font-size:0.8rem;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.ai-email-bar button:hover{background:var(--brown);}
+
+/* Lead magnet bar */
+.lm-bar{
+  background:var(--s2);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+  padding:1.5rem 2.5rem;
+  display:flex;align-items:center;gap:1.5rem;justify-content:center;flex-wrap:wrap;
+  margin-top:3rem;
+}
+.lm-text{flex:1;min-width:240px;max-width:480px;}
+.lm-text h4{font-size:0.95rem;color:var(--ink);font-weight:700;margin-bottom:4px;}
+.lm-text p{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+.lm-form{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.lm-form input{
+  background:var(--canvas);border:1.5px solid var(--hair);border-radius:var(--r-pill);
+  padding:0.6rem 1rem;font-size:0.85rem;
+  color:var(--ink);font-family:'Inter',sans-serif;outline:none;
+  min-width:220px;
+}
+.lm-form input:focus{border-color:var(--amber);}
+.lm-form button{
+  background:var(--amber);color:var(--bg);border:none;border-radius:var(--r-pill);
+  padding:0.6rem 1.4rem;font-size:0.85rem;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.lm-form button:hover{background:var(--brown);}
+.lm-ok{
+  width:100%;text-align:center;font-size:0.82rem;color:var(--brown);font-weight:600;
+  margin-top:8px;display:none;
+}
+.lm-ok.show{display:block;}
+
+/* WeChat big card */
+.wechat-card{
+  background:var(--s1);border:1.5px solid var(--amber);border-radius:var(--r-card);
+  padding:1.5rem;text-align:center;margin-bottom:1rem;
+}
+.wechat-card h4{font-size:1rem;color:var(--ink);margin-bottom:0.5rem;font-weight:700;}
+.wechat-card .wechat-p{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;}
+.wechat-qr{
+  width:140px;height:140px;background:var(--canvas);border:1.5px dashed var(--hair);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;
+  color:var(--muted);font-size:0.7rem;font-weight:600;text-align:center;padding:8px;
+}
+.wechat-id{
+  font-family:'Inter',monospace;font-size:0.88rem;color:var(--ink);font-weight:700;
+  background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-pill);
+  padding:6px 14px;display:inline-block;
+}
+.wechat-id-lbl{font-size:0.72rem;color:var(--muted);margin-bottom:3px;}
+
+/* Social icons in footer */
+.social-icons{display:inline-flex;gap:14px;align-items:center;margin:0 1rem;}
+.social-icons a{
+  width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;
+  color:var(--muted);text-decoration:none;transition:color .15s, transform .1s;
+  border-radius:8px;
+}
+.social-icons a:hover{color:var(--brown);transform:translateY(-2px);}
+.social-icons svg{width:18px;height:18px;display:block;}
+footer{flex-wrap:wrap;}
+
+/* Mobile */
+@media(max-width:860px){
+  .pricing-grid{grid-template-columns:1fr;}
+  .t-grid{grid-template-columns:1fr;}
+  .ai-grid{grid-template-columns:repeat(2,1fr);}
+  .lm-bar{padding:1.25rem 1.5rem;flex-direction:column;}
+  .lm-form{width:100%;}
+  .lm-form input{width:100%;min-width:0;}
+  .section-mt{padding:0 1.5rem;}
+}
 </style>
 </head>
 <body>
@@ -661,13 +839,99 @@ body.review-mode *{cursor:crosshair;}
     </div>
   </div>
 
+  <!-- ══ TESTIMONIALS (Section B · sample placeholders — TODO: replace 3 video cards with real YouTube unlisted embeds + real student quotes) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="testimonials_label">Real Students · Real Progress</div>
+    <h2 class="sec-h2" data-i18n="testimonials_h2">Don't just take our word</h2>
+    <div class="t-grid">
+      <div class="tcard">
+        <div class="t-video-placeholder">▶<span class="t-sample-badge" data-i18n="t_sample_note">Sample</span></div>
+        <div class="tcard-body">
+          <div class="tcard-name" data-i18n="t1_name">Sarah · 🇫🇷</div>
+          <div class="tcard-meta" data-i18n="t1_meta">3 months · A2 level</div>
+          <div class="tcard-quote" data-i18n="t1_quote">"Lin's lessons feel like real conversations. I went from total beginner to chatting about my weekend in Mandarin."</div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="t-video-placeholder">▶<span class="t-sample-badge" data-i18n="t_sample_note">Sample</span></div>
+        <div class="tcard-body">
+          <div class="tcard-name" data-i18n="t2_name">Marco · 🇮🇹</div>
+          <div class="tcard-meta" data-i18n="t2_meta">6 months · B1 level</div>
+          <div class="tcard-quote" data-i18n="t2_quote">"From zero to ordering food in Chinese restaurants. The pinyin foundation is solid."</div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="t-video-placeholder">▶<span class="t-sample-badge" data-i18n="t_sample_note">Sample</span></div>
+        <div class="tcard-body">
+          <div class="tcard-name" data-i18n="t3_name">Anna · 🇩🇪</div>
+          <div class="tcard-meta" data-i18n="t3_meta">1 year · HSK 3 ready</div>
+          <div class="tcard-quote" data-i18n="t3_quote">"Best Chinese teacher I've had in Europe. The cultural context is what makes it click."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ AI TOOLS PREVIEW (Section C · placeholders — TODO: replace 3 product names + add screenshots; update launch dates; replace ai-waitlist Formspree endpoint) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="ai_label">AI Tools</div>
+    <h2 class="sec-h2" data-i18n="ai_h2">AI Tools for Mandarin Learners</h2>
+    <p class="sec-lead" data-i18n="ai_sub">Made by Teacher Lin · Powered by AI</p>
+    <div class="ai-grid">
+      <div class="aicard">
+        <h4 data-i18n="ai1_h">HSK Vocab Generator</h4>
+        <p data-i18n="ai1_p">Drill HSK 1-6 vocab with AI-generated context sentences.</p>
+        <span class="ai-coming" data-i18n="ai_coming">Coming soon</span>
+      </div>
+      <div class="aicard">
+        <h4 data-i18n="ai2_h">Pinyin Tutor Pro</h4>
+        <p data-i18n="ai2_p">Real-time tone correction with adaptive feedback.</p>
+        <span class="ai-coming" data-i18n="ai_coming">Coming soon</span>
+      </div>
+      <div class="aicard">
+        <h4 data-i18n="ai3_h">AI Chat Buddy</h4>
+        <p data-i18n="ai3_p">Practice Mandarin conversation 24/7 with an AI tutor.</p>
+        <span class="ai-coming" data-i18n="ai_coming">Coming soon</span>
+      </div>
+      <div class="aicard suggest">
+        <h4 data-i18n="ai4_h">Suggest one →</h4>
+        <p data-i18n="ai4_p">What AI tool would help you learn? Tell us.</p>
+      </div>
+    </div>
+    <div class="ai-email-bar">
+      <span class="ai-email-h" data-i18n="ai_email_h">Get notified when these launch</span>
+      <!-- TODO: replace # with second Formspree endpoint for AI waitlist -->
+      <form action="#" method="POST" style="display:contents">
+        <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="ai_email_ph" required>
+        <button type="submit" data-i18n="ai_email_btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
   <div class="quote-band">
     <blockquote data-i18n="quote_text">Language is the bridge between cultures.</blockquote>
     <cite data-i18n="quote_cite">— Teacher Lin · SpeakHanzi</cite>
   </div>
 
+  <!-- ══ LEAD MAGNET BAR (Section D · TODO: replace action="#" with 2nd Formspree endpoint; Formspree auto-reply should attach PDF link) ══ -->
+  <div class="lm-bar">
+    <div class="lm-text">
+      <h4 data-i18n="lm_h">📥 Free PDF · 30 High-Frequency Mandarin Phrases</h4>
+      <p data-i18n="lm_sub">For travel, business, daily life · Bilingual + Pinyin</p>
+    </div>
+    <form class="lm-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="lm_email_ph" required>
+      <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
+    </form>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
+    <span class="social-icons">
+      <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+    </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
 </div>
@@ -724,8 +988,26 @@ body.review-mode *{cursor:crosshair;}
     </div>
   </div>
 
+  <!-- ══ LEAD MAGNET BAR (Section D · TODO: replace action="#" with 2nd Formspree endpoint; Formspree auto-reply should attach PDF link) ══ -->
+  <div class="lm-bar">
+    <div class="lm-text">
+      <h4 data-i18n="lm_h">📥 Free PDF · 30 High-Frequency Mandarin Phrases</h4>
+      <p data-i18n="lm_sub">For travel, business, daily life · Bilingual + Pinyin</p>
+    </div>
+    <form class="lm-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="lm_email_ph" required>
+      <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
+    </form>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
+    <span class="social-icons">
+      <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+    </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
 </div>
@@ -734,6 +1016,7 @@ body.review-mode *{cursor:crosshair;}
 <!-- ══ COURSES ══ -->
 <div class="page" id="page-courses">
   <div class="pg-header"><div class="pg-ey" data-i18n="co_eyebrow">Curriculum</div><h1 class="pg-h1" data-i18n="co_h1">SpeakHanzi Courses</h1></div>
+  <p style="text-align:center;max-width:680px;margin:-1.5rem auto 2rem;font-size:0.9rem;color:var(--muted);line-height:1.6;padding:0 1.5rem;" data-i18n="co_subtitle">Every theme below is available as a 1-on-1 monthly package. Pick what you need.</p>
   <div class="cg">
     <div class="ccard"><div class="c-lv" data-i18n="c1_lv">Level 1 · Beginner</div><h3 data-i18n="c1_h">Zero to Hello</h3><p data-i18n="c1_p">Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
     <div class="ccard"><div class="c-lv" data-i18n="c2_lv">Level 2 · Elementary</div><h3 data-i18n="c2_h">Everyday Mandarin</h3><p data-i18n="c2_p">Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
@@ -744,13 +1027,77 @@ body.review-mode *{cursor:crosshair;}
       <div style="text-align:center"><div style="font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--amber);margin-bottom:.5rem">？</div><p style="font-size:0.8rem;color:var(--muted)"><span data-i18n="co_unsure_q">Not sure which level?</span><br><button onclick="goto('contact')" style="background:none;border:none;cursor:pointer;color:var(--amber);font-size:0.8rem;font-family:inherit;padding:0;text-decoration:underline;margin-top:4px" data-i18n="co_unsure_btn">Ask Teacher Lin →</button></p></div>
     </div>
   </div>
-  <footer><span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span><span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
+  <!-- ══ LEAD MAGNET BAR (Section D · TODO: replace action="#" with 2nd Formspree endpoint; Formspree auto-reply should attach PDF link) ══ -->
+  <div class="lm-bar">
+    <div class="lm-text">
+      <h4 data-i18n="lm_h">📥 Free PDF · 30 High-Frequency Mandarin Phrases</h4>
+      <p data-i18n="lm_sub">For travel, business, daily life · Bilingual + Pinyin</p>
+    </div>
+    <form class="lm-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="lm_email_ph" required>
+      <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
+    </form>
+  </div>
+  <footer>
+    <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
+    <span class="social-icons">
+      <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+    </span>
+    <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
+  </footer>
 </div>
 
 
 <!-- ══ CONTACT ══ -->
 <div class="page" id="page-contact">
   <div class="pg-header"><div class="pg-ey" data-i18n="co2_eyebrow">Get in Touch</div><h1 class="pg-h1" data-i18n="co2_h1">Contact Teacher Lin</h1></div>
+
+  <!-- ══ PRICING (Section A · informational only — all CTAs link to Calendly/WeChat/lead magnet form, NO payment) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="pricing_label">Pricing</div>
+    <h2 class="sec-h2" data-i18n="pricing_h2">Simple pricing. Real conversations.</h2>
+    <div class="pricing-grid">
+      <div class="pcard">
+        <div class="pcard-tag" data-i18n="price1_tag">TRY</div>
+        <div><span class="pcard-amt" data-i18n="price1_amt">€29</span><span class="pcard-unit" data-i18n="price1_unit">/ 30 min</span></div>
+        <div class="pcard-desc" data-i18n="price1_desc">One trial lesson</div>
+        <ul>
+          <li data-i18n="price1_b1">Book any time slot</li>
+          <li data-i18n="price1_b2">No commitment</li>
+        </ul>
+        <button class="pcard-cta" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" data-i18n="price1_cta">Book Trial →</button>
+      </div>
+      <div class="pcard featured">
+        <div class="pcard-tag" data-i18n="price2_tag">1-ON-1 MONTHLY</div>
+        <div><span class="pcard-amt" data-i18n="price2_amt">from €40</span><span class="pcard-unit" data-i18n="price2_unit">/ lesson</span></div>
+        <div class="pcard-desc" data-i18n="price2_desc">4 lessons / month · Flexible schedule</div>
+        <ul>
+          <li data-i18n="price2_b1">Topics: HSK, Business, Conversational</li>
+          <li data-i18n="price2_b2">Personalised plan</li>
+          <li data-i18n="price2_b3">Pause anytime</li>
+        </ul>
+        <button class="pcard-cta" onclick="document.getElementById('wechat-card').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="price2_cta">Chat on WeChat →</button>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag" data-i18n="price3_tag">GROUP COHORT</div>
+        <div><span class="pcard-amt" data-i18n="price3_amt">€299</span><span class="pcard-unit" data-i18n="price3_unit">/ 8 weeks</span></div>
+        <div class="pcard-desc" data-i18n="price3_desc">Max 6 students</div>
+        <div class="pcard-next" data-i18n="price3_next">Next start: TBD</div>
+        <ul>
+          <li data-i18n="price3_b1">Beginner level</li>
+          <li data-i18n="price3_b2">Live on Zoom</li>
+          <li data-i18n="price3_b3">Curriculum + community</li>
+        </ul>
+        <button class="pcard-cta outline" onclick="document.querySelector('.lm-bar').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="price3_cta">Get Notified →</button>
+      </div>
+    </div>
+    <p class="pricing-disclaimer" data-i18n="pricing_disclaimer">Pricing is informational. Contact via WeChat or email to finalise your package.</p>
+  </div>
+
   <div class="cl">
     <div>
       <div class="sec-label" style="margin-bottom:1.5rem" data-i18n="form_label">Send a Message</div>
@@ -775,6 +1122,14 @@ body.review-mode *{cursor:crosshair;}
     <div>
       <div class="spot"><div class="big" data-i18n="spot_big">24h</div><div class="sub" data-i18n="spot_sub">Average response — personal, never automated.</div></div>
 
+      <!-- ══ WECHAT BIG CARD (Section F · TODO: add <img src="wechat-qr.png" alt="WeChat QR" style="width:140px;border-radius:12px;margin:0 auto 0.75rem;display:block"> when user supplies QR png) ══ -->
+      <div class="wechat-card" id="wechat-card">
+        <h4 data-i18n="wechat_h">💬 Chat on WeChat</h4>
+        <p class="wechat-p" data-i18n="wechat_p">Quickest way to ask questions or book a custom package.</p>
+        <div class="wechat-id-lbl" data-i18n="wechat_id_lbl">WeChat ID</div>
+        <div class="wechat-id">AliciaLin2001</div>
+      </div>
+
       <!-- Calendly booking card -->
       <div class="scard2" style="text-align:center;padding:1.75rem;">
         <div style="font-size:1.5rem;margin-bottom:.5rem">📅</div>
@@ -786,7 +1141,6 @@ body.review-mode *{cursor:crosshair;}
       </div>
       <div class="scard2"><h4 data-i18n="cd_h4">Contact Details</h4>
         <div class="i-row"><span class="lbl" data-i18n="cd_email_lbl">Email</span><span class="val">info@speakhanzi.com</span></div>
-        <div class="i-row"><span class="lbl" data-i18n="cd_wechat_lbl">WeChat</span><span class="val">AliciaLin2001</span></div>
         <div class="i-row"><span class="lbl" data-i18n="cd_loc_lbl">Location</span><span class="val" data-i18n="cd_loc_val">Leuven, Belgium 🇧🇪</span></div>
         <div class="i-row"><span class="lbl" data-i18n="cd_hours_lbl">Hours</span><span class="val" data-i18n="cd_hours_val">Mon–Fri, flexible (CET)</span></div>
         <div class="i-row"><span class="lbl" data-i18n="cd_langs_lbl">Languages</span><span class="val">🇨🇳 🇬🇧 🇹🇭</span></div>
@@ -801,7 +1155,28 @@ body.review-mode *{cursor:crosshair;}
       </div>
     </div>
   </div>
-  <footer><span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span><span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
+  <!-- ══ LEAD MAGNET BAR (Section D · TODO: replace action="#" with 2nd Formspree endpoint; Formspree auto-reply should attach PDF link) ══ -->
+  <div class="lm-bar">
+    <div class="lm-text">
+      <h4 data-i18n="lm_h">📥 Free PDF · 30 High-Frequency Mandarin Phrases</h4>
+      <p data-i18n="lm_sub">For travel, business, daily life · Bilingual + Pinyin</p>
+    </div>
+    <form class="lm-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="lm_email_ph" required>
+      <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
+    </form>
+  </div>
+  <footer>
+    <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
+    <span class="social-icons">
+      <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+    </span>
+    <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
+  </footer>
 </div>
 
 <script>
@@ -1231,7 +1606,7 @@ async function submitForm(){
   renderList();
   try{
     if(/[?&]review=(1|true)/.test(location.search)){
-      var pwd=prompt("Review password:");
+      var pwd=prompt('Review password:');
       if(pwd==="Alicia2001"){
         document.body.classList.add("review-unlocked");
         setEnabled(true);
