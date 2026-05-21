@@ -422,6 +422,7 @@ footer {
 }
 
 .review-fab{
+  display:none;
   position:fixed;right:18px;bottom:18px;z-index:10000;
   background:var(--ink);color:var(--canvas);
   border-radius:var(--r-pill);
@@ -433,7 +434,10 @@ footer {
   border:none;
 }
 .review-fab.on{background:var(--red);}
+body.review-unlocked .review-fab{display:block;}
+body.review-unlocked .review-panel{display:flex;}
 .review-panel{
+  display:none;
   position:fixed;top:0;right:0;z-index:10001;
   width:380px;max-width:92vw;height:100vh;
   background:var(--canvas);
@@ -441,7 +445,7 @@ footer {
   transform:translateX(102%);
   transition:transform .2s ease;
   box-shadow:var(--sh-md);
-  display:flex;flex-direction:column;
+  flex-direction:column;
 }
 .review-panel.open{transform:translateX(0);}
 .review-panel header{
@@ -525,13 +529,13 @@ body.review-mode *{cursor:crosshair;}
     SpeakHanzi
   </a>
   <div class="nav-center">
-    <button onclick="goto('home')"    id="nav-home"    class="active">首页 Home</button>
-    <button onclick="goto('about')"   id="nav-about">关于 About</button>
-    <button onclick="goto('courses')" id="nav-courses">课程 Courses</button>
-    <button onclick="goto('contact')" id="nav-contact">联系 Contact</button>
+    <button onclick="goto('home')"    id="nav-home"    class="active" data-i18n="nav_home">Home</button>
+    <button onclick="goto('about')"   id="nav-about" data-i18n="nav_about">About</button>
+    <button onclick="goto('courses')" id="nav-courses" data-i18n="nav_courses">Courses</button>
+    <button onclick="goto('contact')" id="nav-contact" data-i18n="nav_contact">Contact</button>
   </div>
   <div class="nav-right">
-    <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')">预约课程 · €29/30min</button>
+    <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" data-i18n="nav_cta_book">Book a Lesson · €29/30min</button>
   </div>
 </nav>
 
@@ -585,16 +589,16 @@ body.review-mode *{cursor:crosshair;}
   <div class="hero">
     <div>
       <div class="hero-eyebrow" data-i18n="hero_eyebrow">🎓 KU Leuven · Leuven, Belgium</div>
-      <h1>和林老师学习<em>中文</em><br>Learn Mandarin<br>with Lin</h1>
+      <h1 data-i18n-html="hero_h1">Learn <em>Mandarin</em><br>with Teacher Lin</h1>
       <p class="hero-sub" data-i18n="hero_sub">Native Mandarin educator with experience across three countries. Conversational, cultural, and built around you — from complete beginner to HSK fluency.</p>
       <div class="hero-actions">
-        <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')">试课</button>
-        <button class="btn-o" onclick="goto('about')">认识林老师 Meet Teacher Lin</button>
+        <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" data-i18n="hero_btn_trial">Try a Lesson · €29/30min</button>
+        <button class="btn-o" onclick="goto('about')" data-i18n="hero_btn_about">Meet Teacher Lin</button>
       </div>
       <div class="hero-stats">
-        <div><div class="s-num">500+</div><div class="s-lbl">Students taught</div></div>
-        <div><div class="s-num">3</div><div class="s-lbl">Countries</div></div>
-        <div><div class="s-num">4.9★</div><div class="s-lbl">Student rating</div></div>
+        <div><div class="s-num">500+</div><div class="s-lbl" data-i18n="hero_stat1_lbl">Students taught</div></div>
+        <div><div class="s-num">3</div><div class="s-lbl" data-i18n="hero_stat2_lbl">Countries</div></div>
+        <div><div class="s-num">4.9★</div><div class="s-lbl" data-i18n="hero_stat3_lbl">Student rating</div></div>
       </div>
     </div>
     <div class="hero-img-wrap">
@@ -604,67 +608,67 @@ body.review-mode *{cursor:crosshair;}
       <div class="float-card">
         <div class="fc-seal">林</div>
         <div class="fc-text">
-          <strong>Teacher Lin 林老师</strong>
-          <span>KU Leuven · Master's Student</span>
+          <strong data-i18n="hero_fc_name">Teacher Lin</strong>
+          <span data-i18n="hero_fc_sub">KU Leuven · Master's Student</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="trust">
-    <div class="t-item"><span class="t-ico">中</span><strong>Native Mandarin</strong> speaker</div>
-    <div class="t-item"><span class="t-ico">鲁</span>Based in <strong>Leuven, Belgium</strong></div>
-    <div class="t-item"><span class="t-ico">学</span><strong>KU Leuven</strong> Master's</div>
-    <div class="t-item"><span class="t-ico">智</span><strong>AI-powered</strong> tools</div>
-    <div class="t-item"><span class="t-ico">旅</span>China · Thailand · Belgium</div>
+    <div class="t-item"><span class="t-ico">中</span><span data-i18n-html="trust_1"><strong>Native Mandarin</strong> speaker</span></div>
+    <div class="t-item"><span class="t-ico">鲁</span><span data-i18n-html="trust_2">Based in <strong>Leuven, Belgium</strong></span></div>
+    <div class="t-item"><span class="t-ico">学</span><span data-i18n-html="trust_3"><strong>KU Leuven</strong> Master's</span></div>
+    <div class="t-item"><span class="t-ico">智</span><span data-i18n-html="trust_4"><strong>AI-powered</strong> tools</span></div>
+    <div class="t-item"><span class="t-ico">旅</span><span data-i18n="trust_5">China · Thailand · Belgium</span></div>
   </div>
 
   <div class="section">
-    <div class="sec-label">为什么选择 SpeakHanzi</div>
-    <h2 class="sec-h2">语言是文化的桥梁<br><span style="font-size:1.1rem;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Language is the bridge between cultures</span></h2>
+    <div class="sec-label" data-i18n="feat_label">Why SpeakHanzi</div>
+    <h2 class="sec-h2" data-i18n="feat_h2">Language is the bridge between cultures</h2>
     <p class="sec-lead" data-i18n="feat_lead">Teacher Lin combines academic rigour from KU Leuven, cross-cultural experience in 3 countries, and AI-enhanced teaching — all in a style that feels like real conversation, not a classroom.</p>
     <div class="feat-grid">
       <div class="card">
         <div class="card-icon">语</div>
-        <h3>Conversation-First</h3>
-        <p>Every lesson starts by talking. Vocabulary is built around what you actually want to say — not a textbook page.</p>
+        <h3 data-i18n="fc1_h">Conversation-First</h3>
+        <p data-i18n="fc1_p">Every lesson starts by talking. Vocabulary is built around what you actually want to say — not a textbook page.</p>
       </div>
       <div class="card">
         <div class="card-icon">🌏</div>
-        <h3>3-Country Experience</h3>
-        <p>Taught in China, Thailand, and Belgium. Teacher Lin understands exactly what challenges European learners face.</p>
+        <h3 data-i18n="fc2_h">3-Country Experience</h3>
+        <p data-i18n="fc2_p">Taught in China, Thailand, and Belgium. Teacher Lin understands exactly what challenges European learners face.</p>
       </div>
       <div class="card">
         <div class="card-icon">🤖</div>
-        <h3>AI-Enhanced Learning</h3>
-        <p>Founder of ThaiCool Chinese — AI-powered tools that make practice between lessons faster and more effective.</p>
+        <h3 data-i18n="fc3_h">AI-Enhanced Learning</h3>
+        <p data-i18n="fc3_p">Founder of ThaiCool Chinese — AI-powered tools that make practice between lessons faster and more effective.</p>
       </div>
       <div class="card">
         <div class="card-icon">🎯</div>
-        <h3>HSK Exam Ready</h3>
-        <p>Structured HSK 1–6 coaching with past papers, listening drills, and writing practice included.</p>
+        <h3 data-i18n="fc4_h">HSK Exam Ready</h3>
+        <p data-i18n="fc4_p">Structured HSK 1–6 coaching with past papers, listening drills, and writing practice included.</p>
       </div>
       <div class="card">
         <div class="card-icon">📱</div>
-        <h3>Flexible & Online</h3>
-        <p>Live lessons on Zoom from anywhere. Weekly or intensive — you choose the pace and schedule.</p>
+        <h3 data-i18n="fc5_h">Flexible & Online</h3>
+        <p data-i18n="fc5_p">Live lessons on Zoom from anywhere. Weekly or intensive — you choose the pace and schedule.</p>
       </div>
       <div class="card">
         <div class="card-icon">🎁</div>
-        <h3>First Lesson · 第一节课</h3>
-        <p>Start with a 30-minute session at €29 — no commitment, no credit card.</p>
+        <h3 data-i18n="fc6_h">First Lesson</h3>
+        <p data-i18n="fc6_p">Start with a 30-minute session at €29 — no commitment, no credit card.</p>
       </div>
     </div>
   </div>
 
   <div class="quote-band">
-    <blockquote>语言是文化的桥梁。<br><span style="font-size:1rem;font-family:'Inter',sans-serif;font-weight:300;opacity:0.85">Language is the bridge between cultures.</span></blockquote>
-    <cite>— Teacher Lin 林老师 · SpeakHanzi</cite>
+    <blockquote data-i18n="quote_text">Language is the bridge between cultures.</blockquote>
+    <cite data-i18n="quote_cite">— Teacher Lin · SpeakHanzi</cite>
   </div>
 
   <footer>
-    <span class="ft-logo">说汉字 SpeakHanzi</span>
-    <span class="ft-r">© 2026 Teacher Lin · info@speakhanzi.com</span>
+    <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
 </div>
 
@@ -676,128 +680,128 @@ body.review-mode *{cursor:crosshair;}
       <img src="cover_picture.png" alt="Teacher Lin">
     </div>
     <div>
-      <div class="sec-label">你的老师 · Your Teacher</div>
-      <div class="about-name">林老师<br>Teacher Lin</div>
-      <div class="about-role">Chinese Language Educator · Educational Innovator</div>
+      <div class="sec-label" data-i18n="about_label">Your Teacher</div>
+      <div class="about-name" data-i18n="about_name">Teacher Lin</div>
+      <div class="about-role" data-i18n="about_role">Chinese Language Educator · Educational Innovator</div>
       <p class="about-bio" data-i18n="about_bio">Passionate educator with experience bridging cultures through Chinese language teaching, project management, and AI-driven educational innovation. Currently pursuing a Master of Educational Studies at KU Leuven, Teacher Lin has taught students across China, Thailand, and Belgium — from grade-school children to business professionals.</p>
       <div class="chips">
-        <span class="chip">📍 Leuven, Belgium</span>
-        <span class="chip">🗣 Mandarin · Native</span>
-        <span class="chip">🇬🇧 English · IELTS 7.0</span>
-        <span class="chip">🇹🇭 Thai · Intermediate</span>
-        <span class="chip">🎓 KU Leuven Master's</span>
-        <span class="chip">💻 Online via Zoom</span>
+        <span class="chip" data-i18n="ab_chip1">📍 Leuven, Belgium</span>
+        <span class="chip" data-i18n="ab_chip2">🗣 Mandarin · Native</span>
+        <span class="chip" data-i18n="ab_chip3">🇬🇧 English · IELTS 7.0</span>
+        <span class="chip" data-i18n="ab_chip4">🇹🇭 Thai · Intermediate</span>
+        <span class="chip" data-i18n="ab_chip5">🎓 KU Leuven Master's</span>
+        <span class="chip" data-i18n="ab_chip6">💻 Online via Zoom</span>
       </div>
-      <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')">预约课程 · €29/30min →</button>
+      <button class="btn-p" onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" data-i18n="about_cta">Book a Lesson · €29/30min →</button>
     </div>
   </div>
 
   <div class="tl-wrap">
     <div class="tl-cols">
       <div>
-        <div class="tl-h" style="font-size:1.35rem;font-weight:700;color:var(--amber);letter-spacing:normal;text-transform:none">学历 Education</div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2024 – Present</div><h4>KU Leuven, Belgium</h4><p>Master of Educational Studies — researching AI-driven pedagogy and cross-cultural language acquisition.</p></div></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2019 – 2023</div><h4>International Chinese Education</h4><p>Bachelor of Arts, specialised in second-language teaching methodology.</p></div></div>
+        <div class="tl-h" style="font-size:1.35rem;font-weight:700;color:var(--amber);letter-spacing:normal;text-transform:none" data-i18n="tl_edu_h">Education</div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr" data-i18n="tl_edu1_yr">2024 – Present</div><h4 data-i18n="tl_edu1_h">KU Leuven, Belgium</h4><p data-i18n="tl_edu1_p">Master of Educational Studies — researching AI-driven pedagogy and cross-cultural language acquisition.</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr" data-i18n="tl_edu2_yr">2019 – 2023</div><h4 data-i18n="tl_edu2_h">International Chinese Education</h4><p data-i18n="tl_edu2_p">Bachelor of Arts, specialised in second-language teaching methodology.</p></div></div>
       </div>
       <div>
-        <div class="tl-h" style="font-size:1.35rem;font-weight:700;color:var(--amber);letter-spacing:normal;text-transform:none">经历 Experience</div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2025 – Present</div><h4>ThaiCool Chinese · Founder</h4><p>Built an online platform connecting 200+ Thai learners to Mandarin. AI-powered tools and social media community (Instagram & TikTok).</p></div></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2024 – Present</div><h4>Leuven Chinese School · Teacher & Project Leader</h4><p>Teaching Chinese to children in Belgium. Led summer cultural camp for 30+ children — full programme design to on-site management.</p></div></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2023 – 2024</div><h4>Kawila Wittayalai School, Thailand</h4><p>Selected by China's Ministry of Education. Taught 100+ students (grades 1–3), coached HSK exams and organised cultural activities.</p></div></div>
+        <div class="tl-h" style="font-size:1.35rem;font-weight:700;color:var(--amber);letter-spacing:normal;text-transform:none" data-i18n="tl_exp_h">Experience</div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr" data-i18n="tl_exp1_yr">2025 – Present</div><h4 data-i18n="tl_exp1_h">ThaiCool Chinese · Founder</h4><p data-i18n="tl_exp1_p">Built an online platform connecting 200+ Thai learners to Mandarin. AI-powered tools and social media community (Instagram & TikTok).</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr" data-i18n="tl_exp2_yr">2024 – Present</div><h4 data-i18n="tl_exp2_h">Leuven Chinese School · Teacher & Project Leader</h4><p data-i18n="tl_exp2_p">Teaching Chinese to children in Belgium. Led summer cultural camp for 30+ children — full programme design to on-site management.</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr" data-i18n="tl_exp3_yr">2023 – 2024</div><h4 data-i18n="tl_exp3_h">Kawila Wittayalai School, Thailand</h4><p data-i18n="tl_exp3_p">Selected by China's Ministry of Education. Taught 100+ students (grades 1–3), coached HSK exams and organised cultural activities.</p></div></div>
       </div>
     </div>
   </div>
 
   <div class="skills-band">
     <div class="skills-inner">
-      <div class="sec-label">技能 Skills</div>
-      <h2 class="sec-h2" style="font-size:1.5rem">What Teacher Lin brings to every lesson</h2>
+      <div class="sec-label" data-i18n="skills_label">Skills</div>
+      <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="skills_h2">What Teacher Lin brings to every lesson</h2>
       <div class="skills-grid">
-        <div class="scard"><h4>Languages 语言</h4><div class="stags"><span class="stag">🇨🇳 Mandarin · Native</span><span class="stag">🇬🇧 English · IELTS 7.0</span><span class="stag">🇹🇭 Thai · Intermediate</span></div></div>
-        <div class="scard"><h4>Teaching 教学</h4><div class="stags"><span class="stag">HSK 1–6 Prep</span><span class="stag">Conversational</span><span class="stag">Business Chinese</span><span class="stag">Children & Adults</span></div></div>
-        <div class="scard"><h4>Technical 技术</h4><div class="stags"><span class="stag">AI in Education</span><span class="stag">Video Editing</span><span class="stag">Graphic Design</span><span class="stag">Social Media</span></div></div>
+        <div class="scard"><h4 data-i18n="sk_langs_h">Languages</h4><div class="stags"><span class="stag" data-i18n="sk_lang1">🇨🇳 Mandarin · Native</span><span class="stag" data-i18n="sk_lang2">🇬🇧 English · IELTS 7.0</span><span class="stag" data-i18n="sk_lang3">🇹🇭 Thai · Intermediate</span></div></div>
+        <div class="scard"><h4 data-i18n="sk_teach_h">Teaching</h4><div class="stags"><span class="stag" data-i18n="sk_teach1">HSK 1–6 Prep</span><span class="stag" data-i18n="sk_teach2">Conversational</span><span class="stag" data-i18n="sk_teach3">Business Chinese</span><span class="stag" data-i18n="sk_teach4">Children & Adults</span></div></div>
+        <div class="scard"><h4 data-i18n="sk_tech_h">Technical</h4><div class="stags"><span class="stag" data-i18n="sk_tech1">AI in Education</span><span class="stag" data-i18n="sk_tech2">Video Editing</span><span class="stag" data-i18n="sk_tech3">Graphic Design</span><span class="stag" data-i18n="sk_tech4">Social Media</span></div></div>
       </div>
     </div>
   </div>
 
   <footer>
-    <span class="ft-logo">说汉字 SpeakHanzi</span>
-    <span class="ft-r">© 2026 Teacher Lin · info@speakhanzi.com</span>
+    <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
 </div>
 
 
 <!-- ══ COURSES ══ -->
 <div class="page" id="page-courses">
-  <div class="pg-header"><div class="pg-ey">课程 · Curriculum</div><h1 class="pg-h1">SpeakHanzi Courses</h1></div>
+  <div class="pg-header"><div class="pg-ey" data-i18n="co_eyebrow">Curriculum</div><h1 class="pg-h1" data-i18n="co_h1">SpeakHanzi Courses</h1></div>
   <div class="cg">
-    <div class="ccard"><div class="c-lv">Level 1 · 初级</div><h3>Zero to Hello · 从零开始</h3><p>Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.</p><span class="c-badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv">Level 2 · 初中级</div><h3>Everyday Mandarin · 日常汉语</h3><p>Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.</p><span class="c-badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv">Level 3 · 中级</div><h3>Flowing Conversations · 流利交流</h3><p>Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.</p><span class="c-badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv">考试 · HSK Prep</div><h3>HSK 1–6 Preparation</h3><p>Targeted vocabulary, past papers, listening and writing for every HSK level.</p><span class="c-badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv">商务 · Professional</div><h3>Business Chinese · 商务汉语</h3><p>Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.</p><span class="c-badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c1_lv">Level 1 · Beginner</div><h3 data-i18n="c1_h">Zero to Hello</h3><p data-i18n="c1_p">Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c2_lv">Level 2 · Elementary</div><h3 data-i18n="c2_h">Everyday Mandarin</h3><p data-i18n="c2_p">Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c3_lv">Level 3 · Intermediate</div><h3 data-i18n="c3_h">Flowing Conversations</h3><p data-i18n="c3_p">Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c4_lv">Exam · HSK Prep</div><h3 data-i18n="c4_h">HSK 1–6 Preparation</h3><p data-i18n="c4_p">Targeted vocabulary, past papers, listening and writing for every HSK level.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c5_lv">Business · Professional</div><h3 data-i18n="c5_h">Business Chinese</h3><p data-i18n="c5_p">Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
     <div class="ccard" style="border-style:dashed;background:var(--s1);display:flex;align-items:center;justify-content:center;min-height:180px;">
-      <div style="text-align:center"><div style="font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--amber);margin-bottom:.5rem">？</div><p style="font-size:0.8rem;color:var(--muted)">Not sure which level?<br><button onclick="goto('contact')" style="background:none;border:none;cursor:pointer;color:var(--amber);font-size:0.8rem;font-family:inherit;padding:0;text-decoration:underline;margin-top:4px">Ask Teacher Lin →</button></p></div>
+      <div style="text-align:center"><div style="font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--amber);margin-bottom:.5rem">？</div><p style="font-size:0.8rem;color:var(--muted)"><span data-i18n="co_unsure_q">Not sure which level?</span><br><button onclick="goto('contact')" style="background:none;border:none;cursor:pointer;color:var(--amber);font-size:0.8rem;font-family:inherit;padding:0;text-decoration:underline;margin-top:4px" data-i18n="co_unsure_btn">Ask Teacher Lin →</button></p></div>
     </div>
   </div>
-  <footer><span class="ft-logo">说汉字 SpeakHanzi</span><span class="ft-r">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
+  <footer><span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span><span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
 </div>
 
 
 <!-- ══ CONTACT ══ -->
 <div class="page" id="page-contact">
-  <div class="pg-header"><div class="pg-ey">联系我们 · Get in Touch</div><h1 class="pg-h1">Contact Teacher Lin</h1></div>
+  <div class="pg-header"><div class="pg-ey" data-i18n="co2_eyebrow">Get in Touch</div><h1 class="pg-h1" data-i18n="co2_h1">Contact Teacher Lin</h1></div>
   <div class="cl">
     <div>
-      <div class="sec-label" style="margin-bottom:1.5rem">发送消息 · Send a Message</div>
-      <label class="fl">我想学 · I'm interested in</label>
+      <div class="sec-label" style="margin-bottom:1.5rem" data-i18n="form_label">Send a Message</div>
+      <label class="fl" data-i18n="form_interest">I'm interested in</label>
       <div class="pills">
-        <button class="pill active" onclick="togglePill(this)">Beginner Chinese</button>
-        <button class="pill" onclick="togglePill(this)">Business Chinese</button>
-        <button class="pill" onclick="togglePill(this)">HSK Prep</button>
-        <button class="pill" onclick="togglePill(this)">Children's Classes</button>
-        <button class="pill" onclick="togglePill(this)">30-min Lesson</button>
+        <button class="pill active" onclick="togglePill(this)" data-i18n="pill_1">Beginner Chinese</button>
+        <button class="pill" onclick="togglePill(this)" data-i18n="pill_2">Business Chinese</button>
+        <button class="pill" onclick="togglePill(this)" data-i18n="pill_3">HSK Prep</button>
+        <button class="pill" onclick="togglePill(this)" data-i18n="pill_4">Children's Classes</button>
+        <button class="pill" onclick="togglePill(this)" data-i18n="pill_5">30-min Lesson</button>
       </div>
       <div class="fr">
-        <div><label class="fl">First Name 名</label><input type="text" id="fname" placeholder="Your name"></div>
-        <div><label class="fl">Last Name 姓</label><input type="text" placeholder="Last name"></div>
+        <div><label class="fl" data-i18n="form_fname_lbl">First Name</label><input type="text" id="fname" placeholder="Your name" data-i18n-placeholder="form_fname_ph"></div>
+        <div><label class="fl" data-i18n="form_lname_lbl">Last Name</label><input type="text" placeholder="Last name" data-i18n-placeholder="form_lname_ph"></div>
       </div>
-      <div class="fg"><label class="fl">Email 邮箱</label><input type="email" id="femail" placeholder="your@email.com"></div>
-      <div class="fg"><label class="fl">Level 水平</label><select><option value="">Select your level…</option><option>Complete Beginner</option><option>Elementary (HSK 1–2)</option><option>Intermediate (HSK 3–4)</option><option>Advanced (HSK 5–6)</option></select></div>
-      <div class="fg"><label class="fl">Message 留言</label><textarea placeholder="Tell Teacher Lin about your learning goals, availability, or any questions…"></textarea></div>
-      <button class="btn-send" onclick="submitForm()">发送 Send Message →</button>
-      <div class="ok" id="ok" data-i18n="form_sent">✓ 发送成功！Teacher Lin will reply within 24 hours.</div>
+      <div class="fg"><label class="fl" data-i18n="form_email_lbl">Email</label><input type="email" id="femail" placeholder="your@email.com" data-i18n-placeholder="form_email_ph"></div>
+      <div class="fg"><label class="fl" data-i18n="form_level_lbl">Level</label><select><option value="" data-i18n="form_lvl_sel">Select your level…</option><option data-i18n="form_lvl_1">Complete Beginner</option><option data-i18n="form_lvl_2">Elementary (HSK 1–2)</option><option data-i18n="form_lvl_3">Intermediate (HSK 3–4)</option><option data-i18n="form_lvl_4">Advanced (HSK 5–6)</option></select></div>
+      <div class="fg"><label class="fl" data-i18n="form_msg_lbl">Message</label><textarea placeholder="Tell Teacher Lin about your learning goals, availability, or any questions…" data-i18n-placeholder="form_msg_ph"></textarea></div>
+      <button class="btn-send" onclick="submitForm()" data-i18n="form_send_btn">Send Message →</button>
+      <div class="ok" id="ok" data-i18n="form_sent">✓ Message sent! Teacher Lin will reply within 24 hours.</div>
     </div>
     <div>
-      <div class="spot"><div class="big">24h</div><div class="sub">Average response — personal, never automated.</div></div>
+      <div class="spot"><div class="big" data-i18n="spot_big">24h</div><div class="sub" data-i18n="spot_sub">Average response — personal, never automated.</div></div>
 
       <!-- Calendly booking card -->
       <div class="scard2" style="text-align:center;padding:1.75rem;">
         <div style="font-size:1.5rem;margin-bottom:.5rem">📅</div>
-        <h4 style="text-align:center;margin-bottom:.5rem">预约课程 Book a Slot · €29/30min</h4>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;margin-bottom:1rem">Pick a 30-minute slot directly in Teacher Lin's calendar — no back-and-forth needed.</p>
-        <button onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" class="btn-p" style="width:100%;justify-content:center">
-          📅 预约时间 Choose a Time →
+        <h4 style="text-align:center;margin-bottom:.5rem" data-i18n="bkg_h4">Book a Slot · €29/30min</h4>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;margin-bottom:1rem" data-i18n="bkg_p">Pick a 30-minute slot directly in Teacher Lin's calendar — no back-and-forth needed.</p>
+        <button onclick="window.open('https://calendly.com/alannineties69/30min','_blank')" class="btn-p" style="width:100%;justify-content:center" data-i18n="bkg_btn">
+          📅 Choose a Time →
         </button>
       </div>
-      <div class="scard2"><h4>Contact Details 联系方式</h4>
-        <div class="i-row"><span class="lbl">Email</span><span class="val">info@speakhanzi.com</span></div>
-        <div class="i-row"><span class="lbl">WeChat</span><span class="val">AliciaLin2001</span></div>
-        <div class="i-row"><span class="lbl">Location</span><span class="val">Leuven, Belgium 🇧🇪</span></div>
-        <div class="i-row"><span class="lbl">Hours</span><span class="val">Mon–Fri, flexible (CET)</span></div>
-        <div class="i-row"><span class="lbl">Languages</span><span class="val">🇨🇳 🇬🇧 🇹🇭</span></div>
+      <div class="scard2"><h4 data-i18n="cd_h4">Contact Details</h4>
+        <div class="i-row"><span class="lbl" data-i18n="cd_email_lbl">Email</span><span class="val">info@speakhanzi.com</span></div>
+        <div class="i-row"><span class="lbl" data-i18n="cd_wechat_lbl">WeChat</span><span class="val">AliciaLin2001</span></div>
+        <div class="i-row"><span class="lbl" data-i18n="cd_loc_lbl">Location</span><span class="val" data-i18n="cd_loc_val">Leuven, Belgium 🇧🇪</span></div>
+        <div class="i-row"><span class="lbl" data-i18n="cd_hours_lbl">Hours</span><span class="val" data-i18n="cd_hours_val">Mon–Fri, flexible (CET)</span></div>
+        <div class="i-row"><span class="lbl" data-i18n="cd_langs_lbl">Languages</span><span class="val">🇨🇳 🇬🇧 🇹🇭</span></div>
       </div>
-      <div class="scard2"><h4>FAQ 常见问题</h4>
+      <div class="scard2"><h4 data-i18n="faq_h4">FAQ</h4>
         <ul class="faq">
-          <li onclick="toggleFaq(this)"><div class="fq">How much is a lesson? <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a1">Each 30-minute lesson is €29. No hidden fees or subscriptions.</div></li>
-          <li onclick="toggleFaq(this)"><div class="fq">Do you teach children? <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a2">Yes! Teacher Lin has extensive experience with children at Leuven Chinese School and in Thailand.</div></li>
-          <li onclick="toggleFaq(this)"><div class="fq">Where are classes held? <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a3">All lessons are live online via Zoom — study from anywhere in the world.</div></li>
-          <li onclick="toggleFaq(this)"><div class="fq">Payment methods? <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a4">Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.</div></li>
+          <li onclick="toggleFaq(this)"><div class="fq"><span data-i18n="faq_q1">How much is a lesson?</span> <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a1">Each 30-minute lesson is €29. No hidden fees or subscriptions.</div></li>
+          <li onclick="toggleFaq(this)"><div class="fq"><span data-i18n="faq_q2">Do you teach children?</span> <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a2">Yes! Teacher Lin has extensive experience with children at Leuven Chinese School and in Thailand.</div></li>
+          <li onclick="toggleFaq(this)"><div class="fq"><span data-i18n="faq_q3">Where are classes held?</span> <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a3">All lessons are live online via Zoom — study from anywhere in the world.</div></li>
+          <li onclick="toggleFaq(this)"><div class="fq"><span data-i18n="faq_q4">Payment methods?</span> <span class="fi">▶</span></div><div class="fa" data-i18n="faq_a4">Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.</div></li>
         </ul>
       </div>
     </div>
   </div>
-  <footer><span class="ft-logo">说汉字 SpeakHanzi</span><span class="ft-r">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
+  <footer><span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span><span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span></footer>
 </div>
 
 <script>
@@ -824,7 +828,7 @@ async function submitForm(){
   var message  = document.querySelector("textarea")?.value||"";
 
   try {
-    var res = await fetch("https://formspree.io/f/xojbjqkd",{
+    var res = await fetch("https://formspree.io/f/xbdborvk",{
       method:"POST",
       headers:{"Content-Type":"application/json","Accept":"application/json"},
       body:JSON.stringify({
@@ -1226,7 +1230,13 @@ async function submitForm(){
   try{annotations.forEach(function(a){applyEntry(a);});}catch(e){}
   renderList();
   try{
-    if(/[?&]review=(1|true)/.test(location.search))setEnabled(true);
+    if(/[?&]review=(1|true)/.test(location.search)){
+      var pwd=prompt("Review password:");
+      if(pwd==="Alicia2001"){
+        document.body.classList.add("review-unlocked");
+        setEnabled(true);
+      }
+    }
   }catch(e){}
 })();
 </script>

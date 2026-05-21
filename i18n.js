@@ -1,122 +1,320 @@
+/* SpeakHanzi i18n — 6 languages
+   zh: 简体中文 · en: English · th: ภาษาไทย · es: Español · nl: Nederlands · fr: Français
+   Use data-i18n="key" for textContent
+       data-i18n-html="key" for innerHTML (preserves <em>, <strong>, <br>)
+       data-i18n-placeholder="key" for <input>/<textarea> placeholders
+*/
 window.__i18n = {
-  hero_eyebrow: { zh: '🎓 KU Leuven · 比利时 鲁汶', en: '🎓 KU Leuven · Leuven, Belgium' },
-  hero_h1_1: { zh: '和林老师学习', en: 'Learn Mandarin' },
-  hero_h1_em: { zh: '中文', en: '中文' },
-  hero_sub: { zh: '具有三个国家教学经验的中文母语教师。从零基础到HSK流利，以对话为核心，为你量身打造的中文学习体验。', en: 'Native Mandarin educator with experience across three countries. Conversational, cultural, and built around you — from complete beginner to HSK fluency.' },
-  hero_btn_trial: { zh: '试课 · €29/30min', en: 'Try a Lesson · €29/30min' },
-  hero_btn_about: { zh: '认识林老师 Meet Teacher Lin', en: 'Meet Teacher Lin' },
-  hero_stat1_lbl: { zh: '累计学生', en: 'Students taught' },
-  hero_stat2_lbl: { zh: '国家', en: 'Countries' },
-  hero_stat3_lbl: { zh: '学生评分', en: 'Student rating' },
-  fc_sub: { zh: 'KU Leuven · 硕士在读', en: "KU Leuven · Master's Student" },
-  trust_1: { zh: '母语中文', en: 'Native Mandarin speaker' },
-  trust_2: { zh: '位于比利时鲁汶', en: 'Based in Leuven, Belgium' },
-  trust_3: { zh: 'KU Leuven 硕士', en: "KU Leuven Master's" },
-  trust_4: { zh: 'AI 辅助教学', en: 'AI-powered tools' },
-  trust_5: { zh: '中国 · 泰国 · 比利时', en: 'China · Thailand · Belgium' },
-  feat_label: { zh: '为什么选择 SpeakHanzi', en: 'Why SpeakHanzi' },
-  feat_lead: { zh: 'Teacher Lin 融合 KU Leuven 的学术严谨、三个国家的跨文化经验及 AI 增强教学，让每一节课都像真实对话，而非课堂。', en: 'Teacher Lin combines academic rigour from KU Leuven, cross-cultural experience in 3 countries, and AI-enhanced teaching — all in a style that feels like real conversation, not a classroom.' },
-  fc1_h: { zh: '对话优先', en: 'Conversation-First' },
-  fc1_p: { zh: '每节课从开口说话开始。词汇围绕你真正想表达的内容构建，不是照本宣科。', en: 'Every lesson starts by talking. Vocabulary is built around what you actually want to say — not a textbook page.' },
-  fc2_h: { zh: '三国教学经验', en: "3-Country Experience" },
-  fc2_p: { zh: '在中国、泰国、比利时教过中文。Teacher Lin 深知欧洲学习者面临的具体挑战。', en: 'Taught in China, Thailand, and Belgium. Teacher Lin understands exactly what challenges European learners face.' },
-  fc3_h: { zh: 'AI 增强学习', en: 'AI-Enhanced Learning' },
-  fc3_p: { zh: 'ThaiCool Chinese 创始人 — AI 辅助工具让课间练习更高效、更有效。', en: 'Founder of ThaiCool Chinese — AI-powered tools that make practice between lessons faster and more effective.' },
-  fc4_h: { zh: 'HSK 备考', en: 'HSK Exam Ready' },
-  fc4_p: { zh: '结构化的 HSK 1–6 辅导，包括真题、听力训练和写作练习。', en: 'Structured HSK 1–6 coaching with past papers, listening drills, and writing practice included.' },
-  fc5_h: { zh: '灵活在线', en: 'Flexible & Online' },
-  fc5_p: { zh: '通过 Zoom 在线授课，无论你在哪里。每周或密集，你来选择节奏。', en: 'Live lessons on Zoom from anywhere. Weekly or intensive — you choose the pace and schedule.' },
-  fc6_p: { zh: '30分钟课程仅 €29，无需承诺，无需信用卡。', en: 'Start with a 30-minute session at €29 — no commitment, no credit card.' },
-  about_label: { zh: '你的老师 · Your Teacher', en: 'Your Teacher' },
-  about_role: { zh: '中文教师 · 教育创新者', en: 'Chinese Language Educator · Educational Innovator' },
-  about_bio: { zh: '充满热情的教育者，通过中文教学、项目管理和 AI 驱动的教育创新，架起文化间的桥梁。目前在 KU Leuven 攻读教育研究硕士，Teacher Lin 在中国、泰国、比利时教授过来自不同背景的学生——从学龄儿童到商务人士。', en: 'Passionate educator with experience bridging cultures through Chinese language teaching, project management, and AI-driven educational innovation. Currently pursuing a Master of Educational Studies at KU Leuven, Teacher Lin has taught students across China, Thailand, and Belgium — from grade-school children to business professionals.' },
-  ab_chip1: { zh: '📍 比利时 鲁汶', en: '📍 Leuven, Belgium' },
-  ab_chip2: { zh: '🗣 中文 · 母语', en: '🗣 Mandarin · Native' },
-  ab_chip3: { zh: '🇬🇧 英语 · IELTS 7.0', en: '🇬🇧 English · IELTS 7.0' },
-  ab_chip4: { zh: '🇹🇭 泰语 · 中级', en: '🇹🇭 Thai · Intermediate' },
-  ab_chip5: { zh: '🎓 KU Leuven 硕士', en: "🎓 KU Leuven Master's" },
-  ab_chip6: { zh: '💻 Zoom 在线', en: '💻 Online via Zoom' },
-  tl_edu1_h: { zh: 'KU Leuven, 比利时', en: 'KU Leuven, Belgium' },
-  tl_edu1_p: { zh: '教育研究硕士 — 研究 AI 驱动的教学法与跨文化语言习得。', en: 'Master of Educational Studies — researching AI-driven pedagogy and cross-cultural language acquisition.' },
-  tl_edu2_h: { zh: '国际中文教育', en: 'International Chinese Education' },
-  tl_edu2_p: { zh: '文学士，专注于第二语言教学法。', en: "Bachelor of Arts, specialised in second-language teaching methodology." },
-  tl_exp1_h: { zh: 'ThaiCool Chinese · 创始人', en: 'ThaiCool Chinese · Founder' },
-  tl_exp1_p: { zh: '搭建线上平台，帮助 200+ 泰国学习者学习普通话。AI 工具及社交媒体社群。', en: 'Built an online platform connecting 200+ Thai learners to Mandarin. AI-powered tools and social media community.' },
-  tl_exp2_h: { zh: '鲁汶中文学校 · 教师兼项目负责人', en: 'Leuven Chinese School · Teacher & Project Leader' },
-  tl_exp2_p: { zh: '在比利时教授儿童中文。带领 30+ 儿童暑期文化营 — 从课程设计到现场管理。', en: 'Teaching Chinese to children in Belgium. Led summer cultural camp for 30+ children — full programme design to on-site management.' },
-  tl_exp3_h: { zh: '泰国 Kawila Wittayalai 学校', en: 'Kawila Wittayalai School, Thailand' },
-  tl_exp3_p: { zh: '经中国教育部选派。教授 100+ 学生（1–3 年级），辅导 HSK 考试并组织文化活动。', en: "Selected by China's Ministry of Education. Taught 100+ students (grades 1–3), coached HSK exams and organised cultural activities." },
-  c1_p: { zh: '声调、拼音、问候、日常用语。你迈向中文的第一步。', en: 'Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.' },
-  c2_p: { zh: '购物、饮食、问路。在中文环境中生活的实用工具箱。', en: 'Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.' },
-  c3_p: { zh: '复杂句型、表达观点、讲述故事。从功能使用走向真正表达。', en: 'Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.' },
-  c4_p: { zh: '针对各 HSK 等级的词汇、真题、听力与写作训练。', en: 'Targeted vocabulary, past papers, listening and writing for every HSK level.' },
-  c5_p: { zh: '会议、谈判、邮件、演示。为与中方合作的职场人士量身打造。', en: 'Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.' },
-  c_unsure: { zh: '不确定适合哪个等级？', en: 'Not sure which level?' },
-  contact_label: { zh: '发送消息 · Send a Message', en: 'Send a Message' },
-  contact_interest: { zh: "我想学 · I'm interested in", en: "I'm interested in" },
-  form_fname_ph: { zh: '你的名字', en: 'Your name' },
-  form_lname_ph: { zh: '姓氏', en: 'Last name' },
-  form_email_ph: { zh: 'your@email.com', en: 'your@email.com' },
-  form_msg_ph: { zh: '告诉 Teacher Lin 你的学习目标、时间安排或任何问题…', en: 'Tell Teacher Lin about your learning goals, availability, or any questions…' },
-  form_sent: { zh: '✓ 发送成功！Teacher Lin 会在 24 小时内回复。', en: '✓ Message sent! Teacher Lin will reply within 24 hours.' },
-  contact_card_p: { zh: '直接在 Teacher Lin 的日历上选择 30 分钟时段 — 无需来回沟通。', en: "Pick a 30-minute slot directly in Teacher Lin's calendar — no back-and-forth needed." },
-  faq_a1: { zh: '每节 30 分钟的课程为 €29。无隐藏费用或订阅。', en: 'Each 30-minute lesson is €29. No hidden fees or subscriptions.' },
-  faq_a2: { zh: '教！Teacher Lin 在鲁汶中文学校和泰国都有丰富的儿童教学经验。', en: 'Yes! Teacher Lin has extensive experience with children at Leuven Chinese School and in Thailand.' },
-  faq_a3: { zh: '所有课程均通过 Zoom 在线直播 — 在世界任何地方都可以学习。', en: 'All lessons are live online via Zoom — study from anywhere in the world.' },
-  faq_a4: { zh: '接受信用卡、PayPal、支付宝和微信支付。', en: 'Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.' }
+
+  /* ═══ NAV ═══ */
+  nav_home:        { zh: '首页', en: 'Home', th: 'หน้าแรก', es: 'Inicio', nl: 'Home', fr: 'Accueil' },
+  nav_about:       { zh: '关于', en: 'About', th: 'เกี่ยวกับ', es: 'Sobre mí', nl: 'Over', fr: 'À propos' },
+  nav_courses:     { zh: '课程', en: 'Courses', th: 'หลักสูตร', es: 'Cursos', nl: 'Cursussen', fr: 'Cours' },
+  nav_contact:     { zh: '联系', en: 'Contact', th: 'ติดต่อ', es: 'Contacto', nl: 'Contact', fr: 'Contact' },
+  nav_cta_book:    { zh: '预约课程 · €29/30分钟', en: 'Book a Lesson · €29/30min', th: 'จองบทเรียน · €29/30น.', es: 'Reservar clase · €29/30min', nl: 'Boek een les · €29/30min', fr: 'Réserver · €29/30min' },
+
+  /* ═══ HERO ═══ */
+  hero_eyebrow:    { zh: '🎓 KU Leuven · 比利时 鲁汶', en: '🎓 KU Leuven · Leuven, Belgium', th: '🎓 KU Leuven · เลอเฟิน เบลเยียม', es: '🎓 KU Leuven · Lovaina, Bélgica', nl: '🎓 KU Leuven · Leuven, België', fr: '🎓 KU Leuven · Louvain, Belgique' },
+  hero_h1:         {
+    zh: '和林老师学习<em>中文</em>',
+    en: 'Learn <em>Mandarin</em><br>with Teacher Lin',
+    th: 'เรียน<em>ภาษาจีน</em><br>กับครูหลิน',
+    es: 'Aprende <em>mandarín</em><br>con la profesora Lin',
+    nl: 'Leer <em>Mandarijn</em><br>met juf Lin',
+    fr: 'Apprenez le <em>mandarin</em><br>avec la professeure Lin'
+  },
+  hero_sub:        { zh: '具有三个国家教学经验的中文母语教师。从零基础到 HSK 流利，以对话为核心，为你量身打造的中文学习体验。', en: 'Native Mandarin educator with experience across three countries. Conversational, cultural, and built around you — from complete beginner to HSK fluency.', th: 'ครูเจ้าของภาษาผู้มีประสบการณ์สอนใน 3 ประเทศ เน้นการสนทนา วัฒนธรรม และออกแบบเฉพาะตัวคุณ ตั้งแต่ผู้เริ่มต้นจนถึงระดับ HSK', es: 'Profesora nativa de mandarín con experiencia en tres países. Conversacional, cultural y diseñada para ti — desde principiante absoluto hasta fluidez HSK.', nl: 'Moedertaal­spreker Mandarijn met onderwijservaring in drie landen. Conversatiegericht, cultureel en op maat — van absolute beginner tot HSK-vloeiendheid.', fr: 'Enseignante native du mandarin avec une expérience dans trois pays. Conversationnel, culturel et conçu sur mesure — du débutant complet à la maîtrise HSK.' },
+  hero_btn_trial:  { zh: '试课 · €29/30分钟', en: 'Try a Lesson · €29/30min', th: 'ทดลองเรียน · €29/30น.', es: 'Probar una clase · €29/30min', nl: 'Probeer een les · €29/30min', fr: 'Essayer un cours · €29/30min' },
+  hero_btn_about:  { zh: '认识林老师', en: 'Meet Teacher Lin', th: 'รู้จักครูหลิน', es: 'Conoce a la profesora Lin', nl: 'Maak kennis met juf Lin', fr: 'Rencontrer la professeure Lin' },
+  hero_stat1_lbl:  { zh: '累计学生', en: 'Students taught', th: 'นักเรียนที่สอน', es: 'Estudiantes', nl: 'Studenten', fr: 'Étudiants' },
+  hero_stat2_lbl:  { zh: '国家', en: 'Countries', th: 'ประเทศ', es: 'Países', nl: 'Landen', fr: 'Pays' },
+  hero_stat3_lbl:  { zh: '学生评分', en: 'Student rating', th: 'คะแนนนักเรียน', es: 'Valoración', nl: 'Beoordeling', fr: 'Note des élèves' },
+  hero_fc_name:    { zh: '林老师', en: 'Teacher Lin', th: 'ครูหลิน', es: 'Profesora Lin', nl: 'Juf Lin', fr: 'Professeure Lin' },
+  hero_fc_sub:     { zh: 'KU Leuven · 硕士在读', en: "KU Leuven · Master's Student", th: 'KU Leuven · ปริญญาโท', es: 'KU Leuven · Máster', nl: 'KU Leuven · Masterstudent', fr: 'KU Leuven · Étudiante en master' },
+
+  /* ═══ TRUST STRIP ═══ */
+  trust_1: { zh: '<strong>母语中文</strong>', en: '<strong>Native Mandarin</strong> speaker', th: 'เจ้าของภาษา<strong>จีนกลาง</strong>', es: 'Hablante <strong>nativa de mandarín</strong>', nl: '<strong>Moedertaal Mandarijn</strong>', fr: '<strong>Mandarin natif</strong>' },
+  trust_2: { zh: '位于<strong>比利时 鲁汶</strong>', en: 'Based in <strong>Leuven, Belgium</strong>', th: 'ประจำที่ <strong>เลอเฟิน เบลเยียม</strong>', es: 'Con base en <strong>Lovaina, Bélgica</strong>', nl: 'Gevestigd in <strong>Leuven, België</strong>', fr: 'Basée à <strong>Louvain, Belgique</strong>' },
+  trust_3: { zh: '<strong>KU Leuven</strong> 硕士', en: '<strong>KU Leuven</strong> Master\'s', th: 'ปริญญาโท <strong>KU Leuven</strong>', es: 'Máster en <strong>KU Leuven</strong>', nl: 'Master <strong>KU Leuven</strong>', fr: 'Master <strong>KU Leuven</strong>' },
+  trust_4: { zh: '<strong>AI 辅助</strong>教学工具', en: '<strong>AI-powered</strong> tools', th: 'เครื่องมือ <strong>AI ช่วยสอน</strong>', es: 'Herramientas <strong>con IA</strong>', nl: '<strong>AI-tools</strong> in de les', fr: 'Outils <strong>basés sur l\'IA</strong>' },
+  trust_5: { zh: '中国 · 泰国 · 比利时', en: 'China · Thailand · Belgium', th: 'จีน · ไทย · เบลเยียม', es: 'China · Tailandia · Bélgica', nl: 'China · Thailand · België', fr: 'Chine · Thaïlande · Belgique' },
+
+  /* ═══ FEATURES SECTION ═══ */
+  feat_label:  { zh: '为什么选择 SpeakHanzi', en: 'Why SpeakHanzi', th: 'ทำไมต้อง SpeakHanzi', es: 'Por qué SpeakHanzi', nl: 'Waarom SpeakHanzi', fr: 'Pourquoi SpeakHanzi' },
+  feat_h2:     { zh: '语言是文化的桥梁', en: 'Language is the bridge between cultures', th: 'ภาษาคือสะพานเชื่อมวัฒนธรรม', es: 'El idioma es el puente entre culturas', nl: 'Taal is de brug tussen culturen', fr: 'La langue est le pont entre les cultures' },
+  feat_lead:   { zh: '林老师将 KU Leuven 的学术严谨、三个国家的跨文化经验与 AI 增强教学融为一体，让每一节课都像真实的对话，而不是课堂。', en: 'Teacher Lin combines academic rigour from KU Leuven, cross-cultural experience in 3 countries, and AI-enhanced teaching — all in a style that feels like real conversation, not a classroom.', th: 'ครูหลินผสานความเข้มข้นทางวิชาการจาก KU Leuven ประสบการณ์ข้ามวัฒนธรรมใน 3 ประเทศ และการสอนที่เสริมด้วย AI — ทุกบทเรียนรู้สึกเหมือนบทสนทนาจริง ไม่ใช่ห้องเรียน', es: 'La profesora Lin combina el rigor académico de KU Leuven, la experiencia intercultural en 3 países y la enseñanza potenciada con IA — todo con un estilo que se siente como una conversación real, no una clase.', nl: 'Juf Lin combineert academische degelijkheid van KU Leuven, interculturele ervaring in 3 landen en AI-ondersteund onderwijs — in een stijl die aanvoelt als een echt gesprek, niet als een klaslokaal.', fr: 'La professeure Lin allie la rigueur académique de KU Leuven, l\'expérience interculturelle dans 3 pays et un enseignement amélioré par l\'IA — dans un style qui ressemble à une vraie conversation, pas à une salle de classe.' },
+
+  fc1_h: { zh: '对话优先', en: 'Conversation-First', th: 'เน้นบทสนทนาก่อน', es: 'Conversación primero', nl: 'Eerst praten', fr: 'La conversation d\'abord' },
+  fc1_p: { zh: '每节课从开口说话开始。词汇围绕你真正想表达的内容构建，而不是照本宣科。', en: 'Every lesson starts by talking. Vocabulary is built around what you actually want to say — not a textbook page.', th: 'ทุกบทเรียนเริ่มต้นด้วยการพูด คำศัพท์สร้างขึ้นรอบสิ่งที่คุณอยากพูดจริง ๆ ไม่ใช่หน้าตำรา', es: 'Cada clase empieza hablando. El vocabulario se construye en torno a lo que realmente quieres decir — no a una página de libro.', nl: 'Elke les begint met praten. Woordenschat draait om wat jij echt wil zeggen — geen pagina uit een boek.', fr: 'Chaque cours commence par la parole. Le vocabulaire se construit autour de ce que vous voulez vraiment dire — pas d\'une page de manuel.' },
+  fc2_h: { zh: '三国教学经验', en: '3-Country Experience', th: 'ประสบการณ์สอนใน 3 ประเทศ', es: 'Experiencia en 3 países', nl: 'Ervaring in 3 landen', fr: 'Expérience dans 3 pays' },
+  fc2_p: { zh: '在中国、泰国、比利时教过中文。林老师深知欧洲学习者面临的具体挑战。', en: 'Taught in China, Thailand, and Belgium. Teacher Lin understands exactly what challenges European learners face.', th: 'เคยสอนในจีน ไทย และเบลเยียม ครูหลินเข้าใจปัญหาเฉพาะของผู้เรียนชาวยุโรปเป็นอย่างดี', es: 'Ha enseñado en China, Tailandia y Bélgica. La profesora Lin sabe exactamente qué desafíos enfrentan los estudiantes europeos.', nl: 'Lesgegeven in China, Thailand en België. Juf Lin begrijpt precies waar Europese leerlingen tegenaan lopen.', fr: 'A enseigné en Chine, en Thaïlande et en Belgique. La professeure Lin comprend exactement les défis des apprenants européens.' },
+  fc3_h: { zh: 'AI 增强学习', en: 'AI-Enhanced Learning', th: 'การเรียนรู้ด้วย AI', es: 'Aprendizaje con IA', nl: 'Leren met AI', fr: 'Apprentissage avec IA' },
+  fc3_p: { zh: 'ThaiCool Chinese 创始人 — AI 辅助工具让课间练习更高效、更有效。', en: 'Founder of ThaiCool Chinese — AI-powered tools that make practice between lessons faster and more effective.', th: 'ผู้ก่อตั้ง ThaiCool Chinese — เครื่องมือ AI ทำให้การฝึกฝนระหว่างบทเรียนเร็วและมีประสิทธิภาพมากขึ้น', es: 'Fundadora de ThaiCool Chinese — herramientas con IA que hacen la práctica entre clases más rápida y eficaz.', nl: 'Oprichter van ThaiCool Chinese — AI-tools die het oefenen tussen lessen sneller en effectiever maken.', fr: 'Fondatrice de ThaiCool Chinese — des outils IA qui rendent la pratique entre les cours plus rapide et efficace.' },
+  fc4_h: { zh: 'HSK 备考', en: 'HSK Exam Ready', th: 'เตรียมสอบ HSK', es: 'Preparación HSK', nl: 'HSK-examen­voor­bereiding', fr: 'Préparation HSK' },
+  fc4_p: { zh: '针对各 HSK 等级的结构化辅导，包括真题、听力训练与写作练习。', en: 'Structured HSK 1–6 coaching with past papers, listening drills, and writing practice included.', th: 'การติวสอบ HSK 1–6 อย่างเป็นระบบ พร้อมข้อสอบเก่า แบบฝึกฟัง และแบบฝึกเขียน', es: 'Preparación estructurada de HSK 1–6 con exámenes anteriores, prácticas de comprensión auditiva y de escritura.', nl: 'Gestructureerde HSK 1–6 coaching met examens uit het verleden, luisteroefeningen en schrijfpraktijk.', fr: 'Préparation structurée HSK 1–6 avec annales, exercices d\'écoute et d\'écriture inclus.' },
+  fc5_h: { zh: '灵活在线', en: 'Flexible & Online', th: 'ยืดหยุ่นและออนไลน์', es: 'Flexible y online', nl: 'Flexibel & online', fr: 'Flexible et en ligne' },
+  fc5_p: { zh: '通过 Zoom 在线授课，无论你在哪里。每周或密集，由你来选择节奏。', en: 'Live lessons on Zoom from anywhere. Weekly or intensive — you choose the pace and schedule.', th: 'เรียนสดบน Zoom จากทุกที่ รายสัปดาห์หรือเข้มข้น คุณเลือกจังหวะและตารางเรียนได้เอง', es: 'Clases en vivo por Zoom desde cualquier lugar. Semanales o intensivas — tú eliges el ritmo y el horario.', nl: 'Live lessen via Zoom, waar je ook bent. Wekelijks of intensief — jij kiest het tempo en het rooster.', fr: 'Cours en direct sur Zoom, où que vous soyez. Hebdomadaire ou intensif — vous choisissez le rythme et le calendrier.' },
+  fc6_h: { zh: '第一节课', en: 'First Lesson', th: 'บทเรียนแรก', es: 'Primera clase', nl: 'Eerste les', fr: 'Premier cours' },
+  fc6_p: { zh: '30 分钟课程仅 €29，无需承诺，无需信用卡。', en: 'Start with a 30-minute session at €29 — no commitment, no credit card.', th: 'เริ่มต้นด้วยเซสชัน 30 นาทีในราคา €29 ไม่ต้องผูกมัด ไม่ต้องใช้บัตรเครดิต', es: 'Empieza con una sesión de 30 minutos por €29 — sin compromiso, sin tarjeta de crédito.', nl: 'Begin met een sessie van 30 minuten voor €29 — geen verplichting, geen creditcard.', fr: 'Commencez par une séance de 30 minutes à €29 — sans engagement, sans carte de crédit.' },
+
+  /* ═══ QUOTE BAND ═══ */
+  quote_text: { zh: '语言是文化的桥梁。', en: 'Language is the bridge between cultures.', th: 'ภาษาคือสะพานเชื่อมวัฒนธรรม', es: 'El idioma es el puente entre culturas.', nl: 'Taal is de brug tussen culturen.', fr: 'La langue est le pont entre les cultures.' },
+  quote_cite: { zh: '— 林老师 · SpeakHanzi', en: '— Teacher Lin · SpeakHanzi', th: '— ครูหลิน · SpeakHanzi', es: '— Profesora Lin · SpeakHanzi', nl: '— Juf Lin · SpeakHanzi', fr: '— Professeure Lin · SpeakHanzi' },
+
+  /* ═══ FOOTER ═══ */
+  footer_logo: { zh: '说汉字', en: 'SpeakHanzi', th: 'SpeakHanzi', es: 'SpeakHanzi', nl: 'SpeakHanzi', fr: 'SpeakHanzi' },
+  footer_copy: { zh: '© 2026 林老师 · info@speakhanzi.com', en: '© 2026 Teacher Lin · info@speakhanzi.com', th: '© 2026 ครูหลิน · info@speakhanzi.com', es: '© 2026 Profesora Lin · info@speakhanzi.com', nl: '© 2026 Juf Lin · info@speakhanzi.com', fr: '© 2026 Professeure Lin · info@speakhanzi.com' },
+
+  /* ═══ ABOUT PAGE ═══ */
+  about_label: { zh: '你的老师', en: 'Your Teacher', th: 'ครูของคุณ', es: 'Tu profesora', nl: 'Jouw leerkracht', fr: 'Votre enseignante' },
+  about_name:  { zh: '林老师', en: 'Teacher Lin', th: 'ครูหลิน', es: 'Profesora Lin', nl: 'Juf Lin', fr: 'Professeure Lin' },
+  about_role:  { zh: '中文教师 · 教育创新者', en: 'Chinese Language Educator · Educational Innovator', th: 'ครูสอนภาษาจีน · นักนวัตกรรมการศึกษา', es: 'Educadora de chino · Innovadora educativa', nl: 'Docent Chinees · Onderwijs-innovator', fr: 'Enseignante de chinois · Innovatrice en éducation' },
+  about_bio:   { zh: '充满热情的教育者，通过中文教学、项目管理与 AI 驱动的教育创新，架起文化间的桥梁。目前在 KU Leuven 攻读教育研究硕士，林老师曾在中国、泰国与比利时教授过来自不同背景的学生 —— 从学龄儿童到商务人士。', en: 'Passionate educator with experience bridging cultures through Chinese language teaching, project management, and AI-driven educational innovation. Currently pursuing a Master of Educational Studies at KU Leuven, Teacher Lin has taught students across China, Thailand, and Belgium — from grade-school children to business professionals.', th: 'ครูผู้เปี่ยมด้วยใจรัก เชื่อมโยงวัฒนธรรมผ่านการสอนภาษาจีน การบริหารโครงการ และนวัตกรรมการศึกษาด้วย AI ปัจจุบันกำลังศึกษาปริญญาโทด้านการศึกษาที่ KU Leuven ครูหลินเคยสอนนักเรียนในจีน ไทย และเบลเยียม ตั้งแต่เด็กประถมจนถึงนักธุรกิจมืออาชีพ', es: 'Educadora apasionada con experiencia tendiendo puentes entre culturas mediante la enseñanza del chino, la gestión de proyectos y la innovación educativa basada en IA. Actualmente cursando un Máster en Estudios Educativos en KU Leuven, la profesora Lin ha enseñado a estudiantes en China, Tailandia y Bélgica — desde niños de primaria hasta profesionales de negocios.', nl: 'Gepassioneerde docent met ervaring in het overbruggen van culturen via Chinees lesgeven, projectmanagement en AI-gestuurde onderwijs­innovatie. Momenteel volgt zij een Master Educational Studies aan KU Leuven; juf Lin gaf les aan studenten in China, Thailand en België — van basisschool­kinderen tot zakelijke professionals.', fr: 'Éducatrice passionnée avec une expérience dans le rapprochement des cultures à travers l\'enseignement du chinois, la gestion de projet et l\'innovation pédagogique basée sur l\'IA. Actuellement en master d\'études en sciences de l\'éducation à KU Leuven, la professeure Lin a enseigné à des élèves en Chine, en Thaïlande et en Belgique — des écoliers aux professionnels du monde des affaires.' },
+
+  ab_chip1: { zh: '📍 比利时 鲁汶', en: '📍 Leuven, Belgium', th: '📍 เลอเฟิน เบลเยียม', es: '📍 Lovaina, Bélgica', nl: '📍 Leuven, België', fr: '📍 Louvain, Belgique' },
+  ab_chip2: { zh: '🗣 中文 · 母语', en: '🗣 Mandarin · Native', th: '🗣 จีนกลาง · เจ้าของภาษา', es: '🗣 Mandarín · Nativa', nl: '🗣 Mandarijn · Moedertaal', fr: '🗣 Mandarin · Langue maternelle' },
+  ab_chip3: { zh: '🇬🇧 英语 · 雅思 7.0', en: '🇬🇧 English · IELTS 7.0', th: '🇬🇧 อังกฤษ · IELTS 7.0', es: '🇬🇧 Inglés · IELTS 7.0', nl: '🇬🇧 Engels · IELTS 7.0', fr: '🇬🇧 Anglais · IELTS 7.0' },
+  ab_chip4: { zh: '🇹🇭 泰语 · 中级', en: '🇹🇭 Thai · Intermediate', th: '🇹🇭 ไทย · ระดับกลาง', es: '🇹🇭 Tailandés · Intermedio', nl: '🇹🇭 Thai · Gemiddeld', fr: '🇹🇭 Thaï · Intermédiaire' },
+  ab_chip5: { zh: '🎓 KU Leuven 硕士', en: "🎓 KU Leuven Master's", th: '🎓 ปริญญาโท KU Leuven', es: '🎓 Máster KU Leuven', nl: '🎓 Master KU Leuven', fr: '🎓 Master KU Leuven' },
+  ab_chip6: { zh: '💻 Zoom 在线', en: '💻 Online via Zoom', th: '💻 ออนไลน์ผ่าน Zoom', es: '💻 Online por Zoom', nl: '💻 Online via Zoom', fr: '💻 En ligne sur Zoom' },
+  about_cta: { zh: '预约课程 · €29/30分钟 →', en: 'Book a Lesson · €29/30min →', th: 'จองบทเรียน · €29/30น. →', es: 'Reservar clase · €29/30min →', nl: 'Boek een les · €29/30min →', fr: 'Réserver un cours · €29/30min →' },
+
+  /* Timeline */
+  tl_edu_h: { zh: '学历', en: 'Education', th: 'การศึกษา', es: 'Educación', nl: 'Opleiding', fr: 'Formation' },
+  tl_exp_h: { zh: '经历', en: 'Experience', th: 'ประสบการณ์', es: 'Experiencia', nl: 'Ervaring', fr: 'Expérience' },
+
+  tl_edu1_yr: { zh: '2024 至今', en: '2024 – Present', th: '2024 – ปัจจุบัน', es: '2024 – Actualidad', nl: '2024 – heden', fr: '2024 – aujourd\'hui' },
+  tl_edu1_h:  { zh: 'KU Leuven，比利时', en: 'KU Leuven, Belgium', th: 'KU Leuven, เบลเยียม', es: 'KU Leuven, Bélgica', nl: 'KU Leuven, België', fr: 'KU Leuven, Belgique' },
+  tl_edu1_p:  { zh: '教育研究硕士 —— 研究 AI 驱动的教学法与跨文化语言习得。', en: 'Master of Educational Studies — researching AI-driven pedagogy and cross-cultural language acquisition.', th: 'ปริญญาโทด้านการศึกษา — วิจัยการสอนด้วย AI และการเรียนรู้ภาษาข้ามวัฒนธรรม', es: 'Máster en Estudios Educativos — investigando pedagogía basada en IA y adquisición de lenguas interculturales.', nl: 'Master Educational Studies — onderzoek naar AI-gedreven didactiek en interculturele taalverwerving.', fr: 'Master en sciences de l\'éducation — recherche sur la pédagogie assistée par IA et l\'acquisition interculturelle des langues.' },
+  tl_edu2_yr: { zh: '2019 – 2023', en: '2019 – 2023', th: '2019 – 2023', es: '2019 – 2023', nl: '2019 – 2023', fr: '2019 – 2023' },
+  tl_edu2_h:  { zh: '国际中文教育', en: 'International Chinese Education', th: 'การสอนภาษาจีนนานาชาติ', es: 'Educación Internacional de Chino', nl: 'Internationaal Chinees Onderwijs', fr: 'Enseignement international du chinois' },
+  tl_edu2_p:  { zh: '文学士，专注于第二语言教学法。', en: 'Bachelor of Arts, specialised in second-language teaching methodology.', th: 'ศิลปศาสตรบัณฑิต เชี่ยวชาญด้านวิธีการสอนภาษาที่สอง', es: 'Licenciatura en Letras, especializada en metodología de enseñanza de segundas lenguas.', nl: 'Bachelor of Arts, gespecialiseerd in didactiek van het tweedetaal-onderwijs.', fr: 'Licence en lettres, spécialisée en didactique des langues secondes.' },
+
+  tl_exp1_yr: { zh: '2025 至今', en: '2025 – Present', th: '2025 – ปัจจุบัน', es: '2025 – Actualidad', nl: '2025 – heden', fr: '2025 – aujourd\'hui' },
+  tl_exp1_h:  { zh: 'ThaiCool Chinese · 创始人', en: 'ThaiCool Chinese · Founder', th: 'ThaiCool Chinese · ผู้ก่อตั้ง', es: 'ThaiCool Chinese · Fundadora', nl: 'ThaiCool Chinese · Oprichter', fr: 'ThaiCool Chinese · Fondatrice' },
+  tl_exp1_p:  { zh: '搭建线上平台，帮助 200+ 泰国学习者学习普通话。AI 工具及社交媒体社群（Instagram & TikTok）。', en: 'Built an online platform connecting 200+ Thai learners to Mandarin. AI-powered tools and social media community (Instagram & TikTok).', th: 'สร้างแพลตฟอร์มออนไลน์เชื่อมโยงผู้เรียนชาวไทยกว่า 200 คนสู่ภาษาจีนกลาง พร้อมเครื่องมือ AI และชุมชนโซเชียล (Instagram & TikTok)', es: 'Creé una plataforma online conectando a más de 200 estudiantes tailandeses con el mandarín. Herramientas con IA y comunidad en redes sociales (Instagram y TikTok).', nl: 'Bouwde een online platform dat 200+ Thaise leerlingen met Mandarijn verbindt. AI-tools en social media community (Instagram & TikTok).', fr: 'Création d\'une plateforme en ligne reliant plus de 200 apprenants thaïlandais au mandarin. Outils IA et communauté sur les réseaux sociaux (Instagram & TikTok).' },
+  tl_exp2_yr: { zh: '2024 至今', en: '2024 – Present', th: '2024 – ปัจจุบัน', es: '2024 – Actualidad', nl: '2024 – heden', fr: '2024 – aujourd\'hui' },
+  tl_exp2_h:  { zh: '鲁汶中文学校 · 教师兼项目负责人', en: 'Leuven Chinese School · Teacher & Project Leader', th: 'โรงเรียนสอนภาษาจีนเลอเฟิน · ครูและผู้นำโครงการ', es: 'Escuela China de Lovaina · Profesora y Líder de Proyecto', nl: 'Chinese School Leuven · Docent & Projectleider', fr: 'École chinoise de Louvain · Enseignante et chef de projet' },
+  tl_exp2_p:  { zh: '在比利时教授儿童中文。带领 30+ 儿童暑期文化营 —— 从课程设计到现场管理全权负责。', en: 'Teaching Chinese to children in Belgium. Led summer cultural camp for 30+ children — full programme design to on-site management.', th: 'สอนภาษาจีนให้เด็ก ๆ ในเบลเยียม นำค่ายวัฒนธรรมฤดูร้อนสำหรับเด็ก 30+ คน — ตั้งแต่ออกแบบหลักสูตรจนถึงการจัดการในสถานที่', es: 'Enseñanza de chino a niños en Bélgica. Dirigí un campamento cultural de verano para más de 30 niños — desde el diseño del programa hasta la gestión in situ.', nl: 'Chinees lesgeven aan kinderen in België. Leidde zomerkamp voor 30+ kinderen — van programma-ontwerp tot uitvoering ter plaatse.', fr: 'Enseignement du chinois aux enfants en Belgique. Direction d\'un camp culturel d\'été pour 30+ enfants — conception du programme à la gestion sur place.' },
+  tl_exp3_yr: { zh: '2023 – 2024', en: '2023 – 2024', th: '2023 – 2024', es: '2023 – 2024', nl: '2023 – 2024', fr: '2023 – 2024' },
+  tl_exp3_h:  { zh: '泰国 Kawila Wittayalai 学校', en: 'Kawila Wittayalai School, Thailand', th: 'โรงเรียนกาวิละวิทยาลัย ประเทศไทย', es: 'Escuela Kawila Wittayalai, Tailandia', nl: 'Kawila Wittayalai School, Thailand', fr: 'École Kawila Wittayalai, Thaïlande' },
+  tl_exp3_p:  { zh: '经中国教育部选派。教授 100+ 学生（1–3 年级），辅导 HSK 考试并组织文化活动。', en: "Selected by China's Ministry of Education. Taught 100+ students (grades 1–3), coached HSK exams and organised cultural activities.", th: 'ได้รับเลือกโดยกระทรวงศึกษาธิการของจีน สอนนักเรียน 100+ คน (ป.1–3) ติว HSK และจัดกิจกรรมวัฒนธรรม', es: 'Seleccionada por el Ministerio de Educación de China. Enseñé a más de 100 estudiantes (grados 1–3), preparé exámenes HSK y organicé actividades culturales.', nl: 'Geselecteerd door het Chinese Ministerie van Onderwijs. Lesgegeven aan 100+ leerlingen (klas 1–3), HSK-examens begeleid en culturele activiteiten georganiseerd.', fr: 'Sélectionnée par le ministère de l\'Éducation de Chine. A enseigné à plus de 100 élèves (CP–CE2), préparé les examens HSK et organisé des activités culturelles.' },
+
+  /* Skills band */
+  skills_label: { zh: '技能', en: 'Skills', th: 'ทักษะ', es: 'Habilidades', nl: 'Vaardigheden', fr: 'Compétences' },
+  skills_h2:    { zh: '林老师为每节课带来什么', en: 'What Teacher Lin brings to every lesson', th: 'สิ่งที่ครูหลินนำมาสู่ทุกบทเรียน', es: 'Lo que la profesora Lin aporta a cada clase', nl: 'Wat juf Lin in elke les meebrengt', fr: 'Ce que la professeure Lin apporte à chaque cours' },
+  sk_langs_h:   { zh: '语言', en: 'Languages', th: 'ภาษา', es: 'Idiomas', nl: 'Talen', fr: 'Langues' },
+  sk_lang1:     { zh: '🇨🇳 中文 · 母语', en: '🇨🇳 Mandarin · Native', th: '🇨🇳 จีนกลาง · เจ้าของภาษา', es: '🇨🇳 Mandarín · Nativa', nl: '🇨🇳 Mandarijn · Moedertaal', fr: '🇨🇳 Mandarin · Langue maternelle' },
+  sk_lang2:     { zh: '🇬🇧 英语 · 雅思 7.0', en: '🇬🇧 English · IELTS 7.0', th: '🇬🇧 อังกฤษ · IELTS 7.0', es: '🇬🇧 Inglés · IELTS 7.0', nl: '🇬🇧 Engels · IELTS 7.0', fr: '🇬🇧 Anglais · IELTS 7.0' },
+  sk_lang3:     { zh: '🇹🇭 泰语 · 中级', en: '🇹🇭 Thai · Intermediate', th: '🇹🇭 ไทย · ระดับกลาง', es: '🇹🇭 Tailandés · Intermedio', nl: '🇹🇭 Thai · Gemiddeld', fr: '🇹🇭 Thaï · Intermédiaire' },
+  sk_teach_h:   { zh: '教学', en: 'Teaching', th: 'การสอน', es: 'Enseñanza', nl: 'Onderwijs', fr: 'Enseignement' },
+  sk_teach1:    { zh: 'HSK 1–6 备考', en: 'HSK 1–6 Prep', th: 'เตรียมสอบ HSK 1–6', es: 'Preparación HSK 1–6', nl: 'HSK 1–6 prep', fr: 'Préparation HSK 1–6' },
+  sk_teach2:    { zh: '日常口语', en: 'Conversational', th: 'สนทนา', es: 'Conversacional', nl: 'Conversatie', fr: 'Conversation' },
+  sk_teach3:    { zh: '商务中文', en: 'Business Chinese', th: 'จีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
+  sk_teach4:    { zh: '儿童与成人', en: 'Children & Adults', th: 'เด็กและผู้ใหญ่', es: 'Niños y adultos', nl: 'Kinderen & volwassenen', fr: 'Enfants et adultes' },
+  sk_tech_h:    { zh: '技术', en: 'Technical', th: 'เทคนิค', es: 'Técnico', nl: 'Technisch', fr: 'Technique' },
+  sk_tech1:     { zh: 'AI 教育应用', en: 'AI in Education', th: 'AI ในการศึกษา', es: 'IA en educación', nl: 'AI in onderwijs', fr: 'IA dans l\'éducation' },
+  sk_tech2:     { zh: '视频剪辑', en: 'Video Editing', th: 'ตัดต่อวิดีโอ', es: 'Edición de vídeo', nl: 'Videobewerking', fr: 'Montage vidéo' },
+  sk_tech3:     { zh: '平面设计', en: 'Graphic Design', th: 'ออกแบบกราฟิก', es: 'Diseño gráfico', nl: 'Grafisch ontwerp', fr: 'Design graphique' },
+  sk_tech4:     { zh: '社交媒体', en: 'Social Media', th: 'โซเชียลมีเดีย', es: 'Redes sociales', nl: 'Social media', fr: 'Réseaux sociaux' },
+
+  /* ═══ COURSES PAGE ═══ */
+  co_eyebrow:  { zh: '课程', en: 'Curriculum', th: 'หลักสูตร', es: 'Plan de estudios', nl: 'Curriculum', fr: 'Programme' },
+  co_h1:       { zh: 'SpeakHanzi 课程', en: 'SpeakHanzi Courses', th: 'หลักสูตร SpeakHanzi', es: 'Cursos SpeakHanzi', nl: 'SpeakHanzi cursussen', fr: 'Cours SpeakHanzi' },
+
+  c1_lv: { zh: '一级 · 初级', en: 'Level 1 · Beginner', th: 'ระดับ 1 · เริ่มต้น', es: 'Nivel 1 · Principiante', nl: 'Niveau 1 · Beginner', fr: 'Niveau 1 · Débutant' },
+  c1_h:  { zh: '从零开始', en: 'Zero to Hello', th: 'เริ่มจากศูนย์', es: 'De cero a Hola', nl: 'Van nul naar hallo', fr: 'De zéro à bonjour' },
+  c1_p:  { zh: '声调、拼音、问候、日常用语。你迈向中文的第一步。', en: 'Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.', th: 'วรรณยุกต์ พินอิน คำทักทาย วลีประจำวัน ก้าวแรกของคุณสู่ภาษาจีน', es: 'Tonos, pinyin, saludos y frases del día a día. Tus primeros pasos reales en mandarín.', nl: 'Tonen, pinyin, begroetingen, dagelijkse zinnen. Je eerste echte stappen in Mandarijn.', fr: 'Tons, pinyin, salutations, phrases du quotidien. Vos premiers vrais pas en mandarin.' },
+  c2_lv: { zh: '二级 · 初中级', en: 'Level 2 · Elementary', th: 'ระดับ 2 · ขั้นต้น', es: 'Nivel 2 · Elemental', nl: 'Niveau 2 · Elementair', fr: 'Niveau 2 · Élémentaire' },
+  c2_h:  { zh: '日常汉语', en: 'Everyday Mandarin', th: 'ภาษาจีนในชีวิตประจำวัน', es: 'Mandarín cotidiano', nl: 'Dagelijks Mandarijn', fr: 'Mandarin du quotidien' },
+  c2_p:  { zh: '购物、饮食、问路。在中文环境中生活的实用工具箱。', en: 'Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.', th: 'ช้อปปิ้ง อาหาร ถามทาง ชุดเครื่องมือสำหรับชีวิตประจำวันในสังคมจีน', es: 'Compras, comida, indicaciones. Una caja de herramientas para la vida diaria en entornos sinohablantes.', nl: 'Winkelen, eten, de weg vragen. Praktische gereedschapskist voor dagelijks leven in Chineestalige omgevingen.', fr: 'Achats, nourriture, itinéraires. Une boîte à outils pratique pour la vie quotidienne en milieu sinophone.' },
+  c3_lv: { zh: '三级 · 中级', en: 'Level 3 · Intermediate', th: 'ระดับ 3 · กลาง', es: 'Nivel 3 · Intermedio', nl: 'Niveau 3 · Gemiddeld', fr: 'Niveau 3 · Intermédiaire' },
+  c3_h:  { zh: '流利交流', en: 'Flowing Conversations', th: 'สนทนาคล่อง', es: 'Conversaciones fluidas', nl: 'Vlotte gesprekken', fr: 'Conversations fluides' },
+  c3_p:  { zh: '复杂句型、表达观点、讲述故事。从功能使用走向真正的表达。', en: 'Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.', th: 'ประโยคซับซ้อน แสดงความคิดเห็น เล่าเรื่อง ก้าวจากการใช้งานสู่การแสดงออกอย่างแท้จริง', es: 'Frases complejas, opiniones, narración. Pasa de lo funcional a lo realmente expresivo.', nl: 'Complexe zinnen, meningen, verhalen vertellen. Van functioneel naar echt expressief.', fr: 'Phrases complexes, opinions, récits. Passez du fonctionnel à l\'authentiquement expressif.' },
+  c4_lv: { zh: '考试 · HSK 备考', en: 'Exam · HSK Prep', th: 'สอบ · เตรียม HSK', es: 'Examen · Preparación HSK', nl: 'Examen · HSK-prep', fr: 'Examen · Prép HSK' },
+  c4_h:  { zh: 'HSK 1–6 备考', en: 'HSK 1–6 Preparation', th: 'เตรียมสอบ HSK 1–6', es: 'Preparación HSK 1–6', nl: 'HSK 1–6 voorbereiding', fr: 'Préparation HSK 1–6' },
+  c4_p:  { zh: '针对各 HSK 等级的词汇、真题、听力与写作训练。', en: 'Targeted vocabulary, past papers, listening and writing for every HSK level.', th: 'คำศัพท์ ข้อสอบเก่า การฟังและการเขียนเฉพาะแต่ละระดับ HSK', es: 'Vocabulario específico, exámenes anteriores, comprensión auditiva y escritura para cada nivel HSK.', nl: 'Gerichte woordenschat, examens uit het verleden, luisteren en schrijven voor elk HSK-niveau.', fr: 'Vocabulaire ciblé, annales, écoute et écriture pour chaque niveau HSK.' },
+  c5_lv: { zh: '商务 · 专业', en: 'Business · Professional', th: 'ธุรกิจ · มืออาชีพ', es: 'Negocios · Profesional', nl: 'Zaken · Professioneel', fr: 'Affaires · Professionnel' },
+  c5_h:  { zh: '商务汉语', en: 'Business Chinese', th: 'ภาษาจีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
+  c5_p:  { zh: '会议、谈判、邮件、演示。为与中方合作的职场人士量身打造。', en: 'Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.', th: 'การประชุม การเจรจา อีเมล การนำเสนอ สำหรับมืออาชีพที่ทำงานกับพันธมิตรชาวจีน', es: 'Reuniones, negociaciones, correos, presentaciones. Para profesionales que trabajan con socios chinos.', nl: 'Vergaderingen, onderhandelingen, e-mails, presentaties. Voor professionals die werken met Chinese partners.', fr: 'Réunions, négociations, e-mails, présentations. Pour les professionnels travaillant avec des partenaires chinois.' },
+  c_badge: { zh: '即将上线', en: 'Coming Soon', th: 'เร็ว ๆ นี้', es: 'Próximamente', nl: 'Binnenkort', fr: 'Bientôt disponible' },
+  co_unsure_q:   { zh: '不确定适合哪个等级？', en: 'Not sure which level?', th: 'ไม่แน่ใจว่าระดับไหน?', es: '¿No estás seguro del nivel?', nl: 'Niet zeker welk niveau?', fr: 'Pas sûr de votre niveau ?' },
+  co_unsure_btn: { zh: '问问林老师 →', en: 'Ask Teacher Lin →', th: 'ถามครูหลิน →', es: 'Pregunta a la profesora Lin →', nl: 'Vraag het juf Lin →', fr: 'Demandez à la professeure Lin →' },
+
+  /* ═══ CONTACT PAGE ═══ */
+  co2_eyebrow: { zh: '联系我们', en: 'Get in Touch', th: 'ติดต่อเรา', es: 'Ponte en contacto', nl: 'Neem contact op', fr: 'Contactez-nous' },
+  co2_h1:      { zh: '联系林老师', en: 'Contact Teacher Lin', th: 'ติดต่อครูหลิน', es: 'Contactar con la profesora Lin', nl: 'Contact met juf Lin', fr: 'Contacter la professeure Lin' },
+  form_label:    { zh: '发送消息', en: 'Send a Message', th: 'ส่งข้อความ', es: 'Enviar un mensaje', nl: 'Stuur een bericht', fr: 'Envoyer un message' },
+  form_interest: { zh: '我想学', en: "I'm interested in", th: 'ฉันสนใจ', es: 'Me interesa', nl: 'Ik ben geïnteresseerd in', fr: 'Je suis intéressé(e) par' },
+  pill_1: { zh: '中文入门', en: 'Beginner Chinese', th: 'จีนเบื้องต้น', es: 'Chino principiante', nl: 'Chinees voor beginners', fr: 'Chinois débutant' },
+  pill_2: { zh: '商务汉语', en: 'Business Chinese', th: 'จีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
+  pill_3: { zh: 'HSK 备考', en: 'HSK Prep', th: 'เตรียมสอบ HSK', es: 'Preparación HSK', nl: 'HSK-prep', fr: 'Prép HSK' },
+  pill_4: { zh: '儿童课程', en: "Children's Classes", th: 'คลาสสำหรับเด็ก', es: 'Clases para niños', nl: 'Kinderlessen', fr: 'Cours pour enfants' },
+  pill_5: { zh: '30 分钟试课', en: '30-min Lesson', th: 'บทเรียน 30 นาที', es: 'Clase de 30 min', nl: 'Les van 30 min', fr: 'Cours 30 min' },
+  form_fname_lbl: { zh: '名字', en: 'First Name', th: 'ชื่อ', es: 'Nombre', nl: 'Voornaam', fr: 'Prénom' },
+  form_fname_ph:  { zh: '你的名字', en: 'Your name', th: 'ชื่อของคุณ', es: 'Tu nombre', nl: 'Je naam', fr: 'Votre prénom' },
+  form_lname_lbl: { zh: '姓氏', en: 'Last Name', th: 'นามสกุล', es: 'Apellido', nl: 'Achternaam', fr: 'Nom' },
+  form_lname_ph:  { zh: '姓氏', en: 'Last name', th: 'นามสกุล', es: 'Apellido', nl: 'Achternaam', fr: 'Nom' },
+  form_email_lbl: { zh: '邮箱', en: 'Email', th: 'อีเมล', es: 'Correo', nl: 'E-mail', fr: 'E-mail' },
+  form_email_ph:  { zh: 'your@email.com', en: 'your@email.com', th: 'your@email.com', es: 'your@email.com', nl: 'your@email.com', fr: 'your@email.com' },
+  form_level_lbl: { zh: '水平', en: 'Level', th: 'ระดับ', es: 'Nivel', nl: 'Niveau', fr: 'Niveau' },
+  form_lvl_sel:   { zh: '选择你的水平…', en: 'Select your level…', th: 'เลือกระดับของคุณ…', es: 'Selecciona tu nivel…', nl: 'Kies je niveau…', fr: 'Sélectionnez votre niveau…' },
+  form_lvl_1:     { zh: '完全零基础', en: 'Complete Beginner', th: 'เริ่มต้นจากศูนย์', es: 'Principiante absoluto', nl: 'Complete beginner', fr: 'Grand débutant' },
+  form_lvl_2:     { zh: '初级 (HSK 1–2)', en: 'Elementary (HSK 1–2)', th: 'ขั้นต้น (HSK 1–2)', es: 'Elemental (HSK 1–2)', nl: 'Elementair (HSK 1–2)', fr: 'Élémentaire (HSK 1–2)' },
+  form_lvl_3:     { zh: '中级 (HSK 3–4)', en: 'Intermediate (HSK 3–4)', th: 'กลาง (HSK 3–4)', es: 'Intermedio (HSK 3–4)', nl: 'Gemiddeld (HSK 3–4)', fr: 'Intermédiaire (HSK 3–4)' },
+  form_lvl_4:     { zh: '高级 (HSK 5–6)', en: 'Advanced (HSK 5–6)', th: 'สูง (HSK 5–6)', es: 'Avanzado (HSK 5–6)', nl: 'Gevorderd (HSK 5–6)', fr: 'Avancé (HSK 5–6)' },
+  form_msg_lbl:   { zh: '留言', en: 'Message', th: 'ข้อความ', es: 'Mensaje', nl: 'Bericht', fr: 'Message' },
+  form_msg_ph:    { zh: '告诉林老师你的学习目标、时间安排或任何问题…', en: 'Tell Teacher Lin about your learning goals, availability, or any questions…', th: 'บอกครูหลินเกี่ยวกับเป้าหมายการเรียน เวลาว่าง หรือคำถามใด ๆ…', es: 'Cuéntale a la profesora Lin tus objetivos, disponibilidad o cualquier pregunta…', nl: 'Vertel juf Lin over je leerdoelen, beschikbaarheid of vragen…', fr: 'Parlez à la professeure Lin de vos objectifs, disponibilités ou questions…' },
+  form_send_btn:  { zh: '发送消息 →', en: 'Send Message →', th: 'ส่งข้อความ →', es: 'Enviar mensaje →', nl: 'Bericht versturen →', fr: 'Envoyer le message →' },
+  form_sending:   { zh: '发送中…', en: 'Sending…', th: 'กำลังส่ง…', es: 'Enviando…', nl: 'Versturen…', fr: 'Envoi…' },
+  form_sent_btn:  { zh: '✓ 已发送', en: '✓ Sent', th: '✓ ส่งแล้ว', es: '✓ Enviado', nl: '✓ Verzonden', fr: '✓ Envoyé' },
+  form_sent:      { zh: '✓ 发送成功！林老师会在 24 小时内回复。', en: '✓ Message sent! Teacher Lin will reply within 24 hours.', th: '✓ ส่งสำเร็จ! ครูหลินจะตอบกลับภายใน 24 ชั่วโมง', es: '✓ ¡Mensaje enviado! La profesora Lin responderá en 24 horas.', nl: '✓ Bericht verzonden! Juf Lin reageert binnen 24 uur.', fr: '✓ Message envoyé ! La professeure Lin répondra dans les 24 heures.' },
+  form_err_fields:{ zh: '请填写姓名和邮箱。', en: 'Please fill in your name and email.', th: 'กรุณากรอกชื่อและอีเมล', es: 'Por favor, completa tu nombre y correo.', nl: 'Vul je naam en e-mail in alsjeblieft.', fr: 'Veuillez indiquer votre nom et e-mail.' },
+  form_err_send:  { zh: '出错了。请直接发邮件到 info@speakhanzi.com。', en: 'Something went wrong. Please email info@speakhanzi.com directly.', th: 'เกิดข้อผิดพลาด กรุณาส่งอีเมลถึง info@speakhanzi.com โดยตรง', es: 'Algo salió mal. Escribe directamente a info@speakhanzi.com.', nl: 'Er ging iets mis. Mail rechtstreeks naar info@speakhanzi.com.', fr: 'Un problème est survenu. Écrivez directement à info@speakhanzi.com.' },
+  form_err_net:   { zh: '网络错误。请直接发邮件到 info@speakhanzi.com。', en: 'Network error. Please email info@speakhanzi.com directly.', th: 'ข้อผิดพลาดเครือข่าย กรุณาส่งอีเมลถึง info@speakhanzi.com โดยตรง', es: 'Error de red. Escribe directamente a info@speakhanzi.com.', nl: 'Netwerkfout. Mail rechtstreeks naar info@speakhanzi.com.', fr: 'Erreur réseau. Écrivez directement à info@speakhanzi.com.' },
+
+  /* Contact sidebar */
+  spot_big: { zh: '24 小时', en: '24h', th: '24 ชม.', es: '24h', nl: '24 u', fr: '24 h' },
+  spot_sub: { zh: '平均回复时间 —— 私人回复，绝非机器自动。', en: 'Average response — personal, never automated.', th: 'เวลาตอบกลับโดยเฉลี่ย — ส่วนตัว ไม่ใช่ระบบอัตโนมัติ', es: 'Tiempo medio de respuesta — personal, nunca automático.', nl: 'Gemiddelde reactietijd — persoonlijk, nooit automatisch.', fr: 'Temps de réponse moyen — personnel, jamais automatisé.' },
+  bkg_h4:   { zh: '预约课程 · €29/30分钟', en: 'Book a Slot · €29/30min', th: 'จองเวลา · €29/30น.', es: 'Reservar hueco · €29/30min', nl: 'Boek een tijdslot · €29/30min', fr: 'Réserver un créneau · €29/30min' },
+  bkg_p:    { zh: '直接在林老师的日历上选择 30 分钟时段 —— 无需来回沟通。', en: "Pick a 30-minute slot directly in Teacher Lin's calendar — no back-and-forth needed.", th: 'เลือกช่วงเวลา 30 นาทีในปฏิทินของครูหลินได้โดยตรง — ไม่ต้องนัดไปมา', es: 'Elige un hueco de 30 minutos directamente en el calendario de la profesora Lin — sin idas y venidas.', nl: 'Kies direct een tijdslot van 30 minuten in de agenda van juf Lin — geen heen-en-weer nodig.', fr: 'Choisissez un créneau de 30 minutes directement dans le calendrier de la professeure Lin — sans aller-retour.' },
+  bkg_btn:  { zh: '📅 选择时间 →', en: '📅 Choose a Time →', th: '📅 เลือกเวลา →', es: '📅 Elige una hora →', nl: '📅 Kies een tijd →', fr: '📅 Choisir un créneau →' },
+
+  cd_h4: { zh: '联系方式', en: 'Contact Details', th: 'ข้อมูลติดต่อ', es: 'Datos de contacto', nl: 'Contactgegevens', fr: 'Coordonnées' },
+  cd_email_lbl:  { zh: '邮箱', en: 'Email', th: 'อีเมล', es: 'Correo', nl: 'E-mail', fr: 'E-mail' },
+  cd_wechat_lbl: { zh: '微信', en: 'WeChat', th: 'WeChat', es: 'WeChat', nl: 'WeChat', fr: 'WeChat' },
+  cd_loc_lbl:    { zh: '位置', en: 'Location', th: 'ที่ตั้ง', es: 'Ubicación', nl: 'Locatie', fr: 'Localisation' },
+  cd_loc_val:    { zh: '比利时 鲁汶 🇧🇪', en: 'Leuven, Belgium 🇧🇪', th: 'เลอเฟิน เบลเยียม 🇧🇪', es: 'Lovaina, Bélgica 🇧🇪', nl: 'Leuven, België 🇧🇪', fr: 'Louvain, Belgique 🇧🇪' },
+  cd_hours_lbl:  { zh: '时间', en: 'Hours', th: 'เวลาทำการ', es: 'Horario', nl: 'Uren', fr: 'Horaires' },
+  cd_hours_val:  { zh: '周一至周五，灵活 (CET)', en: 'Mon–Fri, flexible (CET)', th: 'จันทร์–ศุกร์ ยืดหยุ่น (CET)', es: 'Lun–Vie, flexible (CET)', nl: 'Ma–vr, flexibel (CET)', fr: 'Lun–ven, flexible (CET)' },
+  cd_langs_lbl:  { zh: '语言', en: 'Languages', th: 'ภาษา', es: 'Idiomas', nl: 'Talen', fr: 'Langues' },
+
+  faq_h4: { zh: '常见问题', en: 'FAQ', th: 'คำถามที่พบบ่อย', es: 'Preguntas frecuentes', nl: 'Veelgestelde vragen', fr: 'FAQ' },
+  faq_q1: { zh: '一节课多少钱？', en: 'How much is a lesson?', th: 'บทเรียนละเท่าไหร่?', es: '¿Cuánto cuesta una clase?', nl: 'Hoeveel kost een les?', fr: 'Combien coûte un cours ?' },
+  faq_a1: { zh: '每节 30 分钟的课程为 €29。无隐藏费用或订阅。', en: 'Each 30-minute lesson is €29. No hidden fees or subscriptions.', th: 'บทเรียน 30 นาทีราคา €29 ไม่มีค่าใช้จ่ายแอบแฝงหรือสมาชิกรายเดือน', es: 'Cada clase de 30 minutos cuesta €29. Sin cargos ocultos ni suscripciones.', nl: 'Elke les van 30 minuten kost €29. Geen verborgen kosten of abonnementen.', fr: 'Chaque cours de 30 minutes coûte €29. Sans frais cachés ni abonnement.' },
+  faq_q2: { zh: '教儿童吗？', en: 'Do you teach children?', th: 'สอนเด็กไหม?', es: '¿Enseñas a niños?', nl: 'Geef je les aan kinderen?', fr: 'Enseignez-vous aux enfants ?' },
+  faq_a2: { zh: '教！林老师在鲁汶中文学校和泰国都有丰富的儿童教学经验。', en: 'Yes! Teacher Lin has extensive experience with children at Leuven Chinese School and in Thailand.', th: 'แน่นอน! ครูหลินมีประสบการณ์สอนเด็กมากมายที่โรงเรียนสอนภาษาจีนเลอเฟินและในประเทศไทย', es: '¡Sí! La profesora Lin tiene amplia experiencia con niños en la Escuela China de Lovaina y en Tailandia.', nl: 'Ja! Juf Lin heeft veel ervaring met kinderen aan de Chinese School Leuven en in Thailand.', fr: 'Oui ! La professeure Lin a une grande expérience avec les enfants à l\'École chinoise de Louvain et en Thaïlande.' },
+  faq_q3: { zh: '在哪里上课？', en: 'Where are classes held?', th: 'เรียนที่ไหน?', es: '¿Dónde se imparten las clases?', nl: 'Waar vinden de lessen plaats?', fr: 'Où ont lieu les cours ?' },
+  faq_a3: { zh: '所有课程均通过 Zoom 在线直播 —— 在世界任何地方都可以学习。', en: 'All lessons are live online via Zoom — study from anywhere in the world.', th: 'บทเรียนทั้งหมดเป็นแบบสดผ่าน Zoom — เรียนได้จากทุกที่ในโลก', es: 'Todas las clases son en directo por Zoom — estudia desde cualquier parte del mundo.', nl: 'Alle lessen zijn live online via Zoom — studeer waar je ook bent.', fr: 'Tous les cours sont en direct via Zoom — étudiez où que vous soyez.' },
+  faq_q4: { zh: '支持什么支付方式？', en: 'Payment methods?', th: 'วิธีการชำระเงิน?', es: '¿Métodos de pago?', nl: 'Betaalmethoden?', fr: 'Modes de paiement ?' },
+  faq_a4: { zh: '接受信用卡、PayPal、支付宝和微信支付。', en: 'Credit cards, PayPal, Alipay, and WeChat Pay are all accepted.', th: 'รับบัตรเครดิต PayPal Alipay และ WeChat Pay', es: 'Aceptamos tarjetas de crédito, PayPal, Alipay y WeChat Pay.', nl: 'Creditcards, PayPal, Alipay en WeChat Pay worden allemaal geaccepteerd.', fr: 'Cartes de crédit, PayPal, Alipay et WeChat Pay sont acceptés.' }
+
 };
 
+/* ════════════════════════════════════════════════════════════════════
+   Switcher · browser detection · apply logic
+   ════════════════════════════════════════════════════════════════════ */
 (function() {
-  var lang = localStorage.getItem('sh-lang') || 'zh';
+  var SUPPORTED = ['zh', 'en', 'th', 'es', 'nl', 'fr'];
+  var LANG_NAMES = {
+    zh: '中文',
+    en: 'English',
+    th: 'ไทย',
+    es: 'Español',
+    nl: 'Nederlands',
+    fr: 'Français'
+  };
+  var LANG_HTMLATTR = { zh: 'zh-CN', en: 'en', th: 'th', es: 'es', nl: 'nl', fr: 'fr' };
   var data = window.__i18n;
 
-  // Create lang-switcher buttons in nav-right
-  function createLangSwitcher() {
-    var nav = document.querySelector('.nav-right');
-    if (!nav) return;
-    var wrapper = document.createElement('div');
-    wrapper.style.cssText = 'display:flex;gap:6px;align-items:center;margin-right:10px';
-    var zhBtn = document.createElement('button');
-    zhBtn.className = 'lang-btn' + (lang === 'zh' ? ' active' : '');
-    zhBtn.dataset.lang = 'zh';
-    zhBtn.textContent = '中';
-    zhBtn.onclick = function(){ switchLang('zh'); };
-    var enBtn = document.createElement('button');
-    enBtn.className = 'lang-btn' + (lang === 'en' ? ' active' : '');
-    enBtn.dataset.lang = 'en';
-    enBtn.textContent = 'EN';
-    enBtn.onclick = function(){ switchLang('en'); };
-    wrapper.appendChild(zhBtn);
-    wrapper.appendChild(enBtn);
-    nav.parentNode.insertBefore(wrapper, nav);
+  function detectLang() {
+    var saved = localStorage.getItem('sh-lang');
+    if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
+    var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase().slice(0, 2);
+    if (SUPPORTED.indexOf(nav) !== -1) return nav;
+    return 'en';
   }
+
+  var lang = detectLang();
 
   function applyLang(l) {
-    document.querySelectorAll('.lang-btn').forEach(function(b) {
-      b.classList.toggle('active', b.dataset.lang === l);
-    });
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.dataset.i18n;
-      if (data[key] && data[key][l]) el.textContent = data[key][l];
+      var key = el.getAttribute('data-i18n');
+      if (data[key] && data[key][l] != null) el.textContent = data[key][l];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (data[key] && data[key][l] != null) el.innerHTML = data[key][l];
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-      var key = el.dataset.i18nPlaceholder;
-      if (data[key] && data[key][l]) el.placeholder = data[key][l];
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (data[key] && data[key][l] != null) el.placeholder = data[key][l];
     });
-    document.documentElement.lang = l === 'zh' ? 'zh-CN' : 'en';
+    document.documentElement.lang = LANG_HTMLATTR[l] || l;
+    var current = document.querySelector('#sh-lang-current');
+    if (current) current.textContent = LANG_NAMES[l];
+    document.querySelectorAll('#sh-lang-menu [data-lang]').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === l);
+    });
   }
 
-  createLangSwitcher();
+  function buildSwitcher() {
+    var navRight = document.querySelector('.nav-right');
+    if (!navRight) return;
 
-  // Add lang-btn CSS
+    var wrap = document.createElement('div');
+    wrap.id = 'sh-lang-wrap';
+    wrap.style.cssText = 'position:relative;display:inline-flex;align-items:center;margin-right:10px;font-family:Inter,sans-serif';
+
+    var btn = document.createElement('button');
+    btn.id = 'sh-lang-btn';
+    btn.type = 'button';
+    btn.innerHTML = '🌐 <span id="sh-lang-current">' + LANG_NAMES[lang] + '</span> <span style="font-size:0.6rem;opacity:0.6;margin-left:2px">▾</span>';
+
+    var menu = document.createElement('div');
+    menu.id = 'sh-lang-menu';
+    menu.style.display = 'none';
+
+    SUPPORTED.forEach(function(code) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-lang', code);
+      b.textContent = LANG_NAMES[code];
+      b.onclick = function() {
+        localStorage.setItem('sh-lang', code);
+        lang = code;
+        applyLang(code);
+        menu.style.display = 'none';
+      };
+      menu.appendChild(b);
+    });
+
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+    };
+
+    document.addEventListener('click', function(e) {
+      if (!wrap.contains(e.target)) menu.style.display = 'none';
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(menu);
+    navRight.parentNode.insertBefore(wrap, navRight);
+  }
+
   var style = document.createElement('style');
-  style.textContent = '.lang-btn{padding:4px 10px;font-size:0.75rem;font-weight:600;border:1.5px solid var(--hair);background:none;border-radius:var(--r-pill);cursor:pointer;color:var(--muted);font-family:Inter,sans-serif;transition:all .2s}.lang-btn:hover{border-color:var(--amber);color:var(--brown)}.lang-btn.active{background:var(--amber);color:var(--bg);border-color:var(--amber)}';
+  style.textContent =
+    '#sh-lang-btn{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;font-size:0.78rem;font-weight:600;border:1.5px solid var(--hair);background:var(--canvas);border-radius:var(--r-pill);cursor:pointer;color:var(--ink);font-family:Inter,sans-serif;transition:all .2s}' +
+    '#sh-lang-btn:hover{border-color:var(--amber)}' +
+    '#sh-lang-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--canvas);border:1px solid var(--hair);border-radius:14px;box-shadow:var(--sh-md);padding:6px;min-width:150px;z-index:9000}' +
+    '#sh-lang-menu button{display:block;width:100%;text-align:left;padding:8px 12px;font-size:0.82rem;font-weight:500;border:none;background:none;color:var(--ink);cursor:pointer;border-radius:8px;font-family:Inter,sans-serif}' +
+    '#sh-lang-menu button:hover{background:var(--s1)}' +
+    '#sh-lang-menu button.active{background:var(--amber);color:var(--bg);font-weight:700}' +
+    '@media(max-width:860px){#sh-lang-btn{padding:5px 8px;font-size:0.72rem}#sh-lang-current{display:none}}';
   document.head.appendChild(style);
 
-  applyLang(lang);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { buildSwitcher(); applyLang(lang); });
+  } else {
+    buildSwitcher();
+    applyLang(lang);
+  }
 
   window.switchLang = function(l) {
+    if (SUPPORTED.indexOf(l) === -1) return;
     localStorage.setItem('sh-lang', l);
+    lang = l;
     applyLang(l);
   };
 })();
