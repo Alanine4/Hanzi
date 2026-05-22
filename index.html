@@ -687,6 +687,24 @@ body.review-mode *{cursor:crosshair;}
 .social-icons svg{width:18px;height:18px;display:block;}
 footer{flex-wrap:wrap;}
 
+/* Follow bar (above footer on every page) */
+.follow-bar{background:var(--s1);border-top:1px solid var(--hair-s);padding:2rem 1rem;text-align:center;}
+.follow-bar h3{font-size:0.9rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;}
+.follow-links{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;align-items:center;}
+.follow-link{display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.1rem;border-radius:var(--r-pill);font-size:0.82rem;font-weight:700;text-decoration:none;transition:opacity .15s,transform .1s;white-space:nowrap;}
+.follow-link:hover{opacity:0.82;transform:translateY(-2px);}
+.follow-link svg{width:20px;height:20px;flex:0 0 auto;}
+.follow-link.yt {background:#FF0000;color:#fff;}
+.follow-link.ig {background:linear-gradient(135deg,#833AB4 0%,#FD1D1D 50%,#FCAF45 100%);color:#fff;}
+.follow-link.xhs{background:#FF2442;color:#fff;}
+.follow-link.tt {background:#010101;color:#fff;}
+/* Footer icons — keep small; brand colour on hover */
+.social-icons a[data-todo="youtube"]:hover   {color:#FF0000;}
+.social-icons a[data-todo="instagram"]:hover {color:#E1306C;}
+.social-icons a[data-todo="xiaohongshu"]:hover{color:#FF2442;}
+.social-icons a[data-todo="tiktok"]:hover    {color:#69C9D0;}
+@media(max-width:600px){.follow-links{gap:0.6rem;}.follow-link{padding:0.55rem 0.9rem;font-size:0.78rem;}}
+
 /* Mobile */
 @media(max-width:860px){
   .pricing-grid{grid-template-columns:1fr;}
@@ -923,14 +941,32 @@ footer{flex-wrap:wrap;}
       <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
     </form>
   </div>
+  <!-- ══ FOLLOW BAR ══ -->
+  <div class="follow-bar">
+    <h3 data-i18n="follow_h">Follow Teacher Lin</h3>
+    <div class="follow-links">
+      <a class="follow-link yt" href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>YouTube
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/chinese_with_lin" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>Instagram
+      </a>
+      <a class="follow-link xhs" href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="小红书">
+        <svg viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-family="serif" font-size="15" font-weight="700">红</text></svg>小红书
+      </a>
+      <a class="follow-link tt" href="https://www.tiktok.com/@chinese_with_lin" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg>TikTok
+      </a>
+    </div>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
     <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
     <span class="social-icons">
       <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
-      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+      <a href="https://www.instagram.com/chinese_with_lin" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="https://www.tiktok.com/@chinese_with_lin" data-todo="tiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
     </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
@@ -999,14 +1035,32 @@ footer{flex-wrap:wrap;}
       <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
     </form>
   </div>
+  <!-- ══ FOLLOW BAR ══ -->
+  <div class="follow-bar">
+    <h3 data-i18n="follow_h">Follow Teacher Lin</h3>
+    <div class="follow-links">
+      <a class="follow-link yt" href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>YouTube
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/chinese_with_lin" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>Instagram
+      </a>
+      <a class="follow-link xhs" href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="小红书">
+        <svg viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-family="serif" font-size="15" font-weight="700">红</text></svg>小红书
+      </a>
+      <a class="follow-link tt" href="https://www.tiktok.com/@chinese_with_lin" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg>TikTok
+      </a>
+    </div>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
     <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
     <span class="social-icons">
       <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
-      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+      <a href="https://www.instagram.com/chinese_with_lin" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="https://www.tiktok.com/@chinese_with_lin" data-todo="tiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
     </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
@@ -1038,14 +1092,32 @@ footer{flex-wrap:wrap;}
       <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
     </form>
   </div>
+  <!-- ══ FOLLOW BAR ══ -->
+  <div class="follow-bar">
+    <h3 data-i18n="follow_h">Follow Teacher Lin</h3>
+    <div class="follow-links">
+      <a class="follow-link yt" href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>YouTube
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/chinese_with_lin" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>Instagram
+      </a>
+      <a class="follow-link xhs" href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="小红书">
+        <svg viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-family="serif" font-size="15" font-weight="700">红</text></svg>小红书
+      </a>
+      <a class="follow-link tt" href="https://www.tiktok.com/@chinese_with_lin" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg>TikTok
+      </a>
+    </div>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
     <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
     <span class="social-icons">
       <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
-      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+      <a href="https://www.instagram.com/chinese_with_lin" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="https://www.tiktok.com/@chinese_with_lin" data-todo="tiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
     </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>
@@ -1166,14 +1238,32 @@ footer{flex-wrap:wrap;}
       <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
     </form>
   </div>
+  <!-- ══ FOLLOW BAR ══ -->
+  <div class="follow-bar">
+    <h3 data-i18n="follow_h">Follow Teacher Lin</h3>
+    <div class="follow-links">
+      <a class="follow-link yt" href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>YouTube
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/chinese_with_lin" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>Instagram
+      </a>
+      <a class="follow-link xhs" href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="小红书">
+        <svg viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-family="serif" font-size="15" font-weight="700">红</text></svg>小红书
+      </a>
+      <a class="follow-link tt" href="https://www.tiktok.com/@chinese_with_lin" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg>TikTok
+      </a>
+    </div>
+  </div>
   <footer>
     <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
     <!-- ══ SOCIAL ICONS (Section G · TODO: replace href="#" with real channel URLs) ══ -->
     <span class="social-icons">
       <a href="#" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
-      <a href="#" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
-      <a href="#" data-todo="douyin" target="_blank" rel="noopener" aria-label="Douyin" title="抖音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+      <a href="https://www.instagram.com/chinese_with_lin" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" font-weight="700" fill="#FCFBF6">红</text></svg></a>
+      <a href="https://www.tiktok.com/@chinese_with_lin" data-todo="tiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
     </span>
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · info@speakhanzi.com</span>
   </footer>

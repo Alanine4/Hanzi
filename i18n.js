@@ -282,6 +282,9 @@ window.__i18n = {
   wechat_p:      { zh: '咨询问题或定制课程包，微信最快。', en: 'Quickest way to ask questions or book a custom package.', th: 'วิธีที่เร็วที่สุดในการสอบถามหรือจองแพ็กเกจเฉพาะ', es: 'La forma más rápida de preguntar o reservar un paquete personalizado.', nl: 'De snelste manier om vragen te stellen of een pakket op maat te boeken.', fr: 'Le moyen le plus rapide de poser des questions ou de réserver une formule personnalisée.' },
   wechat_id_lbl: { zh: '微信号', en: 'WeChat ID', th: 'ID WeChat', es: 'ID de WeChat', nl: 'WeChat-ID', fr: 'Identifiant WeChat' },
 
+  /* ═══ FOLLOW BAR ═══ */
+  follow_h: { zh: '关注林老师', en: 'Follow Teacher Lin', th: 'ติดตาม Teacher Lin', es: 'Seguir a Teacher Lin', nl: 'Volg Teacher Lin', fr: 'Suivre Teacher Lin' },
+
   /* ═══ COURSES PAGE UPDATE (section E) ═══ */
   co_subtitle: { zh: '下方所有主题均可作为 1-on-1 月套餐学习，按需选择。', en: 'Every theme below is available as a 1-on-1 monthly package. Pick what you need.', th: 'หัวข้อด้านล่างทั้งหมดเรียนได้แบบ 1-ต่อ-1 รายเดือน เลือกตามที่คุณต้องการ', es: 'Cada tema a continuación está disponible como paquete mensual 1-a-1. Elige lo que necesites.', nl: 'Elk onderstaand thema is beschikbaar als 1-op-1 maandpakket. Kies wat je nodig hebt.', fr: 'Chaque thème ci-dessous est disponible en formule individuelle mensuelle. Choisissez selon vos besoins.' }
 
