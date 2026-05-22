@@ -282,6 +282,9 @@ window.__i18n = {
   wechat_p:      { zh: '咨询问题或定制课程包，微信最快。', en: 'Quickest way to ask questions or book a custom package.', th: 'วิธีที่เร็วที่สุดในการสอบถามหรือจองแพ็กเกจเฉพาะ', es: 'La forma más rápida de preguntar o reservar un paquete personalizado.', nl: 'De snelste manier om vragen te stellen of een pakket op maat te boeken.', fr: 'Le moyen le plus rapide de poser des questions ou de réserver une formule personnalisée.' },
   wechat_id_lbl: { zh: '微信号', en: 'WeChat ID', th: 'ID WeChat', es: 'ID de WeChat', nl: 'WeChat-ID', fr: 'Identifiant WeChat' },
 
+  /* ═══ PAYMENT ═══ */
+  pay_note_trial: { zh: '预约后再付款', en: 'No payment needed to book.', th: 'ไม่ต้องชำระก่อนจอง', es: 'Sin pago previo para reservar.', nl: 'Geen betaling nodig bij boeking.', fr: 'Aucun paiement requis à la réservation.' },
+
   /* ═══ FOLLOW BAR ═══ */
   follow_h: { zh: '关注林老师', en: 'Follow Teacher Lin', th: 'ติดตาม Teacher Lin', es: 'Seguir a Teacher Lin', nl: 'Volg Teacher Lin', fr: 'Suivre Teacher Lin' },
 
