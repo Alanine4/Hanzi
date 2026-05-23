@@ -63,7 +63,7 @@ window.__i18n = {
 
   /* ═══ FOOTER ═══ */
   footer_logo: { zh: '说汉字', en: 'SpeakHanzi', th: 'SpeakHanzi', es: 'SpeakHanzi', nl: 'SpeakHanzi', fr: 'SpeakHanzi' },
-  footer_copy: { zh: '© 2026 林老师 · info@speakhanzi.com', en: '© 2026 Teacher Lin · info@speakhanzi.com', th: '© 2026 ครูหลิน · info@speakhanzi.com', es: '© 2026 Profesora Lin · info@speakhanzi.com', nl: '© 2026 Juf Lin · info@speakhanzi.com', fr: '© 2026 Professeure Lin · info@speakhanzi.com' },
+  footer_copy: { zh: '© 2026 林老师 · anqi.lin@speakhanzi.com', en: '© 2026 Teacher Lin · anqi.lin@speakhanzi.com', th: '© 2026 ครูหลิน · anqi.lin@speakhanzi.com', es: '© 2026 Profesora Lin · anqi.lin@speakhanzi.com', nl: '© 2026 Juf Lin · anqi.lin@speakhanzi.com', fr: '© 2026 Professeure Lin · anqi.lin@speakhanzi.com' },
 
   /* ═══ ABOUT PAGE ═══ */
   about_label: { zh: '你的老师', en: 'Your Teacher', th: 'ครูของคุณ', es: 'Tu profesora', nl: 'Jouw leerkracht', fr: 'Votre enseignante' },
@@ -171,8 +171,8 @@ window.__i18n = {
   form_sent_btn:  { zh: '✓ 已发送', en: '✓ Sent', th: '✓ ส่งแล้ว', es: '✓ Enviado', nl: '✓ Verzonden', fr: '✓ Envoyé' },
   form_sent:      { zh: '✓ 发送成功！林老师会在 24 小时内回复。', en: '✓ Message sent! Teacher Lin will reply within 24 hours.', th: '✓ ส่งสำเร็จ! ครูหลินจะตอบกลับภายใน 24 ชั่วโมง', es: '✓ ¡Mensaje enviado! La profesora Lin responderá en 24 horas.', nl: '✓ Bericht verzonden! Juf Lin reageert binnen 24 uur.', fr: '✓ Message envoyé ! La professeure Lin répondra dans les 24 heures.' },
   form_err_fields:{ zh: '请填写姓名和邮箱。', en: 'Please fill in your name and email.', th: 'กรุณากรอกชื่อและอีเมล', es: 'Por favor, completa tu nombre y correo.', nl: 'Vul je naam en e-mail in alsjeblieft.', fr: 'Veuillez indiquer votre nom et e-mail.' },
-  form_err_send:  { zh: '出错了。请直接发邮件到 info@speakhanzi.com。', en: 'Something went wrong. Please email info@speakhanzi.com directly.', th: 'เกิดข้อผิดพลาด กรุณาส่งอีเมลถึง info@speakhanzi.com โดยตรง', es: 'Algo salió mal. Escribe directamente a info@speakhanzi.com.', nl: 'Er ging iets mis. Mail rechtstreeks naar info@speakhanzi.com.', fr: 'Un problème est survenu. Écrivez directement à info@speakhanzi.com.' },
-  form_err_net:   { zh: '网络错误。请直接发邮件到 info@speakhanzi.com。', en: 'Network error. Please email info@speakhanzi.com directly.', th: 'ข้อผิดพลาดเครือข่าย กรุณาส่งอีเมลถึง info@speakhanzi.com โดยตรง', es: 'Error de red. Escribe directamente a info@speakhanzi.com.', nl: 'Netwerkfout. Mail rechtstreeks naar info@speakhanzi.com.', fr: 'Erreur réseau. Écrivez directement à info@speakhanzi.com.' },
+  form_err_send:  { zh: '出错了。请直接发邮件到 anqi.lin@speakhanzi.com。', en: 'Something went wrong. Please email anqi.lin@speakhanzi.com directly.', th: 'เกิดข้อผิดพลาด กรุณาส่งอีเมลถึง anqi.lin@speakhanzi.com โดยตรง', es: 'Algo salió mal. Escribe directamente a anqi.lin@speakhanzi.com.', nl: 'Er ging iets mis. Mail rechtstreeks naar anqi.lin@speakhanzi.com.', fr: 'Un problème est survenu. Écrivez directement à anqi.lin@speakhanzi.com.' },
+  form_err_net:   { zh: '网络错误。请直接发邮件到 anqi.lin@speakhanzi.com。', en: 'Network error. Please email anqi.lin@speakhanzi.com directly.', th: 'ข้อผิดพลาดเครือข่าย กรุณาส่งอีเมลถึง anqi.lin@speakhanzi.com โดยตรง', es: 'Error de red. Escribe directamente a anqi.lin@speakhanzi.com.', nl: 'Netwerkfout. Mail rechtstreeks naar anqi.lin@speakhanzi.com.', fr: 'Erreur réseau. Écrivez directement à anqi.lin@speakhanzi.com.' },
 
   /* Contact sidebar */
   spot_big: { zh: '24 小时', en: '24h', th: '24 ชม.', es: '24h', nl: '24 u', fr: '24 h' },
