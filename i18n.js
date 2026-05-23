@@ -11,7 +11,7 @@ window.__i18n = {
   nav_about:       { zh: '关于', en: 'About', th: 'เกี่ยวกับ', es: 'Sobre mí', nl: 'Over', fr: 'À propos' },
   nav_courses:     { zh: '课程', en: 'Courses', th: 'หลักสูตร', es: 'Cursos', nl: 'Cursussen', fr: 'Cours' },
   nav_contact:     { zh: '联系', en: 'Contact', th: 'ติดต่อ', es: 'Contacto', nl: 'Contact', fr: 'Contact' },
-  nav_cta_book:    { zh: '预约课程 · €29/30分钟', en: 'Book a Lesson · €29/30min', th: 'จองบทเรียน · €29/30น.', es: 'Reservar clase · €29/30min', nl: 'Boek een les · €29/30min', fr: 'Réserver · €29/30min' },
+  nav_cta_book:    { zh: '预约试课 · €29', en: 'Book a Trial · €29', th: 'จองทดลองเรียน · €29', es: 'Reservar prueba · €29', nl: 'Proefles boeken · €29', fr: 'Réserver un essai · €29' },
 
   /* ═══ HERO ═══ */
   hero_eyebrow:    { zh: '🎓 KU Leuven · 比利时 鲁汶', en: '🎓 KU Leuven · Leuven, Belgium', th: '🎓 KU Leuven · เลอเฟิน เบลเยียม', es: '🎓 KU Leuven · Lovaina, Bélgica', nl: '🎓 KU Leuven · Leuven, België', fr: '🎓 KU Leuven · Louvain, Belgique' },
@@ -30,7 +30,7 @@ window.__i18n = {
   hero_stat2_lbl:  { zh: '国家', en: 'Countries', th: 'ประเทศ', es: 'Países', nl: 'Landen', fr: 'Pays' },
   hero_stat3_lbl:  { zh: '学生评分', en: 'Student rating', th: 'คะแนนนักเรียน', es: 'Valoración', nl: 'Beoordeling', fr: 'Note des élèves' },
   hero_fc_name:    { zh: '林老师', en: 'Teacher Lin', th: 'ครูหลิน', es: 'Profesora Lin', nl: 'Juf Lin', fr: 'Professeure Lin' },
-  hero_fc_sub:     { zh: 'KU Leuven · 硕士在读', en: "KU Leuven · Master's Student", th: 'KU Leuven · ปริญญาโท', es: 'KU Leuven · Máster', nl: 'KU Leuven · Masterstudent', fr: 'KU Leuven · Étudiante en master' },
+  hero_fc_sub:     { zh: 'KU Leuven · 比利时', en: 'KU Leuven · Belgium', th: 'KU Leuven · เบลเยียม', es: 'KU Leuven · Bélgica', nl: 'KU Leuven · België', fr: 'KU Leuven · Belgique' },
 
   /* ═══ TRUST STRIP ═══ */
   trust_1: { zh: '<strong>母语中文</strong>', en: '<strong>Native Mandarin</strong> speaker', th: 'เจ้าของภาษา<strong>จีนกลาง</strong>', es: 'Hablante <strong>nativa de mandarín</strong>', nl: '<strong>Moedertaal Mandarijn</strong>', fr: '<strong>Mandarin natif</strong>' },
@@ -213,8 +213,8 @@ window.__i18n = {
   price1_cta:  { zh: '预约试课 →', en: 'Book Trial →', th: 'จองทดลองเรียน →', es: 'Reservar prueba →', nl: 'Boek proefles →', fr: 'Réserver l\'essai →' },
 
   price2_tag:  { zh: '1-on-1 月套餐', en: '1-ON-1 MONTHLY', th: 'แพ็กเกจรายเดือน 1-ต่อ-1', es: '1-A-1 MENSUAL', nl: '1-OP-1 MAANDPAKKET', fr: 'COURS INDIVIDUEL MENSUEL' },
-  price2_amt:  { zh: '€40 起', en: 'from €40', th: 'เริ่มต้น €40', es: 'desde €40', nl: 'vanaf €40', fr: 'à partir de €40' },
-  price2_unit: { zh: '/ 节', en: '/ lesson', th: '/ บทเรียน', es: '/ clase', nl: '/ les', fr: '/ cours' },
+  price2_amt:  { zh: '€50', en: '€50', th: '€50', es: '€50', nl: '€50', fr: '€50' },
+  price2_unit: { zh: '/ 节 (50分钟)', en: '/ lesson (50 min)', th: '/ บทเรียน (50 นาที)', es: '/ clase (50 min)', nl: '/ les (50 min)', fr: '/ cours (50 min)' },
   price2_desc: { zh: '每月 4 节课 · 时间灵活', en: '4 lessons / month · Flexible schedule', th: '4 บทเรียน / เดือน · เวลายืดหยุ่น', es: '4 clases / mes · Horario flexible', nl: '4 lessen / maand · Flexibel rooster', fr: '4 cours / mois · Horaire flexible' },
   price2_b1:   { zh: '主题：HSK、商务、口语', en: 'Topics: HSK, Business, Conversational', th: 'หัวข้อ: HSK ธุรกิจ บทสนทนา', es: 'Temas: HSK, Negocios, Conversación', nl: 'Thema\'s: HSK, zaken, conversatie', fr: 'Thèmes : HSK, affaires, conversation' },
   price2_b2:   { zh: '个性化学习计划', en: 'Personalised plan', th: 'แผนเรียนเฉพาะตัว', es: 'Plan personalizado', nl: 'Persoonlijk plan', fr: 'Plan personnalisé' },
