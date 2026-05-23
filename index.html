@@ -710,6 +710,10 @@ footer{flex-wrap:wrap;}
 .pay-m:hover{color:var(--ink);}
 .pay-sep{font-size:0.7rem;color:var(--hair);line-height:1.5;}
 .pay-note{font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.4rem;font-style:italic;}
+.c-price-chip{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.7rem;padding:0.28rem 0.75rem;background:var(--amber);color:var(--canvas);border:none;border-radius:var(--r-pill);font-size:0.72rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .15s,transform .1s;}
+.c-price-chip:hover{opacity:0.85;transform:translateY(-1px);}
+.t-video-actual{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--r-card);}
+.t-video-actual iframe{position:absolute;inset:0;width:100%;height:100%;}
 @media(max-width:600px){.follow-links{gap:0.6rem;}.follow-link{padding:0.55rem 0.9rem;font-size:0.78rem;}}
 
 /* Mobile */
@@ -1087,11 +1091,11 @@ footer{flex-wrap:wrap;}
   <div class="pg-header"><div class="pg-ey" data-i18n="co_eyebrow">Curriculum</div><h1 class="pg-h1" data-i18n="co_h1">SpeakHanzi Courses</h1></div>
   <p style="text-align:center;max-width:680px;margin:-1.5rem auto 2rem;font-size:0.9rem;color:var(--muted);line-height:1.6;padding:0 1.5rem;" data-i18n="co_subtitle">Every theme below is available as a 1-on-1 monthly package. Pick what you need.</p>
   <div class="cg">
-    <div class="ccard"><div class="c-lv" data-i18n="c1_lv">Level 1 · Beginner</div><h3 data-i18n="c1_h">Zero to Hello</h3><p data-i18n="c1_p">Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv" data-i18n="c2_lv">Level 2 · Elementary</div><h3 data-i18n="c2_h">Everyday Mandarin</h3><p data-i18n="c2_p">Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv" data-i18n="c3_lv">Level 3 · Intermediate</div><h3 data-i18n="c3_h">Flowing Conversations</h3><p data-i18n="c3_p">Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv" data-i18n="c4_lv">Exam · HSK Prep</div><h3 data-i18n="c4_h">HSK 1–6 Preparation</h3><p data-i18n="c4_p">Targeted vocabulary, past papers, listening and writing for every HSK level.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
-    <div class="ccard"><div class="c-lv" data-i18n="c5_lv">Business · Professional</div><h3 data-i18n="c5_h">Business Chinese</h3><p data-i18n="c5_p">Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.</p><span class="c-badge" data-i18n="c_badge">Coming Soon</span></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c1_lv">Level 1 · Beginner</div><h3 data-i18n="c1_h">Zero to Hello</h3><p data-i18n="c1_p">Tones, pinyin, greetings, daily phrases. Your first real steps into Mandarin.</p><span class="c-badge" data-i18n="c_badge">Available as 1-on-1 →</span><button class="c-price-chip" data-i18n="c_price_chip_lbl" onclick="goto('contact');setTimeout(function(){var p=document.getElementById('pricing-section');if(p)p.scrollIntoView({behavior:'smooth',block:'start'});},300)">€29 trial · €50/mo →</button></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c2_lv">Level 2 · Elementary</div><h3 data-i18n="c2_h">Everyday Mandarin</h3><p data-i18n="c2_p">Shopping, food, directions. A practical toolkit for daily life in Chinese-speaking environments.</p><span class="c-badge" data-i18n="c_badge">Available as 1-on-1 →</span><button class="c-price-chip" data-i18n="c_price_chip_lbl" onclick="goto('contact');setTimeout(function(){var p=document.getElementById('pricing-section');if(p)p.scrollIntoView({behavior:'smooth',block:'start'});},300)">€29 trial · €50/mo →</button></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c3_lv">Level 3 · Intermediate</div><h3 data-i18n="c3_h">Flowing Conversations</h3><p data-i18n="c3_p">Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.</p><span class="c-badge" data-i18n="c_badge">Available as 1-on-1 →</span><button class="c-price-chip" data-i18n="c_price_chip_lbl" onclick="goto('contact');setTimeout(function(){var p=document.getElementById('pricing-section');if(p)p.scrollIntoView({behavior:'smooth',block:'start'});},300)">€29 trial · €50/mo →</button></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c4_lv">Exam · HSK Prep</div><h3 data-i18n="c4_h">HSK 1–6 Preparation</h3><p data-i18n="c4_p">Targeted vocabulary, past papers, listening and writing for every HSK level.</p><span class="c-badge" data-i18n="c_badge">Available as 1-on-1 →</span><button class="c-price-chip" data-i18n="c_price_chip_lbl" onclick="goto('contact');setTimeout(function(){var p=document.getElementById('pricing-section');if(p)p.scrollIntoView({behavior:'smooth',block:'start'});},300)">€29 trial · €50/mo →</button></div>
+    <div class="ccard"><div class="c-lv" data-i18n="c5_lv">Business · Professional</div><h3 data-i18n="c5_h">Business Chinese</h3><p data-i18n="c5_p">Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.</p><span class="c-badge" data-i18n="c_badge">Available as 1-on-1 →</span><button class="c-price-chip" data-i18n="c_price_chip_lbl" onclick="goto('contact');setTimeout(function(){var p=document.getElementById('pricing-section');if(p)p.scrollIntoView({behavior:'smooth',block:'start'});},300)">€29 trial · €50/mo →</button></div>
     <div class="ccard" style="border-style:dashed;background:var(--s1);display:flex;align-items:center;justify-content:center;min-height:180px;">
       <div style="text-align:center"><div style="font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--amber);margin-bottom:.5rem">？</div><p style="font-size:0.8rem;color:var(--muted)"><span data-i18n="co_unsure_q">Not sure which level?</span><br><button onclick="goto('contact')" style="background:none;border:none;cursor:pointer;color:var(--amber);font-size:0.8rem;font-family:inherit;padding:0;text-decoration:underline;margin-top:4px" data-i18n="co_unsure_btn">Ask Teacher Lin →</button></p></div>
     </div>
@@ -1148,7 +1152,7 @@ footer{flex-wrap:wrap;}
   <div class="pg-header"><div class="pg-ey" data-i18n="co2_eyebrow">Get in Touch</div><h1 class="pg-h1" data-i18n="co2_h1">Contact Teacher Lin</h1></div>
 
   <!-- ══ PRICING (Section A · informational only — all CTAs link to Calendly/WeChat/lead magnet form, NO payment) ══ -->
-  <div class="section-mt">
+  <div class="section-mt" id="pricing-section">
     <div class="sec-label" data-i18n="pricing_label">Pricing</div>
     <h2 class="sec-h2" data-i18n="pricing_h2">Simple pricing. Real conversations.</h2>
     <div class="pricing-grid">

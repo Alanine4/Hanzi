@@ -138,6 +138,7 @@ window.__i18n = {
   c5_h:  { zh: '商务汉语', en: 'Business Chinese', th: 'ภาษาจีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
   c5_p:  { zh: '会议、谈判、邮件、演示。为与中方合作的职场人士量身打造。', en: 'Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.', th: 'การประชุม การเจรจา อีเมล การนำเสนอ สำหรับมืออาชีพที่ทำงานกับพันธมิตรชาวจีน', es: 'Reuniones, negociaciones, correos, presentaciones. Para profesionales que trabajan con socios chinos.', nl: 'Vergaderingen, onderhandelingen, e-mails, presentaties. Voor professionals die werken met Chinese partners.', fr: 'Réunions, négociations, e-mails, présentations. Pour les professionnels travaillant avec des partenaires chinois.' },
   c_badge: { zh: '可作 1-on-1 →', en: 'Available as 1-on-1 →', th: 'เรียน 1-ต่อ-1 →', es: 'Disponible 1-a-1 →', nl: 'Beschikbaar 1-op-1 →', fr: 'Disponible en 1-on-1 →' },
+  c_price_chip_lbl: { zh: '€29 试课 · €50/月课 →', en: '€29 trial · €50/mo →', th: '€29 ทดลอง · €50/เดือน →', es: '€29 prueba · €50/mes →', nl: '€29 proef · €50/mnd →', fr: '€29 essai · €50/mois →' },
   co_unsure_q:   { zh: '不确定适合哪个等级？', en: 'Not sure which level?', th: 'ไม่แน่ใจว่าระดับไหน?', es: '¿No estás seguro del nivel?', nl: 'Niet zeker welk niveau?', fr: 'Pas sûr de votre niveau ?' },
   co_unsure_btn: { zh: '问问林老师 →', en: 'Ask Teacher Lin →', th: 'ถามครูหลิน →', es: 'Pregunta a la profesora Lin →', nl: 'Vraag het juf Lin →', fr: 'Demandez à la professeure Lin →' },
 
