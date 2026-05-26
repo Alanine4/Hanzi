@@ -727,11 +727,28 @@ footer{flex-wrap:wrap;}
 .photo-masonry{columns:3;column-gap:0.75rem;margin-top:1.5rem;}
 .photo-masonry img{width:100%;margin-bottom:0.75rem;border-radius:12px;break-inside:avoid;display:block;object-fit:cover;transition:transform .2s;}
 .photo-masonry img:hover{transform:scale(1.02);}
-.interview-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem;}
-.interview-card{display:grid;grid-template-columns:400px 1fr;gap:1.5rem;align-items:start;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1.25rem;}
-.interview-body{display:flex;flex-direction:column;gap:0.5rem;justify-content:center;}
+.interview-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem;margin-top:1.5rem;}
+.interview-card{display:flex;flex-direction:column;gap:0.85rem;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1rem;transition:box-shadow .15s,transform .15s;}
+.interview-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
+.interview-body{display:flex;flex-direction:column;gap:0.4rem;padding:0 0.2rem 0.2rem;}
 .interview-title{font-size:0.95rem;font-weight:700;color:var(--ink);line-height:1.4;}
 .interview-meta{font-size:0.78rem;color:var(--muted);}
+
+/* XHS cover card (use real PNG cover from A照片/) */
+.xhs-cover-wrap{position:relative;border-radius:var(--r-card);overflow:hidden;background:#000;aspect-ratio:3/4;display:block;text-decoration:none;}
+.xhs-cover-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.xhs-cover-wrap:hover img{transform:scale(1.03);}
+.xhs-cover-overlay{position:absolute;inset:0;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%);padding:0.85rem;}
+.xhs-cover-overlay::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;background:rgba(255,36,66,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.xhs-cover-overlay::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-32%,-50%);border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;}
+.xhs-cover-badge{position:absolute;top:0.6rem;left:0.6rem;background:#FF2442;color:#fff;font-size:0.65rem;font-weight:700;padding:0.2rem 0.55rem;border-radius:4px;letter-spacing:0.03em;}
+
+/* Portfolio Table of Contents */
+.pf-toc{max-width:1100px;margin:0 auto 2.5rem;padding:0 2.5rem;}
+.pf-toc-inner{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1rem 1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;box-shadow:var(--sh-sm);}
+.pf-toc a{display:inline-flex;align-items:center;gap:0.35rem;padding:0.5rem 0.95rem;background:var(--s1);color:var(--ink);font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:var(--r-pill);border:1px solid var(--hair-s);transition:background .15s,transform .1s,border-color .15s;}
+.pf-toc a:hover{background:var(--amber);color:var(--canvas);border-color:var(--amber);transform:translateY(-1px);}
+.portfolio-section{scroll-margin-top:90px;}
 .classroom-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
 .classroom-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-card);transition:transform .2s;}
 .classroom-strip img:hover{transform:scale(1.02);}
@@ -1250,27 +1267,11 @@ footer{flex-wrap:wrap;}
 
       <!-- Interview 2: XHS 中文老师访谈 #26 (CSS card) -->
       <div class="interview-card">
-        <div class="xhs-card">
-          <div class="xhs-card-head">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
-            小红书 · 中文老师访谈
-          </div>
-          <div class="xhs-card-body">
-            <div class="xhs-card-h1">中文老师访谈</div>
-            <div class="xhs-card-h2">第 26 期</div>
-            <div class="xhs-card-people">
-              <span data-i18n="xhs_host_lbl">主持人</span>：<b>何十一</b><br>
-              <span data-i18n="xhs_guest_lbl">嘉宾</span>：<b>林安琪</b>
-            </div>
-            <ul>
-              <li>汉语国际教育本科</li>
-              <li>KU Leuven 教育研究硕士在读</li>
-              <li>第二届国际中文教育案例大赛全国亚军</li>
-              <li>比利时中文学校教师</li>
-            </ul>
-          </div>
-          <a class="xhs-card-cta" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
-        </div>
+        <a class="xhs-cover-wrap" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener">
+          <span class="xhs-cover-badge">小红书</span>
+          <img src="A照片/xhsyiyi封面图.png" alt="中文老师访谈 第26期 · 林安琪">
+          <div class="xhs-cover-overlay"></div>
+        </a>
         <div class="interview-body">
           <div class="interview-title" data-i18n="iv2_title">中文老师访谈 · 第 26 期</div>
           <div class="interview-meta" data-i18n="iv2_meta">小红书 · 主持人何十一</div>
@@ -1280,28 +1281,11 @@ footer{flex-wrap:wrap;}
 
       <!-- Interview 3: XHS 🇹🇭 归属计划 (CSS card) -->
       <div class="interview-card">
-        <div class="xhs-card">
-          <div class="xhs-card-head">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
-            小红书 · 归属计划
-          </div>
-          <div class="xhs-card-body">
-            <div class="xhs-card-flag">🇹🇭</div>
-            <div class="xhs-card-h1">对话泰国中文老师</div>
-            <div class="xhs-card-h2">归属计划 · 第 01 期</div>
-            <div class="xhs-card-people">
-              <b>学习语言，多元交友</b><br>
-              <span data-i18n="xhs_host_lbl">主持人</span>：小林在比利时<br>
-              <span data-i18n="xhs_guest_lbl">嘉宾</span>：蝶底小孔
-            </div>
-            <ul>
-              <li>国际中文教师视角</li>
-              <li>跨文化交友与语言习得</li>
-              <li>泰国教学生活实录</li>
-            </ul>
-          </div>
-          <a class="xhs-card-cta" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
-        </div>
+        <a class="xhs-cover-wrap" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener">
+          <span class="xhs-cover-badge">小红书</span>
+          <img src="A照片/TH封面图.png" alt="🇹🇭 归属计划 01 · 对话泰国中文老师">
+          <div class="xhs-cover-overlay"></div>
+        </a>
         <div class="interview-body">
           <div class="interview-title" data-i18n="iv3_title">🇹🇭 归属计划 · 01</div>
           <div class="interview-meta" data-i18n="iv3_meta">小红书 · 对话泰国中文老师</div>
@@ -1664,10 +1648,23 @@ footer{flex-wrap:wrap;}
     <div class="pg-ey" data-i18n="pf_label">Teacher Lin</div>
     <h1 class="pg-h1" data-i18n="pf_h">Portfolio</h1>
   </div>
-  <p style="text-align:center;max-width:820px;margin:-1rem auto 2.5rem;font-size:1.1rem;color:var(--ink);line-height:1.7;padding:1.1rem 1.75rem;background:var(--s1);border-left:3px solid var(--amber);border-right:3px solid var(--amber);border-radius:12px;font-weight:500;" data-i18n="pf_sub">这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。</p>
+  <p style="text-align:center;max-width:820px;margin:-1rem auto 2rem;font-size:1.1rem;color:var(--ink);line-height:1.7;padding:1.1rem 1.75rem;background:var(--s1);border-left:3px solid var(--amber);border-right:3px solid var(--amber);border-radius:12px;font-weight:500;" data-i18n="pf_sub">这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。</p>
+
+  <!-- ══ TABLE OF CONTENTS · 目录跳转 ══ -->
+  <div class="pf-toc">
+    <div class="pf-toc-inner">
+      <a href="#pf-awards" data-i18n="toc_awards">🏆 奖项</a>
+      <a href="#pf-competitions" data-i18n="toc_competitions">🎯 比赛</a>
+      <a href="#pf-interviews" data-i18n="toc_interviews">🎤 采访</a>
+      <a href="#pf-cultural" data-i18n="toc_cultural">🌏 文化</a>
+      <a href="#pf-classroom" data-i18n="toc_classroom">🎓 课堂</a>
+      <a href="#pf-feedback" data-i18n="toc_feedback">💌 留言</a>
+      <a href="#pf-showcase" data-i18n="toc_showcase">🎬 学生作品</a>
+    </div>
+  </div>
 
   <!-- ══ AWARDS · 8 张完整奖项 (Phase 4 真实内容) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-awards">
     <div class="sec-label" data-i18n="pf_awards_label">荣誉</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="awards_h">奖项与荣誉</h2>
     <div class="pf-award-grid">
@@ -1710,7 +1707,7 @@ footer{flex-wrap:wrap;}
   </div>
 
   <!-- ══ COMPETITIONS · 国际中文教育案例大赛 (Phase 4 NEW) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-competitions">
     <div class="sec-label" data-i18n="pf_competitions_label">比赛</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_competitions_h">国际中文教育案例大赛</h2>
     <div class="cap-grid-3">
@@ -1738,11 +1735,15 @@ footer{flex-wrap:wrap;}
         <img src="A照片/02-Competitions-比赛/competition-cpipc-2025-award-ceremony-2.jpg" alt="颁奖典礼 2" loading="lazy">
         <div class="cap-text" data-i18n="cp6_caption">颁奖现场 · 另一角度</div>
       </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/作为KUL的评委.JPG" alt="担任 KU Leuven 评委" loading="lazy">
+        <div class="cap-text" data-i18n="cp7_caption">担任 KU Leuven 评委 · 教育研究项目评审</div>
+      </div>
     </div>
   </div>
 
-  <!-- ══ INTERVIEWS · 4 cards (Phase 4 real content) ══ -->
-  <div class="portfolio-section">
+  <!-- ══ INTERVIEWS · 5 cards (Phase 4 real content) ══ -->
+  <div class="portfolio-section" id="pf-interviews">
     <div class="sec-label" data-i18n="interviews_label">媒体</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="interviews_h">采访与报道</h2>
     <div class="interview-list">
@@ -1757,27 +1758,11 @@ footer{flex-wrap:wrap;}
         </div>
       </div>
       <div class="interview-card">
-        <div class="xhs-card">
-          <div class="xhs-card-head">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
-            小红书 · 中文老师访谈
-          </div>
-          <div class="xhs-card-body">
-            <div class="xhs-card-h1">中文老师访谈</div>
-            <div class="xhs-card-h2">第 26 期</div>
-            <div class="xhs-card-people">
-              <span data-i18n="xhs_host_lbl">主持人</span>：<b>何十一</b><br>
-              <span data-i18n="xhs_guest_lbl">嘉宾</span>：<b>林安琪</b>
-            </div>
-            <ul>
-              <li>汉语国际教育本科</li>
-              <li>KU Leuven 教育研究硕士在读</li>
-              <li>第二届国际中文教育案例大赛全国亚军</li>
-              <li>比利时中文学校教师</li>
-            </ul>
-          </div>
-          <a class="xhs-card-cta" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
-        </div>
+        <a class="xhs-cover-wrap" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener">
+          <span class="xhs-cover-badge">小红书</span>
+          <img src="A照片/xhsyiyi封面图.png" alt="中文老师访谈 第26期 · 林安琪">
+          <div class="xhs-cover-overlay"></div>
+        </a>
         <div class="interview-body">
           <div class="interview-title" data-i18n="iv2_title">中文老师访谈 · 第 26 期</div>
           <div class="interview-meta" data-i18n="iv2_meta">小红书 · 主持人何十一</div>
@@ -1785,28 +1770,11 @@ footer{flex-wrap:wrap;}
         </div>
       </div>
       <div class="interview-card">
-        <div class="xhs-card">
-          <div class="xhs-card-head">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
-            小红书 · 归属计划
-          </div>
-          <div class="xhs-card-body">
-            <div class="xhs-card-flag">🇹🇭</div>
-            <div class="xhs-card-h1">对话泰国中文老师</div>
-            <div class="xhs-card-h2">归属计划 · 第 01 期</div>
-            <div class="xhs-card-people">
-              <b>学习语言，多元交友</b><br>
-              <span data-i18n="xhs_host_lbl">主持人</span>：小林在比利时<br>
-              <span data-i18n="xhs_guest_lbl">嘉宾</span>：蝶底小孔
-            </div>
-            <ul>
-              <li>国际中文教师视角</li>
-              <li>跨文化交友与语言习得</li>
-              <li>泰国教学生活实录</li>
-            </ul>
-          </div>
-          <a class="xhs-card-cta" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
-        </div>
+        <a class="xhs-cover-wrap" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener">
+          <span class="xhs-cover-badge">小红书</span>
+          <img src="A照片/TH封面图.png" alt="🇹🇭 归属计划 01 · 对话泰国中文老师">
+          <div class="xhs-cover-overlay"></div>
+        </a>
         <div class="interview-body">
           <div class="interview-title" data-i18n="iv3_title">🇹🇭 归属计划 · 01</div>
           <div class="interview-meta" data-i18n="iv3_meta">小红书 · 对话泰国中文老师</div>
@@ -1838,7 +1806,7 @@ footer{flex-wrap:wrap;}
   </div>
 
   <!-- ══ CULTURAL EVENTS · 文化交流活动 (Phase 4 NEW) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-cultural">
     <div class="sec-label" data-i18n="pf_cultural_label">文化</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_cultural_h">文化交流活动</h2>
     <div class="cap-grid-3">
@@ -1870,7 +1838,7 @@ footer{flex-wrap:wrap;}
   </div>
 
   <!-- ══ CLASSROOM MOMENTS · 课堂实录 (Phase 4 重新分类) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-classroom">
     <div class="sec-label" data-i18n="pf_classroom_label">课堂实录</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="gallery_h">真实瞬间，真实学生</h2>
     <div class="photo-masonry">
@@ -1902,7 +1870,7 @@ footer{flex-wrap:wrap;}
   </div>
 
   <!-- ══ STUDENT FEEDBACK WALL · 学员评价（18 张完整 feedback ）(Phase 4 NEW) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-feedback">
     <div class="sec-label" data-i18n="pf_feedback_label">学员评价</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_feedback_h">学生留言墙</h2>
     <div class="feedback-wall">
@@ -1982,7 +1950,7 @@ footer{flex-wrap:wrap;}
   </div>
 
   <!-- ══ STUDENT SHOWCASE · 学生原创作品 (Phase 4 占位) ══ -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="pf-showcase">
     <div class="sec-label" data-i18n="pf_showcase_label">学生作品</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_showcase_h">学生原创作品</h2>
     <div class="short-grid">

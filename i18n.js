@@ -390,6 +390,16 @@ window.__i18n = {
   cp4_caption: { zh: '三甲合影 · 全国冠军、亚军、季军同台', en: '三甲合影 · 全国冠军、亚军、季军同台', th: '三甲合影 · 全国冠军、亚军、季军同台', es: '三甲合影 · 全国冠军、亚军、季军同台', nl: '三甲合影 · 全国冠军、亚军、季军同台', fr: '三甲合影 · 全国冠军、亚军、季军同台' },
   cp5_caption: { zh: '颁奖典礼 · 亚军领奖', en: '颁奖典礼 · 亚军领奖', th: '颁奖典礼 · 亚军领奖', es: '颁奖典礼 · 亚军领奖', nl: '颁奖典礼 · 亚军领奖', fr: '颁奖典礼 · 亚军领奖' },
   cp6_caption: { zh: '颁奖现场 · 另一角度', en: '颁奖现场 · 另一角度', th: '颁奖现场 · 另一角度', es: '颁奖现场 · 另一角度', nl: '颁奖现场 · 另一角度', fr: '颁奖现场 · 另一角度' },
+  cp7_caption: { zh: '担任 KU Leuven 评委 · 教育研究项目评审', en: '担任 KU Leuven 评委 · 教育研究项目评审', th: '担任 KU Leuven 评委 · 教育研究项目评审', es: '担任 KU Leuven 评委 · 教育研究项目评审', nl: '担任 KU Leuven 评委 · 教育研究项目评审', fr: '担任 KU Leuven 评委 · 教育研究项目评审' },
+
+  /* Portfolio TOC labels */
+  toc_awards:      { zh: '🏆 奖项', en: '🏆 奖项', th: '🏆 奖项', es: '🏆 奖项', nl: '🏆 奖项', fr: '🏆 奖项' },
+  toc_competitions:{ zh: '🎯 比赛', en: '🎯 比赛', th: '🎯 比赛', es: '🎯 比赛', nl: '🎯 比赛', fr: '🎯 比赛' },
+  toc_interviews:  { zh: '🎤 采访', en: '🎤 采访', th: '🎤 采访', es: '🎤 采访', nl: '🎤 采访', fr: '🎤 采访' },
+  toc_cultural:    { zh: '🌏 文化', en: '🌏 文化', th: '🌏 文化', es: '🌏 文化', nl: '🌏 文化', fr: '🌏 文化' },
+  toc_classroom:   { zh: '🎓 课堂', en: '🎓 课堂', th: '🎓 课堂', es: '🎓 课堂', nl: '🎓 课堂', fr: '🎓 课堂' },
+  toc_feedback:    { zh: '💌 留言', en: '💌 留言', th: '💌 留言', es: '💌 留言', nl: '💌 留言', fr: '💌 留言' },
+  toc_showcase:    { zh: '🎬 学生作品', en: '🎬 学生作品', th: '🎬 学生作品', es: '🎬 学生作品', nl: '🎬 学生作品', fr: '🎬 学生作品' },
 
   /* Cultural Events (Portfolio NEW section) */
   pf_cultural_label: { zh: '文化', en: '文化', th: '文化', es: '文化', nl: '文化', fr: '文化' },
