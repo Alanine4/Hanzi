@@ -716,6 +716,34 @@ footer{flex-wrap:wrap;}
 .t-video-actual iframe{position:absolute;inset:0;width:100%;height:100%;}
 @media(max-width:600px){.follow-links{gap:0.6rem;}.follow-link{padding:0.55rem 0.9rem;font-size:0.78rem;}}
 
+/* ═══ PHASE 3 ADDITIONS · About redesign + Portfolio page ═══ */
+.about-vid-wrap{max-width:700px;margin:1.5rem auto 0;}
+.award-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem;}
+.award-card{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1.5rem 1.25rem;text-align:center;transition:box-shadow .15s,transform .15s;}
+.award-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
+.award-icon-box{width:60px;height:60px;border-radius:50%;background:var(--s2);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.6rem;}
+.award-name{font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;line-height:1.4;}
+.award-yr{font-size:0.72rem;color:var(--muted);}
+.photo-masonry{columns:3;column-gap:0.75rem;margin-top:1.5rem;}
+.photo-masonry img{width:100%;margin-bottom:0.75rem;border-radius:12px;break-inside:avoid;display:block;object-fit:cover;transition:transform .2s;}
+.photo-masonry img:hover{transform:scale(1.02);}
+.interview-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem;}
+.interview-card{display:grid;grid-template-columns:400px 1fr;gap:1.5rem;align-items:start;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1.25rem;}
+.interview-body{display:flex;flex-direction:column;gap:0.5rem;justify-content:center;}
+.interview-title{font-size:0.95rem;font-weight:700;color:var(--ink);line-height:1.4;}
+.interview-meta{font-size:0.78rem;color:var(--muted);}
+.classroom-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+.classroom-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-card);transition:transform .2s;}
+.classroom-strip img:hover{transform:scale(1.02);}
+.portfolio-section{margin-top:4rem;max-width:1100px;margin-left:auto;margin-right:auto;padding:0 2.5rem;}
+.pf-award-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:1.5rem;}
+.short-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem;}
+.short-card{aspect-ratio:9/16;background:var(--s2);border-radius:var(--r-card);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;}
+.short-card-label{position:absolute;bottom:0;left:0;right:0;padding:0.75rem;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:0.75rem;font-weight:600;}
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem;}
+.demo-card{background:var(--canvas);border:1.5px dashed var(--hair);border-radius:var(--r-card);padding:1.5rem;text-align:center;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;}
+.pf-vid-placeholder{position:absolute;inset:0;background:var(--s2);border-radius:var(--r-card);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;}
+
 /* Mobile */
 @media(max-width:860px){
   .pricing-grid{grid-template-columns:1fr;}
@@ -725,6 +753,23 @@ footer{flex-wrap:wrap;}
   .lm-form{width:100%;}
   .lm-form input{width:100%;min-width:0;}
   .section-mt{padding:0 1.5rem;}
+  /* Phase 3 responsive */
+  .award-grid{grid-template-columns:1fr 1fr;}
+  .photo-masonry{columns:2;}
+  .interview-card{grid-template-columns:1fr;}
+  .classroom-strip{grid-template-columns:1fr 1fr;}
+  .pf-award-grid{grid-template-columns:1fr 1fr;}
+  .short-grid{grid-template-columns:repeat(2,1fr);}
+  .demo-grid{grid-template-columns:1fr 1fr;}
+  .portfolio-section{padding:0 1.5rem;}
+  .nav-center{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+}
+@media(max-width:480px){
+  .award-grid{grid-template-columns:1fr;}
+  .photo-masonry{columns:1;}
+  .classroom-strip{grid-template-columns:1fr;}
+  .demo-grid{grid-template-columns:1fr;}
+  .short-grid{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
@@ -740,6 +785,7 @@ footer{flex-wrap:wrap;}
     <button onclick="goto('about')"   id="nav-about" data-i18n="nav_about">About</button>
     <button onclick="goto('courses')" id="nav-courses" data-i18n="nav_courses">Courses</button>
     <button onclick="goto('contact')" id="nav-contact" data-i18n="nav_contact">Contact</button>
+    <button onclick="goto('portfolio')" id="nav-portfolio" data-i18n="nav_portfolio">Portfolio</button>
   </div>
   <div class="nav-right">
     <button class="btn-p" onclick="window.open('https://calendly.com/teacherlin/30min','_blank')" data-i18n="nav_cta_book">Book a Trial · €29</button>
@@ -938,6 +984,20 @@ footer{flex-wrap:wrap;}
     </div>
   </div>
 
+  <!-- ══ CLASSROOM PREVIEW · 3 selected photos — see full gallery in Portfolio ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="classroom_label">In the Classroom</div>
+    <h2 class="sec-h2" style="font-size:1.4rem;margin-bottom:0.5rem" data-i18n="classroom_h">Moments from real lessons</h2>
+    <div class="classroom-strip">
+      <img src="A照片/IMG_8544.JPG" alt="Classroom moment" loading="lazy">
+      <img src="A照片/IMG_9541.JPG" alt="Teaching session" loading="lazy">
+      <img src="A照片/IMG_1592.JPG" alt="Lesson activity" loading="lazy">
+    </div>
+    <div style="text-align:center;margin-top:1rem">
+      <button class="btn-o" onclick="goto('portfolio')" data-i18n="classroom_more">See full portfolio →</button>
+    </div>
+  </div>
+
   <div class="quote-band">
     <blockquote data-i18n="quote_text">Language is the bridge between cultures.</blockquote>
     <cite data-i18n="quote_cite">— Teacher Lin · SpeakHanzi</cite>
@@ -1013,6 +1073,60 @@ footer{flex-wrap:wrap;}
     </div>
   </div>
 
+  <!-- ══ INTRO VIDEO · TODO: record 60–90s intro video, upload to YouTube (unlisted), then replace the placeholder div below with:
+       <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+  ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="about_vid_label">Meet Teacher Lin</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="about_vid_h">Watch before you book</h2>
+    <div class="about-vid-wrap">
+      <div class="t-video-actual">
+        <div class="pf-vid-placeholder">
+          <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="30" fill="none" stroke="var(--amber)" stroke-width="2" opacity="0.45"/><polygon points="26,20 26,44 46,32" fill="var(--amber)" opacity="0.45"/></svg>
+          <span style="color:var(--muted);font-size:0.82rem" data-i18n="about_vid_todo">Intro video · coming soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ AWARDS · TODO: Replace placeholder award names/years/institutions below; edit the matching i18n.js keys (aw1_name–aw5_name, aw1_yr–aw5_yr) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="awards_label">Recognition</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="awards_h">Awards & Recognition</h2>
+    <div class="award-grid">
+      <div class="award-card">
+        <div class="award-icon-box">🏆</div>
+        <div class="award-name" data-i18n="aw1_name">National Excellent Chinese Teacher Abroad</div>
+        <div class="award-yr" data-i18n="aw1_yr">2024 · Hanban / CIEF</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">🌟</div>
+        <div class="award-name" data-i18n="aw2_name">Outstanding Teaching Performance</div>
+        <div class="award-yr" data-i18n="aw2_yr">2023 · Kawila Wittayalai School</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">🎓</div>
+        <div class="award-name" data-i18n="aw3_name">Innovation in Language Education</div>
+        <div class="award-yr" data-i18n="aw3_yr">2024 · KU Leuven</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">📚</div>
+        <div class="award-name" data-i18n="aw4_name">Cultural Bridge Award</div>
+        <div class="award-yr" data-i18n="aw4_yr">2023 · China–Thailand Exchange</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">✨</div>
+        <div class="award-name" data-i18n="aw5_name">Community Impact Award</div>
+        <div class="award-yr" data-i18n="aw5_yr">2025 · ThaiCool Chinese</div>
+      </div>
+      <div class="award-card" style="border-style:dashed;background:var(--s1);">
+        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
+        <div class="award-name" style="color:var(--muted)"><!-- TODO: Add 6th award name in i18n.js --></div>
+        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      </div>
+    </div>
+  </div>
+
   <div class="tl-wrap">
     <div class="tl-cols">
       <div>
@@ -1037,6 +1151,77 @@ footer{flex-wrap:wrap;}
         <div class="scard"><h4 data-i18n="sk_langs_h">Languages</h4><div class="stags"><span class="stag" data-i18n="sk_lang1">🇨🇳 Mandarin · Native</span><span class="stag" data-i18n="sk_lang2">🇬🇧 English · IELTS 7.0</span><span class="stag" data-i18n="sk_lang3">🇹🇭 Thai · Intermediate</span></div></div>
         <div class="scard"><h4 data-i18n="sk_teach_h">Teaching</h4><div class="stags"><span class="stag" data-i18n="sk_teach1">HSK 1–6 Prep</span><span class="stag" data-i18n="sk_teach2">Conversational</span><span class="stag" data-i18n="sk_teach3">Business Chinese</span><span class="stag" data-i18n="sk_teach4">Children & Adults</span></div></div>
         <div class="scard"><h4 data-i18n="sk_tech_h">Technical</h4><div class="stags"><span class="stag" data-i18n="sk_tech1">AI in Education</span><span class="stag" data-i18n="sk_tech2">Video Editing</span><span class="stag" data-i18n="sk_tech3">Graphic Design</span><span class="stag" data-i18n="sk_tech4">Social Media</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TEACHING GALLERY · Using photos from A照片/ folder.
+       TODO: Review photos and remove any you don't want public.
+       All photos use relative path A照片/FILENAME — make sure this folder is deployed alongside index.html. ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="gallery_label">In the Classroom</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="gallery_h">Real moments, real students</h2>
+    <div class="photo-masonry">
+      <img src="A照片/IMG_7170.JPG" alt="Teaching moment" loading="lazy">
+      <img src="A照片/IMG_7173.JPG" alt="Classroom activity" loading="lazy">
+      <img src="A照片/IMG_7171.JPG" alt="Teaching session" loading="lazy">
+      <img src="A照片/IMG_2178.JPG" alt="Lesson moment" loading="lazy">
+      <img src="A照片/IMG_7174.JPG" alt="Group lesson" loading="lazy">
+      <img src="A照片/IMG_7172.JPG" alt="Student engagement" loading="lazy">
+      <img src="A照片/IMG_2352.jpg" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_7176.JPG" alt="Classroom" loading="lazy">
+      <img src="A照片/IMG_9004.jpg" alt="Lesson activity" loading="lazy">
+    </div>
+    <div style="text-align:center;margin-top:1.5rem">
+      <button class="btn-o" onclick="goto('portfolio')" data-i18n="gallery_more">See full gallery →</button>
+    </div>
+  </div>
+
+  <!-- ══ INTERVIEWS · TODO: For each card, replace the placeholder div with a real YouTube embed:
+       <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+       Then update the iv{n}_title / iv{n}_meta / iv{n}_desc keys in i18n.js ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="interviews_label">Media</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="interviews_h">Interviews & Features</h2>
+    <div class="interview-list">
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv1_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv1_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc"><!-- TODO: Brief description of interview topic --></p>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv2_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv2_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc"><!-- TODO: Brief description --></p>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv3_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv3_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc"><!-- TODO: Brief description --></p>
+        </div>
       </div>
     </div>
   </div>
@@ -1319,6 +1504,272 @@ footer{flex-wrap:wrap;}
     <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · anqi.lin@speakhanzi.com</span>
   </footer>
 </div>
+
+
+<!-- ══ PORTFOLIO ══ -->
+<div class="page" id="page-portfolio">
+  <!-- Header -->
+  <div class="pg-header">
+    <div class="pg-ey" data-i18n="pf_label">Teacher Lin</div>
+    <h1 class="pg-h1" data-i18n="pf_h">Portfolio</h1>
+  </div>
+  <p style="text-align:center;max-width:680px;margin:-1.5rem auto 2rem;font-size:0.9rem;color:var(--muted);line-height:1.6;padding:0 1.5rem" data-i18n="pf_sub">Awards, interviews, classroom moments, short videos and AI product demos — all in one place.</p>
+
+  <!-- ══ AWARDS ══ -->
+  <!-- TODO: Update award names/years/institutions by editing aw1–aw5 keys in i18n.js -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_awards_label">Recognition</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="awards_h">Awards & Recognition</h2>
+    <div class="pf-award-grid">
+      <div class="award-card">
+        <div class="award-icon-box">🏆</div>
+        <div class="award-name" data-i18n="aw1_name">National Excellent Chinese Teacher Abroad</div>
+        <div class="award-yr" data-i18n="aw1_yr">2024 · Hanban / CIEF</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">🌟</div>
+        <div class="award-name" data-i18n="aw2_name">Outstanding Teaching Performance</div>
+        <div class="award-yr" data-i18n="aw2_yr">2023 · Kawila Wittayalai School</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">🎓</div>
+        <div class="award-name" data-i18n="aw3_name">Innovation in Language Education</div>
+        <div class="award-yr" data-i18n="aw3_yr">2024 · KU Leuven</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">📚</div>
+        <div class="award-name" data-i18n="aw4_name">Cultural Bridge Award</div>
+        <div class="award-yr" data-i18n="aw4_yr">2023 · China–Thailand Exchange</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon-box">✨</div>
+        <div class="award-name" data-i18n="aw5_name">Community Impact Award</div>
+        <div class="award-yr" data-i18n="aw5_yr">2025 · ThaiCool Chinese</div>
+      </div>
+      <div class="award-card" style="border-style:dashed;background:var(--s1);">
+        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
+        <div class="award-name" style="color:var(--muted)"><!-- TODO: 6th award --></div>
+        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      </div>
+      <div class="award-card" style="border-style:dashed;background:var(--s1);">
+        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
+        <div class="award-name" style="color:var(--muted)"><!-- TODO: 7th award --></div>
+        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      </div>
+      <div class="award-card" style="border-style:dashed;background:var(--s1);">
+        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
+        <div class="award-name" style="color:var(--muted)"><!-- TODO: 8th award --></div>
+        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ INTERVIEWS ══ -->
+  <!-- TODO: For each card replace the placeholder div with:
+       <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+       Then update iv1/iv2/iv3 keys in i18n.js -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="interviews_label">Media</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="interviews_h">Interviews & Features</h2>
+    <div class="interview-list">
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv1_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv1_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc"><!-- TODO: Brief description --></p>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv2_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv2_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc"><!-- TODO: Brief description --></p>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="t-video-actual">
+          <div class="pf-vid-placeholder">
+            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+          </div>
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv3_title"><!-- TODO: Interview title --></div>
+          <div class="interview-meta" data-i18n="iv3_meta"><!-- TODO: Media outlet · Year --></div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc"><!-- TODO: Brief description --></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CLASSROOM MOMENTS · All photos from A照片/ folder ══ -->
+  <!-- TODO: Review each photo; remove any you don't want public; folder must be deployed with index.html -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_classroom_label">Gallery</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="gallery_h">Real moments, real students</h2>
+    <div class="photo-masonry">
+      <img src="A照片/IMG_7170.JPG" alt="Teaching moment" loading="lazy">
+      <img src="A照片/IMG_0051.JPG" alt="Classroom" loading="lazy">
+      <img src="A照片/IMG_7173.JPG" alt="Lesson activity" loading="lazy">
+      <img src="A照片/IMG_2178.JPG" alt="Teaching session" loading="lazy">
+      <img src="A照片/IMG_7171.JPG" alt="Student engagement" loading="lazy">
+      <img src="A照片/IMG_0057.JPG" alt="Classroom moment" loading="lazy">
+      <img src="A照片/IMG_7174.JPG" alt="Group lesson" loading="lazy">
+      <img src="A照片/IMG_2352.jpg" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_7172.JPG" alt="Lesson" loading="lazy">
+      <img src="A照片/IMG_0068.JPG" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_7176.JPG" alt="Classroom activity" loading="lazy">
+      <img src="A照片/IMG_1592.JPG" alt="Teaching moment" loading="lazy">
+      <img src="A照片/IMG_7177.JPG" alt="Student" loading="lazy">
+      <img src="A照片/IMG_2394.jpg" alt="Lesson" loading="lazy">
+      <img src="A照片/IMG_7178.JPG" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_0946.JPG" alt="Classroom" loading="lazy">
+      <img src="A照片/IMG_7182.JPG" alt="Teaching session" loading="lazy">
+      <img src="A照片/IMG_2396.jpg" alt="Lesson activity" loading="lazy">
+      <img src="A照片/IMG_7183.JPG" alt="Classroom moment" loading="lazy">
+      <img src="A照片/IMG_1634.JPG" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_7186.JPG" alt="Student work" loading="lazy">
+      <img src="A照片/IMG_2422.jpg" alt="Group lesson" loading="lazy">
+      <img src="A照片/IMG_7269.jpg" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_2439.JPG" alt="Classroom" loading="lazy">
+      <img src="A照片/IMG_7579.JPG" alt="Lesson" loading="lazy">
+      <img src="A照片/IMG_0962.JPG" alt="Teaching moment" loading="lazy">
+      <img src="A照片/IMG_8544.JPG" alt="Student activity" loading="lazy">
+      <img src="A照片/IMG_8980.JPG" alt="Teaching" loading="lazy">
+      <img src="A照片/IMG_9004.jpg" alt="Lesson" loading="lazy">
+      <img src="A照片/IMG_9541.JPG" alt="Teaching session" loading="lazy">
+      <img src="A照片/IMG_9586.JPG" alt="Classroom" loading="lazy">
+      <img src="A照片/60e14b7d83bf47eec68b6b7190990071.JPG" alt="Teaching moment" loading="lazy">
+      <img src="A照片/b7463d0633b1a7a5f41a716781f5a157.JPG" alt="Teaching" loading="lazy">
+    </div>
+  </div>
+
+  <!-- ══ SHORT VIDEOS ══ -->
+  <!-- TODO: Replace each placeholder div with a vertical video embed or <video> tag.
+       For YouTube Shorts: <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+       Update sv1_lbl–sv4_lbl keys in i18n.js with real video titles ══ -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_shorts_label">Short Videos</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_shorts_h">Clips & Highlights</h2>
+    <div class="short-grid">
+      <div class="short-card">
+        <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
+          <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+        </div>
+        <div class="short-card-label" data-i18n="sv1_lbl">Short video 1 · TODO</div>
+      </div>
+      <div class="short-card">
+        <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
+          <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+        </div>
+        <div class="short-card-label" data-i18n="sv2_lbl">Short video 2 · TODO</div>
+      </div>
+      <div class="short-card">
+        <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
+          <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+        </div>
+        <div class="short-card-label" data-i18n="sv3_lbl">Short video 3 · TODO</div>
+      </div>
+      <div class="short-card">
+        <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
+          <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
+        </div>
+        <div class="short-card-label" data-i18n="sv4_lbl">Short video 4 · TODO</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ AI PRODUCT DEMOS ══ -->
+  <!-- TODO: Replace each demo-card with a real screenshot + description + link when products are ready -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_demos_label">AI Tools</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_demos_h">AI Products for Mandarin Learners</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:0.5rem" data-i18n="pf_demos_sub">Built by Teacher Lin · powered by AI · coming soon</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <div style="font-size:2rem">🤖</div>
+        <div style="font-size:0.9rem;font-weight:700;color:var(--ink)" data-i18n="demo1_h">HSK Vocab Generator</div>
+        <div style="font-size:0.78rem;color:var(--muted)" data-i18n="demo1_sub">AI-powered flashcard sets for every HSK level</div>
+        <div style="font-size:0.7rem;color:var(--amber);font-weight:600">Coming soon</div>
+        <!-- TODO: Replace with screenshot image + live demo link -->
+      </div>
+      <div class="demo-card">
+        <div style="font-size:2rem">🎙</div>
+        <div style="font-size:0.9rem;font-weight:700;color:var(--ink)" data-i18n="demo2_h">Pinyin Tutor Pro</div>
+        <div style="font-size:0.78rem;color:var(--muted)" data-i18n="demo2_sub">Interactive tones and pronunciation trainer</div>
+        <div style="font-size:0.7rem;color:var(--amber);font-weight:600">Coming soon</div>
+        <!-- TODO: Replace with screenshot image + live demo link -->
+      </div>
+      <div class="demo-card">
+        <div style="font-size:2rem">💬</div>
+        <div style="font-size:0.9rem;font-weight:700;color:var(--ink)" data-i18n="demo3_h">AI Chat Buddy</div>
+        <div style="font-size:0.78rem;color:var(--muted)" data-i18n="demo3_sub">Practice Mandarin conversation at any level</div>
+        <div style="font-size:0.7rem;color:var(--amber);font-weight:600">Coming soon</div>
+        <!-- TODO: Replace with screenshot image + live demo link -->
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem">
+      <button class="btn-o" onclick="goto('contact')" data-i18n="classroom_more">Get notified when these launch →</button>
+    </div>
+  </div>
+
+  <!-- ══ LEAD MAGNET BAR ══ -->
+  <div class="lm-bar">
+    <div class="lm-text">
+      <h4 data-i18n="lm_h">📥 Free PDF · 30 High-Frequency Mandarin Phrases</h4>
+      <p data-i18n="lm_sub">For travel, business, daily life · Bilingual + Pinyin</p>
+    </div>
+    <form class="lm-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="lm_email_ph" required>
+      <button type="submit" data-i18n="lm_btn">Get Free PDF →</button>
+    </form>
+  </div>
+  <!-- ══ FOLLOW BAR ══ -->
+  <div class="follow-bar">
+    <h3 data-i18n="follow_h">Follow Teacher Lin</h3>
+    <div class="follow-links">
+      <a class="follow-link yt" href="https://www.youtube.com/@TamenMandarin" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>YouTube
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/chinese_with_lin" target="_blank" rel="noopener" aria-label="Instagram @chinese_with_lin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>@chinese_with_lin
+      </a>
+      <a class="follow-link ig" href="https://www.instagram.com/thaicool.chinese/" target="_blank" rel="noopener" aria-label="Instagram @thaicool.chinese">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>@thaicool.chinese
+      </a>
+      <a class="follow-link xhs" href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="小红书">
+        <svg viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-family="serif" font-size="7" font-weight="700">小红书</text></svg>小红书
+      </a>
+      <a class="follow-link tt" href="https://www.tiktok.com/@chinese_with_lin" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg>TikTok
+      </a>
+    </div>
+  </div>
+  <footer>
+    <span class="ft-logo" data-i18n="footer_logo">SpeakHanzi</span>
+    <span class="social-icons">
+      <a href="https://www.youtube.com/@TamenMandarin" data-todo="youtube" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a>
+      <a href="https://www.instagram.com/chinese_with_lin" data-todo="instagram" target="_blank" rel="noopener" aria-label="Instagram @chinese_with_lin" title="@chinese_with_lin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.instagram.com/thaicool.chinese/" data-todo="instagram2" target="_blank" rel="noopener" aria-label="Instagram @thaicool.chinese" title="@thaicool.chinese"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
+      <a href="https://www.xiaohongshu.com/user/profile/59b41c5182ec397bcd1b848d?xsec_token=AB7a1PI6SG4-C3yF9UZXCYhLau4-mIyS-oJjRip21zfXs%3D&amp;xsec_source=pc_search" data-todo="xiaohongshu" target="_blank" rel="noopener" aria-label="Xiaohongshu" title="小红书"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="7" font-weight="700" fill="#FCFBF6">小红书</text></svg></a>
+      <a href="https://www.tiktok.com/@chinese_with_lin" data-todo="tiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.96a8.16 8.16 0 0 0 4.77 1.52V7.03a4.85 4.85 0 0 1-1.84-.34Z"/></svg></a>
+    </span>
+    <span class="ft-r" data-i18n="footer_copy">© 2026 Teacher Lin · anqi.lin@speakhanzi.com</span>
+  </footer>
+</div>
+
 
 <script>
 function goto(id){

@@ -290,7 +290,80 @@ window.__i18n = {
   follow_h: { zh: '关注林老师', en: 'Follow Teacher Lin', th: 'ติดตาม Teacher Lin', es: 'Seguir a Teacher Lin', nl: 'Volg Teacher Lin', fr: 'Suivre Teacher Lin' },
 
   /* ═══ COURSES PAGE UPDATE (section E) ═══ */
-  co_subtitle: { zh: '下方所有主题均可作为 1-on-1 月套餐学习，按需选择。', en: 'Every theme below is available as a 1-on-1 monthly package. Pick what you need.', th: 'หัวข้อด้านล่างทั้งหมดเรียนได้แบบ 1-ต่อ-1 รายเดือน เลือกตามที่คุณต้องการ', es: 'Cada tema a continuación está disponible como paquete mensual 1-a-1. Elige lo que necesites.', nl: 'Elk onderstaand thema is beschikbaar als 1-op-1 maandpakket. Kies wat je nodig hebt.', fr: 'Chaque thème ci-dessous est disponible en formule individuelle mensuelle. Choisissez selon vos besoins.' }
+  co_subtitle: { zh: '下方所有主题均可作为 1-on-1 月套餐学习，按需选择。', en: 'Every theme below is available as a 1-on-1 monthly package. Pick what you need.', th: 'หัวข้อด้านล่างทั้งหมดเรียนได้แบบ 1-ต่อ-1 รายเดือน เลือกตามที่คุณต้องการ', es: 'Cada tema a continuación está disponible como paquete mensual 1-a-1. Elige lo que necesites.', nl: 'Elk onderstaand thema is beschikbaar als 1-op-1 maandpakket. Kies wat je nodig hebt.', fr: 'Chaque thème ci-dessous est disponible en formule individuelle mensuelle. Choisissez selon vos besoins.' },
+
+  /* ═══ PHASE 3 — About redesign + Portfolio ═══ */
+
+  /* Nav */
+  nav_portfolio: { zh: '作品集', en: 'Portfolio', th: 'ผลงาน', es: 'Portafolio', nl: 'Portfolio', fr: 'Portfolio' },
+
+  /* About – intro video */
+  about_vid_label: { zh: '认识林老师', en: 'Meet Teacher Lin', th: 'รู้จัก Teacher Lin', es: 'Conoce a Teacher Lin', nl: 'Maak kennis met Teacher Lin', fr: 'Rencontrez Teacher Lin' },
+  about_vid_h:     { zh: '预约前先看看', en: 'Watch before you book', th: 'ดูก่อนจอง', es: 'Mira antes de reservar', nl: 'Bekijk voor je boekt', fr: 'Regardez avant de réserver' },
+  about_vid_todo:  { zh: '简介视频 · 即将上线', en: 'Intro video · coming soon', th: 'วิดีโอแนะนำ · เร็วๆ นี้', es: 'Video de presentación · próximamente', nl: 'Introductievideo · binnenkort', fr: 'Vidéo de présentation · bientôt disponible' },
+
+  /* About – awards (TODO: replace placeholder text below with real award names in each language) */
+  awards_label: { zh: '荣誉', en: 'Recognition', th: 'รางวัลและเกียรติยศ', es: 'Reconocimientos', nl: 'Erkenning', fr: 'Distinctions' },
+  awards_h:     { zh: '奖项与荣誉', en: 'Awards & Recognition', th: 'รางวัลและการยอมรับ', es: 'Premios y Reconocimientos', nl: 'Prijzen & Erkenning', fr: 'Prix et Reconnaissances' },
+  aw1_name: { zh: '全国优秀汉语教师（海外）', en: 'National Excellent Chinese Teacher Abroad', th: 'ครูภาษาจีนดีเด่นแห่งชาติ (ต่างประเทศ)', es: 'Profesora de Chino Excelente en el Extranjero', nl: 'Nationaal Uitstekende Chinese Leraar Buitenland', fr: 'Excellente professeure de chinois à l'étranger' },
+  aw1_yr:   { zh: '2024 · 汉办 / 中国国际中文教育基金会', en: '2024 · Hanban / CIEF', th: '2024 · Hanban / CIEF', es: '2024 · Hanban / CIEF', nl: '2024 · Hanban / CIEF', fr: '2024 · Hanban / CIEF' },
+  aw2_name: { zh: '优秀教学表现奖', en: 'Outstanding Teaching Performance', th: 'รางวัลการสอนดีเด่น', es: 'Rendimiento Docente Sobresaliente', nl: 'Uitstekende Onderwijsprestatie', fr: 'Excellence pédagogique' },
+  aw2_yr:   { zh: '2023 · 泰国卡维拉威塔亚莱学校', en: '2023 · Kawila Wittayalai School', th: '2023 · โรงเรียนคาวิลาวิทยาลัย', es: '2023 · Escuela Kawila Wittayalai', nl: '2023 · Kawila Wittayalai School', fr: '2023 · École Kawila Wittayalai' },
+  aw3_name: { zh: '语言教育创新奖', en: 'Innovation in Language Education', th: 'รางวัลนวัตกรรมการสอนภาษา', es: 'Innovación en Educación Lingüística', nl: 'Innovatie in Taalonderwijs', fr: 'Innovation en enseignement des langues' },
+  aw3_yr:   { zh: '2024 · 鲁汶大学', en: '2024 · KU Leuven', th: '2024 · KU Leuven', es: '2024 · KU Lovaina', nl: '2024 · KU Leuven', fr: '2024 · KU Leuven' },
+  aw4_name: { zh: '文化桥梁奖', en: 'Cultural Bridge Award', th: 'รางวัลสะพานวัฒนธรรม', es: 'Premio Puente Cultural', nl: 'Culturele Brug Award', fr: 'Prix Pont Culturel' },
+  aw4_yr:   { zh: '2023 · 中泰文化交流项目', en: '2023 · China–Thailand Exchange', th: '2023 · โครงการแลกเปลี่ยนไทย-จีน', es: '2023 · Intercambio China–Tailandia', nl: '2023 · China–Thailand Uitwisseling', fr: '2023 · Échange Chine–Thaïlande' },
+  aw5_name: { zh: '社区影响力奖', en: 'Community Impact Award', th: 'รางวัลผลกระทบชุมชน', es: 'Premio Impacto Comunitario', nl: 'Community Impact Award', fr: 'Prix Impact Communautaire' },
+  aw5_yr:   { zh: '2025 · ThaiCool Chinese', en: '2025 · ThaiCool Chinese', th: '2025 · ThaiCool Chinese', es: '2025 · ThaiCool Chinese', nl: '2025 · ThaiCool Chinese', fr: '2025 · ThaiCool Chinese' },
+
+  /* About – gallery */
+  gallery_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
+  gallery_h:     { zh: '真实瞬间，真实学生', en: 'Real moments, real students', th: 'ช่วงเวลาจริง นักเรียนจริง', es: 'Momentos reales, estudiantes reales', nl: 'Echte momenten, echte studenten', fr: 'Vrais moments, vrais étudiants' },
+  gallery_more:  { zh: '查看完整相册 →', en: 'See full gallery →', th: 'ดูแกลเลอรี่ทั้งหมด →', es: 'Ver galería completa →', nl: 'Bekijk volledige galerij →', fr: 'Voir la galerie complète →' },
+
+  /* About – interviews */
+  interviews_label: { zh: '媒体', en: 'Media', th: 'สื่อ', es: 'Medios', nl: 'Media', fr: 'Médias' },
+  interviews_h:     { zh: '采访与报道', en: 'Interviews & Features', th: 'สัมภาษณ์และสารคดี', es: 'Entrevistas y Reportajes', nl: 'Interviews & Features', fr: 'Interviews & Reportages' },
+  iv1_title: { zh: '【TODO: 采访标题】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv1_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv1_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description of interview -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv2_title: { zh: '【TODO: 采访标题 2】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv2_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv2_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv3_title: { zh: '【TODO: 采访标题 3】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv3_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv3_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+
+  /* Homepage classroom preview */
+  classroom_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
+  classroom_h:     { zh: '来自真实课堂的瞬间', en: 'Moments from real lessons', th: 'ช่วงเวลาจากชั้นเรียนจริง', es: 'Momentos de clases reales', nl: 'Momenten uit echte lessen', fr: 'Moments de vraies leçons' },
+  classroom_more:  { zh: '查看完整作品集 →', en: 'See full portfolio →', th: 'ดูพอร์ตโฟลิโอทั้งหมด →', es: 'Ver portafolio completo →', nl: 'Bekijk volledig portfolio →', fr: 'Voir le portfolio complet →' },
+
+  /* Portfolio page */
+  pf_label:          { zh: '林老师', en: 'Teacher Lin', th: 'Teacher Lin', es: 'Teacher Lin', nl: 'Teacher Lin', fr: 'Teacher Lin' },
+  pf_h:              { zh: '作品集', en: 'Portfolio', th: 'ผลงาน', es: 'Portafolio', nl: 'Portfolio', fr: 'Portfolio' },
+  pf_sub:            { zh: '奖项、采访、课堂时刻、短视频和 AI 产品演示', en: 'Awards, interviews, classroom moments, short videos and AI product demos — all in one place.', th: 'รางวัล สัมภาษณ์ ช่วงเวลาในชั้นเรียน วิดีโอสั้น และ AI demos', es: 'Premios, entrevistas, momentos en aula, videos cortos y demos de productos IA', nl: 'Prijzen, interviews, klasmomenten, korte video\'s en AI-productdemo\'s', fr: 'Prix, interviews, moments en classe, vidéos courtes et démos de produits IA' },
+  pf_awards_label:   { zh: '荣誉', en: 'Recognition', th: 'รางวัล', es: 'Reconocimientos', nl: 'Erkenning', fr: 'Distinctions' },
+  pf_classroom_label:{ zh: '相册', en: 'Gallery', th: 'แกลเลอรี่', es: 'Galería', nl: 'Galerij', fr: 'Galerie' },
+  pf_shorts_label:   { zh: '短视频', en: 'Short Videos', th: 'วิดีโอสั้น', es: 'Videos Cortos', nl: 'Korte Video\'s', fr: 'Vidéos courtes' },
+  pf_shorts_h:       { zh: '精彩片段', en: 'Clips & Highlights', th: 'คลิปไฮไลท์', es: 'Clips y Destacados', nl: 'Clips & Hoogtepunten', fr: 'Clips et moments forts' },
+  pf_demos_label:    { zh: 'AI 工具', en: 'AI Tools', th: 'เครื่องมือ AI', es: 'Herramientas IA', nl: 'AI Tools', fr: 'Outils IA' },
+  pf_demos_h:        { zh: '普通话学习 AI 产品', en: 'AI Products for Mandarin Learners', th: 'เครื่องมือ AI สำหรับผู้เรียนภาษาจีน', es: 'Productos IA para Aprendices de Mandarín', nl: 'AI-producten voor Mandarijnleerders', fr: 'Produits IA pour apprenants du mandarin' },
+  pf_demos_sub:      { zh: '由林老师开发 · AI 驱动 · 即将上线', en: 'Built by Teacher Lin · powered by AI · coming soon', th: 'พัฒนาโดย Teacher Lin · ขับเคลื่อนด้วย AI · เร็วๆ นี้', es: 'Desarrollado por Teacher Lin · impulsado por IA · próximamente', nl: 'Gemaakt door Teacher Lin · AI-aangedreven · binnenkort', fr: 'Créé par Teacher Lin · propulsé par IA · bientôt disponible' },
+
+  /* Portfolio – short video labels (TODO: replace with real video titles) */
+  sv1_lbl: { zh: '短视频 1 · 待补充', en: 'Short video 1 · TODO', th: 'วิดีโอสั้น 1 · TODO', es: 'Video corto 1 · TODO', nl: 'Korte video 1 · TODO', fr: 'Vidéo courte 1 · TODO' },
+  sv2_lbl: { zh: '短视频 2 · 待补充', en: 'Short video 2 · TODO', th: 'วิดีโอสั้น 2 · TODO', es: 'Video corto 2 · TODO', nl: 'Korte video 2 · TODO', fr: 'Vidéo courte 2 · TODO' },
+  sv3_lbl: { zh: '短视频 3 · 待补充', en: 'Short video 3 · TODO', th: 'วิดีโอสั้น 3 · TODO', es: 'Video corto 3 · TODO', nl: 'Korte video 3 · TODO', fr: 'Vidéo courte 3 · TODO' },
+  sv4_lbl: { zh: '短视频 4 · 待补充', en: 'Short video 4 · TODO', th: 'วิดีโอสั้น 4 · TODO', es: 'Video corto 4 · TODO', nl: 'Korte video 4 · TODO', fr: 'Vidéo courte 4 · TODO' },
+
+  /* Portfolio – AI demo cards (TODO: replace with real product names) */
+  demo1_h:   { zh: 'HSK 词汇生成器', en: 'HSK Vocab Generator', th: 'HSK Vocab Generator', es: 'Generador de Vocabulario HSK', nl: 'HSK Vocabulaire Generator', fr: 'Générateur de vocabulaire HSK' },
+  demo1_sub: { zh: 'AI 驱动的各级 HSK 词卡', en: 'AI-powered flashcard sets for every HSK level', th: 'ชุดแฟลชการ์ด AI สำหรับทุกระดับ HSK', es: 'Tarjetas de vocabulario HSK con IA', nl: 'AI-flashcardsets voor elk HSK-niveau', fr: 'Cartes de vocabulaire HSK alimentées par IA' },
+  demo2_h:   { zh: '拼音导师 Pro', en: 'Pinyin Tutor Pro', th: 'Pinyin Tutor Pro', es: 'Pinyin Tutor Pro', nl: 'Pinyin Tutor Pro', fr: 'Pinyin Tutor Pro' },
+  demo2_sub: { zh: '互动声调与发音训练器', en: 'Interactive tones and pronunciation trainer', th: 'ฝึกวรรณยุกต์และการออกเสียงแบบโต้ตอบ', es: 'Entrenador interactivo de tonos y pronunciación', nl: 'Interactieve toon- en uitspraakoefenaar', fr: 'Entraîneur interactif de tons et prononciation' },
+  demo3_h:   { zh: 'AI 对话伙伴', en: 'AI Chat Buddy', th: 'AI Chat Buddy', es: 'Compañero de Chat con IA', nl: 'AI Chatmaatje', fr: 'Compagnon de conversation IA' },
+  demo3_sub: { zh: '随时随地练习普通话对话', en: 'Practice Mandarin conversation at any level', th: 'ฝึกสนทนาภาษาจีนกลางได้ทุกระดับ', es: 'Practica conversación en mandarín a cualquier nivel', nl: 'Oefen Mandarijn gesprekken op elk niveau', fr: 'Pratiquez la conversation en mandarin à tout niveau' }
 
 };
 
