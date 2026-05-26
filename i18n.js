@@ -343,6 +343,9 @@ window.__i18n = {
   iv4_title: { zh: 'Everyday Boundaries of Belonging in School Offices', en: 'Everyday Boundaries of Belonging in School Offices', th: 'Everyday Boundaries of Belonging in School Offices', es: 'Everyday Boundaries of Belonging in School Offices', nl: 'Everyday Boundaries of Belonging in School Offices', fr: 'Everyday Boundaries of Belonging in School Offices' },
   iv4_meta:  { zh: 'KU Leuven 学术演讲 · 2024', en: 'KU Leuven 学术演讲 · 2024', th: 'KU Leuven 学术演讲 · 2024', es: 'KU Leuven 学术演讲 · 2024', nl: 'KU Leuven 学术演讲 · 2024', fr: 'KU Leuven 学术演讲 · 2024' },
   iv4_desc:  { zh: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', en: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', th: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', es: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', nl: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', fr: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人' },
+  iv5_title: { zh: '新民晚报报道·第二届国际中文教育案例大赛', en: '新民晚报报道·第二届国际中文教育案例大赛', th: '新民晚报报道·第二届国际中文教育案例大赛', es: '新民晚报报道·第二届国际中文教育案例大赛', nl: '新民晚报报道·第二届国际中文教育案例大赛', fr: '新民晚报报道·第二届国际中文教育案例大赛' },
+  iv5_meta:  { zh: '新民晚报 · 主流媒体报道 · 2025', en: '新民晚报 · 主流媒体报道 · 2025', th: '新民晚报 · 主流媒体报道 · 2025', es: '新民晚报 · 主流媒体报道 · 2025', nl: '新民晚报 · 主流媒体报道 · 2025', fr: '新民晚报 · 主流媒体报道 · 2025' },
+  iv5_desc:  { zh: '上海主流媒体报道大赛实况 · 林老师团队获亚军', en: '上海主流媒体报道大赛实况 · 林老师团队获亚军', th: '上海主流媒体报道大赛实况 · 林老师团队获亚军', es: '上海主流媒体报道大赛实况 · 林老师团队获亚军', nl: '上海主流媒体报道大赛实况 · 林老师团队获亚军', fr: '上海主流媒体报道大赛实况 · 林老师团队获亚军' },
 
   /* Homepage classroom preview */
   classroom_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
@@ -352,7 +355,7 @@ window.__i18n = {
   /* Portfolio page */
   pf_label:          { zh: '林老师', en: 'Teacher Lin', th: 'Teacher Lin', es: 'Teacher Lin', nl: 'Teacher Lin', fr: 'Teacher Lin' },
   pf_h:              { zh: '作品集', en: 'Portfolio', th: 'ผลงาน', es: 'Portafolio', nl: 'Portfolio', fr: 'Portfolio' },
-  pf_sub:            { zh: '奖项、采访、课堂时刻、短视频和 AI 产品演示', en: 'Awards, interviews, classroom moments, short videos and AI product demos — all in one place.', th: 'รางวัล สัมภาษณ์ ช่วงเวลาในชั้นเรียน วิดีโอสั้น และ AI demos', es: 'Premios, entrevistas, momentos en aula, videos cortos y demos de productos IA', nl: 'Prijzen, interviews, klasmomenten, korte video\'s en AI-productdemo\'s', fr: 'Prix, interviews, moments en classe, vidéos courtes et démos de produits IA' },
+  pf_sub:            { zh: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', en: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', th: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', es: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', nl: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', fr: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。' },
   pf_awards_label:   { zh: '荣誉', en: 'Recognition', th: 'รางวัล', es: 'Reconocimientos', nl: 'Erkenning', fr: 'Distinctions' },
   pf_classroom_label:{ zh: '相册', en: 'Gallery', th: 'แกลเลอรี่', es: 'Galería', nl: 'Galerij', fr: 'Galerie' },
   pf_shorts_label:   { zh: '短视频', en: 'Short Videos', th: 'วิดีโอสั้น', es: 'Videos Cortos', nl: 'Korte Video\'s', fr: 'Vidéos courtes' },
