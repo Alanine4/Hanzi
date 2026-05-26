@@ -744,6 +744,59 @@ footer{flex-wrap:wrap;}
 .demo-card{background:var(--canvas);border:1.5px dashed var(--hair);border-radius:var(--r-card);padding:1.5rem;text-align:center;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;}
 .pf-vid-placeholder{position:absolute;inset:0;background:var(--s2);border-radius:var(--r-card);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;}
 
+/* ═══ PHASE 4 — Real content rollout ═══ */
+/* Award card with real image */
+.award-card.has-img{padding:1rem;}
+.award-card-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;margin-bottom:0.85rem;background:var(--s2);cursor:zoom-in;transition:transform .2s;}
+.award-card-img:hover{transform:scale(1.02);}
+
+/* XHS custom interview card */
+.xhs-card{background:linear-gradient(135deg,#FFF6F6 0%,#FFFAF5 100%);border:1px solid #FFE0DC;border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;}
+.xhs-card-head{display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1.25rem;background:#FF2442;color:#fff;font-size:0.78rem;font-weight:700;}
+.xhs-card-head svg{flex:0 0 auto;}
+.xhs-card-body{padding:1.5rem 1.25rem;flex:1;display:flex;flex-direction:column;gap:0.6rem;}
+.xhs-card-h1{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--ink);line-height:1.3;}
+.xhs-card-h2{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--brown);font-weight:600;}
+.xhs-card-flag{font-size:2rem;line-height:1;margin-bottom:0.25rem;}
+.xhs-card-people{font-size:0.82rem;color:var(--body);line-height:1.7;padding:0.6rem 0;border-top:1px solid #FFE0DC;border-bottom:1px solid #FFE0DC;margin:0.5rem 0;}
+.xhs-card-people b{color:var(--ink);}
+.xhs-card ul{list-style:none;padding:0;margin:0;font-size:0.78rem;color:var(--muted);line-height:1.7;}
+.xhs-card li::before{content:'· ';color:var(--amber);font-weight:700;}
+.xhs-card-cta{background:#FF2442;color:#fff;text-align:center;padding:0.7rem;font-size:0.85rem;font-weight:700;text-decoration:none;display:block;border-top:1px solid #FFE0DC;transition:opacity .15s;}
+.xhs-card-cta:hover{opacity:0.88;}
+
+/* Interview card with dual-image (academic talk) */
+.iv-dual-img{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;border-radius:var(--r-card);overflow:hidden;}
+.iv-dual-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+
+/* Photo with caption (used in awards/competitions/cultural/feedback) */
+.cap-card{display:flex;flex-direction:column;gap:0.6rem;}
+.cap-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-card);background:var(--s2);transition:transform .2s;cursor:zoom-in;}
+.cap-card img:hover{transform:scale(1.02);}
+.cap-text{font-size:0.78rem;color:var(--muted);line-height:1.5;padding:0 0.25rem;}
+
+/* Feedback wall (masonry-like, but with captions) */
+.feedback-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem;}
+.feedback-wall .cap-card img{aspect-ratio:3/4;}
+
+/* Cultural / Competitions grid (uniform 3-col) */
+.cap-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem;}
+
+/* Lightbox for image zoom (CSS-only) */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:10000;align-items:center;justify-content:center;padding:2rem;cursor:zoom-out;}
+.lightbox:target{display:flex;}
+.lightbox img{max-width:95%;max-height:95vh;object-fit:contain;border-radius:8px;}
+
+@media(max-width:860px){
+  .feedback-wall{grid-template-columns:repeat(2,1fr);}
+  .cap-grid-3{grid-template-columns:1fr 1fr;}
+  .iv-dual-img{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .feedback-wall{grid-template-columns:1fr;}
+  .cap-grid-3{grid-template-columns:1fr;}
+}
+
 /* Mobile */
 @media(max-width:860px){
   .pricing-grid{grid-template-columns:1fr;}
@@ -989,9 +1042,9 @@ footer{flex-wrap:wrap;}
     <div class="sec-label" data-i18n="classroom_label">In the Classroom</div>
     <h2 class="sec-h2" style="font-size:1.4rem;margin-bottom:0.5rem" data-i18n="classroom_h">Moments from real lessons</h2>
     <div class="classroom-strip">
-      <img src="A照片/IMG_8544.JPG" alt="Classroom moment" loading="lazy">
-      <img src="A照片/IMG_9541.JPG" alt="Teaching session" loading="lazy">
-      <img src="A照片/IMG_1592.JPG" alt="Lesson activity" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-class6-3-six-angels.JPG" alt="泰国 KWC 课堂" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-china-trip-discussion.JPG" alt="小组讨论" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-tu.JPG" alt="教学'土'" loading="lazy">
     </div>
     <div style="text-align:center;margin-top:1rem">
       <button class="btn-o" onclick="goto('portfolio')" data-i18n="classroom_more">See full portfolio →</button>
@@ -1094,35 +1147,35 @@ footer{flex-wrap:wrap;}
     <div class="sec-label" data-i18n="awards_label">Recognition</div>
     <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="awards_h">Awards & Recognition</h2>
     <div class="award-grid">
-      <div class="award-card">
-        <div class="award-icon-box">🏆</div>
-        <div class="award-name" data-i18n="aw1_name">National Excellent Chinese Teacher Abroad</div>
-        <div class="award-yr" data-i18n="aw1_yr">2024 · Hanban / CIEF</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/国际中文教师证书.jpg" alt="CTCSOL Certificate" loading="lazy">
+        <div class="award-name" data-i18n="aw1_name">国际中文教师证书 (CTCSOL)</div>
+        <div class="award-yr" data-i18n="aw1_yr">中外语言交流合作中心 · 2023.12</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">🌟</div>
-        <div class="award-name" data-i18n="aw2_name">Outstanding Teaching Performance</div>
-        <div class="award-yr" data-i18n="aw2_yr">2023 · Kawila Wittayalai School</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-01-ecnu-best-teaching-2023.JPG" alt="Best Teaching Award" loading="lazy">
+        <div class="award-name" data-i18n="aw2_name">最佳教学奖</div>
+        <div class="award-yr" data-i18n="aw2_yr">华东师大 · 赴泰志愿者教学技能大赛 · 2023</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">🎓</div>
-        <div class="award-name" data-i18n="aw3_name">Innovation in Language Education</div>
-        <div class="award-yr" data-i18n="aw3_yr">2024 · KU Leuven</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-02-cpipc-case-competition-2025.JPG" alt="CPIPC Award" loading="lazy">
+        <div class="award-name" data-i18n="aw3_name">国际中文教育案例大赛·全国亚军</div>
+        <div class="award-yr" data-i18n="aw3_yr">中国研究生创新实践系列大赛 · 2025</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">📚</div>
-        <div class="award-name" data-i18n="aw4_name">Cultural Bridge Award</div>
-        <div class="award-yr" data-i18n="aw4_yr">2023 · China–Thailand Exchange</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-03-ubc-volunteer-2023.JPG" alt="UBC Volunteer Certificate" loading="lazy">
+        <div class="award-name" data-i18n="aw4_name">志愿教学感谢证书</div>
+        <div class="award-yr" data-i18n="aw4_yr">UBC 中文项目 · 26 小时无偿教学 · 2023</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">✨</div>
-        <div class="award-name" data-i18n="aw5_name">Community Impact Award</div>
-        <div class="award-yr" data-i18n="aw5_yr">2025 · ThaiCool Chinese</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/event-05-hanban-21st-thailand-volunteer-2024.JPG" alt="Hanban 21st Thailand" loading="lazy">
+        <div class="award-name" data-i18n="aw5_name">第 21 批赴泰志愿者欢送大会</div>
+        <div class="award-yr" data-i18n="aw5_yr">汉办 20 周年活动 · 2024</div>
       </div>
-      <div class="award-card" style="border-style:dashed;background:var(--s1);">
-        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
-        <div class="award-name" style="color:var(--muted)"><!-- TODO: Add 6th award name in i18n.js --></div>
-        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/event-04-aeec-symposium-southampton-2023.jpg" alt="AEEC Southampton" loading="lazy">
+        <div class="award-name" data-i18n="aw6_name">第 4 届欧洲汉语教学协会国际研讨会</div>
+        <div class="award-yr" data-i18n="aw6_yr">英国南安普顿大学 · 2023</div>
       </div>
     </div>
   </div>
@@ -1162,66 +1215,152 @@ footer{flex-wrap:wrap;}
     <div class="sec-label" data-i18n="gallery_label">In the Classroom</div>
     <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="gallery_h">Real moments, real students</h2>
     <div class="photo-masonry">
-      <img src="A照片/IMG_7170.JPG" alt="Teaching moment" loading="lazy">
-      <img src="A照片/IMG_7173.JPG" alt="Classroom activity" loading="lazy">
-      <img src="A照片/IMG_7171.JPG" alt="Teaching session" loading="lazy">
-      <img src="A照片/IMG_2178.JPG" alt="Lesson moment" loading="lazy">
-      <img src="A照片/IMG_7174.JPG" alt="Group lesson" loading="lazy">
-      <img src="A照片/IMG_7172.JPG" alt="Student engagement" loading="lazy">
-      <img src="A照片/IMG_2352.jpg" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_7176.JPG" alt="Classroom" loading="lazy">
-      <img src="A照片/IMG_9004.jpg" alt="Lesson activity" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-yue.JPG" alt="教学'月'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-presentation-overview.JPG" alt="鲁汶课堂" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-zou.JPG" alt="教学'走'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-multicultural-group.jpg" alt="多元文化班" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-china-trip-discussion.JPG" alt="小组讨论" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-character-cards-1.jpg" alt="字卡游戏" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-radicals-group.jpg" alt="偏旁课" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-graduation-ceremony.jpg" alt="结业典礼" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-private-pekingopera-masks.JPG" alt="京剧脸谱课" loading="lazy">
     </div>
     <div style="text-align:center;margin-top:1.5rem">
       <button class="btn-o" onclick="goto('portfolio')" data-i18n="gallery_more">See full gallery →</button>
     </div>
   </div>
 
-  <!-- ══ INTERVIEWS · TODO: For each card, replace the placeholder div with a real YouTube embed:
-       <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-       Then update the iv{n}_title / iv{n}_meta / iv{n}_desc keys in i18n.js ══ -->
+  <!-- ══ INTERVIEWS · 4 cards: YouTube iframe + 2 XHS CSS-rendered cards + Academic talk dual-image ══ -->
   <div class="section-mt">
     <div class="sec-label" data-i18n="interviews_label">Media</div>
     <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="interviews_h">Interviews & Features</h2>
     <div class="interview-list">
+
+      <!-- Interview 1: YouTube Chinese Podcast #192 -->
       <div class="interview-card">
         <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
-          </div>
+          <iframe src="https://www.youtube.com/embed/0gehVsthMu0?rel=0" title="Chinese Podcast #192 · Teacher Lin" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv1_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv1_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc"><!-- TODO: Brief description of interview topic --></p>
+          <div class="interview-title" data-i18n="iv1_title">不要再用英文学中文了！沉浸式学中文的秘诀</div>
+          <div class="interview-meta" data-i18n="iv1_meta">Chinese Podcast 第 192 期 · YouTube</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc">林老师专访 · 谈沉浸式语言学习的方法与常见误区</p>
         </div>
       </div>
+
+      <!-- Interview 2: XHS 中文老师访谈 #26 (CSS card) -->
       <div class="interview-card">
-        <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+        <div class="xhs-card">
+          <div class="xhs-card-head">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
+            小红书 · 中文老师访谈
           </div>
+          <div class="xhs-card-body">
+            <div class="xhs-card-h1">中文老师访谈</div>
+            <div class="xhs-card-h2">第 26 期</div>
+            <div class="xhs-card-people">
+              <span data-i18n="xhs_host_lbl">主持人</span>：<b>何十一</b><br>
+              <span data-i18n="xhs_guest_lbl">嘉宾</span>：<b>林安琪</b>
+            </div>
+            <ul>
+              <li>汉语国际教育本科</li>
+              <li>KU Leuven 教育研究硕士在读</li>
+              <li>第二届国际中文教育案例大赛全国亚军</li>
+              <li>比利时中文学校教师</li>
+            </ul>
+          </div>
+          <a class="xhs-card-cta" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv2_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv2_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc"><!-- TODO: Brief description --></p>
+          <div class="interview-title" data-i18n="iv2_title">中文老师访谈 · 第 26 期</div>
+          <div class="interview-meta" data-i18n="iv2_meta">小红书 · 主持人何十一</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc">林老师对谈"在比利时读研、教中文"的多元路径</p>
         </div>
       </div>
+
+      <!-- Interview 3: XHS 🇹🇭 归属计划 (CSS card) -->
       <div class="interview-card">
-        <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+        <div class="xhs-card">
+          <div class="xhs-card-head">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
+            小红书 · 归属计划
           </div>
+          <div class="xhs-card-body">
+            <div class="xhs-card-flag">🇹🇭</div>
+            <div class="xhs-card-h1">对话泰国中文老师</div>
+            <div class="xhs-card-h2">归属计划 · 第 01 期</div>
+            <div class="xhs-card-people">
+              <b>学习语言，多元交友</b><br>
+              <span data-i18n="xhs_host_lbl">主持人</span>：小林在比利时<br>
+              <span data-i18n="xhs_guest_lbl">嘉宾</span>：蝶底小孔
+            </div>
+            <ul>
+              <li>国际中文教师视角</li>
+              <li>跨文化交友与语言习得</li>
+              <li>泰国教学生活实录</li>
+            </ul>
+          </div>
+          <a class="xhs-card-cta" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv3_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv3_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc"><!-- TODO: Brief description --></p>
+          <div class="interview-title" data-i18n="iv3_title">🇹🇭 归属计划 · 01</div>
+          <div class="interview-meta" data-i18n="iv3_meta">小红书 · 对话泰国中文老师</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc">学习语言，多元交友 · 国际中文教师视角</p>
         </div>
+      </div>
+
+      <!-- Interview 4: Academic Talk KU Leuven 2024 (dual-image card) -->
+      <div class="interview-card">
+        <div class="iv-dual-img">
+          <img src="A照片/KUL课堂1.JPG" alt="KU Leuven academic talk · slide" loading="lazy">
+          <img src="A照片/KUL课堂2.JPG" alt="KU Leuven academic talk · stage" loading="lazy">
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv4_title">Everyday Boundaries of Belonging in School Offices</div>
+          <div class="interview-meta" data-i18n="iv4_meta">KU Leuven 学术演讲 · 2024</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv4_desc">国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ STUDENT FEEDBACK WALL · About page (8 selected) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="pf_feedback_label">学员评价</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="pf_feedback_h">学生留言墙</h2>
+    <div class="feedback-wall">
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-01-farewell-2024.JPG" alt="学生手写信" loading="lazy">
+        <div class="cap-text" data-i18n="fb1_caption">泰国学生手写信 · "老师即将回国了..." · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-01-alicialin-2024.JPG" alt="英文信" loading="lazy">
+        <div class="cap-text" data-i18n="fb2_caption">英文信 · "Hello Alicia! I'm so happy..." · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-thai-en-01-bestteacher.JPG" alt="泰英双语" loading="lazy">
+        <div class="cap-text" data-i18n="fb3_caption">泰英双语 · "Lin Laoshi is the BEST TEACHER"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-05-firstclass-heartfelt.JPG" alt="中文长信" loading="lazy">
+        <div class="cap-text" data-i18n="fb4_caption">中文长信 · "第一次和老师上课..." · 真情流露</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-01-wewillrememberyou.JPG" alt="手工剪贴册" loading="lazy">
+        <div class="cap-text" data-i18n="fb5_caption">手工剪贴册 · "We will remember you with warm thoughts"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-02-nobodylikeyou.JPG" alt="剪贴册" loading="lazy">
+        <div class="cap-text" data-i18n="fb6_caption">剪贴册第二册 · "Nobody LIKE you / Hope to see you again"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-social-collage-01.JPG" alt="学员评价" loading="lazy">
+        <div class="cap-text" data-i18n="fb7_caption">学员评价 · KWC 学生中泰双语好评</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-wechat-chat-screenshot.JPG" alt="微信对话" loading="lazy">
+        <div class="cap-text" data-i18n="fb8_caption">学员微信对话 · "谢谢老师，一切都非常好"</div>
       </div>
     </div>
   </div>
@@ -1515,178 +1654,344 @@ footer{flex-wrap:wrap;}
   </div>
   <p style="text-align:center;max-width:680px;margin:-1.5rem auto 2rem;font-size:0.9rem;color:var(--muted);line-height:1.6;padding:0 1.5rem" data-i18n="pf_sub">Awards, interviews, classroom moments, short videos and AI product demos — all in one place.</p>
 
-  <!-- ══ AWARDS ══ -->
-  <!-- TODO: Update award names/years/institutions by editing aw1–aw5 keys in i18n.js -->
+  <!-- ══ AWARDS · 8 张完整奖项 (Phase 4 真实内容) ══ -->
   <div class="portfolio-section">
-    <div class="sec-label" data-i18n="pf_awards_label">Recognition</div>
-    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="awards_h">Awards & Recognition</h2>
+    <div class="sec-label" data-i18n="pf_awards_label">荣誉</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="awards_h">奖项与荣誉</h2>
     <div class="pf-award-grid">
-      <div class="award-card">
-        <div class="award-icon-box">🏆</div>
-        <div class="award-name" data-i18n="aw1_name">National Excellent Chinese Teacher Abroad</div>
-        <div class="award-yr" data-i18n="aw1_yr">2024 · Hanban / CIEF</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/国际中文教师证书.jpg" alt="CTCSOL Certificate" loading="lazy">
+        <div class="award-name" data-i18n="aw1_name">国际中文教师证书 (CTCSOL)</div>
+        <div class="award-yr" data-i18n="aw1_yr">中外语言交流合作中心 · 2023.12</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">🌟</div>
-        <div class="award-name" data-i18n="aw2_name">Outstanding Teaching Performance</div>
-        <div class="award-yr" data-i18n="aw2_yr">2023 · Kawila Wittayalai School</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-01-ecnu-best-teaching-2023.JPG" alt="Best Teaching Award" loading="lazy">
+        <div class="award-name" data-i18n="aw2_name">最佳教学奖</div>
+        <div class="award-yr" data-i18n="aw2_yr">华东师大 · 赴泰志愿者教学技能大赛 · 2023</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">🎓</div>
-        <div class="award-name" data-i18n="aw3_name">Innovation in Language Education</div>
-        <div class="award-yr" data-i18n="aw3_yr">2024 · KU Leuven</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-02-cpipc-case-competition-2025.JPG" alt="CPIPC Award" loading="lazy">
+        <div class="award-name" data-i18n="aw3_name">国际中文教育案例大赛·全国亚军</div>
+        <div class="award-yr" data-i18n="aw3_yr">中国研究生创新实践系列大赛 · 2025</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">📚</div>
-        <div class="award-name" data-i18n="aw4_name">Cultural Bridge Award</div>
-        <div class="award-yr" data-i18n="aw4_yr">2023 · China–Thailand Exchange</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-03-ubc-volunteer-2023.JPG" alt="UBC Volunteer Certificate" loading="lazy">
+        <div class="award-name" data-i18n="aw4_name">志愿教学感谢证书</div>
+        <div class="award-yr" data-i18n="aw4_yr">UBC 中文项目 · 26 小时无偿教学 · 2023</div>
       </div>
-      <div class="award-card">
-        <div class="award-icon-box">✨</div>
-        <div class="award-name" data-i18n="aw5_name">Community Impact Award</div>
-        <div class="award-yr" data-i18n="aw5_yr">2025 · ThaiCool Chinese</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/event-05-hanban-21st-thailand-volunteer-2024.JPG" alt="Hanban Thailand" loading="lazy">
+        <div class="award-name" data-i18n="aw5_name">第 21 批赴泰志愿者欢送大会</div>
+        <div class="award-yr" data-i18n="aw5_yr">汉办 20 周年活动 · 2024</div>
       </div>
-      <div class="award-card" style="border-style:dashed;background:var(--s1);">
-        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
-        <div class="award-name" style="color:var(--muted)"><!-- TODO: 6th award --></div>
-        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/event-04-aeec-symposium-southampton-2023.jpg" alt="AEEC Southampton" loading="lazy">
+        <div class="award-name" data-i18n="aw6_name">第 4 届欧洲汉语教学协会国际研讨会</div>
+        <div class="award-yr" data-i18n="aw6_yr">英国南安普顿大学 · 2023</div>
       </div>
-      <div class="award-card" style="border-style:dashed;background:var(--s1);">
-        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
-        <div class="award-name" style="color:var(--muted)"><!-- TODO: 7th award --></div>
-        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/合照event-04-aeec-symposium-southampton-scholar.JPG" alt="Southampton Scholar Photo" loading="lazy">
+        <div class="award-name" data-i18n="aw7_name">与汉语教学界资深学者合影</div>
+        <div class="award-yr" data-i18n="aw7_yr">AEEC 研讨会 · 南安普顿 · 2023</div>
       </div>
-      <div class="award-card" style="border-style:dashed;background:var(--s1);">
-        <div class="award-icon-box" style="background:transparent;font-size:1.4rem">➕</div>
-        <div class="award-name" style="color:var(--muted)"><!-- TODO: 8th award --></div>
-        <div class="award-yr" style="color:var(--hair)">Year · Institution</div>
+      <div class="award-card has-img">
+        <img class="award-card-img" src="A照片/01-Awards-获奖和证书/award-01-ecnu-best-teaching-2023-portrait.jpg" alt="ECNU Certificate Portrait" loading="lazy">
+        <div class="award-name" data-i18n="aw8_name">最佳教学奖证书（近景）</div>
+        <div class="award-yr" data-i18n="aw8_yr">华东师大 · 2023</div>
       </div>
     </div>
   </div>
 
-  <!-- ══ INTERVIEWS ══ -->
-  <!-- TODO: For each card replace the placeholder div with:
-       <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-       Then update iv1/iv2/iv3 keys in i18n.js -->
+  <!-- ══ COMPETITIONS · 国际中文教育案例大赛 (Phase 4 NEW) ══ -->
   <div class="portfolio-section">
-    <div class="sec-label" data-i18n="interviews_label">Media</div>
-    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="interviews_h">Interviews & Features</h2>
+    <div class="sec-label" data-i18n="pf_competitions_label">比赛</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_competitions_h">国际中文教育案例大赛</h2>
+    <div class="cap-grid-3">
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/IMG_2398.JPG" alt="大赛开幕式" loading="lazy">
+        <div class="cap-text" data-i18n="cp1_caption">大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/IMG_2419.JPG" alt="评委席" loading="lazy">
+        <div class="cap-text" data-i18n="cp2_caption">评委席 · 资深专家点评环节</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/competition-cpipc-2025-team-presentation.jpg" alt="团队答辩" loading="lazy">
+        <div class="cap-text" data-i18n="cp3_caption">团队答辩现场 · 林老师主讲 · 乙队</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/competition-cpipc-2025-top-three-groups.jpg" alt="三甲合影" loading="lazy">
+        <div class="cap-text" data-i18n="cp4_caption">三甲合影 · 全国冠军、亚军、季军同台</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/competition-cpipc-2025-award-ceremony-1.jpg" alt="颁奖典礼 1" loading="lazy">
+        <div class="cap-text" data-i18n="cp5_caption">颁奖典礼 · 亚军领奖</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/02-Competitions-比赛/competition-cpipc-2025-award-ceremony-2.jpg" alt="颁奖典礼 2" loading="lazy">
+        <div class="cap-text" data-i18n="cp6_caption">颁奖现场 · 另一角度</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ INTERVIEWS · 4 cards (Phase 4 real content) ══ -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="interviews_label">媒体</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="interviews_h">采访与报道</h2>
     <div class="interview-list">
       <div class="interview-card">
         <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
-          </div>
+          <iframe src="https://www.youtube.com/embed/0gehVsthMu0?rel=0" title="Chinese Podcast #192 · Teacher Lin" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv1_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv1_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc"><!-- TODO: Brief description --></p>
+          <div class="interview-title" data-i18n="iv1_title">不要再用英文学中文了！沉浸式学中文的秘诀</div>
+          <div class="interview-meta" data-i18n="iv1_meta">Chinese Podcast 第 192 期 · YouTube</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv1_desc">林老师专访 · 谈沉浸式语言学习的方法与常见误区</p>
         </div>
       </div>
       <div class="interview-card">
-        <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+        <div class="xhs-card">
+          <div class="xhs-card-head">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
+            小红书 · 中文老师访谈
           </div>
+          <div class="xhs-card-body">
+            <div class="xhs-card-h1">中文老师访谈</div>
+            <div class="xhs-card-h2">第 26 期</div>
+            <div class="xhs-card-people">
+              <span data-i18n="xhs_host_lbl">主持人</span>：<b>何十一</b><br>
+              <span data-i18n="xhs_guest_lbl">嘉宾</span>：<b>林安琪</b>
+            </div>
+            <ul>
+              <li>汉语国际教育本科</li>
+              <li>KU Leuven 教育研究硕士在读</li>
+              <li>第二届国际中文教育案例大赛全国亚军</li>
+              <li>比利时中文学校教师</li>
+            </ul>
+          </div>
+          <a class="xhs-card-cta" href="http://xhslink.com/o/36pzP5gFVOw" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv2_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv2_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc"><!-- TODO: Brief description --></p>
+          <div class="interview-title" data-i18n="iv2_title">中文老师访谈 · 第 26 期</div>
+          <div class="interview-meta" data-i18n="iv2_meta">小红书 · 主持人何十一</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv2_desc">林老师对谈"在比利时读研、教中文"的多元路径</p>
         </div>
       </div>
       <div class="interview-card">
-        <div class="t-video-actual">
-          <div class="pf-vid-placeholder">
-            <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
-            <span style="color:var(--muted);font-size:0.72rem">Interview video</span>
+        <div class="xhs-card">
+          <div class="xhs-card-head">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700">书</text></svg>
+            小红书 · 归属计划
           </div>
+          <div class="xhs-card-body">
+            <div class="xhs-card-flag">🇹🇭</div>
+            <div class="xhs-card-h1">对话泰国中文老师</div>
+            <div class="xhs-card-h2">归属计划 · 第 01 期</div>
+            <div class="xhs-card-people">
+              <b>学习语言，多元交友</b><br>
+              <span data-i18n="xhs_host_lbl">主持人</span>：小林在比利时<br>
+              <span data-i18n="xhs_guest_lbl">嘉宾</span>：蝶底小孔
+            </div>
+            <ul>
+              <li>国际中文教师视角</li>
+              <li>跨文化交友与语言习得</li>
+              <li>泰国教学生活实录</li>
+            </ul>
+          </div>
+          <a class="xhs-card-cta" href="http://xhslink.com/o/335T5pwxrV9" target="_blank" rel="noopener" data-i18n="xhs_view_btn">在小红书查看 →</a>
         </div>
         <div class="interview-body">
-          <div class="interview-title" data-i18n="iv3_title"><!-- TODO: Interview title --></div>
-          <div class="interview-meta" data-i18n="iv3_meta"><!-- TODO: Media outlet · Year --></div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc"><!-- TODO: Brief description --></p>
+          <div class="interview-title" data-i18n="iv3_title">🇹🇭 归属计划 · 01</div>
+          <div class="interview-meta" data-i18n="iv3_meta">小红书 · 对话泰国中文老师</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv3_desc">学习语言，多元交友 · 国际中文教师视角</p>
+        </div>
+      </div>
+      <div class="interview-card">
+        <div class="iv-dual-img">
+          <img src="A照片/KUL课堂1.JPG" alt="KU Leuven academic talk · slide" loading="lazy">
+          <img src="A照片/KUL课堂2.JPG" alt="KU Leuven academic talk · stage" loading="lazy">
+        </div>
+        <div class="interview-body">
+          <div class="interview-title" data-i18n="iv4_title">Everyday Boundaries of Belonging in School Offices</div>
+          <div class="interview-meta" data-i18n="iv4_meta">KU Leuven 学术演讲 · 2024</div>
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0" data-i18n="iv4_desc">国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ CLASSROOM MOMENTS · All photos from A照片/ folder ══ -->
-  <!-- TODO: Review each photo; remove any you don't want public; folder must be deployed with index.html -->
+  <!-- ══ CULTURAL EVENTS · 文化交流活动 (Phase 4 NEW) ══ -->
   <div class="portfolio-section">
-    <div class="sec-label" data-i18n="pf_classroom_label">Gallery</div>
-    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="gallery_h">Real moments, real students</h2>
+    <div class="sec-label" data-i18n="pf_cultural_label">文化</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_cultural_h">文化交流活动</h2>
+    <div class="cap-grid-3">
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-06-midautumn-chiangmai-hanfu-2024.jpg" alt="中秋汉服" loading="lazy">
+        <div class="cap-text" data-i18n="ce1_caption">"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-09-belgium-dragondance-practice.JPG" alt="舞龙训练" loading="lazy">
+        <div class="cap-text" data-i18n="ce2_caption">比利时鲁汶 · 舞龙队训练日</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-10-leuven-dragondance-plaza.JPG" alt="舞龙表演" loading="lazy">
+        <div class="cap-text" data-i18n="ce3_caption">鲁汶广场 · 舞龙表演 · 新年游行</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-05-cny-leuven-children-redenvelopes.jpg" alt="春节红包" loading="lazy">
+        <div class="cap-text" data-i18n="ce4_caption">鲁汶中文学校 · 春节红包活动</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-01-chiangmai-univ-language-institute.JPG" alt="清迈大学" loading="lazy">
+        <div class="cap-text" data-i18n="ce5_caption">清迈大学语言学院 · 文化交流大合影</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/03-Cultural-文化交流/cultural-07-kwc-yearend-hanfu-group.jpg" alt="KWC 汉服" loading="lazy">
+        <div class="cap-text" data-i18n="ce6_caption">KWC 学校 · 中国文化日 · 汉服合影</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CLASSROOM MOMENTS · 课堂实录 (Phase 4 重新分类) ══ -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_classroom_label">课堂实录</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="gallery_h">真实瞬间，真实学生</h2>
     <div class="photo-masonry">
-      <img src="A照片/IMG_7170.JPG" alt="Teaching moment" loading="lazy">
-      <img src="A照片/IMG_0051.JPG" alt="Classroom" loading="lazy">
-      <img src="A照片/IMG_7173.JPG" alt="Lesson activity" loading="lazy">
-      <img src="A照片/IMG_2178.JPG" alt="Teaching session" loading="lazy">
-      <img src="A照片/IMG_7171.JPG" alt="Student engagement" loading="lazy">
-      <img src="A照片/IMG_0057.JPG" alt="Classroom moment" loading="lazy">
-      <img src="A照片/IMG_7174.JPG" alt="Group lesson" loading="lazy">
-      <img src="A照片/IMG_2352.jpg" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_7172.JPG" alt="Lesson" loading="lazy">
-      <img src="A照片/IMG_0068.JPG" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_7176.JPG" alt="Classroom activity" loading="lazy">
-      <img src="A照片/IMG_1592.JPG" alt="Teaching moment" loading="lazy">
-      <img src="A照片/IMG_7177.JPG" alt="Student" loading="lazy">
-      <img src="A照片/IMG_2394.jpg" alt="Lesson" loading="lazy">
-      <img src="A照片/IMG_7178.JPG" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_0946.JPG" alt="Classroom" loading="lazy">
-      <img src="A照片/IMG_7182.JPG" alt="Teaching session" loading="lazy">
-      <img src="A照片/IMG_2396.jpg" alt="Lesson activity" loading="lazy">
-      <img src="A照片/IMG_7183.JPG" alt="Classroom moment" loading="lazy">
-      <img src="A照片/IMG_1634.JPG" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_7186.JPG" alt="Student work" loading="lazy">
-      <img src="A照片/IMG_2422.jpg" alt="Group lesson" loading="lazy">
-      <img src="A照片/IMG_7269.jpg" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_2439.JPG" alt="Classroom" loading="lazy">
-      <img src="A照片/IMG_7579.JPG" alt="Lesson" loading="lazy">
-      <img src="A照片/IMG_0962.JPG" alt="Teaching moment" loading="lazy">
-      <img src="A照片/IMG_8544.JPG" alt="Student activity" loading="lazy">
-      <img src="A照片/IMG_8980.JPG" alt="Teaching" loading="lazy">
-      <img src="A照片/IMG_9004.jpg" alt="Lesson" loading="lazy">
-      <img src="A照片/IMG_9541.JPG" alt="Teaching session" loading="lazy">
-      <img src="A照片/IMG_9586.JPG" alt="Classroom" loading="lazy">
-      <img src="A照片/60e14b7d83bf47eec68b6b7190990071.JPG" alt="Teaching moment" loading="lazy">
-      <img src="A照片/b7463d0633b1a7a5f41a716781f5a157.JPG" alt="Teaching" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-yue.JPG" alt="教学'月'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-presentation-overview.JPG" alt="鲁汶课堂全景" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-mother.JPG" alt="教学'母'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-multicultural-group.jpg" alt="多元文化班" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-zou.JPG" alt="教学'走'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-radicals-group.jpg" alt="偏旁课" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-tu.JPG" alt="教学'土'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-character-cards-1.jpg" alt="字卡游戏" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-class6-3-six-angels.JPG" alt="KWC 班级" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-character-cards-2.jpg" alt="字卡游戏 2" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-china-trip-discussion.JPG" alt="小组讨论" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-graduation-ceremony.jpg" alt="结业典礼" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-kwc-thumbsup-group.JPG" alt="点赞合影" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-panda-cards.jpg" alt="熊猫卡片课" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-progressstar-certificates.JPG" alt="进步之星" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-radical-cards.jpg" alt="偏旁字卡" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-overview-lesson.JPG" alt="课堂俯视" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-1.JPG" alt="天气汉字 1" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-2.JPG" alt="天气汉字 2" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-children-handicrafts.jpg" alt="孩童手工" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-student-color-words.jpg" alt="学生彩绘" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-student-cny-greeting.jpg" alt="学生新年作业" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-student-drawing-book.jpg" alt="学生绘本临摹" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-private-pekingopera-masks.JPG" alt="京剧脸谱课" loading="lazy">
     </div>
   </div>
 
-  <!-- ══ SHORT VIDEOS ══ -->
-  <!-- TODO: Replace each placeholder div with a vertical video embed or <video> tag.
-       For YouTube Shorts: <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-       Update sv1_lbl–sv4_lbl keys in i18n.js with real video titles ══ -->
+  <!-- ══ STUDENT FEEDBACK WALL · 学员评价（18 张完整 feedback ）(Phase 4 NEW) ══ -->
   <div class="portfolio-section">
-    <div class="sec-label" data-i18n="pf_shorts_label">Short Videos</div>
-    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_shorts_h">Clips & Highlights</h2>
+    <div class="sec-label" data-i18n="pf_feedback_label">学员评价</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_feedback_h">学生留言墙</h2>
+    <div class="feedback-wall">
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-01-farewell-2024.JPG" alt="中文信 1" loading="lazy">
+        <div class="cap-text" data-i18n="fb1_caption">泰国学生手写信 · "老师即将回国了..." · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-01-alicialin-2024.JPG" alt="英文信 1" loading="lazy">
+        <div class="cap-text" data-i18n="fb2_caption">英文信 · "Hello Alicia! I'm so happy..." · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-thai-en-01-bestteacher.JPG" alt="泰英双语" loading="lazy">
+        <div class="cap-text" data-i18n="fb3_caption">泰英双语 · "Lin Laoshi is the BEST TEACHER"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-05-firstclass-heartfelt.JPG" alt="中文长信" loading="lazy">
+        <div class="cap-text" data-i18n="fb4_caption">中文长信 · "第一次和老师上课..." · 真情流露</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-01-wewillrememberyou.JPG" alt="剪贴册 1" loading="lazy">
+        <div class="cap-text" data-i18n="fb5_caption">手工剪贴册 · "We will remember you with warm thoughts"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-02-nobodylikeyou.JPG" alt="剪贴册 2" loading="lazy">
+        <div class="cap-text" data-i18n="fb6_caption">剪贴册第二册 · "Nobody LIKE you / Hope to see you again"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-social-collage-01.JPG" alt="评价 collage 1" loading="lazy">
+        <div class="cap-text" data-i18n="fb7_caption">学员评价 · KWC 学生中泰双语好评</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-wechat-chat-screenshot.JPG" alt="微信对话" loading="lazy">
+        <div class="cap-text" data-i18n="fb8_caption">学员微信对话 · "谢谢老师，一切都非常好"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-02-jiangchanghua-farewell.JPG" alt="中文信 江昌华" loading="lazy">
+        <div class="cap-text">中文手写信 · "你好 lin 老师 我是江昌华"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-03-macy-2020.JPG" alt="中文信 Macy" loading="lazy">
+        <div class="cap-text">中文长信 · Macy 写 · 2020/12/26</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-04-bigfan-drawing.JPG" alt="彩绘卡片" loading="lazy">
+        <div class="cap-text">彩绘卡片 · "我是你的大粉丝"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-06-linruoxiaobang-2024.JPG" alt="中文信 林若小棒" loading="lazy">
+        <div class="cap-text">中文信 · 学生林若小棒 · 2024</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-02-shenli-urthebest.JPG" alt="英文信 沈丽" loading="lazy">
+        <div class="cap-text">英文信 · "U R The BEST teacher" · 沈丽</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-03-class6-reflection.JPG" alt="英文反思" loading="lazy">
+        <div class="cap-text">英文反思 · Class 6/3</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-04-wangyicheng.JPG" alt="英文信 王驿玉成" loading="lazy">
+        <div class="cap-text">英文信 · "Nice to meet you" · 王驿玉成</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-social-collage-02-breakoutroom.JPG" alt="评价 collage 2" loading="lazy">
+        <div class="cap-text">学员评价 · "breakout room 体验很棒"</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-social-collage-03-firstclass.JPG" alt="评价 collage 3" loading="lazy">
+        <div class="cap-text">学员评价 · 第一次课感受</div>
+      </div>
+      <div class="cap-card">
+        <img src="A照片/04-Classroom-课堂/feedback-hsk-tips-xhs-post.PNG" alt="HSK 笔记" loading="lazy">
+        <div class="cap-text">HSK 学习笔记 · 小红书排版图</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STUDENT SHOWCASE · 学生原创作品 (Phase 4 占位) ══ -->
+  <div class="portfolio-section">
+    <div class="sec-label" data-i18n="pf_showcase_label">学生作品</div>
+    <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_showcase_h">学生原创作品</h2>
     <div class="short-grid">
       <div class="short-card">
         <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
           <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
         </div>
-        <div class="short-card-label" data-i18n="sv1_lbl">Short video 1 · TODO</div>
+        <div class="short-card-label" data-i18n="showcase1">学生中文书评 · 独白版 · 视频待补</div>
       </div>
       <div class="short-card">
         <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
           <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
         </div>
-        <div class="short-card-label" data-i18n="sv2_lbl">Short video 2 · TODO</div>
+        <div class="short-card-label" data-i18n="showcase2">学生中文书评 · 小组版 · 视频待补</div>
       </div>
       <div class="short-card">
         <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
           <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
         </div>
-        <div class="short-card-label" data-i18n="sv3_lbl">Short video 3 · TODO</div>
+        <div class="short-card-label" data-i18n="sv3_lbl">短视频 3 · 待补充</div>
       </div>
       <div class="short-card">
         <div class="pf-vid-placeholder" style="border-radius:var(--r-card)">
           <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.45"/><polygon points="20,15 20,33 35,24" fill="var(--amber)" opacity="0.45"/></svg>
         </div>
-        <div class="short-card-label" data-i18n="sv4_lbl">Short video 4 · TODO</div>
+        <div class="short-card-label" data-i18n="sv4_lbl">短视频 4 · 待补充</div>
       </div>
     </div>
   </div>

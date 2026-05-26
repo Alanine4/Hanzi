@@ -305,16 +305,23 @@ window.__i18n = {
   /* About – awards (TODO: replace placeholder text below with real award names in each language) */
   awards_label: { zh: '荣誉', en: 'Recognition', th: 'รางวัลและเกียรติยศ', es: 'Reconocimientos', nl: 'Erkenning', fr: 'Distinctions' },
   awards_h:     { zh: '奖项与荣誉', en: 'Awards & Recognition', th: 'รางวัลและการยอมรับ', es: 'Premios y Reconocimientos', nl: 'Prijzen & Erkenning', fr: 'Prix et Reconnaissances' },
-  aw1_name: { zh: '全国优秀汉语教师（海外）', en: 'National Excellent Chinese Teacher Abroad', th: 'ครูภาษาจีนดีเด่นแห่งชาติ (ต่างประเทศ)', es: 'Profesora de Chino Excelente en el Extranjero', nl: 'Nationaal Uitstekende Chinese Leraar Buitenland', fr: 'Excellente professeure de chinois à l'étranger' },
-  aw1_yr:   { zh: '2024 · 汉办 / 中国国际中文教育基金会', en: '2024 · Hanban / CIEF', th: '2024 · Hanban / CIEF', es: '2024 · Hanban / CIEF', nl: '2024 · Hanban / CIEF', fr: '2024 · Hanban / CIEF' },
-  aw2_name: { zh: '优秀教学表现奖', en: 'Outstanding Teaching Performance', th: 'รางวัลการสอนดีเด่น', es: 'Rendimiento Docente Sobresaliente', nl: 'Uitstekende Onderwijsprestatie', fr: 'Excellence pédagogique' },
-  aw2_yr:   { zh: '2023 · 泰国卡维拉威塔亚莱学校', en: '2023 · Kawila Wittayalai School', th: '2023 · โรงเรียนคาวิลาวิทยาลัย', es: '2023 · Escuela Kawila Wittayalai', nl: '2023 · Kawila Wittayalai School', fr: '2023 · École Kawila Wittayalai' },
-  aw3_name: { zh: '语言教育创新奖', en: 'Innovation in Language Education', th: 'รางวัลนวัตกรรมการสอนภาษา', es: 'Innovación en Educación Lingüística', nl: 'Innovatie in Taalonderwijs', fr: 'Innovation en enseignement des langues' },
-  aw3_yr:   { zh: '2024 · 鲁汶大学', en: '2024 · KU Leuven', th: '2024 · KU Leuven', es: '2024 · KU Lovaina', nl: '2024 · KU Leuven', fr: '2024 · KU Leuven' },
-  aw4_name: { zh: '文化桥梁奖', en: 'Cultural Bridge Award', th: 'รางวัลสะพานวัฒนธรรม', es: 'Premio Puente Cultural', nl: 'Culturele Brug Award', fr: 'Prix Pont Culturel' },
-  aw4_yr:   { zh: '2023 · 中泰文化交流项目', en: '2023 · China–Thailand Exchange', th: '2023 · โครงการแลกเปลี่ยนไทย-จีน', es: '2023 · Intercambio China–Tailandia', nl: '2023 · China–Thailand Uitwisseling', fr: '2023 · Échange Chine–Thaïlande' },
-  aw5_name: { zh: '社区影响力奖', en: 'Community Impact Award', th: 'รางวัลผลกระทบชุมชน', es: 'Premio Impacto Comunitario', nl: 'Community Impact Award', fr: 'Prix Impact Communautaire' },
-  aw5_yr:   { zh: '2025 · ThaiCool Chinese', en: '2025 · ThaiCool Chinese', th: '2025 · ThaiCool Chinese', es: '2025 · ThaiCool Chinese', nl: '2025 · ThaiCool Chinese', fr: '2025 · ThaiCool Chinese' },
+  aw1_name: { zh: '国际中文教师证书 (CTCSOL)', en: '国际中文教师证书 (CTCSOL)', th: '国际中文教师证书 (CTCSOL)', es: '国际中文教师证书 (CTCSOL)', nl: '国际中文教师证书 (CTCSOL)', fr: '国际中文教师证书 (CTCSOL)' },
+  /* NOTE: 文字只填中文 zh，其他 5 语言暂用相同中文占位；用户后期可逐个语言改 */
+  aw1_yr:   { zh: '中外语言交流合作中心 · 2023.12', en: '中外语言交流合作中心 · 2023.12', th: '中外语言交流合作中心 · 2023.12', es: '中外语言交流合作中心 · 2023.12', nl: '中外语言交流合作中心 · 2023.12', fr: '中外语言交流合作中心 · 2023.12' },
+  aw2_name: { zh: '最佳教学奖', en: '最佳教学奖', th: '最佳教学奖', es: '最佳教学奖', nl: '最佳教学奖', fr: '最佳教学奖' },
+  aw2_yr:   { zh: '华东师大 · 赴泰志愿者教学技能大赛 · 2023', en: '华东师大 · 赴泰志愿者教学技能大赛 · 2023', th: '华东师大 · 赴泰志愿者教学技能大赛 · 2023', es: '华东师大 · 赴泰志愿者教学技能大赛 · 2023', nl: '华东师大 · 赴泰志愿者教学技能大赛 · 2023', fr: '华东师大 · 赴泰志愿者教学技能大赛 · 2023' },
+  aw3_name: { zh: '国际中文教育案例大赛·全国亚军', en: '国际中文教育案例大赛·全国亚军', th: '国际中文教育案例大赛·全国亚军', es: '国际中文教育案例大赛·全国亚军', nl: '国际中文教育案例大赛·全国亚军', fr: '国际中文教育案例大赛·全国亚军' },
+  aw3_yr:   { zh: '中国研究生创新实践系列大赛 · 2025', en: '中国研究生创新实践系列大赛 · 2025', th: '中国研究生创新实践系列大赛 · 2025', es: '中国研究生创新实践系列大赛 · 2025', nl: '中国研究生创新实践系列大赛 · 2025', fr: '中国研究生创新实践系列大赛 · 2025' },
+  aw4_name: { zh: '志愿教学感谢证书', en: '志愿教学感谢证书', th: '志愿教学感谢证书', es: '志愿教学感谢证书', nl: '志愿教学感谢证书', fr: '志愿教学感谢证书' },
+  aw4_yr:   { zh: 'UBC 中文项目 · 26 小时无偿教学 · 2023', en: 'UBC 中文项目 · 26 小时无偿教学 · 2023', th: 'UBC 中文项目 · 26 小时无偿教学 · 2023', es: 'UBC 中文项目 · 26 小时无偿教学 · 2023', nl: 'UBC 中文项目 · 26 小时无偿教学 · 2023', fr: 'UBC 中文项目 · 26 小时无偿教学 · 2023' },
+  aw5_name: { zh: '第 21 批赴泰志愿者欢送大会', en: '第 21 批赴泰志愿者欢送大会', th: '第 21 批赴泰志愿者欢送大会', es: '第 21 批赴泰志愿者欢送大会', nl: '第 21 批赴泰志愿者欢送大会', fr: '第 21 批赴泰志愿者欢送大会' },
+  aw5_yr:   { zh: '汉办 20 周年活动 · 2024', en: '汉办 20 周年活动 · 2024', th: '汉办 20 周年活动 · 2024', es: '汉办 20 周年活动 · 2024', nl: '汉办 20 周年活动 · 2024', fr: '汉办 20 周年活动 · 2024' },
+  aw6_name: { zh: '第 4 届欧洲汉语教学协会国际研讨会', en: '第 4 届欧洲汉语教学协会国际研讨会', th: '第 4 届欧洲汉语教学协会国际研讨会', es: '第 4 届欧洲汉语教学协会国际研讨会', nl: '第 4 届欧洲汉语教学协会国际研讨会', fr: '第 4 届欧洲汉语教学协会国际研讨会' },
+  aw6_yr:   { zh: '英国南安普顿大学 · 2023', en: '英国南安普顿大学 · 2023', th: '英国南安普顿大学 · 2023', es: '英国南安普顿大学 · 2023', nl: '英国南安普顿大学 · 2023', fr: '英国南安普顿大学 · 2023' },
+  aw7_name: { zh: '与汉语教学界资深学者合影', en: '与汉语教学界资深学者合影', th: '与汉语教学界资深学者合影', es: '与汉语教学界资深学者合影', nl: '与汉语教学界资深学者合影', fr: '与汉语教学界资深学者合影' },
+  aw7_yr:   { zh: 'AEEC 研讨会 · 南安普顿 · 2023', en: 'AEEC 研讨会 · 南安普顿 · 2023', th: 'AEEC 研讨会 · 南安普顿 · 2023', es: 'AEEC 研讨会 · 南安普顿 · 2023', nl: 'AEEC 研讨会 · 南安普顿 · 2023', fr: 'AEEC 研讨会 · 南安普顿 · 2023' },
+  aw8_name: { zh: '最佳教学奖证书（近景）', en: '最佳教学奖证书（近景）', th: '最佳教学奖证书（近景）', es: '最佳教学奖证书（近景）', nl: '最佳教学奖证书（近景）', fr: '最佳教学奖证书（近景）' },
+  aw8_yr:   { zh: '华东师大 · 2023', en: '华东师大 · 2023', th: '华东师大 · 2023', es: '华东师大 · 2023', nl: '华东师大 · 2023', fr: '华东师大 · 2023' },
 
   /* About – gallery */
   gallery_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
@@ -324,15 +331,18 @@ window.__i18n = {
   /* About – interviews */
   interviews_label: { zh: '媒体', en: 'Media', th: 'สื่อ', es: 'Medios', nl: 'Media', fr: 'Médias' },
   interviews_h:     { zh: '采访与报道', en: 'Interviews & Features', th: 'สัมภาษณ์และสารคดี', es: 'Entrevistas y Reportajes', nl: 'Interviews & Features', fr: 'Interviews & Reportages' },
-  iv1_title: { zh: '【TODO: 采访标题】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv1_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv1_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description of interview -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv2_title: { zh: '【TODO: 采访标题 2】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv2_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv2_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv3_title: { zh: '【TODO: 采访标题 3】', en: '<!-- TODO: replace with real interview title -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv3_meta:  { zh: '媒体 · 年份', en: '<!-- TODO: Media outlet · Year -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
-  iv3_desc:  { zh: '采访简介...', en: '<!-- TODO: brief description -->', th: '<!-- TODO -->', es: '<!-- TODO -->', nl: '<!-- TODO -->', fr: '<!-- TODO -->' },
+  iv1_title: { zh: '不要再用英文学中文了！沉浸式学中文的秘诀', en: '不要再用英文学中文了！沉浸式学中文的秘诀', th: '不要再用英文学中文了！沉浸式学中文的秘诀', es: '不要再用英文学中文了！沉浸式学中文的秘诀', nl: '不要再用英文学中文了！沉浸式学中文的秘诀', fr: '不要再用英文学中文了！沉浸式学中文的秘诀' },
+  iv1_meta:  { zh: 'Chinese Podcast 第 192 期 · YouTube', en: 'Chinese Podcast 第 192 期 · YouTube', th: 'Chinese Podcast 第 192 期 · YouTube', es: 'Chinese Podcast 第 192 期 · YouTube', nl: 'Chinese Podcast 第 192 期 · YouTube', fr: 'Chinese Podcast 第 192 期 · YouTube' },
+  iv1_desc:  { zh: '林老师专访 · 谈沉浸式语言学习的方法与常见误区', en: '林老师专访 · 谈沉浸式语言学习的方法与常见误区', th: '林老师专访 · 谈沉浸式语言学习的方法与常见误区', es: '林老师专访 · 谈沉浸式语言学习的方法与常见误区', nl: '林老师专访 · 谈沉浸式语言学习的方法与常见误区', fr: '林老师专访 · 谈沉浸式语言学习的方法与常见误区' },
+  iv2_title: { zh: '中文老师访谈 · 第 26 期', en: '中文老师访谈 · 第 26 期', th: '中文老师访谈 · 第 26 期', es: '中文老师访谈 · 第 26 期', nl: '中文老师访谈 · 第 26 期', fr: '中文老师访谈 · 第 26 期' },
+  iv2_meta:  { zh: '小红书 · 主持人何十一', en: '小红书 · 主持人何十一', th: '小红书 · 主持人何十一', es: '小红书 · 主持人何十一', nl: '小红书 · 主持人何十一', fr: '小红书 · 主持人何十一' },
+  iv2_desc:  { zh: '林老师对谈"在比利时读研、教中文"的多元路径', en: '林老师对谈"在比利时读研、教中文"的多元路径', th: '林老师对谈"在比利时读研、教中文"的多元路径', es: '林老师对谈"在比利时读研、教中文"的多元路径', nl: '林老师对谈"在比利时读研、教中文"的多元路径', fr: '林老师对谈"在比利时读研、教中文"的多元路径' },
+  iv3_title: { zh: '🇹🇭 归属计划 · 01', en: '🇹🇭 归属计划 · 01', th: '🇹🇭 归属计划 · 01', es: '🇹🇭 归属计划 · 01', nl: '🇹🇭 归属计划 · 01', fr: '🇹🇭 归属计划 · 01' },
+  iv3_meta:  { zh: '小红书 · 对话泰国中文老师', en: '小红书 · 对话泰国中文老师', th: '小红书 · 对话泰国中文老师', es: '小红书 · 对话泰国中文老师', nl: '小红书 · 对话泰国中文老师', fr: '小红书 · 对话泰国中文老师' },
+  iv3_desc:  { zh: '学习语言，多元交友 · 国际中文教师视角', en: '学习语言，多元交友 · 国际中文教师视角', th: '学习语言，多元交友 · 国际中文教师视角', es: '学习语言，多元交友 · 国际中文教师视角', nl: '学习语言，多元交友 · 国际中文教师视角', fr: '学习语言，多元交友 · 国际中文教师视角' },
+  iv4_title: { zh: 'Everyday Boundaries of Belonging in School Offices', en: 'Everyday Boundaries of Belonging in School Offices', th: 'Everyday Boundaries of Belonging in School Offices', es: 'Everyday Boundaries of Belonging in School Offices', nl: 'Everyday Boundaries of Belonging in School Offices', fr: 'Everyday Boundaries of Belonging in School Offices' },
+  iv4_meta:  { zh: 'KU Leuven 学术演讲 · 2024', en: 'KU Leuven 学术演讲 · 2024', th: 'KU Leuven 学术演讲 · 2024', es: 'KU Leuven 学术演讲 · 2024', nl: 'KU Leuven 学术演讲 · 2024', fr: 'KU Leuven 学术演讲 · 2024' },
+  iv4_desc:  { zh: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', en: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', th: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', es: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', nl: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人', fr: '国际中文教师在学校办公室的归属感研究 · Anqi Lin 等三人' },
 
   /* Homepage classroom preview */
   classroom_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
@@ -363,7 +373,64 @@ window.__i18n = {
   demo2_h:   { zh: '拼音导师 Pro', en: 'Pinyin Tutor Pro', th: 'Pinyin Tutor Pro', es: 'Pinyin Tutor Pro', nl: 'Pinyin Tutor Pro', fr: 'Pinyin Tutor Pro' },
   demo2_sub: { zh: '互动声调与发音训练器', en: 'Interactive tones and pronunciation trainer', th: 'ฝึกวรรณยุกต์และการออกเสียงแบบโต้ตอบ', es: 'Entrenador interactivo de tonos y pronunciación', nl: 'Interactieve toon- en uitspraakoefenaar', fr: 'Entraîneur interactif de tons et prononciation' },
   demo3_h:   { zh: 'AI 对话伙伴', en: 'AI Chat Buddy', th: 'AI Chat Buddy', es: 'Compañero de Chat con IA', nl: 'AI Chatmaatje', fr: 'Compagnon de conversation IA' },
-  demo3_sub: { zh: '随时随地练习普通话对话', en: 'Practice Mandarin conversation at any level', th: 'ฝึกสนทนาภาษาจีนกลางได้ทุกระดับ', es: 'Practica conversación en mandarín a cualquier nivel', nl: 'Oefen Mandarijn gesprekken op elk niveau', fr: 'Pratiquez la conversation en mandarin à tout niveau' }
+  demo3_sub: { zh: '随时随地练习普通话对话', en: 'Practice Mandarin conversation at any level', th: 'ฝึกสนทนาภาษาจีนกลางได้ทุกระดับ', es: 'Practica conversación en mandarín a cualquier nivel', nl: 'Oefen Mandarijn gesprekken op elk niveau', fr: 'Pratiquez la conversation en mandarin à tout niveau' },
+
+  /* ═══ PHASE 4 — Competitions + Cultural Events + Student Feedback Wall + Classroom captions ═══ */
+  /* All keys filled with Chinese for all 6 langs; user fills other languages later */
+
+  /* Competitions (Portfolio NEW section) */
+  pf_competitions_label: { zh: '比赛', en: '比赛', th: '比赛', es: '比赛', nl: '比赛', fr: '比赛' },
+  pf_competitions_h:     { zh: '国际中文教育案例大赛', en: '国际中文教育案例大赛', th: '国际中文教育案例大赛', es: '国际中文教育案例大赛', nl: '国际中文教育案例大赛', fr: '国际中文教育案例大赛' },
+  cp1_caption: { zh: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025', en: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025', th: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025', es: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025', nl: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025', fr: '大赛开幕式 · 华东师范大学礼堂 · 全国选手齐聚 · 2025' },
+  cp2_caption: { zh: '评委席 · 资深专家点评环节', en: '评委席 · 资深专家点评环节', th: '评委席 · 资深专家点评环节', es: '评委席 · 资深专家点评环节', nl: '评委席 · 资深专家点评环节', fr: '评委席 · 资深专家点评环节' },
+  cp3_caption: { zh: '团队答辩现场 · 林老师主讲 · 乙队', en: '团队答辩现场 · 林老师主讲 · 乙队', th: '团队答辩现场 · 林老师主讲 · 乙队', es: '团队答辩现场 · 林老师主讲 · 乙队', nl: '团队答辩现场 · 林老师主讲 · 乙队', fr: '团队答辩现场 · 林老师主讲 · 乙队' },
+  cp4_caption: { zh: '三甲合影 · 全国冠军、亚军、季军同台', en: '三甲合影 · 全国冠军、亚军、季军同台', th: '三甲合影 · 全国冠军、亚军、季军同台', es: '三甲合影 · 全国冠军、亚军、季军同台', nl: '三甲合影 · 全国冠军、亚军、季军同台', fr: '三甲合影 · 全国冠军、亚军、季军同台' },
+  cp5_caption: { zh: '颁奖典礼 · 亚军领奖', en: '颁奖典礼 · 亚军领奖', th: '颁奖典礼 · 亚军领奖', es: '颁奖典礼 · 亚军领奖', nl: '颁奖典礼 · 亚军领奖', fr: '颁奖典礼 · 亚军领奖' },
+  cp6_caption: { zh: '颁奖现场 · 另一角度', en: '颁奖现场 · 另一角度', th: '颁奖现场 · 另一角度', es: '颁奖现场 · 另一角度', nl: '颁奖现场 · 另一角度', fr: '颁奖现场 · 另一角度' },
+
+  /* Cultural Events (Portfolio NEW section) */
+  pf_cultural_label: { zh: '文化', en: '文化', th: '文化', es: '文化', nl: '文化', fr: '文化' },
+  pf_cultural_h:     { zh: '文化交流活动', en: '文化交流活动', th: '文化交流活动', es: '文化交流活动', nl: '文化交流活动', fr: '文化交流活动' },
+  ce1_caption: { zh: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024', en: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024', th: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024', es: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024', nl: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024', fr: '"情满中秋·月圆清迈"文艺联欢会 · 汉服扇舞 · 2024' },
+  ce2_caption: { zh: '比利时鲁汶 · 舞龙队训练日', en: '比利时鲁汶 · 舞龙队训练日', th: '比利时鲁汶 · 舞龙队训练日', es: '比利时鲁汶 · 舞龙队训练日', nl: '比利时鲁汶 · 舞龙队训练日', fr: '比利时鲁汶 · 舞龙队训练日' },
+  ce3_caption: { zh: '鲁汶广场 · 舞龙表演 · 新年游行', en: '鲁汶广场 · 舞龙表演 · 新年游行', th: '鲁汶广场 · 舞龙表演 · 新年游行', es: '鲁汶广场 · 舞龙表演 · 新年游行', nl: '鲁汶广场 · 舞龙表演 · 新年游行', fr: '鲁汶广场 · 舞龙表演 · 新年游行' },
+  ce4_caption: { zh: '鲁汶中文学校 · 春节红包活动', en: '鲁汶中文学校 · 春节红包活动', th: '鲁汶中文学校 · 春节红包活动', es: '鲁汶中文学校 · 春节红包活动', nl: '鲁汶中文学校 · 春节红包活动', fr: '鲁汶中文学校 · 春节红包活动' },
+  ce5_caption: { zh: '清迈大学语言学院 · 文化交流大合影', en: '清迈大学语言学院 · 文化交流大合影', th: '清迈大学语言学院 · 文化交流大合影', es: '清迈大学语言学院 · 文化交流大合影', nl: '清迈大学语言学院 · 文化交流大合影', fr: '清迈大学语言学院 · 文化交流大合影' },
+  ce6_caption: { zh: 'KWC 学校 · 中国文化日 · 汉服合影', en: 'KWC 学校 · 中国文化日 · 汉服合影', th: 'KWC 学校 · 中国文化日 · 汉服合影', es: 'KWC 学校 · 中国文化日 · 汉服合影', nl: 'KWC 学校 · 中国文化日 · 汉服合影', fr: 'KWC 学校 · 中国文化日 · 汉服合影' },
+
+  /* Student Feedback Wall (About + Portfolio NEW section) */
+  pf_feedback_label: { zh: '学员评价', en: '学员评价', th: '学员评价', es: '学员评价', nl: '学员评价', fr: '学员评价' },
+  pf_feedback_h:     { zh: '学生留言墙', en: '学生留言墙', th: '学生留言墙', es: '学生留言墙', nl: '学生留言墙', fr: '学生留言墙' },
+  fb1_caption: { zh: '泰国学生手写信 · "老师即将回国了..." · 2024', en: '泰国学生手写信 · "老师即将回国了..." · 2024', th: '泰国学生手写信 · "老师即将回国了..." · 2024', es: '泰国学生手写信 · "老师即将回国了..." · 2024', nl: '泰国学生手写信 · "老师即将回国了..." · 2024', fr: '泰国学生手写信 · "老师即将回国了..." · 2024' },
+  fb2_caption: { zh: '英文信 · "Hello Alicia! I\'m so happy..." · 2024', en: '英文信 · "Hello Alicia! I\'m so happy..." · 2024', th: '英文信 · "Hello Alicia! I\'m so happy..." · 2024', es: '英文信 · "Hello Alicia! I\'m so happy..." · 2024', nl: '英文信 · "Hello Alicia! I\'m so happy..." · 2024', fr: '英文信 · "Hello Alicia! I\'m so happy..." · 2024' },
+  fb3_caption: { zh: '泰英双语 · "Lin Laoshi is the BEST TEACHER"', en: '泰英双语 · "Lin Laoshi is the BEST TEACHER"', th: '泰英双语 · "Lin Laoshi is the BEST TEACHER"', es: '泰英双语 · "Lin Laoshi is the BEST TEACHER"', nl: '泰英双语 · "Lin Laoshi is the BEST TEACHER"', fr: '泰英双语 · "Lin Laoshi is the BEST TEACHER"' },
+  fb4_caption: { zh: '中文长信 · "第一次和老师上课..." · 真情流露', en: '中文长信 · "第一次和老师上课..." · 真情流露', th: '中文长信 · "第一次和老师上课..." · 真情流露', es: '中文长信 · "第一次和老师上课..." · 真情流露', nl: '中文长信 · "第一次和老师上课..." · 真情流露', fr: '中文长信 · "第一次和老师上课..." · 真情流露' },
+  fb5_caption: { zh: '手工剪贴册 · "We will remember you with warm thoughts"', en: '手工剪贴册 · "We will remember you with warm thoughts"', th: '手工剪贴册 · "We will remember you with warm thoughts"', es: '手工剪贴册 · "We will remember you with warm thoughts"', nl: '手工剪贴册 · "We will remember you with warm thoughts"', fr: '手工剪贴册 · "We will remember you with warm thoughts"' },
+  fb6_caption: { zh: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"', en: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"', th: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"', es: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"', nl: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"', fr: '剪贴册第二册 · "Nobody LIKE you / Hope to see you again"' },
+  fb7_caption: { zh: '学员评价 · KWC 学生中泰双语好评', en: '学员评价 · KWC 学生中泰双语好评', th: '学员评价 · KWC 学生中泰双语好评', es: '学员评价 · KWC 学生中泰双语好评', nl: '学员评价 · KWC 学生中泰双语好评', fr: '学员评价 · KWC 学生中泰双语好评' },
+  fb8_caption: { zh: '学员微信对话 · "谢谢老师，一切都非常好"', en: '学员微信对话 · "谢谢老师，一切都非常好"', th: '学员微信对话 · "谢谢老师，一切都非常好"', es: '学员微信对话 · "谢谢老师，一切都非常好"', nl: '学员微信对话 · "谢谢老师，一切都非常好"', fr: '学员微信对话 · "谢谢老师，一切都非常好"' },
+
+  /* Classroom captions (gallery) */
+  cm1_caption: { zh: '泰国 KWC · 教学"月 yuè" · 学生互动', en: '泰国 KWC · 教学"月 yuè" · 学生互动', th: '泰国 KWC · 教学"月 yuè" · 学生互动', es: '泰国 KWC · 教学"月 yuè" · 学生互动', nl: '泰国 KWC · 教学"月 yuè" · 学生互动', fr: '泰国 KWC · 教学"月 yuè" · 学生互动' },
+  cm2_caption: { zh: '教学"走 zǒu" · 一年级课堂', en: '教学"走 zǒu" · 一年级课堂', th: '教学"走 zǒu" · 一年级课堂', es: '教学"走 zǒu" · 一年级课堂', nl: '教学"走 zǒu" · 一年级课堂', fr: '教学"走 zǒu" · 一年级课堂' },
+  cm3_caption: { zh: '"为什么要去中国"小组讨论 · 激发学习动机', en: '"为什么要去中国"小组讨论 · 激发学习动机', th: '"为什么要去中国"小组讨论 · 激发学习动机', es: '"为什么要去中国"小组讨论 · 激发学习动机', nl: '"为什么要去中国"小组讨论 · 激发学习动机', fr: '"为什么要去中国"小组讨论 · 激发学习动机' },
+  cm4_caption: { zh: '比利时鲁汶中文学校 · 课堂全景', en: '比利时鲁汶中文学校 · 课堂全景', th: '比利时鲁汶中文学校 · 课堂全景', es: '比利时鲁汶中文学校 · 课堂全景', nl: '比利时鲁汶中文学校 · 课堂全景', fr: '比利时鲁汶中文学校 · 课堂全景' },
+  cm5_caption: { zh: '多元文化班 · 欧亚混血孩童合影', en: '多元文化班 · 欧亚混血孩童合影', th: '多元文化班 · 欧亚混血孩童合影', es: '多元文化班 · 欧亚混血孩童合影', nl: '多元文化班 · 欧亚混血孩童合影', fr: '多元文化班 · 欧亚混血孩童合影' },
+  cm6_caption: { zh: '汉字字卡互动游戏', en: '汉字字卡互动游戏', th: '汉字字卡互动游戏', es: '汉字字卡互动游戏', nl: '汉字字卡互动游戏', fr: '汉字字卡互动游戏' },
+  cm7_caption: { zh: '偏旁部首专题 · 小组学习', en: '偏旁部首专题 · 小组学习', th: '偏旁部首专题 · 小组学习', es: '偏旁部首专题 · 小组学习', nl: '偏旁部首专题 · 小组学习', fr: '偏旁部首专题 · 小组学习' },
+  cm8_caption: { zh: '鲁汶中文学校 · 学生结业典礼', en: '鲁汶中文学校 · 学生结业典礼', th: '鲁汶中文学校 · 学生结业典礼', es: '鲁汶中文学校 · 学生结业典礼', nl: '鲁汶中文学校 · 学生结业典礼', fr: '鲁汶中文学校 · 学生结业典礼' },
+  cm9_caption: { zh: '私教课 · 京剧脸谱主题文化课', en: '私教课 · 京剧脸谱主题文化课', th: '私教课 · 京剧脸谱主题文化课', es: '私教课 · 京剧脸谱主题文化课', nl: '私教课 · 京剧脸谱主题文化课', fr: '私教课 · 京剧脸谱主题文化课' },
+
+  /* Student Showcase (placeholder) */
+  pf_showcase_label: { zh: '学生作品', en: '学生作品', th: '学生作品', es: '学生作品', nl: '学生作品', fr: '学生作品' },
+  pf_showcase_h:     { zh: '学生原创作品', en: '学生原创作品', th: '学生原创作品', es: '学生原创作品', nl: '学生原创作品', fr: '学生原创作品' },
+  showcase1: { zh: '学生中文书评 · 独白版 · 视频待补', en: '学生中文书评 · 独白版 · 视频待补', th: '学生中文书评 · 独白版 · 视频待补', es: '学生中文书评 · 独白版 · 视频待补', nl: '学生中文书评 · 独白版 · 视频待补', fr: '学生中文书评 · 独白版 · 视频待补' },
+  showcase2: { zh: '学生中文书评 · 小组版 · 视频待补', en: '学生中文书评 · 小组版 · 视频待补', th: '学生中文书评 · 小组版 · 视频待补', es: '学生中文书评 · 小组版 · 视频待补', nl: '学生中文书评 · 小组版 · 视频待补', fr: '学生中文书评 · 小组版 · 视频待补' },
+
+  /* XHS interview card UI labels */
+  xhs_view_btn: { zh: '在小红书查看 →', en: '在小红书查看 →', th: '在小红书查看 →', es: '在小红书查看 →', nl: '在小红书查看 →', fr: '在小红书查看 →' },
+  xhs_host_lbl: { zh: '主持人', en: '主持人', th: '主持人', es: '主持人', nl: '主持人', fr: '主持人' },
+  xhs_guest_lbl: { zh: '嘉宾', en: '嘉宾', th: '嘉宾', es: '嘉宾', nl: '嘉宾', fr: '嘉宾' }
 
 };
 
