@@ -12,6 +12,7 @@ window.__i18n = {
   nav_courses:     { zh: '课程', en: 'Courses', th: 'หลักสูตร', es: 'Cursos', nl: 'Cursussen', fr: 'Cours' },
   nav_contact:     { zh: '联系', en: 'Contact', th: 'ติดต่อ', es: 'Contacto', nl: 'Contact', fr: 'Contact' },
   nav_cta_book:    { zh: '预约试课 · €29', en: 'Book a Trial · €29', th: 'จองทดลองเรียน · €29', es: 'Reservar prueba · €29', nl: 'Proefles boeken · €29', fr: 'Réserver un essai · €29' },
+  nav_ai:          { zh: 'AI', en: 'AI', th: 'AI', es: 'AI', nl: 'AI', fr: 'AI' },
 
   /* ═══ HERO ═══ */
   hero_eyebrow:    { zh: '🎓 KU Leuven · 比利时 鲁汶', en: '🎓 KU Leuven · Leuven, Belgium', th: '🎓 KU Leuven · เลอเฟิน เบลเยียม', es: '🎓 KU Leuven · Lovaina, Bélgica', nl: '🎓 KU Leuven · Leuven, België', fr: '🎓 KU Leuven · Louvain, Belgique' },
@@ -443,7 +444,28 @@ window.__i18n = {
   /* XHS interview card UI labels */
   xhs_view_btn: { zh: '在小红书查看 →', en: '在小红书查看 →', th: '在小红书查看 →', es: '在小红书查看 →', nl: '在小红书查看 →', fr: '在小红书查看 →' },
   xhs_host_lbl: { zh: '主持人', en: '主持人', th: '主持人', es: '主持人', nl: '主持人', fr: '主持人' },
-  xhs_guest_lbl: { zh: '嘉宾', en: '嘉宾', th: '嘉宾', es: '嘉宾', nl: '嘉宾', fr: '嘉宾' }
+  xhs_guest_lbl: { zh: '嘉宾', en: '嘉宾', th: '嘉宾', es: '嘉宾', nl: '嘉宾', fr: '嘉宾' },
+
+  /* AI banner on HOME (replaces 4-card AI section) */
+  ai_banner_eyebrow: { zh: 'AI · 我们的差异化', en: 'AI · 我们的差异化', th: 'AI · 我们的差异化', es: 'AI · 我们的差异化', nl: 'AI · 我们的差异化', fr: 'AI · 我们的差异化' },
+  ai_banner_h:       { zh: 'AI 工具，由中文老师亲手调教', en: 'AI 工具，由中文老师亲手调教', th: 'AI 工具，由中文老师亲手调教', es: 'AI 工具，由中文老师亲手调教', nl: 'AI 工具，由中文老师亲手调教', fr: 'AI 工具，由中文老师亲手调教' },
+  ai_banner_sub:     { zh: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。', en: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。', th: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。', es: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。', nl: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。', fr: '不是程序员应付事的玩具 —— 是一位有上百名学生教学经验的中文老师为学生设计、亲身使用的学习伙伴。' },
+  ai_banner_btn:     { zh: '探索 Teacher Lin 的 AI →', en: '探索 Teacher Lin 的 AI →', th: '探索 Teacher Lin 的 AI →', es: '探索 Teacher Lin 的 AI →', nl: '探索 Teacher Lin 的 AI →', fr: '探索 Teacher Lin 的 AI →' },
+
+  /* AI page skeleton (Step 2 will fill more) */
+  ai_page_eyebrow: { zh: 'AI · 正在搭建', en: 'AI · 正在搭建', th: 'AI · 正在搭建', es: 'AI · 正在搭建', nl: 'AI · 正在搭建', fr: 'AI · 正在搭建' },
+  ai_page_h:       { zh: 'Teacher Lin × AI', en: 'Teacher Lin × AI', th: 'Teacher Lin × AI', es: 'Teacher Lin × AI', nl: 'Teacher Lin × AI', fr: 'Teacher Lin × AI' },
+  ai_page_sub:     { zh: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。', en: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。', th: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。', es: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。', nl: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。', fr: '这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。' },
+  ai_tab_students: { zh: '👨‍🎓 给学生用', en: '👨‍🎓 给学生用', th: '👨‍🎓 给学生用', es: '👨‍🎓 给学生用', nl: '👨‍🎓 给学生用', fr: '👨‍🎓 给学生用' },
+  ai_tab_teachers: { zh: '👩‍🏫 给老师用', en: '👩‍🏫 给老师用', th: '👩‍🏫 给老师用', es: '👩‍🏫 给老师用', nl: '👩‍🏫 给老师用', fr: '👩‍🏫 给老师用' },
+  ai_coming_h:     { zh: '产品页正在打磨中', en: '产品页正在打磨中', th: '产品页正在打磨中', es: '产品页正在打磨中', nl: '产品页正在打磨中', fr: '产品页正在打磨中' },
+  ai_coming_p:     { zh: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', en: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', th: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', es: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', nl: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', fr: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。' },
+
+  /* About — bottom CTA + testimonial */
+  about_more_portfolio: { zh: '查看完整作品集 →', en: '查看完整作品集 →', th: '查看完整作品集 →', es: '查看完整作品集 →', nl: '查看完整作品集 →', fr: '查看完整作品集 →' },
+  about_more_sub:       { zh: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', en: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', th: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', es: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', nl: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', fr: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio' },
+  about_t_label:        { zh: '学员反馈', en: '学员反馈', th: '学员反馈', es: '学员反馈', nl: '学员反馈', fr: '学员反馈' },
+  about_t_h:            { zh: '听听学生怎么说', en: '听听学生怎么说', th: '听听学生怎么说', es: '听听学生怎么说', nl: '听听学生怎么说', fr: '听听学生怎么说' }
 
 };
 
