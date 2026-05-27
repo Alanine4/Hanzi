@@ -273,8 +273,8 @@ window.__i18n = {
   ai_email_btn: { zh: '订阅', en: 'Subscribe', th: 'สมัครรับ', es: 'Suscribirme', nl: 'Abonneren', fr: 'S\'abonner' },
 
   /* ═══ LEAD MAGNET (above each footer · section D) ═══ */
-  lm_h:        { zh: '免费 PDF · 30 句中文高频对话', en: 'Free PDF · 30 High-Frequency Mandarin Phrases', th: 'PDF ฟรี · 30 วลีภาษาจีนใช้บ่อย', es: 'PDF gratis · 30 frases de mandarín de alta frecuencia', nl: 'Gratis PDF · 30 veelgebruikte Mandarijnse zinnen', fr: 'PDF gratuit · 30 phrases mandarin les plus utilisées' },
-  lm_sub:      { zh: '适用于旅游、商务、日常 · 双语对照 + 拼音', en: 'For travel, business, daily life · Bilingual + Pinyin', th: 'สำหรับการเดินทาง ธุรกิจ ชีวิตประจำวัน · สองภาษา + พินอิน', es: 'Para viajes, negocios, vida diaria · Bilingüe + Pinyin', nl: 'Voor reizen, zaken, dagelijks leven · Tweetalig + Pinyin', fr: 'Pour voyage, affaires, vie quotidienne · Bilingue + Pinyin' },
+  lm_h:        { zh: '📥 免费 PDF · 新版 HSK 1-3 词汇', en: '📥 免费 PDF · 新版 HSK 1-3 词汇', th: '📥 免费 PDF · 新版 HSK 1-3 词汇', es: '📥 免费 PDF · 新版 HSK 1-3 词汇', nl: '📥 免费 PDF · 新版 HSK 1-3 词汇', fr: '📥 免费 PDF · 新版 HSK 1-3 词汇' },
+  lm_sub:      { zh: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', en: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', th: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', es: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', nl: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', fr: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句' },
   lm_email_ph: { zh: 'your@email.com', en: 'your@email.com', th: 'your@email.com', es: 'your@email.com', nl: 'your@email.com', fr: 'your@email.com' },
   lm_btn:      { zh: '获取 PDF →', en: 'Get Free PDF →', th: 'รับ PDF ฟรี →', es: 'Obtener PDF gratis →', nl: 'Krijg gratis PDF →', fr: 'Obtenir le PDF gratuit →' },
   lm_sent:     { zh: '✓ 已发送！请查收邮箱（含垃圾邮件）', en: '✓ Sent! Check your inbox (and spam folder)', th: '✓ ส่งแล้ว! ตรวจสอบกล่องจดหมาย (รวมถึงสแปม)', es: '✓ ¡Enviado! Revisa tu bandeja (y spam)', nl: '✓ Verzonden! Check je inbox (en spam)', fr: '✓ Envoyé ! Vérifiez votre boîte (et spam)' },
@@ -319,8 +319,8 @@ window.__i18n = {
   aw5_yr:   { zh: '汉办 20 周年活动 · 2024', en: '汉办 20 周年活动 · 2024', th: '汉办 20 周年活动 · 2024', es: '汉办 20 周年活动 · 2024', nl: '汉办 20 周年活动 · 2024', fr: '汉办 20 周年活动 · 2024' },
   aw6_name: { zh: '第 4 届欧洲汉语教学协会国际研讨会', en: '第 4 届欧洲汉语教学协会国际研讨会', th: '第 4 届欧洲汉语教学协会国际研讨会', es: '第 4 届欧洲汉语教学协会国际研讨会', nl: '第 4 届欧洲汉语教学协会国际研讨会', fr: '第 4 届欧洲汉语教学协会国际研讨会' },
   aw6_yr:   { zh: '英国南安普顿大学 · 2023', en: '英国南安普顿大学 · 2023', th: '英国南安普顿大学 · 2023', es: '英国南安普顿大学 · 2023', nl: '英国南安普顿大学 · 2023', fr: '英国南安普顿大学 · 2023' },
-  aw7_name: { zh: '与汉语教学界资深学者合影', en: '与汉语教学界资深学者合影', th: '与汉语教学界资深学者合影', es: '与汉语教学界资深学者合影', nl: '与汉语教学界资深学者合影', fr: '与汉语教学界资深学者合影' },
-  aw7_yr:   { zh: 'AEEC 研讨会 · 南安普顿 · 2023', en: 'AEEC 研讨会 · 南安普顿 · 2023', th: 'AEEC 研讨会 · 南安普顿 · 2023', es: 'AEEC 研讨会 · 南安普顿 · 2023', nl: 'AEEC 研讨会 · 南安普顿 · 2023', fr: 'AEEC 研讨会 · 南安普顿 · 2023' },
+  aw7_name: { zh: '与白乐桑教授 (Joël Bellassen) 合影', en: '与白乐桑教授 (Joël Bellassen) 合影', th: '与白乐桑教授 (Joël Bellassen) 合影', es: '与白乐桑教授 (Joël Bellassen) 合影', nl: '与白乐桑教授 (Joël Bellassen) 合影', fr: '与白乐桑教授 (Joël Bellassen) 合影' },
+  aw7_yr:   { zh: 'EACT 研讨会 · 南安普顿 · 2023', en: 'EACT 研讨会 · 南安普顿 · 2023', th: 'EACT 研讨会 · 南安普顿 · 2023', es: 'EACT 研讨会 · 南安普顿 · 2023', nl: 'EACT 研讨会 · 南安普顿 · 2023', fr: 'EACT 研讨会 · 南安普顿 · 2023' },
   aw8_name: { zh: '担任 KU Leuven 评委', en: '担任 KU Leuven 评委', th: '担任 KU Leuven 评委', es: '担任 KU Leuven 评委', nl: '担任 KU Leuven 评委', fr: '担任 KU Leuven 评委' },
   aw8_yr:   { zh: '教育研究项目评审 · 比利时鲁汶大学', en: '教育研究项目评审 · 比利时鲁汶大学', th: '教育研究项目评审 · 比利时鲁汶大学', es: '教育研究项目评审 · 比利时鲁汶大学', nl: '教育研究项目评审 · 比利时鲁汶大学', fr: '教育研究项目评审 · 比利时鲁汶大学' },
 
@@ -400,7 +400,7 @@ window.__i18n = {
   toc_cultural:    { zh: '🌏 文化', en: '🌏 文化', th: '🌏 文化', es: '🌏 文化', nl: '🌏 文化', fr: '🌏 文化' },
   toc_classroom:   { zh: '🎓 课堂', en: '🎓 课堂', th: '🎓 课堂', es: '🎓 课堂', nl: '🎓 课堂', fr: '🎓 课堂' },
   toc_feedback:    { zh: '💌 留言', en: '💌 留言', th: '💌 留言', es: '💌 留言', nl: '💌 留言', fr: '💌 留言' },
-  toc_showcase:    { zh: '🎬 学生作品', en: '🎬 学生作品', th: '🎬 学生作品', es: '🎬 学生作品', nl: '🎬 学生作品', fr: '🎬 学生作品' },
+  toc_showcase:    { zh: '🏆 学员成绩', en: '🏆 学员成绩', th: '🏆 学员成绩', es: '🏆 学员成绩', nl: '🏆 学员成绩', fr: '🏆 学员成绩' },
 
   /* Cultural Events (Portfolio NEW section) */
   pf_cultural_label: { zh: '文化', en: '文化', th: '文化', es: '文化', nl: '文化', fr: '文化' },
@@ -435,11 +435,13 @@ window.__i18n = {
   cm8_caption: { zh: '鲁汶中文学校 · 学生结业典礼', en: '鲁汶中文学校 · 学生结业典礼', th: '鲁汶中文学校 · 学生结业典礼', es: '鲁汶中文学校 · 学生结业典礼', nl: '鲁汶中文学校 · 学生结业典礼', fr: '鲁汶中文学校 · 学生结业典礼' },
   cm9_caption: { zh: '私教课 · 京剧脸谱主题文化课', en: '私教课 · 京剧脸谱主题文化课', th: '私教课 · 京剧脸谱主题文化课', es: '私教课 · 京剧脸谱主题文化课', nl: '私教课 · 京剧脸谱主题文化课', fr: '私教课 · 京剧脸谱主题文化课' },
 
-  /* Student Showcase (placeholder) */
-  pf_showcase_label: { zh: '学生作品', en: '学生作品', th: '学生作品', es: '学生作品', nl: '学生作品', fr: '学生作品' },
-  pf_showcase_h:     { zh: '学生原创作品', en: '学生原创作品', th: '学生原创作品', es: '学生原创作品', nl: '学生原创作品', fr: '学生原创作品' },
-  showcase1: { zh: '学生中文书评 · 独白版 · 视频待补', en: '学生中文书评 · 独白版 · 视频待补', th: '学生中文书评 · 独白版 · 视频待补', es: '学生中文书评 · 独白版 · 视频待补', nl: '学生中文书评 · 独白版 · 视频待补', fr: '学生中文书评 · 独白版 · 视频待补' },
-  showcase2: { zh: '学生中文书评 · 小组版 · 视频待补', en: '学生中文书评 · 小组版 · 视频待补', th: '学生中文书评 · 小组版 · 视频待补', es: '学生中文书评 · 小组版 · 视频待补', nl: '学生中文书评 · 小组版 · 视频待补', fr: '学生中文书评 · 小组版 · 视频待补' },
+  /* Student Achievements (HSK results) */
+  pf_showcase_label: { zh: '学员成绩', en: '学员成绩', th: '学员成绩', es: '学员成绩', nl: '学员成绩', fr: '学员成绩' },
+  pf_showcase_h:     { zh: '学员成绩展示', en: '学员成绩展示', th: '学员成绩展示', es: '学员成绩展示', nl: '学员成绩展示', fr: '学员成绩展示' },
+  pf_showcase_sub:   { zh: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中', en: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中', th: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中', es: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中', nl: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中', fr: '林老师指导的学员 HSK 考试通过记录 · 真实成绩截图持续补充中' },
+  ach1_caption: { zh: 'HSK 1 通过 · 学员 · 学习时长待补', en: 'HSK 1 通过 · 学员 · 学习时长待补', th: 'HSK 1 通过 · 学员 · 学习时长待补', es: 'HSK 1 通过 · 学员 · 学习时长待补', nl: 'HSK 1 通过 · 学员 · 学习时长待补', fr: 'HSK 1 通过 · 学员 · 学习时长待补' },
+  ach2_caption: { zh: 'HSK 3 通过 · 学员 · 学习时长待补', en: 'HSK 3 通过 · 学员 · 学习时长待补', th: 'HSK 3 通过 · 学员 · 学习时长待补', es: 'HSK 3 通过 · 学员 · 学习时长待补', nl: 'HSK 3 通过 · 学员 · 学习时长待补', fr: 'HSK 3 通过 · 学员 · 学习时长待补' },
+  ach3_caption: { zh: 'HSK 5 通过 · 学员 · 学习时长待补', en: 'HSK 5 通过 · 学员 · 学习时长待补', th: 'HSK 5 通过 · 学员 · 学习时长待补', es: 'HSK 5 通过 · 学员 · 学习时长待补', nl: 'HSK 5 通过 · 学员 · 学习时长待补', fr: 'HSK 5 通过 · 学员 · 学习时长待补' },
 
   /* XHS interview card UI labels */
   xhs_view_btn: { zh: '在小红书查看 →', en: '在小红书查看 →', th: '在小红书查看 →', es: '在小红书查看 →', nl: '在小红书查看 →', fr: '在小红书查看 →' },
