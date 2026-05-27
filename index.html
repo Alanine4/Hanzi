@@ -727,6 +727,11 @@ footer{flex-wrap:wrap;}
 .photo-masonry{columns:3;column-gap:0.75rem;margin-top:1.5rem;}
 .photo-masonry img{width:100%;margin-bottom:0.75rem;border-radius:12px;break-inside:avoid;display:block;object-fit:cover;transition:transform .2s;}
 .photo-masonry img:hover{transform:scale(1.02);}
+/* Privacy mask for photos with identifiable faces — blurs whole image + adds label */
+.photo-masonry .privacy-photo{width:100%;margin-bottom:0.75rem;break-inside:avoid;display:block;position:relative;border-radius:12px;overflow:hidden;}
+.photo-masonry .privacy-photo img{display:block;width:100%;margin:0;border-radius:0;filter:blur(10px);transition:filter .3s,transform .2s;}
+.photo-masonry .privacy-photo:hover img{filter:blur(6px);transform:scale(1.02);}
+.photo-masonry .privacy-photo::after{content:'👥 隐私保护';position:absolute;top:0.55rem;left:0.55rem;background:rgba(0,0,0,0.6);color:#fff;font-size:0.66rem;font-weight:600;padding:0.3rem 0.65rem;border-radius:5px;letter-spacing:0.04em;pointer-events:none;backdrop-filter:blur(4px);}
 .interview-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem;margin-top:1.5rem;}
 .interview-card{display:flex;flex-direction:column;gap:0.85rem;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1rem;transition:box-shadow .15s,transform .15s;}
 .interview-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
@@ -1741,44 +1746,41 @@ footer{flex-wrap:wrap;}
   <div class="portfolio-section" id="pf-classroom">
     <div class="sec-label" data-i18n="pf_classroom_label">课堂实录</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="gallery_h">真实瞬间，真实学生</h2>
+    <!-- 16 张精选 · 主题各异（删除主题重复的；含 1 张人脸隐私遮罩） -->
     <div class="photo-masonry">
       <img src="A照片/04-Classroom-课堂/classroom-kwc-character-yue.JPG" alt="教学'月'" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-presentation-overview.JPG" alt="鲁汶课堂全景" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-mother.JPG" alt="教学'母'" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-leuven-multicultural-group.jpg" alt="多元文化班" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-kwc-character-zou.JPG" alt="教学'走'" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-multicultural-group.jpg" alt="多元文化班" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-radicals-group.jpg" alt="偏旁课" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-kwc-character-tu.JPG" alt="教学'土'" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-character-cards-1.jpg" alt="字卡游戏" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-kwc-class6-3-six-angels.JPG" alt="KWC 班级" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-leuven-character-cards-2.jpg" alt="字卡游戏 2" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-kwc-china-trip-discussion.JPG" alt="小组讨论" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-graduation-ceremony.jpg" alt="结业典礼" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-kwc-thumbsup-group.JPG" alt="点赞合影" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-panda-cards.jpg" alt="熊猫卡片课" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-leuven-progressstar-certificates.JPG" alt="进步之星" loading="lazy">
+      <!-- 隐私保护 · 脸部模糊 -->
+      <div class="privacy-photo">
+        <img src="A照片/04-Classroom-课堂/classroom-leuven-radical-cards.jpg" alt="偏旁字卡课堂（隐私保护）" loading="lazy">
+      </div>
       <img src="A照片/04-Classroom-课堂/classroom-leuven-overview-lesson.JPG" alt="课堂俯视" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-1.JPG" alt="天气汉字 1" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-2.JPG" alt="天气汉字 2" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-1.JPG" alt="天气汉字" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-student-color-words.jpg" alt="学生彩绘作业" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-private-pekingopera-masks.JPG" alt="京剧脸谱文化课" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-children-handicrafts.jpg" alt="孩童手工" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-student-color-words.jpg" alt="学生彩绘" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-student-cny-greeting.jpg" alt="学生新年作业" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-student-drawing-book.jpg" alt="学生绘本临摹" loading="lazy">
-      <img src="A照片/04-Classroom-课堂/classroom-private-pekingopera-masks.JPG" alt="京剧脸谱课" loading="lazy">
     </div>
   </div>
 
-  <!-- ══ STUDENT FEEDBACK WALL · 学员评价（18 张完整 feedback ）(Phase 4 NEW) ══ -->
+  <!-- ══ STUDENT FEEDBACK WALL · 10 张精选（去 2 行重复·保留主题代表性）══ -->
   <div class="portfolio-section" id="pf-feedback">
     <div class="sec-label" data-i18n="pf_feedback_label">学员评价</div>
     <h2 class="sec-h2" style="font-size:1.35rem" data-i18n="pf_feedback_h">学生留言墙</h2>
     <div class="feedback-wall">
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-01-farewell-2024.JPG" alt="中文信 1" loading="lazy">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-01-farewell-2024.JPG" alt="中文信" loading="lazy">
         <div class="cap-text" data-i18n="fb1_caption">泰国学生手写信 · "老师即将回国了..." · 2024</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-en-01-alicialin-2024.JPG" alt="英文信 1" loading="lazy">
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-01-alicialin-2024.JPG" alt="英文信" loading="lazy">
         <div class="cap-text" data-i18n="fb2_caption">英文信 · "Hello Alicia! I'm so happy..." · 2024</div>
       </div>
       <div class="cap-card">
@@ -1790,15 +1792,15 @@ footer{flex-wrap:wrap;}
         <div class="cap-text" data-i18n="fb4_caption">中文长信 · "第一次和老师上课..." · 真情流露</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-01-wewillrememberyou.JPG" alt="剪贴册 1" loading="lazy">
+        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-01-wewillrememberyou.JPG" alt="手工剪贴册" loading="lazy">
         <div class="cap-text" data-i18n="fb5_caption">手工剪贴册 · "We will remember you with warm thoughts"</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-scrapbook-02-nobodylikeyou.JPG" alt="剪贴册 2" loading="lazy">
-        <div class="cap-text" data-i18n="fb6_caption">剪贴册第二册 · "Nobody LIKE you / Hope to see you again"</div>
+        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-04-bigfan-drawing.JPG" alt="彩绘卡片" loading="lazy">
+        <div class="cap-text">彩绘卡片 · "我是你的大粉丝"</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-social-collage-01.JPG" alt="评价 collage 1" loading="lazy">
+        <img src="A照片/04-Classroom-课堂/feedback-social-collage-01.JPG" alt="社媒评价" loading="lazy">
         <div class="cap-text" data-i18n="fb7_caption">学员评价 · KWC 学生中泰双语好评</div>
       </div>
       <div class="cap-card">
@@ -1806,43 +1808,11 @@ footer{flex-wrap:wrap;}
         <div class="cap-text" data-i18n="fb8_caption">学员微信对话 · "谢谢老师，一切都非常好"</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-02-jiangchanghua-farewell.JPG" alt="中文信 江昌华" loading="lazy">
-        <div class="cap-text">中文手写信 · "你好 lin 老师 我是江昌华"</div>
+        <img src="A照片/04-Classroom-课堂/feedback-letter-en-03-class6-reflection.JPG" alt="英文班级反思" loading="lazy">
+        <div class="cap-text">英文班级反思 · Class 6/3</div>
       </div>
       <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-03-macy-2020.JPG" alt="中文信 Macy" loading="lazy">
-        <div class="cap-text">中文长信 · Macy 写 · 2020/12/26</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-04-bigfan-drawing.JPG" alt="彩绘卡片" loading="lazy">
-        <div class="cap-text">彩绘卡片 · "我是你的大粉丝"</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-cn-06-linruoxiaobang-2024.JPG" alt="中文信 林若小棒" loading="lazy">
-        <div class="cap-text">中文信 · 学生林若小棒 · 2024</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-en-02-shenli-urthebest.JPG" alt="英文信 沈丽" loading="lazy">
-        <div class="cap-text">英文信 · "U R The BEST teacher" · 沈丽</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-en-03-class6-reflection.JPG" alt="英文反思" loading="lazy">
-        <div class="cap-text">英文反思 · Class 6/3</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-letter-en-04-wangyicheng.JPG" alt="英文信 王驿玉成" loading="lazy">
-        <div class="cap-text">英文信 · "Nice to meet you" · 王驿玉成</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-social-collage-02-breakoutroom.JPG" alt="评价 collage 2" loading="lazy">
-        <div class="cap-text">学员评价 · "breakout room 体验很棒"</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-social-collage-03-firstclass.JPG" alt="评价 collage 3" loading="lazy">
-        <div class="cap-text">学员评价 · 第一次课感受</div>
-      </div>
-      <div class="cap-card">
-        <img src="A照片/04-Classroom-课堂/feedback-hsk-tips-xhs-post.PNG" alt="HSK 笔记" loading="lazy">
+        <img src="A照片/04-Classroom-课堂/feedback-hsk-tips-xhs-post.PNG" alt="HSK 学习笔记" loading="lazy">
         <div class="cap-text">HSK 学习笔记 · 小红书排版图</div>
       </div>
     </div>
