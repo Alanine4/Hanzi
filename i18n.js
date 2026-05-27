@@ -133,7 +133,7 @@ window.__i18n = {
   c3_h:  { zh: '流利交流', en: 'Flowing Conversations', th: 'สนทนาคล่อง', es: 'Conversaciones fluidas', nl: 'Vlotte gesprekken', fr: 'Conversations fluides' },
   c3_p:  { zh: '复杂句型、表达观点、讲述故事。从功能使用走向真正的表达。', en: 'Complex sentences, opinions, storytelling. Move from functional to genuinely expressive.', th: 'ประโยคซับซ้อน แสดงความคิดเห็น เล่าเรื่อง ก้าวจากการใช้งานสู่การแสดงออกอย่างแท้จริง', es: 'Frases complejas, opiniones, narración. Pasa de lo funcional a lo realmente expresivo.', nl: 'Complexe zinnen, meningen, verhalen vertellen. Van functioneel naar echt expressief.', fr: 'Phrases complexes, opinions, récits. Passez du fonctionnel à l\'authentiquement expressif.' },
   c4_lv: { zh: '考试 · HSK 备考', en: 'Exam · HSK Prep', th: 'สอบ · เตรียม HSK', es: 'Examen · Preparación HSK', nl: 'Examen · HSK-prep', fr: 'Examen · Prép HSK' },
-  c4_h:  { zh: 'HSK 1–6 备考', en: 'HSK 1–6 Preparation', th: 'เตรียมสอบ HSK 1–6', es: 'Preparación HSK 1–6', nl: 'HSK 1–6 voorbereiding', fr: 'Préparation HSK 1–6' },
+  c4_h:  { zh: 'HSK 1-6 题型与词汇速成', en: 'HSK 1-6 题型与词汇速成', th: 'HSK 1-6 题型与词汇速成', es: 'HSK 1-6 题型与词汇速成', nl: 'HSK 1-6 题型与词汇速成', fr: 'HSK 1-6 题型与词汇速成' },
   c4_p:  { zh: '针对各 HSK 等级的词汇、真题、听力与写作训练。', en: 'Targeted vocabulary, past papers, listening and writing for every HSK level.', th: 'คำศัพท์ ข้อสอบเก่า การฟังและการเขียนเฉพาะแต่ละระดับ HSK', es: 'Vocabulario específico, exámenes anteriores, comprensión auditiva y escritura para cada nivel HSK.', nl: 'Gerichte woordenschat, examens uit het verleden, luisteren en schrijven voor elk HSK-niveau.', fr: 'Vocabulaire ciblé, annales, écoute et écriture pour chaque niveau HSK.' },
   c5_lv: { zh: '商务 · 专业', en: 'Business · Professional', th: 'ธุรกิจ · มืออาชีพ', es: 'Negocios · Profesional', nl: 'Zaken · Professioneel', fr: 'Affaires · Professionnel' },
   c5_h:  { zh: '商务汉语', en: 'Business Chinese', th: 'ภาษาจีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
@@ -321,8 +321,8 @@ window.__i18n = {
   aw6_yr:   { zh: '英国南安普顿大学 · 2023', en: '英国南安普顿大学 · 2023', th: '英国南安普顿大学 · 2023', es: '英国南安普顿大学 · 2023', nl: '英国南安普顿大学 · 2023', fr: '英国南安普顿大学 · 2023' },
   aw7_name: { zh: '与汉语教学界资深学者合影', en: '与汉语教学界资深学者合影', th: '与汉语教学界资深学者合影', es: '与汉语教学界资深学者合影', nl: '与汉语教学界资深学者合影', fr: '与汉语教学界资深学者合影' },
   aw7_yr:   { zh: 'AEEC 研讨会 · 南安普顿 · 2023', en: 'AEEC 研讨会 · 南安普顿 · 2023', th: 'AEEC 研讨会 · 南安普顿 · 2023', es: 'AEEC 研讨会 · 南安普顿 · 2023', nl: 'AEEC 研讨会 · 南安普顿 · 2023', fr: 'AEEC 研讨会 · 南安普顿 · 2023' },
-  aw8_name: { zh: '最佳教学奖证书（近景）', en: '最佳教学奖证书（近景）', th: '最佳教学奖证书（近景）', es: '最佳教学奖证书（近景）', nl: '最佳教学奖证书（近景）', fr: '最佳教学奖证书（近景）' },
-  aw8_yr:   { zh: '华东师大 · 2023', en: '华东师大 · 2023', th: '华东师大 · 2023', es: '华东师大 · 2023', nl: '华东师大 · 2023', fr: '华东师大 · 2023' },
+  aw8_name: { zh: '担任 KU Leuven 评委', en: '担任 KU Leuven 评委', th: '担任 KU Leuven 评委', es: '担任 KU Leuven 评委', nl: '担任 KU Leuven 评委', fr: '担任 KU Leuven 评委' },
+  aw8_yr:   { zh: '教育研究项目评审 · 比利时鲁汶大学', en: '教育研究项目评审 · 比利时鲁汶大学', th: '教育研究项目评审 · 比利时鲁汶大学', es: '教育研究项目评审 · 比利时鲁汶大学', nl: '教育研究项目评审 · 比利时鲁汶大学', fr: '教育研究项目评审 · 比利时鲁汶大学' },
 
   /* About – gallery */
   gallery_label: { zh: '课堂', en: 'In the Classroom', th: 'ในชั้นเรียน', es: 'En el Aula', nl: 'In de Klas', fr: 'En classe' },
