@@ -773,6 +773,46 @@ footer{flex-wrap:wrap;}
 .ai-coming-panel h3{font-family:'Noto Serif SC',serif;font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;}
 .ai-coming-panel p{font-size:0.92rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;}
 
+/* AI page — Why AI block */
+.ai-why{max-width:1100px;margin:2rem auto 1rem;padding:0 2.5rem;}
+.ai-why h3{font-family:'Noto Serif SC',serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-align:center;margin-bottom:1.5rem;}
+.ai-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.ai-why-card{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1.5rem 1.25rem;transition:transform .15s,box-shadow .15s;}
+.ai-why-card:hover{transform:translateY(-2px);box-shadow:var(--sh-md);}
+.ai-why-num{font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:700;color:var(--amber);line-height:1;margin-bottom:0.6rem;}
+.ai-why-card h4{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.4;}
+.ai-why-card p{font-size:0.83rem;color:var(--muted);line-height:1.7;margin:0;}
+
+/* AI page — Tab content + product grid */
+.ai-tab-content{max-width:1100px;margin:0 auto;padding:0 2.5rem;}
+.ai-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem;}
+.ai-product-card{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;}
+.ai-product-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);}
+.ai-product-thumb{aspect-ratio:16/10;background:var(--s2);position:relative;display:flex;align-items:center;justify-content:center;font-size:3rem;overflow:hidden;}
+.ai-product-thumb img,.ai-product-thumb iframe{width:100%;height:100%;object-fit:cover;border:0;}
+.ai-product-thumb .ai-thumb-icon{font-size:3rem;opacity:0.5;}
+.ai-coming-badge{position:absolute;top:0.6rem;right:0.6rem;background:var(--amber);color:var(--canvas);font-size:0.65rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:4px;letter-spacing:0.04em;line-height:1.3;}
+.ai-product-body{padding:1.1rem 1.2rem 1.3rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;}
+.ai-product-body h4{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin:0;line-height:1.4;}
+.ai-product-body p{font-size:0.83rem;color:var(--body);line-height:1.65;margin:0;}
+.ai-product-meta{font-size:0.72rem;color:var(--muted);font-style:italic;margin-top:auto;padding-top:0.6rem;border-top:1px solid var(--hair-s);}
+
+/* AI page — Tab CTA section */
+.ai-tab-cta{max-width:780px;margin:3rem auto 0;padding:2rem 2.5rem;background:linear-gradient(135deg,var(--s1) 0%,var(--canvas) 100%);border:1.5px solid var(--amber);border-radius:var(--r-card);text-align:center;}
+.ai-tab-cta h3{font-family:'Noto Serif SC',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin:0 0 0.6rem;}
+.ai-tab-cta p{font-size:0.92rem;color:var(--body);line-height:1.7;margin:0 auto 1.3rem;max-width:560px;}
+.ai-tab-cta-btns{display:flex;justify-content:center;align-items:center;gap:1.25rem;flex-wrap:wrap;}
+.ai-cta-secondary{font-size:0.82rem;color:var(--muted);text-decoration:none;border:none;background:none;cursor:pointer;font-family:inherit;}
+.ai-cta-secondary:hover{color:var(--amber);}
+
+@media(max-width:860px){
+  .ai-why-grid{grid-template-columns:1fr;}
+  .ai-product-grid{grid-template-columns:1fr;}
+  .ai-why{padding:0 1.5rem;}
+  .ai-tab-content{padding:0 1.5rem;}
+  .ai-tab-cta{padding:1.5rem 1.25rem;}
+}
+
 @media(max-width:860px){
   .ai-banner{grid-template-columns:1fr;padding:1.75rem;text-align:center;}
   .ai-banner p{margin:0 auto;}
@@ -1933,15 +1973,137 @@ footer{flex-wrap:wrap;}
   </div>
   <p style="text-align:center;max-width:780px;margin:-1rem auto 1.5rem;font-size:1.05rem;color:var(--ink);line-height:1.7;padding:1rem 1.75rem;background:var(--s1);border-left:3px solid var(--amber);border-right:3px solid var(--amber);border-radius:12px;" data-i18n="ai_page_sub">这里展示 Teacher Lin 亲手调教的 AI 学习工具。完整产品页正在搭建中 —— 留下邮箱抢先体验。</p>
 
-  <!-- Two Tabs (visual placeholder · Step 2 wires JS) -->
-  <div class="ai-tabs">
-    <button class="ai-tab active" data-i18n="ai_tab_students">👨‍🎓 给学生用</button>
-    <button class="ai-tab" data-i18n="ai_tab_teachers">👩‍🏫 给老师用</button>
+  <!-- ══ WHY AI · 差异化叙事 (3 cards) ══ -->
+  <div class="ai-why">
+    <h3 data-i18n="ai_why_h">为什么需要"老师亲手调教"的 AI？</h3>
+    <div class="ai-why-grid">
+      <div class="ai-why-card">
+        <div class="ai-why-num">01</div>
+        <h4 data-i18n="ai_why1_h">不只是套壳 ChatGPT</h4>
+        <p data-i18n="ai_why1_p">市面上多数 AI 工具是通用模型套壳，无法理解中文学习者的真实痛点。Teacher Lin 的工具基于 100+ 学生的实地教学数据调教，对症下药。</p>
+      </div>
+      <div class="ai-why-card">
+        <div class="ai-why-num">02</div>
+        <h4 data-i18n="ai_why2_h">老师亲身使用过</h4>
+        <p data-i18n="ai_why2_p">每个工具老师都先自用 1-3 个月，亲手调教提示词、试错参数后才发布。不是程序员凭想象做的玩具，是经过课堂检验的产品。</p>
+      </div>
+      <div class="ai-why-card">
+        <div class="ai-why-num">03</div>
+        <h4 data-i18n="ai_why3_h">跟课程闭环</h4>
+        <p data-i18n="ai_why3_p">AI 工具是课程的延伸：老师上课讲、AI 课后练。形成"学 - 练 - 反馈"完整闭环，比单独刷 App 效率高得多。</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Coming Soon panel -->
+  <!-- ══ TABS · functional tab switching ══ -->
+  <div class="ai-tabs">
+    <button class="ai-tab active" id="ai-tab-btn-students" onclick="switchAiTab('students')" data-i18n="ai_tab_students">👨‍🎓 给学生用</button>
+    <button class="ai-tab" id="ai-tab-btn-teachers" onclick="switchAiTab('teachers')" data-i18n="ai_tab_teachers">👩‍🏫 给老师用</button>
+  </div>
+
+  <!-- ══ STUDENTS TAB CONTENT ══ -->
+  <div class="ai-tab-content" id="ai-tab-students-content">
+    <div class="ai-product-grid">
+      <!-- TODO: 替换 .ai-thumb-icon 为真实截图 <img src="..."> 或 YouTube embed iframe；
+           CTA 按钮加 onclick="window.open('YOUR_DEMO_URL','_blank')" -->
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">📚</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_s1_h">HSK 个性化词汇训练</h4>
+          <p data-i18n="ai_s1_p">按你的水平和兴趣生成 HSK 词卡。AI 根据你做错的题反复强化薄弱环节，比通用刷题 App 智能得多。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">🎙</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_s2_h">拼音声调实时纠正</h4>
+          <p data-i18n="ai_s2_p">对着麦克风读拼音，AI 实时反馈你的声调是否准确。可视化波形 + 具体改进建议。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">💬</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_s3_h">AI 中文对话伙伴</h4>
+          <p data-i18n="ai_s3_p">24/7 陪你练中文。按你的话题、水平、目标自适应。不会因为你说错就崩溃，会耐心引导你说对。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Students Tab CTA — primary: Book Trial -->
+    <div class="ai-tab-cta">
+      <h3 data-i18n="ai_s_cta_h">想让这些工具为你定制？</h3>
+      <p data-i18n="ai_s_cta_p">预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。</p>
+      <div class="ai-tab-cta-btns">
+        <button class="btn-p" onclick="window.open('https://calendly.com/teacherlin/30min','_blank')" data-i18n="ai_s_cta_btn">📅 预约试课 · €29</button>
+        <button class="ai-cta-secondary" onclick="document.querySelector('#page-ai .ai-coming-panel, #page-ai .lm-bar').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="ai_s_cta_alt">或留邮箱抢先体验 ↓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TEACHERS TAB CONTENT ══ -->
+  <div class="ai-tab-content" id="ai-tab-teachers-content" style="display:none">
+    <div class="ai-product-grid">
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">📝</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_t1_h">AI 备课助手</h4>
+          <p data-i18n="ai_t1_p">输入主题和学生水平，AI 生成完整课件 + 练习题 + 教学建议。一杯咖啡的时间备完一节课。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">📊</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_t2_h">学情智能分析</h4>
+          <p data-i18n="ai_t2_p">上传学生作业 / 测试，AI 自动分析每个学生的薄弱环节 + 推送针对性练习。让因材施教成为可能。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+      <div class="ai-product-card">
+        <div class="ai-product-thumb">
+          <span class="ai-coming-badge" data-i18n="ai_coming_badge">即将上线</span>
+          <span class="ai-thumb-icon">✍️</span>
+        </div>
+        <div class="ai-product-body">
+          <h4 data-i18n="ai_t3_h">AI 作业批改</h4>
+          <p data-i18n="ai_t3_p">中文作文 + 口语录音自动批改 + 给出中肯反馈。老师只需复核，把时间还给教学和备课。</p>
+          <div class="ai-product-meta" data-i18n="ai_meta_demo">📊 截图 + 视频演示 · 即将上线</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teachers Tab CTA — primary: WeChat -->
+    <div class="ai-tab-cta">
+      <h3 data-i18n="ai_t_cta_h">想用这些工具教你的学生？</h3>
+      <p data-i18n="ai_t_cta_p">加微信聊聊你的教学场景和学生情况，我们一起定制部署方案 —— 提示词、流程、培训一站搞定。</p>
+      <div class="ai-tab-cta-btns">
+        <button class="btn-p" onclick="goto('contact');setTimeout(function(){var c=document.getElementById('wechat-card');if(c)c.scrollIntoView({behavior:'smooth',block:'center'})},300)" data-i18n="ai_t_cta_btn">💬 加微信聊</button>
+        <button class="ai-cta-secondary" onclick="document.querySelector('#page-ai .ai-coming-panel, #page-ai .lm-bar').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="ai_t_cta_alt">或留邮箱了解最新进展 ↓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Soon · email waitlist (kept) -->
   <div class="ai-coming-panel">
-    <div class="big-icon">🛠</div>
+    <div class="big-icon">📬</div>
     <h3 data-i18n="ai_coming_h">产品页正在打磨中</h3>
     <p data-i18n="ai_coming_p">完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。</p>
     <form class="lm-form" action="#" method="POST" style="max-width:420px;margin:0 auto;">
@@ -2007,6 +2169,12 @@ function goto(id){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 function togglePill(el){document.querySelectorAll(".pill").forEach(p=>p.classList.remove("active"));el.classList.add("active");}
+function switchAiTab(tab){
+  document.querySelectorAll(".ai-tab").forEach(t=>t.classList.remove("active"));
+  document.querySelectorAll(".ai-tab-content").forEach(c=>{c.style.display="none";});
+  var btn=document.getElementById("ai-tab-btn-"+tab); if(btn)btn.classList.add("active");
+  var content=document.getElementById("ai-tab-"+tab+"-content"); if(content)content.style.display="block";
+}
 function toggleFaq(li){li.classList.toggle("open");}
 async function submitForm(){
   var n=document.getElementById("fname").value.trim();
