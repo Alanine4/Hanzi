@@ -138,8 +138,8 @@ window.__i18n = {
   c5_lv: { zh: '商务 · 专业', en: 'Business · Professional', th: 'ธุรกิจ · มืออาชีพ', es: 'Negocios · Profesional', nl: 'Zaken · Professioneel', fr: 'Affaires · Professionnel' },
   c5_h:  { zh: '商务汉语', en: 'Business Chinese', th: 'ภาษาจีนธุรกิจ', es: 'Chino de negocios', nl: 'Zakelijk Chinees', fr: 'Chinois des affaires' },
   c5_p:  { zh: '会议、谈判、邮件、演示。为与中方合作的职场人士量身打造。', en: 'Meetings, negotiations, emails, presentations. For professionals working with Chinese partners.', th: 'การประชุม การเจรจา อีเมล การนำเสนอ สำหรับมืออาชีพที่ทำงานกับพันธมิตรชาวจีน', es: 'Reuniones, negociaciones, correos, presentaciones. Para profesionales que trabajan con socios chinos.', nl: 'Vergaderingen, onderhandelingen, e-mails, presentaties. Voor professionals die werken met Chinese partners.', fr: 'Réunions, négociations, e-mails, présentations. Pour les professionnels travaillant avec des partenaires chinois.' },
-  c_badge: { zh: '可作 1-on-1 →', en: 'Available as 1-on-1 →', th: 'เรียน 1-ต่อ-1 →', es: 'Disponible 1-a-1 →', nl: 'Beschikbaar 1-op-1 →', fr: 'Disponible en 1-on-1 →' },
-  c_price_chip_lbl: { zh: '€29 试课 · €50/月课 →', en: '€29 trial · €50/mo →', th: '€29 ทดลอง · €50/เดือน →', es: '€29 prueba · €50/mes →', nl: '€29 proef · €50/mnd →', fr: '€29 essai · €50/mois →' },
+  c_badge: { zh: '🔜 Coming Soon · 8 月开课', en: '🔜 Coming Soon · 8 月开课', th: '🔜 Coming Soon · 8 月开课', es: '🔜 Coming Soon · 8 月开课', nl: '🔜 Coming Soon · 8 月开课', fr: '🔜 Coming Soon · 8 月开课' },
+  c_price_chip_lbl: { zh: '📬 留邮箱第一时间通知 →', en: '📬 留邮箱第一时间通知 →', th: '📬 留邮箱第一时间通知 →', es: '📬 留邮箱第一时间通知 →', nl: '📬 留邮箱第一时间通知 →', fr: '📬 留邮箱第一时间通知 →' },
   co_unsure_q:   { zh: '不确定适合哪个等级？', en: 'Not sure which level?', th: 'ไม่แน่ใจว่าระดับไหน?', es: '¿No estás seguro del nivel?', nl: 'Niet zeker welk niveau?', fr: 'Pas sûr de votre niveau ?' },
   co_unsure_btn: { zh: '问问林老师 →', en: 'Ask Teacher Lin →', th: 'ถามครูหลิน →', es: 'Pregunta a la profesora Lin →', nl: 'Vraag het juf Lin →', fr: 'Demandez à la professeure Lin →' },
 
@@ -291,7 +291,10 @@ window.__i18n = {
   follow_h: { zh: '关注林老师', en: 'Follow Teacher Lin', th: 'ติดตาม Teacher Lin', es: 'Seguir a Teacher Lin', nl: 'Volg Teacher Lin', fr: 'Suivre Teacher Lin' },
 
   /* ═══ COURSES PAGE UPDATE (section E) ═══ */
-  co_subtitle: { zh: '下方所有主题均可作为 1-on-1 月套餐学习，按需选择。', en: 'Every theme below is available as a 1-on-1 monthly package. Pick what you need.', th: 'หัวข้อด้านล่างทั้งหมดเรียนได้แบบ 1-ต่อ-1 รายเดือน เลือกตามที่คุณต้องการ', es: 'Cada tema a continuación está disponible como paquete mensual 1-a-1. Elige lo que necesites.', nl: 'Elk onderstaand thema is beschikbaar als 1-op-1 maandpakket. Kies wat je nodig hebt.', fr: 'Chaque thème ci-dessous est disponible en formule individuelle mensuelle. Choisissez selon vos besoins.' },
+  co_subtitle: { zh: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', en: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', th: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', es: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', nl: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', fr: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。' },
+  co_coming_banner_h: { zh: '🔜 全部课程 8 月开班', en: '🔜 全部课程 8 月开班', th: '🔜 全部课程 8 月开班', es: '🔜 全部课程 8 月开班', nl: '🔜 全部课程 8 月开班', fr: '🔜 全部课程 8 月开班' },
+  co_coming_banner_p: { zh: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', en: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', th: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', es: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', nl: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', fr: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你' },
+  co_coming_banner_btn: { zh: '📬 开班通知我', en: '📬 开班通知我', th: '📬 开班通知我', es: '📬 开班通知我', nl: '📬 开班通知我', fr: '📬 开班通知我' },
 
   /* ═══ PHASE 3 — About redesign + Portfolio ═══ */
 
