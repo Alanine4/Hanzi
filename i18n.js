@@ -301,7 +301,7 @@ window.__i18n = {
   /* ═══ PHASE 3 — About redesign + Portfolio ═══ */
 
   /* Nav */
-  nav_portfolio: { zh: '作品集', en: 'Portfolio', th: 'ผลงาน', es: 'Portafolio', nl: 'Portfolio', fr: 'Portfolio' },
+  nav_portfolio: { zh: '更多关于', en: 'More', th: '更多关于', es: '更多关于', nl: '更多关于', fr: '更多关于' },
 
   /* About – intro video */
   about_vid_label: { zh: '认识林老师', en: 'Meet Teacher Lin', th: 'รู้จัก Teacher Lin', es: 'Conoce a Teacher Lin', nl: 'Maak kennis met Teacher Lin', fr: 'Rencontrez Teacher Lin' },
@@ -360,7 +360,7 @@ window.__i18n = {
 
   /* Portfolio page */
   pf_label:          { zh: '林老师', en: 'Teacher Lin', th: 'Teacher Lin', es: 'Teacher Lin', nl: 'Teacher Lin', fr: 'Teacher Lin' },
-  pf_h:              { zh: '作品集', en: 'Portfolio', th: 'ผลงาน', es: 'Portafolio', nl: 'Portfolio', fr: 'Portfolio' },
+  pf_h:              { zh: '经历与成就', en: '经历与成就', th: '经历与成就', es: '经历与成就', nl: '经历与成就', fr: '经历与成就' },
   pf_sub:            { zh: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', en: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', th: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', es: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', nl: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。', fr: '这里收录林老师的获奖证书 · 比赛实录 · 媒体采访 · 文化活动 · 课堂瞬间 · 学员留言 —— 一处看完真实的教学历程。' },
   pf_awards_label:   { zh: '荣誉', en: 'Recognition', th: 'รางวัล', es: 'Reconocimientos', nl: 'Erkenning', fr: 'Distinctions' },
   pf_classroom_label:{ zh: '相册', en: 'Gallery', th: 'แกลเลอรี่', es: 'Galería', nl: 'Galerij', fr: 'Galerie' },
@@ -469,7 +469,9 @@ window.__i18n = {
   ai_coming_p:     { zh: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', en: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', th: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', es: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', nl: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。', fr: '完整产品演示 · 截图 · 视频讲解即将上线。留下邮箱第一时间通知你。' },
 
   /* About — bottom CTA + testimonial */
-  about_more_portfolio: { zh: '查看完整作品集 →', en: '查看完整作品集 →', th: '查看完整作品集 →', es: '查看完整作品集 →', nl: '查看完整作品集 →', fr: '查看完整作品集 →' },
+  about_more_portfolio: { zh: '更多关于林老师 →', en: '更多关于林老师 →', th: '更多关于林老师 →', es: '更多关于林老师 →', nl: '更多关于林老师 →', fr: '更多关于林老师 →' },
+  more_about_btn: { zh: '更多关于林老师 →', en: '更多关于林老师 →', th: '更多关于林老师 →', es: '更多关于林老师 →', nl: '更多关于林老师 →', fr: '更多关于林老师 →' },
+  ai_notify_btn: { zh: '📬 开班后通知我 →', en: '📬 开班后通知我 →', th: '📬 开班后通知我 →', es: '📬 开班后通知我 →', nl: '📬 开班后通知我 →', fr: '📬 开班后通知我 →' },
   about_more_sub:       { zh: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', en: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', th: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', es: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', nl: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio', fr: '8 张奖项证书 · 7 张比赛实录 · 5 个媒体采访 · 24 张课堂瞬间 · 18 张学员留言 —— 都在 Portfolio' },
   about_t_label:        { zh: '学员反馈', en: '学员反馈', th: '学员反馈', es: '学员反馈', nl: '学员反馈', fr: '学员反馈' },
   about_t_h:            { zh: '听听学生怎么说', en: '听听学生怎么说', th: '听听学生怎么说', es: '听听学生怎么说', nl: '听听学生怎么说', fr: '听听学生怎么说' },
