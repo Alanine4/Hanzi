@@ -761,6 +761,26 @@ footer{flex-wrap:wrap;}
 .ai-banner-cta{background:var(--amber);color:var(--ink);border:none;padding:0.95rem 1.85rem;border-radius:var(--r-pill);font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;transition:transform .15s,box-shadow .15s;}
 .ai-banner-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(209,163,107,0.4);}
 
+/* About — 我的故事 narrative */
+.about-story-body{max-width:760px;margin:1.25rem auto 0;}
+.about-story-body p{font-size:1rem;line-height:1.95;color:var(--body);margin:0 0 1.15rem;}
+.about-story-body p:last-child{margin-bottom:0;}
+.about-story-body strong{color:var(--ink);font-weight:700;}
+
+/* Homepage — AI 融入每节课 */
+.aimethod-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.75rem;}
+.aimethod-card{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-card);padding:1.5rem 1.35rem;position:relative;transition:transform .15s,box-shadow .15s;}
+.aimethod-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);}
+.aimethod-card::before{content:'';position:absolute;left:0;top:1.5rem;width:3px;height:1.6rem;background:var(--amber);border-radius:0 3px 3px 0;}
+.aimethod-card h4{font-size:1.05rem;font-weight:700;color:var(--ink);margin:0 0 0.55rem;}
+.aimethod-card p{font-size:0.85rem;color:var(--muted);line-height:1.65;margin:0;}
+.aimethod-arrow{display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:1.4rem;}
+.aimethod-foot{text-align:center;font-size:0.9rem;color:var(--brown);font-weight:600;margin-top:1.5rem;}
+.aimethod-video{max-width:760px;margin:1.75rem auto 0;}
+@media(max-width:860px){
+  .aimethod-steps{grid-template-columns:1fr;}
+}
+
 /* Courses Coming Soon banner */
 .co-coming-banner{max-width:880px;margin:0 auto 2.5rem;padding:1.6rem 2rem;background:linear-gradient(135deg,#FFF9F0 0%,#FFF6E8 100%);border:1.5px solid var(--amber);border-radius:var(--r-card);text-align:center;box-shadow:var(--sh-sm);}
 .co-coming-banner h3{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin:0 0 0.6rem;}
@@ -1079,6 +1099,37 @@ footer{flex-wrap:wrap;}
     </div>
   </div>
 
+  <!-- ══ AI 融入每节课 · AI teaching method (Section · highlights AI differentiation) ══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="aimethod_label">AI × 教学</div>
+    <h2 class="sec-h2" data-i18n="aimethod_h">每节课都结合 AI · 学中文从此有趣</h2>
+    <p class="sec-lead" data-i18n="aimethod_sub">不是用 AI 取代老师，而是让老师 + AI 一起，把你的每节课变得个性化、有趣、高效。</p>
+    <div class="aimethod-steps">
+      <div class="aimethod-card">
+        <h4 data-i18n="aimethod_s1_t">🕐 课前</h4>
+        <p data-i18n="aimethod_s1_p">AI 按你的兴趣和水平，生成专属话题词汇和对话</p>
+      </div>
+      <div class="aimethod-card">
+        <h4 data-i18n="aimethod_s2_t">🎯 课中</h4>
+        <p data-i18n="aimethod_s2_p">老师带你练 + AI 实时互动游戏、即时纠音</p>
+      </div>
+      <div class="aimethod-card">
+        <h4 data-i18n="aimethod_s3_t">🔁 课后</h4>
+        <p data-i18n="aimethod_s3_p">AI 陪练巩固，自动复习你的薄弱点</p>
+      </div>
+    </div>
+    <p class="aimethod-foot" data-i18n="aimethod_foot">一节课的三个阶段，AI 全程在场，但老师始终主导。</p>
+    <!-- AI 上课视频位 · TODO: 用户提供 YouTube 链接后替换为 <iframe> -->
+    <div class="aimethod-video">
+      <div class="t-video-actual">
+        <div class="pf-vid-placeholder">
+          <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="30" fill="none" stroke="var(--amber)" stroke-width="2" opacity="0.45"/><polygon points="26,20 26,44 46,32" fill="var(--amber)" opacity="0.45"/></svg>
+          <span style="color:var(--muted);font-size:0.82rem" data-i18n="aimethod_video_todo">📹 AI 上课实录视频 · 即将上线</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ══ TESTIMONIALS (Section B · sample placeholders — TODO: replace 3 video cards with real YouTube unlisted embeds + real student quotes) ══ -->
   <div class="section-mt">
     <div class="sec-label" data-i18n="testimonials_label">Real Students · Real Progress</div>
@@ -1181,6 +1232,19 @@ footer{flex-wrap:wrap;}
         <span class="chip" data-i18n="ab_chip6">💻 Online via Zoom</span>
       </div>
       <button class="btn-p" onclick="goto('contact')" data-i18n="about_cta">Book a Lesson · €29/30min →</button>
+    </div>
+  </div>
+
+  <!-- ══ MY STORY · 我的故事（基于简历 + 真实经历）══ -->
+  <div class="section-mt">
+    <div class="sec-label" data-i18n="about_story_label">我的故事</div>
+    <h2 class="sec-h2" style="font-size:1.5rem" data-i18n="about_story_h">从三个国家的讲台，到 AI 教学</h2>
+    <div class="about-story-body">
+      <p data-i18n-html="about_story_p1">我叫林安琪（Alicia）...</p>
+      <p data-i18n-html="about_story_p2">2023 年，我被国家选派到泰国...</p>
+      <p data-i18n-html="about_story_p3">2024 年，我来到比利时...</p>
+      <p data-i18n-html="about_story_p4">这几年，我把课堂上的思考带到更大的地方...</p>
+      <p data-i18n-html="about_story_p5">2025 年，我创办了 ThaiCool Chinese...</p>
     </div>
   </div>
 
@@ -1749,6 +1813,7 @@ footer{flex-wrap:wrap;}
       <img src="A照片/04-Classroom-课堂/classroom-leuven-weather-character-1.JPG" alt="天气汉字" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-student-color-words.jpg" alt="学生彩绘作业" loading="lazy">
       <img src="A照片/04-Classroom-课堂/classroom-private-pekingopera-masks.JPG" alt="京剧脸谱文化课" loading="lazy">
+      <img src="A照片/04-Classroom-课堂/classroom-children-handicrafts.jpg" alt="孩童手工" loading="lazy">
     </div>
   </div>
 
