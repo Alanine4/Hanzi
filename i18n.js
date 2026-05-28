@@ -153,6 +153,7 @@ window.__i18n = {
   pill_3: { zh: 'HSK 备考', en: 'HSK Prep', th: 'เตรียมสอบ HSK', es: 'Preparación HSK', nl: 'HSK-prep', fr: 'Prép HSK' },
   pill_4: { zh: '儿童课程', en: "Children's Classes", th: 'คลาสสำหรับเด็ก', es: 'Clases para niños', nl: 'Kinderlessen', fr: 'Cours pour enfants' },
   pill_5: { zh: '30 分钟试课', en: '30-min Lesson', th: 'บทเรียน 30 นาที', es: 'Clase de 30 min', nl: 'Les van 30 min', fr: 'Cours 30 min' },
+  pill_pdf: { zh: '📥 免费领取 HSK 1-3 词汇 PDF', en: '📥 免费领取 HSK 1-3 词汇 PDF', th: '📥 免费领取 HSK 1-3 词汇 PDF', es: '📥 免费领取 HSK 1-3 词汇 PDF', nl: '📥 免费领取 HSK 1-3 词汇 PDF', fr: '📥 免费领取 HSK 1-3 词汇 PDF' },
   form_fname_lbl: { zh: '名字', en: 'First Name', th: 'ชื่อ', es: 'Nombre', nl: 'Voornaam', fr: 'Prénom' },
   form_fname_ph:  { zh: '你的名字', en: 'Your name', th: 'ชื่อของคุณ', es: 'Tu nombre', nl: 'Je naam', fr: 'Votre prénom' },
   form_lname_lbl: { zh: '姓氏', en: 'Last Name', th: 'นามสกุล', es: 'Apellido', nl: 'Achternaam', fr: 'Nom' },
@@ -276,7 +277,7 @@ window.__i18n = {
   lm_h:        { zh: '📥 免费 PDF · 新版 HSK 1-3 词汇', en: '📥 免费 PDF · 新版 HSK 1-3 词汇', th: '📥 免费 PDF · 新版 HSK 1-3 词汇', es: '📥 免费 PDF · 新版 HSK 1-3 词汇', nl: '📥 免费 PDF · 新版 HSK 1-3 词汇', fr: '📥 免费 PDF · 新版 HSK 1-3 词汇' },
   lm_sub:      { zh: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', en: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', th: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', es: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', nl: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句', fr: '新 HSK 大纲收录词汇 · 中英对照 + 拼音 + 例句' },
   lm_email_ph: { zh: 'your@email.com', en: 'your@email.com', th: 'your@email.com', es: 'your@email.com', nl: 'your@email.com', fr: 'your@email.com' },
-  lm_btn:      { zh: '获取 PDF →', en: 'Get Free PDF →', th: 'รับ PDF ฟรี →', es: 'Obtener PDF gratis →', nl: 'Krijg gratis PDF →', fr: 'Obtenir le PDF gratuit →' },
+  lm_btn:      { zh: '免费领取 PDF →', en: '免费领取 PDF →', th: '免费领取 PDF →', es: '免费领取 PDF →', nl: '免费领取 PDF →', fr: '免费领取 PDF →' },
   lm_sent:     { zh: '✓ 已发送！请查收邮箱（含垃圾邮件）', en: '✓ Sent! Check your inbox (and spam folder)', th: '✓ ส่งแล้ว! ตรวจสอบกล่องจดหมาย (รวมถึงสแปม)', es: '✓ ¡Enviado! Revisa tu bandeja (y spam)', nl: '✓ Verzonden! Check je inbox (en spam)', fr: '✓ Envoyé ! Vérifiez votre boîte (et spam)' },
 
   /* ═══ WECHAT BIG CARD (CONTACT section F) ═══ */
