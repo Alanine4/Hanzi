@@ -11,7 +11,7 @@ window.__i18n = {
   nav_about:       { zh: '关于', en: 'About', th: 'เกี่ยวกับ', es: 'Sobre mí', nl: 'Over', fr: 'À propos' },
   nav_courses:     { zh: '课程', en: 'Courses', th: 'หลักสูตร', es: 'Cursos', nl: 'Cursussen', fr: 'Cours' },
   nav_contact:     { zh: '联系', en: 'Contact', th: 'ติดต่อ', es: 'Contacto', nl: 'Contact', fr: 'Contact' },
-  nav_cta_book:    { zh: '预约试课 · €29', en: 'Book a Trial · €29', th: 'จองทดลองเรียน · €29', es: 'Reservar prueba · €29', nl: 'Proefles boeken · €29', fr: 'Réserver un essai · €29' },
+  nav_cta_book:    { zh: '🔜 2026 年 8 月开课', en: '🔜 2026 年 8 月开课', th: '🔜 2026 年 8 月开课', es: '🔜 2026 年 8 月开课', nl: '🔜 2026 年 8 月开课', fr: '🔜 2026 年 8 月开课' },
   nav_ai:          { zh: 'AI', en: 'AI', th: 'AI', es: 'AI', nl: 'AI', fr: 'AI' },
 
   /* ═══ HERO ═══ */
@@ -25,7 +25,7 @@ window.__i18n = {
     fr: 'Apprenez le <em>mandarin</em><br>avec la professeure Lin'
   },
   hero_sub:        { zh: '具有三个国家教学经验的中文母语教师。从零基础到 HSK 流利，以对话为核心，为你量身打造的中文学习体验。', en: 'Native Mandarin educator with experience across three countries. Conversational, cultural, and built around you — from complete beginner to HSK fluency.', th: 'ครูเจ้าของภาษาผู้มีประสบการณ์สอนใน 3 ประเทศ เน้นการสนทนา วัฒนธรรม และออกแบบเฉพาะตัวคุณ ตั้งแต่ผู้เริ่มต้นจนถึงระดับ HSK', es: 'Profesora nativa de mandarín con experiencia en tres países. Conversacional, cultural y diseñada para ti — desde principiante absoluto hasta fluidez HSK.', nl: 'Moedertaal­spreker Mandarijn met onderwijservaring in drie landen. Conversatiegericht, cultureel en op maat — van absolute beginner tot HSK-vloeiendheid.', fr: 'Enseignante native du mandarin avec une expérience dans trois pays. Conversationnel, culturel et conçu sur mesure — du débutant complet à la maîtrise HSK.' },
-  hero_btn_trial:  { zh: '试课 · €29/30分钟', en: 'Try a Lesson · €29/30min', th: 'ทดลองเรียน · €29/30น.', es: 'Probar una clase · €29/30min', nl: 'Probeer een les · €29/30min', fr: 'Essayer un cours · €29/30min' },
+  hero_btn_trial:  { zh: '🔜 2026 年 8 月开课 · 留邮箱通知', en: '🔜 2026 年 8 月开课 · 留邮箱通知', th: '🔜 2026 年 8 月开课 · 留邮箱通知', es: '🔜 2026 年 8 月开课 · 留邮箱通知', nl: '🔜 2026 年 8 月开课 · 留邮箱通知', fr: '🔜 2026 年 8 月开课 · 留邮箱通知' },
   hero_btn_about:  { zh: '认识林老师', en: 'Meet Teacher Lin', th: 'รู้จักครูหลิน', es: 'Conoce a la profesora Lin', nl: 'Maak kennis met juf Lin', fr: 'Rencontrer la professeure Lin' },
   hero_stat1_lbl:  { zh: '累计学生', en: 'Students taught', th: 'นักเรียนที่สอน', es: 'Estudiantes', nl: 'Studenten', fr: 'Étudiants' },
   hero_stat2_lbl:  { zh: '国家', en: 'Countries', th: 'ประเทศ', es: 'Países', nl: 'Landen', fr: 'Pays' },
@@ -78,7 +78,7 @@ window.__i18n = {
   ab_chip4: { zh: '🇹🇭 泰语 · 中级', en: '🇹🇭 Thai · Intermediate', th: '🇹🇭 ไทย · ระดับกลาง', es: '🇹🇭 Tailandés · Intermedio', nl: '🇹🇭 Thai · Gemiddeld', fr: '🇹🇭 Thaï · Intermédiaire' },
   ab_chip5: { zh: '🎓 KU Leuven 硕士', en: "🎓 KU Leuven Master's", th: '🎓 ปริญญาโท KU Leuven', es: '🎓 Máster KU Leuven', nl: '🎓 Master KU Leuven', fr: '🎓 Master KU Leuven' },
   ab_chip6: { zh: '💻 Zoom 在线', en: '💻 Online via Zoom', th: '💻 ออนไลน์ผ่าน Zoom', es: '💻 Online por Zoom', nl: '💻 Online via Zoom', fr: '💻 En ligne sur Zoom' },
-  about_cta: { zh: '预约课程 · €29/30分钟 →', en: 'Book a Lesson · €29/30min →', th: 'จองบทเรียน · €29/30น. →', es: 'Reservar clase · €29/30min →', nl: 'Boek een les · €29/30min →', fr: 'Réserver un cours · €29/30min →' },
+  about_cta: { zh: '🔜 2026 年 8 月开课 · 留邮箱通知 →', en: '🔜 2026 年 8 月开课 · 留邮箱通知 →', th: '🔜 2026 年 8 月开课 · 留邮箱通知 →', es: '🔜 2026 年 8 月开课 · 留邮箱通知 →', nl: '🔜 2026 年 8 月开课 · 留邮箱通知 →', fr: '🔜 2026 年 8 月开课 · 留邮箱通知 →' },
 
   /* Timeline */
   tl_edu_h: { zh: '学历', en: 'Education', th: 'การศึกษา', es: 'Educación', nl: 'Opleiding', fr: 'Formation' },
@@ -179,9 +179,9 @@ window.__i18n = {
   /* Contact sidebar */
   spot_big: { zh: '24 小时', en: '24h', th: '24 ชม.', es: '24h', nl: '24 u', fr: '24 h' },
   spot_sub: { zh: '平均回复时间 —— 私人回复，绝非机器自动。', en: 'Average response — personal, never automated.', th: 'เวลาตอบกลับโดยเฉลี่ย — ส่วนตัว ไม่ใช่ระบบอัตโนมัติ', es: 'Tiempo medio de respuesta — personal, nunca automático.', nl: 'Gemiddelde reactietijd — persoonlijk, nooit automatisch.', fr: 'Temps de réponse moyen — personnel, jamais automatisé.' },
-  bkg_h4:   { zh: '预约课程 · €29/30分钟', en: 'Book a Slot · €29/30min', th: 'จองเวลา · €29/30น.', es: 'Reservar hueco · €29/30min', nl: 'Boek een tijdslot · €29/30min', fr: 'Réserver un créneau · €29/30min' },
-  bkg_p:    { zh: '直接在林老师的日历上选择 30 分钟时段 —— 无需来回沟通。', en: "Pick a 30-minute slot directly in Teacher Lin's calendar — no back-and-forth needed.", th: 'เลือกช่วงเวลา 30 นาทีในปฏิทินของครูหลินได้โดยตรง — ไม่ต้องนัดไปมา', es: 'Elige un hueco de 30 minutos directamente en el calendario de la profesora Lin — sin idas y venidas.', nl: 'Kies direct een tijdslot van 30 minuten in de agenda van juf Lin — geen heen-en-weer nodig.', fr: 'Choisissez un créneau de 30 minutes directement dans le calendrier de la professeure Lin — sans aller-retour.' },
-  bkg_btn:  { zh: '📅 选择时间 →', en: '📅 Choose a Time →', th: '📅 เลือกเวลา →', es: '📅 Elige una hora →', nl: '📅 Kies een tijd →', fr: '📅 Choisir un créneau →' },
+  bkg_h4:   { zh: '🔜 2026 年 8 月开课', en: '🔜 2026 年 8 月开课', th: '🔜 2026 年 8 月开课', es: '🔜 2026 年 8 月开课', nl: '🔜 2026 年 8 月开课', fr: '🔜 2026 年 8 月开课' },
+  bkg_p:    { zh: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。', en: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。', th: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。', es: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。', nl: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。', fr: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。留下邮箱，开班第一时间通知你预约。' },
+  bkg_btn:  { zh: '📬 留邮箱 · 开班通知我 →', en: '📬 留邮箱 · 开班通知我 →', th: '📬 留邮箱 · 开班通知我 →', es: '📬 留邮箱 · 开班通知我 →', nl: '📬 留邮箱 · 开班通知我 →', fr: '📬 留邮箱 · 开班通知我 →' },
 
   cd_h4: { zh: '联系方式', en: 'Contact Details', th: 'ข้อมูลติดต่อ', es: 'Datos de contacto', nl: 'Contactgegevens', fr: 'Coordonnées' },
   cd_email_lbl:  { zh: '邮箱', en: 'Email', th: 'อีเมล', es: 'Correo', nl: 'E-mail', fr: 'E-mail' },
@@ -213,7 +213,7 @@ window.__i18n = {
   price1_desc: { zh: '一次性试课', en: 'One trial lesson', th: 'บทเรียนทดลอง 1 ครั้ง', es: 'Una clase de prueba', nl: 'Eén proefles', fr: 'Un cours d\'essai' },
   price1_b1:   { zh: '直接预约时段', en: 'Book any time slot', th: 'จองช่วงเวลาได้ทันที', es: 'Reserva cualquier hora', nl: 'Boek een tijdslot', fr: 'Réservez un créneau' },
   price1_b2:   { zh: '无任何承诺', en: 'No commitment', th: 'ไม่มีข้อผูกมัด', es: 'Sin compromiso', nl: 'Geen verplichting', fr: 'Sans engagement' },
-  price1_cta:  { zh: '预约试课 →', en: 'Book Trial →', th: 'จองทดลองเรียน →', es: 'Reservar prueba →', nl: 'Boek proefles →', fr: 'Réserver l\'essai →' },
+  price1_cta:  { zh: '🔜 8 月开课 · 通知我 →', en: '🔜 8 月开课 · 通知我 →', th: '🔜 8 月开课 · 通知我 →', es: '🔜 8 月开课 · 通知我 →', nl: '🔜 8 月开课 · 通知我 →', fr: '🔜 8 月开课 · 通知我 →' },
 
   price2_tag:  { zh: '1-on-1 月套餐', en: '1-ON-1 MONTHLY', th: 'แพ็กเกจรายเดือน 1-ต่อ-1', es: '1-A-1 MENSUAL', nl: '1-OP-1 MAANDPAKKET', fr: 'COURS INDIVIDUEL MENSUEL' },
   price2_amt:  { zh: '€50', en: '€50', th: '€50', es: '€50', nl: '€50', fr: '€50' },
@@ -292,9 +292,9 @@ window.__i18n = {
   follow_h: { zh: '关注林老师', en: 'Follow Teacher Lin', th: 'ติดตาม Teacher Lin', es: 'Seguir a Teacher Lin', nl: 'Volg Teacher Lin', fr: 'Suivre Teacher Lin' },
 
   /* ═══ COURSES PAGE UPDATE (section E) ═══ */
-  co_subtitle: { zh: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', en: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', th: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', es: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', nl: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', fr: '林老师现在暂不接收新学员，预计 2025 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。' },
+  co_subtitle: { zh: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', en: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', th: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', es: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', nl: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。', fr: '林老师现在暂不接收新学员，预计 2026 年 8 月正式开班。下方主题预览，欢迎留邮箱第一时间收到开班通知。' },
   co_coming_banner_h: { zh: '🔜 全部课程 8 月开班', en: '🔜 全部课程 8 月开班', th: '🔜 全部课程 8 月开班', es: '🔜 全部课程 8 月开班', nl: '🔜 全部课程 8 月开班', fr: '🔜 全部课程 8 月开班' },
-  co_coming_banner_p: { zh: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', en: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', th: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', es: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', nl: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', fr: '林老师现在专注准备 2025 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你' },
+  co_coming_banner_p: { zh: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', en: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', th: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', es: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', nl: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你', fr: '林老师现在专注准备 2026 年 8 月新一期课程·暂不接收新学员·留下邮箱开班第一时间通知你' },
   co_coming_banner_btn: { zh: '📬 开班通知我', en: '📬 开班通知我', th: '📬 开班通知我', es: '📬 开班通知我', nl: '📬 开班通知我', fr: '📬 开班通知我' },
 
   /* ═══ PHASE 3 — About redesign + Portfolio ═══ */
@@ -506,8 +506,8 @@ window.__i18n = {
 
   /* Students Tab CTA */
   ai_s_cta_h:   { zh: '想让这些工具为你定制？', en: '想让这些工具为你定制？', th: '想让这些工具为你定制？', es: '想让这些工具为你定制？', nl: '想让这些工具为你定制？', fr: '想让这些工具为你定制？' },
-  ai_s_cta_p:   { zh: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。', en: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。', th: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。', es: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。', nl: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。', fr: '预约一节 €29 试课，让老师了解你的水平和目标后，调教一套属于你的 AI 学习伙伴。' },
-  ai_s_cta_btn: { zh: '📅 预约试课 · €29', en: '📅 预约试课 · €29', th: '📅 预约试课 · €29', es: '📅 预约试课 · €29', nl: '📅 预约试课 · €29', fr: '📅 预约试课 · €29' },
+  ai_s_cta_p:   { zh: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。', en: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。', th: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。', es: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。', nl: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。', fr: '课程预计 2026 年 8 月开班。留下邮箱，开班后老师会了解你的水平和目标，调教一套属于你的 AI 学习伙伴。' },
+  ai_s_cta_btn: { zh: '🔜 8 月开课 · 留邮箱通知', en: '🔜 8 月开课 · 留邮箱通知', th: '🔜 8 月开课 · 留邮箱通知', es: '🔜 8 月开课 · 留邮箱通知', nl: '🔜 8 月开课 · 留邮箱通知', fr: '🔜 8 月开课 · 留邮箱通知' },
   ai_s_cta_alt: { zh: '或留邮箱抢先体验 ↓', en: '或留邮箱抢先体验 ↓', th: '或留邮箱抢先体验 ↓', es: '或留邮箱抢先体验 ↓', nl: '或留邮箱抢先体验 ↓', fr: '或留邮箱抢先体验 ↓' },
 
   /* Teachers Tab CTA */
