@@ -664,11 +664,6 @@ body.review-mode *{cursor:crosshair;}
 }
 .wechat-card h4{font-size:1rem;color:var(--ink);margin-bottom:0.5rem;font-weight:700;}
 .wechat-card .wechat-p{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;}
-.wechat-qr{
-  width:140px;height:140px;background:var(--canvas);border:1.5px dashed var(--hair);border-radius:12px;
-  display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;
-  color:var(--muted);font-size:0.7rem;font-weight:600;text-align:center;padding:8px;
-}
 .wechat-id{
   font-family:'Inter',monospace;font-size:0.88rem;color:var(--ink);font-weight:700;
   background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-pill);
@@ -1527,7 +1522,7 @@ footer{flex-wrap:wrap;}
     <div>
       <div class="spot"><div class="big" data-i18n="spot_big">24h</div><div class="sub" data-i18n="spot_sub">Average response — personal, never automated.</div></div>
 
-      <!-- ══ WECHAT BIG CARD (Section F · TODO: add <img src="wechat-qr.png" alt="WeChat QR" style="width:140px;border-radius:12px;margin:0 auto 0.75rem;display:block"> when user supplies QR png) ══ -->
+      <!-- ══ WECHAT CARD (Section F · 仅文字 ID · 不用二维码) ══ -->
       <div class="wechat-card" id="wechat-card">
         <h4 data-i18n="wechat_h">💬 Chat on WeChat</h4>
         <p class="wechat-p" data-i18n="wechat_p">Quickest way to ask questions or book a custom package.</p>
