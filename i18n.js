@@ -205,6 +205,7 @@ window.__i18n = {
   /* ═══ PRICING (CONTACT page section A) ═══ */
   pricing_label:      { zh: '价格', en: 'Pricing', th: 'ราคา', es: 'Precios', nl: 'Prijzen', fr: 'Tarifs' },
   pricing_h2:         { zh: '简单定价，真实对话', en: 'Simple pricing. Real conversations.', th: 'ราคาเรียบง่าย บทสนทนาจริง', es: 'Precios simples. Conversaciones reales.', nl: 'Eenvoudige prijzen. Echte gesprekken.', fr: 'Tarifs simples. Vraies conversations.' },
+  pricing_coming_note:{ zh: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你', en: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你', th: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你', es: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你', nl: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你', fr: '🔜 以下为参考价格 · 课程预计 2026 年 8 月开班 · 现在留邮箱，开班第一时间通知你' },
   pricing_disclaimer: { zh: '此处仅为价格说明。通过 WeChat 或邮箱联系确定具体方案。', en: 'Pricing is informational. Contact via WeChat or email to finalise your package.', th: 'ราคานี้เพื่อข้อมูล ติดต่อทาง WeChat หรืออีเมลเพื่อยืนยันแพ็กเกจของคุณ', es: 'Los precios son informativos. Contacta por WeChat o email para definir tu paquete.', nl: 'Prijzen zijn informatief. Neem contact op via WeChat of e-mail om je pakket vast te leggen.', fr: 'Les tarifs sont indicatifs. Contactez-nous via WeChat ou e-mail pour finaliser votre formule.' },
 
   price1_tag:  { zh: '试课', en: 'TRY', th: 'ทดลองเรียน', es: 'PRUEBA', nl: 'PROBEER', fr: 'ESSAI' },
